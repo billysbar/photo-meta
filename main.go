@@ -35,7 +35,7 @@ func main() {
 	switch command {
 	case "process":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor process /path/to/photos /destination/path")
+			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path")
 			os.Exit(1)
 		}
 		
@@ -57,6 +57,30 @@ func main() {
 			log.Fatal(err)
 		}
 		
+	case "datetime":
+		if len(os.Args) < 4 {
+			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path")
+			os.Exit(1)
+		}
+		
+		sourcePath := os.Args[2]
+		destPath := os.Args[3]
+		
+		// Check if source path exists
+		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
+			log.Fatalf("Source path does not exist: %s", sourcePath)
+		}
+		
+		// Check if destination path exists
+		if _, err := os.Stat(destPath); os.IsNotExist(err) {
+			log.Fatalf("Destination path does not exist: %s", destPath)
+		}
+		
+		// Process datetime matching
+		if err := processDateTimeMatching(sourcePath, destPath); err != nil {
+			log.Fatal(err)
+		}
+		
 	default:
 		showUsage()
 		os.Exit(1)
@@ -66,14 +90,20 @@ func main() {
 func showUsage() {
 	fmt.Println("📸 Photo Metadata Editor - Simplified Version")
 	fmt.Println()
-	fmt.Println("Usage:")
+	fmt.Println("Commands:")
 	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path")
+	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path")
 	fmt.Println()
-	fmt.Println("Features:")
+	fmt.Println("Process Features:")
 	fmt.Println("  - Extracts GPS location data from photos")
 	fmt.Println("  - Renames files to YYYY-MM-DD-location format")
 	fmt.Println("  - Organizes files into YEAR/COUNTRY/CITY directory structure under destination")
 	fmt.Println("  - Merges files if destination structure already exists")
+	fmt.Println()
+	fmt.Println("DateTime Features:")
+	fmt.Println("  - Matches files by date from filename to existing location structure")
+	fmt.Println("  - Uses processed photos as location database")
+	fmt.Println("  - Interactive mode with prompts for verification")
 	fmt.Println()
 }
 
