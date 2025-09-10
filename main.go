@@ -81,6 +81,36 @@ func main() {
 			log.Fatal(err)
 		}
 		
+	case "clean":
+		if len(os.Args) < 3 {
+			fmt.Println("Usage: ./photo-metadata-editor clean /target/path [--dry-run] [--verbose]")
+			os.Exit(1)
+		}
+		
+		targetPath := os.Args[2]
+		
+		// Check if target path exists
+		if _, err := os.Stat(targetPath); os.IsNotExist(err) {
+			log.Fatalf("Target path does not exist: %s", targetPath)
+		}
+		
+		// Parse optional flags
+		dryRun := false
+		verbose := false
+		for i := 3; i < len(os.Args); i++ {
+			switch os.Args[i] {
+			case "--dry-run":
+				dryRun = true
+			case "--verbose":
+				verbose = true
+			}
+		}
+		
+		// Process clean (duplicate removal)
+		if err := processClean(targetPath, dryRun, verbose); err != nil {
+			log.Fatal(err)
+		}
+		
 	default:
 		showUsage()
 		os.Exit(1)
@@ -93,6 +123,7 @@ func showUsage() {
 	fmt.Println("Commands:")
 	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path")
 	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path")
+	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--verbose]")
 	fmt.Println()
 	fmt.Println("Process Features:")
 	fmt.Println("  - Extracts GPS location data from photos")
@@ -104,6 +135,12 @@ func showUsage() {
 	fmt.Println("  - Matches files by date from filename to existing location structure")
 	fmt.Println("  - Uses processed photos as location database")
 	fmt.Println("  - Interactive mode with prompts for verification")
+	fmt.Println()
+	fmt.Println("Clean Features:")
+	fmt.Println("  - Intelligent duplicate detection using SHA-256 hashing")
+	fmt.Println("  - Structure-based selection (keeps best organized files)")
+	fmt.Println("  - Supports --dry-run and --verbose modes")
+	fmt.Println("  - Prioritizes processed files over unorganized ones")
 	fmt.Println()
 }
 
