@@ -34,7 +34,7 @@ func processDateTimeMatching(sourcePath, destPath string) error {
 	if err != nil {
 		return fmt.Errorf("failed to check for GPS data: %v", err)
 	}
-	
+
 	if hasGPS {
 		fmt.Printf("❌ Found GPS data in source file: %s\n", gpsFile)
 		fmt.Println("⚠️  Please run 'process' command first to organize GPS-enabled photos.")
@@ -50,13 +50,13 @@ func processDateTimeMatching(sourcePath, destPath string) error {
 	if err != nil {
 		return fmt.Errorf("failed to build date-location database: %v", err)
 	}
-	
+
 	fmt.Printf("✅ Built database with %d date-location mappings\n", len(db.DateToLocation))
 	if len(db.DateToLocation) == 0 {
 		fmt.Println("⚠️  No processed photos found in destination. Run 'process' command first.")
 		return nil
 	}
-	
+
 	// Show database contents for debugging
 	fmt.Println("\n📋 Date-Location Database:")
 	for date, location := range db.DateToLocation {
@@ -73,22 +73,22 @@ func processDateTimeMatching(sourcePath, destPath string) error {
 func checkForGPSInSource(sourcePath string) (bool, string, error) {
 	var hasGPS bool
 	var gpsFile string
-	
+
 	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
-		
+
 		// Skip directories
 		if info.IsDir() {
 			return nil
 		}
-		
+
 		// Check if it's a photo file
 		if !isPhotoFile(path) {
 			return nil
 		}
-		
+
 		// Quick check for GPS data
 		_, _, err = extractGPSCoordinates(path)
 		if err == nil {
@@ -96,43 +96,43 @@ func checkForGPSInSource(sourcePath string) (bool, string, error) {
 			gpsFile = path
 			return fmt.Errorf("found GPS") // Early termination
 		}
-		
+
 		return nil
 	})
-	
+
 	if err != nil && err.Error() == "found GPS" {
 		return hasGPS, gpsFile, nil
 	}
-	
+
 	return hasGPS, gpsFile, err
 }
 
 // buildDateLocationDB scans destination and builds date->location mapping
 func buildDateLocationDB(destPath string) (*DateLocationDB, error) {
 	db := NewDateLocationDB()
-	
+
 	err := filepath.Walk(destPath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
-		
+
 		// Skip directories
 		if info.IsDir() {
 			return nil
 		}
-		
+
 		// Check if it's a photo file
 		if !isPhotoFile(path) {
 			return nil
 		}
-		
+
 		// Extract date and location from file path and name
 		date, location, err := extractDateLocationFromPath(path, destPath)
 		if err != nil {
 			fmt.Printf("⚠️  Could not parse %s: %v\n", filepath.Base(path), err)
 			return nil // Continue processing other files
 		}
-		
+
 		// Store in database with special UK replacement logic
 		if existingLocation, exists := db.DateToLocation[date]; exists {
 			if existingLocation != location {
@@ -148,10 +148,10 @@ func buildDateLocationDB(destPath string) (*DateLocationDB, error) {
 			db.DateToLocation[date] = location
 			fmt.Printf("📅 Added: %s -> %s\n", date, location)
 		}
-		
+
 		return nil
 	})
-	
+
 	return db, err
 }
 
@@ -162,23 +162,23 @@ func extractDateLocationFromPath(filePath, basePath string) (string, string, err
 	if err != nil {
 		return "", "", err
 	}
-	
+
 	// Extract filename for date parsing
 	filename := filepath.Base(filePath)
-	
+
 	// Parse date from filename (expect YYYY-MM-DD-location.ext format)
 	dateRegex := regexp.MustCompile(`^(\d{4}-\d{2}-\d{2})`)
 	matches := dateRegex.FindStringSubmatch(filename)
 	if len(matches) < 2 {
 		return "", "", fmt.Errorf("no date found in filename: %s", filename)
 	}
-	
+
 	date := matches[1]
-	
+
 	// Extract location from directory path
 	dirPath := filepath.Dir(relPath)
 	location := dirPath
-	
+
 	return date, location, nil
 }
 
@@ -186,22 +186,22 @@ func extractDateLocationFromPath(filePath, basePath string) (string, string, err
 func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocationDB) error {
 	processedCount := 0
 	unmatchedFiles := []string{}
-	
+
 	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
-		
+
 		// Skip directories
 		if info.IsDir() {
 			return nil
 		}
-		
+
 		// Check if it's a photo file
 		if !isPhotoFile(path) {
 			return nil
 		}
-		
+
 		// Extract date from filename
 		date, err := extractDateFromFilename(filepath.Base(path))
 		if err != nil {
@@ -209,7 +209,7 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 			unmatchedFiles = append(unmatchedFiles, path)
 			return nil
 		}
-		
+
 		// Look up location for this date
 		location, exists := db.DateToLocation[date]
 		if !exists {
@@ -217,39 +217,39 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 			unmatchedFiles = append(unmatchedFiles, path)
 			return nil
 		}
-		
+
 		// Interactive prompt for verification
-		fmt.Printf("\n📷 File: %s\n", filepath.Base(path))
-		fmt.Printf("📅 Extracted Date: %s\n", date)
-		fmt.Printf("📍 Matched Location: %s\n", location)
-		
-		if !promptForConfirmation("Process this file? (y/n): ") {
-			fmt.Println("⏭️  Skipped by user")
-			unmatchedFiles = append(unmatchedFiles, path)
-			return nil
-		}
-		
+		//fmt.Printf("\n📷 File: %s\n", filepath.Base(path))
+		//fmt.Printf("📅 Extracted Date: %s\n", date)
+		//fmt.Printf("📍 Matched Location: %s\n", location)
+		//
+		//if !promptForConfirmation("Process this file? (y/n): ") {
+		//	fmt.Println("⏭️  Skipped by user")
+		//	unmatchedFiles = append(unmatchedFiles, path)
+		//	return nil
+		//}
+
 		// Move file to matched location
 		if err := moveFileToLocation(path, destPath, location, date); err != nil {
 			return fmt.Errorf("failed to move %s: %v", filepath.Base(path), err)
 		}
-		
+
 		processedCount++
 		return nil
 	})
-	
+
 	// Summary
 	fmt.Printf("\n📊 DateTime Processing Summary:\n")
 	fmt.Printf("✅ Files processed: %d\n", processedCount)
 	fmt.Printf("⚠️  Files unmatched: %d\n", len(unmatchedFiles))
-	
+
 	if len(unmatchedFiles) > 0 {
 		fmt.Println("\n📋 Unmatched Files:")
 		for _, file := range unmatchedFiles {
 			fmt.Printf("  - %s\n", filepath.Base(file))
 		}
 	}
-	
+
 	return err
 }
 
@@ -261,20 +261,20 @@ func extractDateFromFilename(filename string) (string, error) {
 		year, month, day := matches[1], matches[2], matches[3]
 		return fmt.Sprintf("%s-%s-%s", year, month, day), nil
 	}
-	
+
 	// Pattern 2: YYYY-MM-DD format already in filename
 	pattern2 := regexp.MustCompile(`(\d{4}-\d{2}-\d{2})`)
 	if matches := pattern2.FindStringSubmatch(filename); len(matches) >= 2 {
 		return matches[1], nil
 	}
-	
+
 	// Pattern 3: YYYYMMDD format
 	pattern3 := regexp.MustCompile(`^(\d{4})(\d{2})(\d{2})`)
 	if matches := pattern3.FindStringSubmatch(filename); len(matches) >= 4 {
 		year, month, day := matches[1], matches[2], matches[3]
 		return fmt.Sprintf("%s-%s-%s", year, month, day), nil
 	}
-	
+
 	return "", fmt.Errorf("no date pattern found in filename")
 }
 
@@ -288,15 +288,15 @@ func moveFileToLocation(sourcePath, destBasePath, location, date string) error {
 	} else {
 		city = "unknown"
 	}
-	
+
 	// Generate new filename
 	ext := filepath.Ext(sourcePath)
 	newFilename := fmt.Sprintf("%s-%s%s", date, city, ext)
-	
+
 	// Full destination path
 	destDir := filepath.Join(destBasePath, location)
 	destPath := filepath.Join(destDir, newFilename)
-	
+
 	// Handle duplicates
 	finalPath := destPath
 	counter := 1
@@ -304,22 +304,22 @@ func moveFileToLocation(sourcePath, destBasePath, location, date string) error {
 		if _, err := os.Stat(finalPath); os.IsNotExist(err) {
 			break
 		}
-		
+
 		base := strings.TrimSuffix(newFilename, ext)
 		duplicateFilename := fmt.Sprintf("%s-%d%s", base, counter, ext)
 		finalPath = filepath.Join(destDir, duplicateFilename)
 		counter++
-		
+
 		if counter > 1000 {
 			return fmt.Errorf("too many duplicate filenames")
 		}
 	}
-	
+
 	// Move the file
 	if err := os.Rename(sourcePath, finalPath); err != nil {
 		return err
 	}
-	
+
 	fmt.Printf("✅ Moved to: %s\n", finalPath)
 	return nil
 }
@@ -327,14 +327,14 @@ func moveFileToLocation(sourcePath, destBasePath, location, date string) error {
 // promptForConfirmation prompts user for y/n confirmation
 func promptForConfirmation(prompt string) bool {
 	reader := bufio.NewReader(os.Stdin)
-	
+
 	for {
 		fmt.Print(prompt)
 		response, err := reader.ReadString('\n')
 		if err != nil {
 			return false
 		}
-		
+
 		response = strings.ToLower(strings.TrimSpace(response))
 		switch response {
 		case "y", "yes":

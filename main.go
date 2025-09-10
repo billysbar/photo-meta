@@ -94,6 +94,16 @@ func main() {
 			log.Fatalf("Target path does not exist: %s", targetPath)
 		}
 		
+		// Check for incorrectly formatted dry-run arguments
+		for i := 3; i < len(os.Args); i++ {
+			arg := strings.ToLower(os.Args[i])
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" {
+				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
+				fmt.Println("Use '--dry-run' instead")
+				os.Exit(1)
+			}
+		}
+		
 		// Parse optional flags
 		dryRun := false
 		verbose := false
