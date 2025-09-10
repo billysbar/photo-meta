@@ -134,13 +134,36 @@ func processPhotos(sourcePath, destPath string) error {
 }
 
 func isPhotoFile(path string) bool {
-	ext := filepath.Ext(path)
-	switch ext {
-	case ".jpg", ".jpeg", ".JPG", ".JPEG", ".heic", ".HEIC":
-		return true
-	default:
-		return false
+	ext := strings.ToLower(filepath.Ext(path))
+	
+	// Common photo/image formats that can contain GPS metadata
+	supportedFormats := map[string]bool{
+		".jpg":   true,
+		".jpeg":  true,
+		".heic":  true,
+		".heif":  true,
+		".tiff":  true,
+		".tif":   true,
+		".dng":   true,  // RAW format
+		".cr2":   true,  // Canon RAW
+		".nef":   true,  // Nikon RAW
+		".arw":   true,  // Sony RAW
+		".orf":   true,  // Olympus RAW
+		".rw2":   true,  // Panasonic RAW
+		".raf":   true,  // Fuji RAW
+		".srw":   true,  // Samsung RAW
+		".pef":   true,  // Pentax RAW
+		".3fr":   true,  // Hasselblad RAW
+		".fff":   true,  // Imacon RAW
+		".iiq":   true,  // Phase One RAW
+		".k25":   true,  // Kodak RAW
+		".kdc":   true,  // Kodak RAW
+		".dcr":   true,  // Kodak RAW
+		".mrw":   true,  // Minolta RAW
+		".raw":   true,  // Generic RAW
 	}
+	
+	return supportedFormats[ext]
 }
 
 func processPhoto(photoPath, destBasePath string) error {

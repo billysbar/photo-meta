@@ -10,7 +10,7 @@ A streamlined photo organization tool that processes photos with GPS data and or
 - **File Renaming**: Renames files to `YYYY-MM-DD-location` format
 - **Merge Support**: Merges files into existing directory structures
 - **Comprehensive Coverage**: Supports 200+ major cities worldwide with offline mapping
-- **Multi-format Support**: Works with JPG, JPEG, HEIC files
+- **Multi-format Support**: Works with JPG, JPEG, HEIC, TIFF, and RAW formats (25+ formats)
 
 ## Requirements
 
@@ -71,7 +71,7 @@ Creates structure: `~/Photos/2025/spain/palma/2025-09-02-palma.HEIC`
 
 ## How It Works
 
-1. **Scans Source Directory** - Recursively finds all photo files (JPG, JPEG, HEIC)
+1. **Scans Source Directory** - Recursively finds all image files (JPG, JPEG, HEIC, TIFF, RAW formats)
 2. **GPS Extraction** - Uses exiftool to extract GPS coordinates from photo metadata
 3. **Location Resolution** - Converts coordinates to location names using:
    - Offline mapping for 200+ major cities (fastest)
@@ -113,6 +113,30 @@ organized/2025/
     └── manchester/
         └── 2025-08-31-manchester.HEIC
 ```
+
+## Supported File Formats
+
+### Standard Image Formats
+- **JPEG**: `.jpg`, `.jpeg`
+- **HEIC/HEIF**: `.heic`, `.heif` (Apple's modern format)
+- **TIFF**: `.tiff`, `.tif`
+
+### RAW Camera Formats
+- **Canon**: `.cr2`
+- **Nikon**: `.nef`
+- **Sony**: `.arw`
+- **Olympus**: `.orf`
+- **Panasonic**: `.rw2`
+- **Fuji**: `.raf`
+- **Samsung**: `.srw`
+- **Pentax**: `.pef`
+- **Hasselblad**: `.3fr`
+- **Phase One**: `.iiq`
+- **Kodak**: `.k25`, `.kdc`, `.dcr`
+- **Minolta**: `.mrw`
+- **Generic**: `.raw`, `.dng`
+
+**Note**: All formats are processed if they contain GPS metadata. Files without GPS data are skipped regardless of format.
 
 ## Supported Locations
 
