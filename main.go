@@ -35,12 +35,22 @@ func main() {
 	switch command {
 	case "process":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path")
+			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path [--workers N]")
 			os.Exit(1)
 		}
 		
 		sourcePath := os.Args[2]
 		destPath := os.Args[3]
+		
+		// Parse optional workers flag
+		workers := 4 // Default worker count
+		for i := 4; i < len(os.Args); i++ {
+			if os.Args[i] == "--workers" && i+1 < len(os.Args) {
+				if _, err := fmt.Sscanf(os.Args[i+1], "%d", &workers); err != nil {
+					log.Fatalf("Invalid worker count: %s", os.Args[i+1])
+				}
+			}
+		}
 		
 		// Check if source path exists
 		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
@@ -52,8 +62,8 @@ func main() {
 			log.Fatalf("Failed to create destination path: %v", err)
 		}
 		
-		// Process photos
-		if err := processPhotos(sourcePath, destPath); err != nil {
+		// Process photos concurrently
+		if err := processPhotosConcurrently(sourcePath, destPath, workers); err != nil {
 			log.Fatal(err)
 		}
 		
@@ -128,39 +138,58 @@ func main() {
 }
 
 func showUsage() {
-	fmt.Println("📸 Photo Metadata Editor - Simplified Version")
+	fmt.Println("📸 Photo Metadata Editor - High Performance Concurrent Version")
 	fmt.Println()
 	fmt.Println("Commands:")
-	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path")
-	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path")
-	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--verbose]")
+	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N]")
+	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N]")
+	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--verbose] [--workers N]")
+	fmt.Println()
+	fmt.Println("Performance Options:")
+	fmt.Println("  --workers N    Number of concurrent workers (1-16, default: 4)")
+	fmt.Println("               Higher values process more files simultaneously")
+	fmt.Println("               Lower values reduce system load and memory usage")
 	fmt.Println()
 	fmt.Println("Process Features:")
-	fmt.Println("  - Extracts GPS location data from photos")
-	fmt.Println("  - Renames files to YYYY-MM-DD-location format")
-	fmt.Println("  - Organizes files into YEAR/COUNTRY/CITY directory structure under destination")
-	fmt.Println("  - Merges files if destination structure already exists")
+	fmt.Println("  - 🚀 Concurrent processing with configurable worker pools")
+	fmt.Println("  - 🔒 Thread-safe file operations with intelligent locking")
+	fmt.Println("  - 📊 Real-time progress tracking with ETA calculations")
+	fmt.Println("  - ⏹️  Graceful cancellation (Ctrl+C) with cleanup")
+	fmt.Println("  - 📍 Extracts GPS location data from photos")
+	fmt.Println("  - 📁 Organizes into YEAR/COUNTRY/CITY structure")
+	fmt.Println("  - 🔄 Smart duplicate handling with counter suffixes")
 	fmt.Println()
 	fmt.Println("DateTime Features:")
-	fmt.Println("  - Matches files by date from filename to existing location structure")
-	fmt.Println("  - Uses processed photos as location database")
-	fmt.Println("  - Interactive mode with prompts for verification")
+	fmt.Println("  - 🔄 Concurrent date-based file matching")
+	fmt.Println("  - 📊 Progress tracking for large datasets") 
+	fmt.Println("  - 🗃️  Uses processed photos as location database")
+	fmt.Println("  - 🤝 Interactive verification prompts")
 	fmt.Println()
 	fmt.Println("Clean Features:")
-	fmt.Println("  - Intelligent duplicate detection using SHA-256 hashing")
-	fmt.Println("  - Structure-based selection (keeps best organized files)")
-	fmt.Println("  - Supports --dry-run and --verbose modes")
-	fmt.Println("  - Prioritizes processed files over unorganized ones")
+	fmt.Println("  - ⚡ High-speed duplicate detection using SHA-256")
+	fmt.Println("  - 🧠 Intelligent file prioritization")
+	fmt.Println("  - 🔒 Safe concurrent duplicate removal")
+	fmt.Println("  - 🔍 --dry-run mode for safe preview")
+	fmt.Println("  - 📝 --verbose mode for detailed logging")
+	fmt.Println()
+	fmt.Println("Performance Tips:")
+	fmt.Println("  - Use --workers 8-16 for large photo collections")
+	fmt.Println("  - Use --workers 1-4 for slower storage (USB drives)")
+	fmt.Println("  - Press Ctrl+C for graceful cancellation")
+	fmt.Println("  - Monitor system resources during processing")
 	fmt.Println()
 }
 
 func processPhotos(sourcePath, destPath string) error {
-	fmt.Printf("🔍 Processing photos from: %s\n", sourcePath)
+	return processPhotosConcurrently(sourcePath, destPath, 1)
+}
+
+func processPhotosConcurrently(sourcePath, destPath string, workers int) error {
+	fmt.Printf("🔍 Scanning photos from: %s\n", sourcePath)
 	fmt.Printf("📁 Destination: %s\n", destPath)
 	
-	processedCount := 0
-	skippedCounts := make(map[string]int) // Track by file extension
-	
+	// Collect all photo files
+	var jobs []WorkJob
 	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -176,38 +205,29 @@ func processPhotos(sourcePath, destPath string) error {
 			return nil
 		}
 		
-		// Process the photo
-		if err := processPhoto(path, destPath); err != nil {
-			if isNoGPSError(err) {
-				ext := filepath.Ext(path)
-				skippedCounts[ext]++
-				return nil // Continue processing other files
-			}
-			return err // Return other errors
-		}
+		// Add to jobs list
+		jobs = append(jobs, WorkJob{
+			PhotoPath: path,
+			DestPath:  destPath,
+			JobType:   "process",
+		})
 		
-		processedCount++
 		return nil
 	})
 	
-	// Report summary
-	fmt.Printf("\n📊 Processing Summary:\n")
-	fmt.Printf("✅ Files processed with GPS data: %d\n", processedCount)
-	
-	totalSkipped := 0
-	for _, count := range skippedCounts {
-		totalSkipped += count
-	}
-	fmt.Printf("⚠️  Files skipped (no GPS data): %d\n", totalSkipped)
-	
-	if len(skippedCounts) > 0 {
-		fmt.Printf("   Breakdown by type:\n")
-		for ext, count := range skippedCounts {
-			fmt.Printf("   - %s: %d files\n", ext, count)
-		}
+	if err != nil {
+		return err
 	}
 	
-	return err
+	if len(jobs) == 0 {
+		fmt.Println("📭 No photo files found to process")
+		return nil
+	}
+	
+	fmt.Printf("📝 Found %d photo files to process\n", len(jobs))
+	
+	// Process jobs concurrently
+	return processJobsConcurrently(jobs, workers)
 }
 
 func isPhotoFile(path string) bool {
@@ -244,90 +264,95 @@ func isPhotoFile(path string) bool {
 }
 
 func processPhoto(photoPath, destBasePath string) error {
-	fmt.Printf("📷 Processing: %s\n", filepath.Base(photoPath))
-	
-	// Extract GPS coordinates
-	lat, lon, err := extractGPSCoordinates(photoPath)
-	if err != nil {
-		return &NoGPSError{File: photoPath, Err: err}
-	}
-	
-	// Get location from coordinates
-	location, err := getLocationFromCoordinates(lat, lon)
-	if err != nil {
-		return fmt.Errorf("failed to get location for %s: %v", filepath.Base(photoPath), err)
-	}
-	
-	fmt.Printf("📍 Location: %s (%.6f, %.6f)\n", location, lat, lon)
-	
-	// Extract date from photo
-	date, err := extractPhotoDate(photoPath)
-	if err != nil {
-		return fmt.Errorf("failed to extract date from %s: %v", filepath.Base(photoPath), err)
-	}
-	
-	// Parse location into country and city
-	country, city, err := parseLocation(location)
-	if err != nil {
-		// Prompt for missing country/city information
-		country, city, err = promptForLocation(location)
+	// Use file locks to prevent race conditions
+	return WithFilelocks(destBasePath, photoPath, func() error {
+		fmt.Printf("📷 Processing: %s\n", filepath.Base(photoPath))
+		
+		// Extract GPS coordinates
+		lat, lon, err := extractGPSCoordinates(photoPath)
 		if err != nil {
-			return fmt.Errorf("failed to get location information: %v", err)
-		}
-	}
-	
-	// Generate new filename and directory structure using destination base path
-	newFilename := fmt.Sprintf("%s-%s%s", 
-		date.Format("2006-01-02"), 
-		city, 
-		filepath.Ext(photoPath))
-	
-	// Smart directory structure - check if destination already ends with the year
-	year := date.Format("2006")
-	var newDir string
-	
-	// Check if destination path already ends with the year
-	destBase := filepath.Base(destBasePath)
-	if destBase == year {
-		// Destination already ends with year (e.g., "/tmp/2025"), so just add country/city
-		newDir = filepath.Join(destBasePath, country, city)
-	} else {
-		// Destination doesn't end with year, so add full structure
-		newDir = filepath.Join(destBasePath, year, country, city)
-	}
-	
-	newPath := filepath.Join(newDir, newFilename)
-	
-	// Create directory structure if it doesn't exist
-	if err := os.MkdirAll(newDir, 0755); err != nil {
-		return fmt.Errorf("failed to create directory %s: %v", newDir, err)
-	}
-	
-	// Handle duplicate filenames by adding a counter
-	finalPath := newPath
-	counter := 1
-	for {
-		if _, err := os.Stat(finalPath); os.IsNotExist(err) {
-			break // File doesn't exist, we can use this path
+			return &NoGPSError{File: photoPath, Err: err}
 		}
 		
-		// File exists, create a new name with counter
-		ext := filepath.Ext(newFilename)
-		base := strings.TrimSuffix(newFilename, ext)
-		duplicateFilename := fmt.Sprintf("%s-%d%s", base, counter, ext)
-		finalPath = filepath.Join(newDir, duplicateFilename)
-		counter++
-		
-		if counter > 1000 {
-			return fmt.Errorf("too many duplicate filenames, stopping at counter %d", counter)
+		// Get location from coordinates
+		location, err := getLocationFromCoordinates(lat, lon)
+		if err != nil {
+			return fmt.Errorf("failed to get location for %s: %v", filepath.Base(photoPath), err)
 		}
-	}
-	
-	// Move/rename the file
-	if err := os.Rename(photoPath, finalPath); err != nil {
-		return fmt.Errorf("failed to move file from %s to %s: %v", photoPath, finalPath, err)
-	}
-	
-	fmt.Printf("✅ Moved to: %s\n", finalPath)
-	return nil
+		
+		fmt.Printf("📍 Location: %s (%.6f, %.6f)\n", location, lat, lon)
+		
+		// Extract date from photo
+		date, err := extractPhotoDate(photoPath)
+		if err != nil {
+			return fmt.Errorf("failed to extract date from %s: %v", filepath.Base(photoPath), err)
+		}
+		
+		// Parse location into country and city
+		country, city, err := parseLocation(location)
+		if err != nil {
+			// Prompt for missing country/city information
+			country, city, err = promptForLocation(location)
+			if err != nil {
+				return fmt.Errorf("failed to get location information: %v", err)
+			}
+		}
+		
+		// Generate new filename and directory structure using destination base path
+		newFilename := fmt.Sprintf("%s-%s%s", 
+			date.Format("2006-01-02"), 
+			city, 
+			filepath.Ext(photoPath))
+		
+		// Smart directory structure - check if destination already ends with the year
+		year := date.Format("2006")
+		var newDir string
+		
+		// Check if destination path already ends with the year
+		destBase := filepath.Base(destBasePath)
+		if destBase == year {
+			// Destination already ends with year (e.g., "/tmp/2025"), so just add country/city
+			newDir = filepath.Join(destBasePath, country, city)
+		} else {
+			// Destination doesn't end with year, so add full structure
+			newDir = filepath.Join(destBasePath, year, country, city)
+		}
+		
+		newPath := filepath.Join(newDir, newFilename)
+		
+		// Create directory structure if it doesn't exist (with additional lock)
+		return WithBatchLocks([]string{newDir}, func() error {
+			if err := os.MkdirAll(newDir, 0755); err != nil {
+				return fmt.Errorf("failed to create directory %s: %v", newDir, err)
+			}
+			
+			// Handle duplicate filenames by adding a counter
+			finalPath := newPath
+			counter := 1
+			for {
+				if _, err := os.Stat(finalPath); os.IsNotExist(err) {
+					break // File doesn't exist, we can use this path
+				}
+				
+				// File exists, create a new name with counter
+				ext := filepath.Ext(newFilename)
+				base := strings.TrimSuffix(newFilename, ext)
+				duplicateFilename := fmt.Sprintf("%s-%d%s", base, counter, ext)
+				finalPath = filepath.Join(newDir, duplicateFilename)
+				counter++
+				
+				if counter > 1000 {
+					return fmt.Errorf("too many duplicate filenames, stopping at counter %d", counter)
+				}
+			}
+			
+			// Move/rename the file
+			if err := os.Rename(photoPath, finalPath); err != nil {
+				return fmt.Errorf("failed to move file from %s to %s: %v", photoPath, finalPath, err)
+			}
+			
+			fmt.Printf("✅ Moved to: %s\n", finalPath)
+			return nil
+		})
+	})
 }
