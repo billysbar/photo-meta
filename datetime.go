@@ -22,13 +22,17 @@ func NewDateLocationDB() *DateLocationDB {
 }
 
 // processDateTimeMatching handles the datetime command workflow
-func processDateTimeMatching(sourcePath, destPath string, dryRun bool, showProgress bool) error {
+func processDateTimeMatching(sourcePath, destPath string, dryRun bool, dryRun1 bool, showProgress bool) error {
 	fmt.Printf("🕒 DateTime Matching Mode\n")
 	fmt.Printf("🔍 Source: %s\n", sourcePath)
 	fmt.Printf("📁 Destination: %s\n", destPath)
 	
 	if dryRun {
-		fmt.Println("🔍 DRY RUN MODE - No files will be moved")
+		if dryRun1 {
+			fmt.Println("🔍 DRY RUN1 MODE - Sample only 1 file per type per directory")
+		} else {
+			fmt.Println("🔍 DRY RUN MODE - No files will be moved")
+		}
 	}
 	fmt.Println()
 
@@ -70,7 +74,7 @@ func processDateTimeMatching(sourcePath, destPath string, dryRun bool, showProgr
 
 	// Step 3: Process files in source path
 	fmt.Println("🔄 Step 3: Processing files in source path...")
-	return processFilesWithDateTimeMatching(sourcePath, destPath, db, dryRun, showProgress)
+	return processFilesWithDateTimeMatching(sourcePath, destPath, db, dryRun, dryRun1, showProgress)
 }
 
 // checkForGPSInSource scans source path for any files with GPS data
@@ -187,33 +191,53 @@ func extractDateLocationFromPath(filePath, basePath string) (string, string, err
 }
 
 // processFilesWithDateTimeMatching processes source files using datetime matching
-func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocationDB, dryRun bool, showProgress bool) error {
+func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocationDB, dryRun bool, dryRun1 bool, showProgress bool) error {
 	processedCount := 0
 	videoCount := 0
 	photoCount := 0
 	unmatchedFiles := []string{}
 
-	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
+	// Collect files to process
+	var filesToProcess []string
+	
+	if dryRun1 {
+		// Sample files for dry-run1 mode
+		var err error
+		filesToProcess, err = collectSampleFilesForDatetime(sourcePath)
 		if err != nil {
 			return err
 		}
-
-		// Skip directories
-		if info.IsDir() {
+		fmt.Printf("📋 Sampled %d files for datetime matching preview\n", len(filesToProcess))
+	} else {
+		// Collect all files
+		err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+			// Skip directories
+			if info.IsDir() {
+				return nil
+			}
+			// Check if it's a media file (photo or video)
+			if !isMediaFile(path) {
+				return nil
+			}
+			filesToProcess = append(filesToProcess, path)
 			return nil
+		})
+		if err != nil {
+			return err
 		}
-
-		// Check if it's a media file (photo or video)
-		if !isMediaFile(path) {
-			return nil
-		}
-
+	}
+	
+	// Process the collected files
+	for _, path := range filesToProcess {
 		// Extract date from filename
 		date, err := extractDateFromFilename(filepath.Base(path))
 		if err != nil {
 			fmt.Printf("🔍 DEBUG: %s - %v\n", filepath.Base(path), err)
 			unmatchedFiles = append(unmatchedFiles, path)
-			return nil
+			continue
 		}
 
 		// Look up location for this date
@@ -221,7 +245,7 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 		if !exists {
 			fmt.Printf("🔍 DEBUG: %s - date %s not found in database\n", filepath.Base(path), date)
 			unmatchedFiles = append(unmatchedFiles, path)
-			return nil
+			continue
 		}
 
 		// Interactive prompt for verification
@@ -232,7 +256,7 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 		//if !promptForConfirmation("Process this file? (y/n): ") {
 		//	fmt.Println("⏭️  Skipped by user")
 		//	unmatchedFiles = append(unmatchedFiles, path)
-		//	return nil
+		//	continue
 		//}
 
 		// Move file to matched location
@@ -246,8 +270,7 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 		} else {
 			photoCount++
 		}
-		return nil
-	})
+	}
 
 	// Summary
 	fmt.Printf("\n📊 DateTime Processing Summary:\n")
@@ -263,7 +286,7 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 		}
 	}
 
-	return err
+	return nil
 }
 
 // extractDateFromFilename extracts date from filename patterns
@@ -399,4 +422,68 @@ func promptForConfirmation(prompt string) bool {
 			fmt.Println("Please enter 'y' or 'n'")
 		}
 	}
+}
+
+// collectSampleFilesForDatetime collects sample files for datetime dry-run1 mode
+func collectSampleFilesForDatetime(sourcePath string) ([]string, error) {
+	// Map to track files by directory and type
+	dirFiles := make(map[string]map[string][]string) // directory -> {photos: [], videos: []}
+	
+	// Collect all files grouped by directory and type
+	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		
+		// Skip directories
+		if info.IsDir() {
+			return nil
+		}
+		
+		// Check if it's a media file
+		if !isMediaFile(path) {
+			return nil
+		}
+		
+		// Get directory path
+		dir := filepath.Dir(path)
+		
+		// Initialize directory map if needed
+		if dirFiles[dir] == nil {
+			dirFiles[dir] = map[string][]string{
+				"photos": []string{},
+				"videos": []string{},
+			}
+		}
+		
+		// Add to appropriate type list
+		if isVideoFile(path) {
+			dirFiles[dir]["videos"] = append(dirFiles[dir]["videos"], path)
+		} else {
+			dirFiles[dir]["photos"] = append(dirFiles[dir]["photos"], path)
+		}
+		
+		return nil
+	})
+	
+	if err != nil {
+		return nil, err
+	}
+	
+	// Sample files: 1 photo and 1 video per directory (if available)
+	var sampleFiles []string
+	
+	for _, files := range dirFiles {
+		// Sample 1 photo per directory
+		if len(files["photos"]) > 0 {
+			sampleFiles = append(sampleFiles, files["photos"][0])
+		}
+		
+		// Sample 1 video per directory
+		if len(files["videos"]) > 0 {
+			sampleFiles = append(sampleFiles, files["videos"][0])
+		}
+	}
+	
+	return sampleFiles, nil
 }

@@ -39,11 +39,15 @@ const (
 )
 
 // processClean handles the clean command workflow
-func processClean(targetPath string, dryRun bool, verbose bool, workers int, showProgress bool) error {
+func processClean(targetPath string, dryRun bool, dryRun1 bool, verbose bool, workers int, showProgress bool) error {
 	fmt.Printf("🧹 Clean Mode - Duplicate Detection and Removal\n")
 	fmt.Printf("📁 Target: %s\n", targetPath)
 	if dryRun {
-		fmt.Println("🔍 DRY RUN MODE - No files will be deleted")
+		if dryRun1 {
+			fmt.Println("🔍 DRY RUN1 MODE - Sample analysis of duplicate files")
+		} else {
+			fmt.Println("🔍 DRY RUN MODE - No files will be deleted")
+		}
 	}
 	fmt.Println()
 
@@ -58,7 +62,24 @@ func processClean(targetPath string, dryRun bool, verbose bool, workers int, sho
 		return nil
 	}
 
-	// Report duplicates
+	// Sample duplicate groups if dry-run1 mode
+	if dryRun1 && len(duplicateGroups) > 0 {
+		// For dry-run1, show only first 3 duplicate groups as sample
+		maxGroups := 3
+		if len(duplicateGroups) < maxGroups {
+			maxGroups = len(duplicateGroups)
+		}
+		sampleGroups := duplicateGroups[:maxGroups]
+		fmt.Printf("📋 Showing sample of %d duplicate groups (total: %d groups)\n", len(sampleGroups), len(duplicateGroups))
+		
+		// Report sample duplicates
+		reportDuplicates(sampleGroups, verbose)
+		
+		// Show summary of what would be removed from all groups
+		return reportDryRun1Summary(duplicateGroups, DuplicateKeepBestStructure)
+	}
+
+	// Report all duplicates (normal mode)
 	reportDuplicates(duplicateGroups, verbose)
 
 	// Remove duplicates using intelligent structure-based selection
@@ -473,4 +494,34 @@ func isNumeric(s string) bool {
 		}
 	}
 	return true
+}
+
+// reportDryRun1Summary provides a summary of what would be cleaned in dry-run1 mode
+func reportDryRun1Summary(duplicateGroups []DuplicateGroup, action DuplicateAction) error {
+	totalFiles := 0
+	totalWouldRemove := 0
+	totalSpaceSaved := int64(0)
+	
+	// Count total files and calculate what would be removed
+	for _, group := range duplicateGroups {
+		totalFiles += len(group.Files)
+		
+		// Count files that would be removed (all except the one we keep)
+		filesToRemove := len(group.Files) - 1
+		totalWouldRemove += filesToRemove
+		
+		// Calculate space that would be saved
+		spaceSaved := group.Size * int64(filesToRemove)
+		totalSpaceSaved += spaceSaved
+	}
+	
+	fmt.Printf("\n📊 === Dry-Run1 Summary ===\n")
+	fmt.Printf("Total duplicate groups found: %d\n", len(duplicateGroups))
+	fmt.Printf("Total files in duplicate groups: %d\n", totalFiles)
+	fmt.Printf("Files that would be removed: %d\n", totalWouldRemove)
+	fmt.Printf("Space that would be saved: %s\n", formatFileSize(totalSpaceSaved))
+	fmt.Printf("Strategy: %s\n", getDuplicateActionDescription(action))
+	fmt.Printf("\n💡 Run with --dry-run to see full details or without --dry-run to actually clean\n")
+	
+	return nil
 }

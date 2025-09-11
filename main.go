@@ -35,7 +35,7 @@ func main() {
 	switch command {
 	case "process":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run] [--progress]")
+			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 			os.Exit(1)
 		}
 		
@@ -45,9 +45,9 @@ func main() {
 		// Check for incorrectly formatted dry-run arguments
 		for i := 4; i < len(os.Args); i++ {
 			arg := strings.ToLower(os.Args[i])
-			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" {
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" && arg != "--dry-run1" {
 				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
-				fmt.Println("Use '--dry-run' instead")
+				fmt.Println("Use '--dry-run' or '--dry-run1' instead")
 				os.Exit(1)
 			}
 		}
@@ -55,6 +55,7 @@ func main() {
 		// Parse optional flags
 		workers := 4 // Default worker count
 		dryRun := false
+		dryRun1 := false
 		showProgress := true // Default to showing progress
 		for i := 4; i < len(os.Args); i++ {
 			switch os.Args[i] {
@@ -67,6 +68,9 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
+			case "--dry-run1":
+				dryRun1 = true
+				dryRun = true // dry-run1 implies dry-run
 			case "--progress":
 				showProgress = true
 			case "--no-progress":
@@ -85,13 +89,13 @@ func main() {
 		}
 		
 		// Process photos concurrently
-		if err := processPhotosConcurrently(sourcePath, destPath, workers, dryRun, showProgress); err != nil {
+		if err := processPhotosConcurrently(sourcePath, destPath, workers, dryRun, dryRun1, showProgress); err != nil {
 			log.Fatal(err)
 		}
 		
 	case "datetime":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--progress]")
+			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 			os.Exit(1)
 		}
 		
@@ -101,9 +105,9 @@ func main() {
 		// Check for incorrectly formatted dry-run arguments
 		for i := 4; i < len(os.Args); i++ {
 			arg := strings.ToLower(os.Args[i])
-			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" {
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" && arg != "--dry-run1" {
 				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
-				fmt.Println("Use '--dry-run' instead")
+				fmt.Println("Use '--dry-run' or '--dry-run1' instead")
 				os.Exit(1)
 			}
 		}
@@ -111,6 +115,7 @@ func main() {
 		// Parse optional flags
 		workers := 4 // Default worker count
 		dryRun := false
+		dryRun1 := false
 		showProgress := true // Default to showing progress
 		for i := 4; i < len(os.Args); i++ {
 			switch os.Args[i] {
@@ -123,6 +128,9 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
+			case "--dry-run1":
+				dryRun1 = true
+				dryRun = true // dry-run1 implies dry-run
 			case "--progress":
 				showProgress = true
 			case "--no-progress":
@@ -141,13 +149,13 @@ func main() {
 		}
 		
 		// Process datetime matching
-		if err := processDateTimeMatching(sourcePath, destPath, dryRun, showProgress); err != nil {
+		if err := processDateTimeMatching(sourcePath, destPath, dryRun, dryRun1, showProgress); err != nil {
 			log.Fatal(err)
 		}
 		
 	case "clean":
 		if len(os.Args) < 3 {
-			fmt.Println("Usage: ./photo-metadata-editor clean /target/path [--dry-run] [--verbose] [--workers N] [--progress]")
+			fmt.Println("Usage: ./photo-metadata-editor clean /target/path [--dry-run] [--dry-run1] [--verbose] [--workers N] [--progress]")
 			os.Exit(1)
 		}
 		
@@ -161,15 +169,16 @@ func main() {
 		// Check for incorrectly formatted dry-run arguments
 		for i := 3; i < len(os.Args); i++ {
 			arg := strings.ToLower(os.Args[i])
-			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" {
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" && arg != "--dry-run1" {
 				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
-				fmt.Println("Use '--dry-run' instead")
+				fmt.Println("Use '--dry-run' or '--dry-run1' instead")
 				os.Exit(1)
 			}
 		}
 		
 		// Parse optional flags
 		dryRun := false
+		dryRun1 := false
 		verbose := false
 		workers := 4 // Default worker count
 		showProgress := true // Default to showing progress (unless verbose)
@@ -177,6 +186,9 @@ func main() {
 			switch os.Args[i] {
 			case "--dry-run":
 				dryRun = true
+			case "--dry-run1":
+				dryRun1 = true
+				dryRun = true // dry-run1 implies dry-run
 			case "--verbose":
 				verbose = true
 				showProgress = false // Disable progress in verbose mode
@@ -195,7 +207,67 @@ func main() {
 		}
 		
 		// Process clean (duplicate removal)
-		if err := processClean(targetPath, dryRun, verbose, workers, showProgress); err != nil {
+		if err := processClean(targetPath, dryRun, dryRun1, verbose, workers, showProgress); err != nil {
+			log.Fatal(err)
+		}
+		
+	case "merge":
+		if len(os.Args) < 4 {
+			fmt.Println("Usage: ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
+			os.Exit(1)
+		}
+		
+		sourcePath := os.Args[2]
+		targetPath := os.Args[3]
+		
+		// Check for incorrectly formatted dry-run arguments
+		for i := 4; i < len(os.Args); i++ {
+			arg := strings.ToLower(os.Args[i])
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" && arg != "--dry-run1" {
+				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
+				fmt.Println("Use '--dry-run' or '--dry-run1' instead")
+				os.Exit(1)
+			}
+		}
+		
+		// Parse optional flags
+		workers := 4 // Default worker count
+		dryRun := false
+		dryRun1 := false
+		showProgress := true // Default to showing progress
+		for i := 4; i < len(os.Args); i++ {
+			switch os.Args[i] {
+			case "--workers":
+				if i+1 < len(os.Args) {
+					if _, err := fmt.Sscanf(os.Args[i+1], "%d", &workers); err != nil {
+						log.Fatalf("Invalid worker count: %s", os.Args[i+1])
+					}
+					i++ // Skip the next argument since it's the worker count
+				}
+			case "--dry-run":
+				dryRun = true
+			case "--dry-run1":
+				dryRun1 = true
+				dryRun = true // dry-run1 implies dry-run
+			case "--progress":
+				showProgress = true
+			case "--no-progress":
+				showProgress = false
+			}
+		}
+		
+		// Check if source path exists
+		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
+			log.Fatalf("Source path does not exist: %s", sourcePath)
+		}
+		
+		// Check if target path exists
+		if _, err := os.Stat(targetPath); os.IsNotExist(err) {
+			log.Fatalf("Target path does not exist: %s", targetPath)
+		}
+		
+		// Process merge
+		if err := processMerge(sourcePath, targetPath, workers, dryRun, dryRun1, showProgress); err != nil {
 			log.Fatal(err)
 		}
 		
@@ -209,9 +281,10 @@ func showUsage() {
 	fmt.Println("📸 Photo Metadata Editor - High Performance Concurrent Version")
 	fmt.Println()
 	fmt.Println("Commands:")
-	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run] [--progress]")
-	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--progress]")
-	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--verbose] [--workers N] [--progress]")
+	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
+	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
+	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--dry-run1] [--verbose] [--workers N] [--progress]")
+	fmt.Println("  ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 	fmt.Println()
 	fmt.Println("Performance Options:")
 	fmt.Println("  --workers N    Number of concurrent workers (1-16, default: 4)")
@@ -226,6 +299,7 @@ func showUsage() {
 	fmt.Println("  - 📊 Enhanced progress bars with visual indicators and ETA")
 	fmt.Println("  - ⏹️  Graceful cancellation (Ctrl+C) with cleanup")
 	fmt.Println("  - 🔍 --dry-run mode for safe preview without moving files")
+	fmt.Println("  - 🔍 --dry-run1 mode for quick overview (1 file per type per directory)")
 	fmt.Println("  - 📍 Extracts GPS location data from photos and videos")
 	fmt.Println("  - 📁 Photos organized in YEAR/COUNTRY/CITY structure")
 	fmt.Println("  - 🎥 Videos organized in VIDEO-FILES/YEAR/COUNTRY/CITY structure")
@@ -235,6 +309,7 @@ func showUsage() {
 	fmt.Println("  - 🔄 Concurrent date-based file matching for photos and videos")
 	fmt.Println("  - 📊 Enhanced progress bars with visual feedback")
 	fmt.Println("  - 🔍 --dry-run mode for safe preview without moving files")
+	fmt.Println("  - 🔍 --dry-run1 mode for quick overview (1 file per type per directory)")
 	fmt.Println("  - 🗃️  Uses processed photos as location database")
 	fmt.Println("  - 🎥 Video files organized in VIDEO-FILES/YYYY/COUNTRY/CITY")
 	fmt.Println("  - 📷 Photo files placed in regular YYYY/COUNTRY/CITY structure")
@@ -246,7 +321,20 @@ func showUsage() {
 	fmt.Println("  - 🔒 Safe concurrent duplicate removal")
 	fmt.Println("  - 📊 Enhanced progress bars (disabled in --verbose mode)")
 	fmt.Println("  - 🔍 --dry-run mode for safe preview")
+	fmt.Println("  - 🔍 --dry-run1 mode for quick summary (samples first 3 duplicate groups)")
 	fmt.Println("  - 📝 --verbose mode for detailed logging")
+	fmt.Println()
+	fmt.Println("Merge Features:")
+	fmt.Println("  - 🔀 Merge photos from source into target using YEAR/COUNTRY/CITY structure")
+	fmt.Println("  - 🚀 Concurrent processing with configurable worker pools")
+	fmt.Println("  - 📊 Enhanced progress bars with visual feedback")
+	fmt.Println("  - 🔍 --dry-run mode for safe preview without copying files")
+	fmt.Println("  - 🔍 --dry-run1 mode for quick overview (1 file per type per directory)")
+	fmt.Println("  - 📍 GPS-based location detection or intelligent inference")
+	fmt.Println("  - 🔄 Smart duplicate detection to avoid overwriting existing files")
+	fmt.Println("  - 🎥 Videos organized in VIDEO-FILES/YEAR/COUNTRY/CITY structure")
+	fmt.Println("  - 📷 Photos organized in YEAR/COUNTRY/CITY structure")
+	fmt.Println("  - 💾 Copies files (preserves originals in source)")
 	fmt.Println()
 	fmt.Println("Performance Tips:")
 	fmt.Println("  - Use --workers 8-16 for large photo collections")
@@ -257,45 +345,57 @@ func showUsage() {
 }
 
 func processPhotos(sourcePath, destPath string) error {
-	return processPhotosConcurrently(sourcePath, destPath, 1, false, true)
+	return processPhotosConcurrently(sourcePath, destPath, 1, false, false, true)
 }
 
-func processPhotosConcurrently(sourcePath, destPath string, workers int, dryRun bool, showProgress bool) error {
+func processPhotosConcurrently(sourcePath, destPath string, workers int, dryRun bool, dryRun1 bool, showProgress bool) error {
 	fmt.Printf("🔍 Scanning media files from: %s\n", sourcePath)
 	fmt.Printf("📁 Destination: %s\n", destPath)
 	
 	if dryRun {
-		fmt.Println("🔍 DRY RUN MODE - No files will be moved")
+		if dryRun1 {
+			fmt.Println("🔍 DRY RUN1 MODE - Sample only 1 file per type per directory")
+		} else {
+			fmt.Println("🔍 DRY RUN MODE - No files will be moved")
+		}
 		fmt.Println()
 	}
 	
 	// Collect all media files
 	var jobs []WorkJob
-	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		
-		// Skip directories
-		if info.IsDir() {
+	var err error
+	
+	if dryRun1 {
+		// For dry-run1, sample 1 photo and 1 video per directory
+		jobs, err = collectSampleFiles(sourcePath, destPath, dryRun)
+	} else {
+		// Normal collection - all files
+		err = filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+			
+			// Skip directories
+			if info.IsDir() {
+				return nil
+			}
+			
+			// Check if it's a media file (photo or video)
+			if !isMediaFile(path) {
+				return nil
+			}
+			
+			// Add to jobs list
+			jobs = append(jobs, WorkJob{
+				PhotoPath: path,
+				DestPath:  destPath,
+				JobType:   "process",
+				DryRun:    dryRun,
+			})
+			
 			return nil
-		}
-		
-		// Check if it's a media file (photo or video)
-		if !isMediaFile(path) {
-			return nil
-		}
-		
-		// Add to jobs list
-		jobs = append(jobs, WorkJob{
-			PhotoPath: path,
-			DestPath:  destPath,
-			JobType:   "process",
-			DryRun:    dryRun,
 		})
-		
-		return nil
-	})
+	}
 	
 	if err != nil {
 		return err
@@ -569,4 +669,92 @@ func processMediaFileInternal(mediaPath, destBasePath string, dryRun bool) error
 		}
 		return nil
 	})
+}
+
+// collectSampleFiles collects a sample of files for dry-run1 mode
+// Samples 1 photo and 1 video per directory to provide an overview
+func collectSampleFiles(sourcePath, destPath string, dryRun bool) ([]WorkJob, error) {
+	// Map to track files by directory and type
+	dirFiles := make(map[string]map[string][]string) // directory -> {photos: [], videos: []}
+	
+	// Collect all files grouped by directory and type
+	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		
+		// Skip directories
+		if info.IsDir() {
+			return nil
+		}
+		
+		// Check if it's a media file
+		if !isMediaFile(path) {
+			return nil
+		}
+		
+		// Get directory path
+		dir := filepath.Dir(path)
+		
+		// Initialize directory map if needed
+		if dirFiles[dir] == nil {
+			dirFiles[dir] = map[string][]string{
+				"photos": []string{},
+				"videos": []string{},
+			}
+		}
+		
+		// Add to appropriate type list
+		if isVideoFile(path) {
+			dirFiles[dir]["videos"] = append(dirFiles[dir]["videos"], path)
+		} else {
+			dirFiles[dir]["photos"] = append(dirFiles[dir]["photos"], path)
+		}
+		
+		return nil
+	})
+	
+	if err != nil {
+		return nil, err
+	}
+	
+	// Sample files: 1 photo and 1 video per directory (if available)
+	var jobs []WorkJob
+	totalPhotos := 0
+	totalVideos := 0
+	directoriesWithPhotos := 0
+	directoriesWithVideos := 0
+	
+	for _, files := range dirFiles {
+		// Sample 1 photo per directory
+		if len(files["photos"]) > 0 {
+			photoPath := files["photos"][0] // Take first photo
+			jobs = append(jobs, WorkJob{
+				PhotoPath: photoPath,
+				DestPath:  destPath,
+				JobType:   "process",
+				DryRun:    dryRun,
+			})
+			totalPhotos++
+			directoriesWithPhotos++
+		}
+		
+		// Sample 1 video per directory
+		if len(files["videos"]) > 0 {
+			videoPath := files["videos"][0] // Take first video
+			jobs = append(jobs, WorkJob{
+				PhotoPath: videoPath,
+				DestPath:  destPath,
+				JobType:   "process",
+				DryRun:    dryRun,
+			})
+			totalVideos++
+			directoriesWithVideos++
+		}
+	}
+	
+	fmt.Printf("📋 Sampled %d files from %d directories (%d photos from %d dirs, %d videos from %d dirs)\n", 
+		len(jobs), len(dirFiles), totalPhotos, directoriesWithPhotos, totalVideos, directoriesWithVideos)
+	
+	return jobs, nil
 }

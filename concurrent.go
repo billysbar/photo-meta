@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"strings"
 	"sync"
 	"time"
 )
@@ -330,6 +331,34 @@ func processJob(job WorkJob, ctx context.Context) WorkResult {
 		// Implement clean logic here  
 		result.Message = "Clean operation not yet implemented"
 		result.Success = false
+		
+	case "merge":
+		err = processMergeFile(job.PhotoPath, job.DestPath, job.DryRun)
+		if err != nil {
+			// Check if it's a "file already exists" case
+			if strings.Contains(err.Error(), "already exists") {
+				result.Message = fmt.Sprintf("File already exists in target")
+				result.Success = true // Still count as success
+			} else {
+				result.Error = err
+			}
+		} else {
+			result.Success = true
+			// Determine file type for success messages
+			if isVideoFile(job.PhotoPath) {
+				if job.DryRun {
+					result.Message = "Video would be merged (dry run)"
+				} else {
+					result.Message = "Video merged successfully"
+				}
+			} else {
+				if job.DryRun {
+					result.Message = "Photo would be merged (dry run)"
+				} else {
+					result.Message = "Photo merged successfully"
+				}
+			}
+		}
 		
 	default:
 		result.Error = fmt.Errorf("unknown job type: %s", job.JobType)
