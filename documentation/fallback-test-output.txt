@@ -1,0 +1,142 @@
+=== FALLBACK COMMAND COMPREHENSIVE TEST ===
+Date: Thu 11 Sep 2025 17:13:58 BST
+Source: /tmp/photos
+Destination: /tmp/dest
+
+=== 1. Testing fallback command --dry-run1 mode (sample preview) ===
+
+📅 Fallback Organization Mode
+🔍 Source: /tmp/photos
+📁 Destination: /tmp/dest
+🔍 DRY RUN1 MODE - Sample only 1 file per type per subdirectory
+
+🔄 Processing files for fallback organization...
+📋 Sampled 8 files for fallback organization preview
+📅 File: 20250902200725.MOV -> Date: 2025-09-02 -> Location: 2025/September
+🎥 [DRY RUN] Processing video file: 20250902200725.MOV
+✅ [DRY RUN] Video would be moved to: /tmp/dest/VIDEO-FILES/2025/September/2025-09-02.MOV
+📅 File: 20250831054410.HEIC -> Date: 2025-08-31 -> Location: 2025/August
+📷 [DRY RUN] Processing photo file: 20250831054410.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2025/August/2025-08-31.HEIC
+📅 File: 20250831130611.MOV -> Date: 2025-08-31 -> Location: 2025/August
+🎥 [DRY RUN] Processing video file: 20250831130611.MOV
+✅ [DRY RUN] Video would be moved to: /tmp/dest/VIDEO-FILES/2025/August/2025-08-31.MOV
+📅 File: 03-03-2009-DSCF4300.JPG -> Date: 2009-03-03 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 03-03-2009-DSCF4300.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-03.JPG
+📅 File: 03-10-2018-IMG_20181003_184119.jpg -> Date: 2018-10-03 -> Location: 2018/October
+📷 [DRY RUN] Processing photo file: 03-10-2018-IMG_20181003_184119.jpg
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2018/October/2018-10-03.jpg
+📅 File: 01-04-2020-IMG_5536.JPG -> Date: 2020-04-01 -> Location: 2020/April
+📷 [DRY RUN] Processing photo file: 01-04-2020-IMG_5536.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2020/April/2020-04-01.JPG
+📅 File: 09-03-2020-IMG-20200309-WA0000.jpeg -> Date: 2020-03-09 -> Location: 2020/March
+📷 [DRY RUN] Processing photo file: 09-03-2020-IMG-20200309-WA0000.jpeg
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2020/March/2020-03-09.jpeg
+📅 File: 20250831120839.HEIC -> Date: 2025-08-31 -> Location: 2025/August
+📷 [DRY RUN] Processing photo file: 20250831120839.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2025/August/2025-08-31.HEIC
+
+📊 Fallback Processing Summary:
+✅ Total files processed: 8
+📷 Photos processed: 6
+🎥 Videos processed: 2 (moved to VIDEO-FILES/)
+⚠️  Files unmatched: 0
+
+=== 2. Testing fallback command --dry-run mode (full preview) ===
+
+📅 Fallback Organization Mode
+🔍 Source: /tmp/photos
+📁 Destination: /tmp/dest
+🔍 DRY RUN MODE - No files will be moved
+
+🔄 Processing files for fallback organization...
+📅 File: 03-03-2009-DSCF4300.JPG -> Date: 2009-03-03 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 03-03-2009-DSCF4300.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-03.JPG
+📅 File: 03-03-2009-DSCF4301.JPG -> Date: 2009-03-03 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 03-03-2009-DSCF4301.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-03.JPG
+📅 File: 08-03-2009-Dsc 2228.jpg -> Date: 2009-03-08 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 08-03-2009-Dsc 2228.jpg
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-08.jpg
+📅 File: 08-03-2009-Dsc 2229.jpg -> Date: 2009-03-08 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 08-03-2009-Dsc 2229.jpg
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-08.jpg
+📅 File: 08-03-2009-Dsc 2230.jpg -> Date: 2009-03-08 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 08-03-2009-Dsc 2230.jpg
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-08.jpg
+📅 File: 12-03-2009-DSCF4344.JPG -> Date: 2009-03-12 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 12-03-2009-DSCF4344.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-12.JPG
+📅 File: 12-03-2009-DSCF4346.JPG -> Date: 2009-03-12 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 12-03-2009-DSCF4346.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-12.JPG
+📅 File: 14-03-2009-P1010658.JPG -> Date: 2009-03-14 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 14-03-2009-P1010658.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-14.JPG
+📅 File: 14-03-2009-P1010659.JPG -> Date: 2009-03-14 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 14-03-2009-P1010659.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-14.JPG
+📅 File: 14-03-2009-P1010660.JPG -> Date: 2009-03-14 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 14-03-2009-P1010660.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-14.JPG
+📅 File: 14-03-2009-P1010661.JPG -> Date: 2009-03-14 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 14-03-2009-P1010661.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-14.JPG
+📅 File: 14-03-2009-P1010662.JPG -> Date: 2009-03-14 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 14-03-2009-P1010662.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-14.JPG
+📅 File: 14-03-2009-P1010663.JPG -> Date: 2009-03-14 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 14-03-2009-P1010663.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-14.JPG
+📅 File: 14-03-2009-P1010666.JPG -> Date: 2009-03-14 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 14-03-2009-P1010666.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/dest/2009/March/2009-03-14.JPG
+📅 File: 14-03-2009-P1010670.JPG -> Date: 2009-03-14 -> Location: 2009/March
+📷 [DRY RUN] Processing photo file: 14-03-2009-P1010670.JPG
+
+=== 3. Summary section of full dry-run ===
+
+✅ [DRY RUN] Video would be moved to: /tmp/dest/VIDEO-FILES/2025/September/2025-09-04.MP4
+📅 File: 20250904144834.MP4 -> Date: 2025-09-04 -> Location: 2025/September
+🎥 [DRY RUN] Processing video file: 20250904144834.MP4
+✅ [DRY RUN] Video would be moved to: /tmp/dest/VIDEO-FILES/2025/September/2025-09-04.MP4
+
+📊 Fallback Processing Summary:
+✅ Total files processed: 146
+📷 Photos processed: 141
+🎥 Videos processed: 5 (moved to VIDEO-FILES/)
+⚠️  Files unmatched: 0
+
+=== 4. Directory structure analysis ===
+Input directory structure:
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250901202923.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250905082547.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250831110432.JPG
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250904121036.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250831102228.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250831194137.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250904100025(1).HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250904100023.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250901192759.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250905134308.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250904130714.JPG
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250831054410.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250904121527.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250901140030.JPG
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250904130849.JPG
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250901083443.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250906095725.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250831110749.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250902192354.HEIC
+/tmp/photos/2025 Sept majorca/shani/jpeg/All/20250905134301.HEIC
+
+Expected output structure (examples):
+/tmp/dest/2009/March/2009-03-03.JPG
+/tmp/dest/2018/October/2018-10-10.JPG
+/tmp/dest/2020/April/2020-04-22.jpeg
+/tmp/dest/2025/September/2025-09-01.HEIC
+/tmp/dest/VIDEO-FILES/2025/September/2025-09-02.MOV
+
+=== TEST COMPLETED ===

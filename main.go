@@ -93,6 +93,9 @@ func main() {
 			log.Fatal(err)
 		}
 		
+		// Clean up empty directories after processing
+		cleanupEmptyDirectoriesIfNeeded("process", sourcePath, dryRun, -1) // -1 means always run cleanup
+		
 	case "fallback":
 		if len(os.Args) < 4 {
 			fmt.Println("Usage: ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
@@ -152,6 +155,9 @@ func main() {
 		if err := processFallbackOrganization(sourcePath, destPath, dryRun, dryRun1, showProgress); err != nil {
 			log.Fatal(err)
 		}
+		
+		// Clean up empty directories after fallback processing
+		cleanupEmptyDirectoriesIfNeeded("fallback", sourcePath, dryRun, -1)
 		
 	case "datetime":
 		if len(os.Args) < 4 {
@@ -213,6 +219,9 @@ func main() {
 			log.Fatal(err)
 		}
 		
+		// Clean up empty directories after datetime processing
+		cleanupEmptyDirectoriesIfNeeded("datetime", sourcePath, dryRun, -1)
+		
 	case "clean":
 		if len(os.Args) < 3 {
 			fmt.Println("Usage: ./photo-metadata-editor clean /target/path [--dry-run] [--dry-run1] [--verbose] [--workers N] [--progress]")
@@ -270,6 +279,9 @@ func main() {
 		if err := processClean(targetPath, dryRun, dryRun1, verbose, workers, showProgress); err != nil {
 			log.Fatal(err)
 		}
+		
+		// Clean up empty directories after cleaning
+		cleanupEmptyDirectoriesIfNeeded("clean", targetPath, dryRun, -1)
 		
 	case "merge":
 		if len(os.Args) < 4 {
