@@ -182,9 +182,65 @@ func (pt *ProgressTracker) FormatProgress() string {
 		elapsed.Round(time.Second), etaStr)
 }
 
+// FormatProgressBar returns a formatted progress bar like PhotoXX
+func (pt *ProgressTracker) FormatProgressBar() string {
+	total, completed, failed, skipped, elapsed := pt.GetStats()
+	
+	percentage := 0.0
+	if total > 0 {
+		percentage = float64(completed+skipped) / float64(total) * 100
+	}
+	
+	// Create progress bar (40 characters wide)
+	barWidth := 40
+	filledWidth := int(float64(barWidth) * percentage / 100)
+	bar := ""
+	for i := 0; i < barWidth; i++ {
+		if i < filledWidth {
+			bar += "█" // Filled character
+		} else {
+			bar += "░" // Empty character
+		}
+	}
+	
+	// Format numbers with commas for large counts
+	completedStr := formatNumber(completed + skipped)
+	totalStr := formatNumber(total)
+	
+	// Base progress line
+	progressLine := fmt.Sprintf("[%s] %s/%s (%.1f%%) | %v", 
+		bar, completedStr, totalStr, percentage, elapsed.Round(time.Second))
+	
+	// Add ETA if available
+	eta := pt.EstimateTimeRemaining()
+	if eta > 0 {
+		progressLine += fmt.Sprintf(" | ETA: %v", eta.Round(time.Second))
+	}
+	
+	// Add failure count if any
+	if failed > 0 {
+		progressLine += fmt.Sprintf(" | Failed: %d", failed)
+	}
+	
+	return progressLine
+}
+
+// formatNumber adds commas to large numbers
+func formatNumber(n int) string {
+	if n < 1000 {
+		return fmt.Sprintf("%d", n)
+	}
+	return fmt.Sprintf("%s,%03d", formatNumber(n/1000), n%1000)
+}
+
 // processJobsConcurrently processes jobs using a worker pool with cancellation support
 func processJobsConcurrently(jobs []WorkJob, numWorkers int) error {
-	return ProcessJobsWithCancellation(jobs, numWorkers)
+	return ProcessJobsWithCancellation(jobs, numWorkers, true)
+}
+
+// processJobsConcurrentlyWithProgress processes jobs with progress control
+func processJobsConcurrentlyWithProgress(jobs []WorkJob, numWorkers int, showProgress bool) error {
+	return ProcessJobsWithCancellation(jobs, numWorkers, showProgress)
 }
 
 // cancellableWorker processes jobs with cancellation support

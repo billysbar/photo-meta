@@ -39,7 +39,7 @@ const (
 )
 
 // processClean handles the clean command workflow
-func processClean(targetPath string, dryRun bool, verbose bool, workers int) error {
+func processClean(targetPath string, dryRun bool, verbose bool, workers int, showProgress bool) error {
 	fmt.Printf("🧹 Clean Mode - Duplicate Detection and Removal\n")
 	fmt.Printf("📁 Target: %s\n", targetPath)
 	if dryRun {

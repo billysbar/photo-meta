@@ -35,7 +35,7 @@ func main() {
 	switch command {
 	case "process":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run]")
+			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run] [--progress]")
 			os.Exit(1)
 		}
 		
@@ -55,6 +55,7 @@ func main() {
 		// Parse optional flags
 		workers := 4 // Default worker count
 		dryRun := false
+		showProgress := true // Default to showing progress
 		for i := 4; i < len(os.Args); i++ {
 			switch os.Args[i] {
 			case "--workers":
@@ -66,6 +67,10 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
+			case "--progress":
+				showProgress = true
+			case "--no-progress":
+				showProgress = false
 			}
 		}
 		
@@ -80,13 +85,13 @@ func main() {
 		}
 		
 		// Process photos concurrently
-		if err := processPhotosConcurrently(sourcePath, destPath, workers, dryRun); err != nil {
+		if err := processPhotosConcurrently(sourcePath, destPath, workers, dryRun, showProgress); err != nil {
 			log.Fatal(err)
 		}
 		
 	case "datetime":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run]")
+			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--progress]")
 			os.Exit(1)
 		}
 		
@@ -106,6 +111,7 @@ func main() {
 		// Parse optional flags
 		workers := 4 // Default worker count
 		dryRun := false
+		showProgress := true // Default to showing progress
 		for i := 4; i < len(os.Args); i++ {
 			switch os.Args[i] {
 			case "--workers":
@@ -117,6 +123,10 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
+			case "--progress":
+				showProgress = true
+			case "--no-progress":
+				showProgress = false
 			}
 		}
 		
@@ -131,13 +141,13 @@ func main() {
 		}
 		
 		// Process datetime matching
-		if err := processDateTimeMatching(sourcePath, destPath, dryRun); err != nil {
+		if err := processDateTimeMatching(sourcePath, destPath, dryRun, showProgress); err != nil {
 			log.Fatal(err)
 		}
 		
 	case "clean":
 		if len(os.Args) < 3 {
-			fmt.Println("Usage: ./photo-metadata-editor clean /target/path [--dry-run] [--verbose] [--workers N]")
+			fmt.Println("Usage: ./photo-metadata-editor clean /target/path [--dry-run] [--verbose] [--workers N] [--progress]")
 			os.Exit(1)
 		}
 		
@@ -162,12 +172,14 @@ func main() {
 		dryRun := false
 		verbose := false
 		workers := 4 // Default worker count
+		showProgress := true // Default to showing progress (unless verbose)
 		for i := 3; i < len(os.Args); i++ {
 			switch os.Args[i] {
 			case "--dry-run":
 				dryRun = true
 			case "--verbose":
 				verbose = true
+				showProgress = false // Disable progress in verbose mode
 			case "--workers":
 				if i+1 < len(os.Args) {
 					if _, err := fmt.Sscanf(os.Args[i+1], "%d", &workers); err != nil {
@@ -175,11 +187,15 @@ func main() {
 					}
 					i++ // Skip the next argument since it's the worker count
 				}
+			case "--progress":
+				showProgress = true
+			case "--no-progress":
+				showProgress = false
 			}
 		}
 		
 		// Process clean (duplicate removal)
-		if err := processClean(targetPath, dryRun, verbose, workers); err != nil {
+		if err := processClean(targetPath, dryRun, verbose, workers, showProgress); err != nil {
 			log.Fatal(err)
 		}
 		
@@ -193,19 +209,21 @@ func showUsage() {
 	fmt.Println("📸 Photo Metadata Editor - High Performance Concurrent Version")
 	fmt.Println()
 	fmt.Println("Commands:")
-	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run]")
-	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run]")
-	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--verbose] [--workers N]")
+	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run] [--progress]")
+	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--progress]")
+	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--verbose] [--workers N] [--progress]")
 	fmt.Println()
 	fmt.Println("Performance Options:")
 	fmt.Println("  --workers N    Number of concurrent workers (1-16, default: 4)")
 	fmt.Println("               Higher values process more files simultaneously")
 	fmt.Println("               Lower values reduce system load and memory usage")
+	fmt.Println("  --progress     Show enhanced progress bar (default: true)")
+	fmt.Println("  --no-progress  Disable progress bar display")
 	fmt.Println()
 	fmt.Println("Process Features:")
 	fmt.Println("  - 🚀 Concurrent processing with configurable worker pools")
 	fmt.Println("  - 🔒 Thread-safe file operations with intelligent locking")
-	fmt.Println("  - 📊 Real-time progress tracking with ETA calculations")
+	fmt.Println("  - 📊 Enhanced progress bars with visual indicators and ETA")
 	fmt.Println("  - ⏹️  Graceful cancellation (Ctrl+C) with cleanup")
 	fmt.Println("  - 🔍 --dry-run mode for safe preview without moving files")
 	fmt.Println("  - 📍 Extracts GPS location data from photos and videos")
@@ -215,7 +233,7 @@ func showUsage() {
 	fmt.Println()
 	fmt.Println("DateTime Features:")
 	fmt.Println("  - 🔄 Concurrent date-based file matching for photos and videos")
-	fmt.Println("  - 📊 Progress tracking for large datasets") 
+	fmt.Println("  - 📊 Enhanced progress bars with visual feedback")
 	fmt.Println("  - 🔍 --dry-run mode for safe preview without moving files")
 	fmt.Println("  - 🗃️  Uses processed photos as location database")
 	fmt.Println("  - 🎥 Video files organized in VIDEO-FILES/YYYY/COUNTRY/CITY")
@@ -226,6 +244,7 @@ func showUsage() {
 	fmt.Println("  - ⚡ High-speed duplicate detection using SHA-256")
 	fmt.Println("  - 🧠 Intelligent file prioritization")
 	fmt.Println("  - 🔒 Safe concurrent duplicate removal")
+	fmt.Println("  - 📊 Enhanced progress bars (disabled in --verbose mode)")
 	fmt.Println("  - 🔍 --dry-run mode for safe preview")
 	fmt.Println("  - 📝 --verbose mode for detailed logging")
 	fmt.Println()
@@ -238,10 +257,10 @@ func showUsage() {
 }
 
 func processPhotos(sourcePath, destPath string) error {
-	return processPhotosConcurrently(sourcePath, destPath, 1, false)
+	return processPhotosConcurrently(sourcePath, destPath, 1, false, true)
 }
 
-func processPhotosConcurrently(sourcePath, destPath string, workers int, dryRun bool) error {
+func processPhotosConcurrently(sourcePath, destPath string, workers int, dryRun bool, showProgress bool) error {
 	fmt.Printf("🔍 Scanning media files from: %s\n", sourcePath)
 	fmt.Printf("📁 Destination: %s\n", destPath)
 	
@@ -300,7 +319,7 @@ func processPhotosConcurrently(sourcePath, destPath string, workers int, dryRun 
 	fmt.Printf("📝 Found %d media files to process (%d photos, %d videos)\n", len(jobs), photoCount, videoCount)
 	
 	// Process jobs concurrently
-	return processJobsConcurrently(jobs, workers)
+	return processJobsConcurrentlyWithProgress(jobs, workers, showProgress)
 }
 
 func isPhotoFile(path string) bool {

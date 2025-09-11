@@ -22,7 +22,7 @@ func NewDateLocationDB() *DateLocationDB {
 }
 
 // processDateTimeMatching handles the datetime command workflow
-func processDateTimeMatching(sourcePath, destPath string, dryRun bool) error {
+func processDateTimeMatching(sourcePath, destPath string, dryRun bool, showProgress bool) error {
 	fmt.Printf("🕒 DateTime Matching Mode\n")
 	fmt.Printf("🔍 Source: %s\n", sourcePath)
 	fmt.Printf("📁 Destination: %s\n", destPath)
@@ -70,7 +70,7 @@ func processDateTimeMatching(sourcePath, destPath string, dryRun bool) error {
 
 	// Step 3: Process files in source path
 	fmt.Println("🔄 Step 3: Processing files in source path...")
-	return processFilesWithDateTimeMatching(sourcePath, destPath, db, dryRun)
+	return processFilesWithDateTimeMatching(sourcePath, destPath, db, dryRun, showProgress)
 }
 
 // checkForGPSInSource scans source path for any files with GPS data
@@ -187,7 +187,7 @@ func extractDateLocationFromPath(filePath, basePath string) (string, string, err
 }
 
 // processFilesWithDateTimeMatching processes source files using datetime matching
-func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocationDB, dryRun bool) error {
+func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocationDB, dryRun bool, showProgress bool) error {
 	processedCount := 0
 	videoCount := 0
 	photoCount := 0

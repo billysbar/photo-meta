@@ -151,8 +151,48 @@ func cancellableProgressReporter(progress *ProgressTracker, wg *sync.WaitGroup,
 	fmt.Printf("\r%s\n", finalMsg)
 }
 
+// cancellableProgressBarReporter displays enhanced progress bar updates
+func cancellableProgressBarReporter(progress *ProgressTracker, wg *sync.WaitGroup, 
+	cancelMgr *CancellationManager) {
+	defer wg.Done()
+	
+	ticker := time.NewTicker(500 * time.Millisecond)
+	defer ticker.Stop()
+	
+	lastUpdate := ""
+	
+	for !progress.IsComplete() && cancelMgr.ShouldContinue() {
+		select {
+		case <-ticker.C:
+			progressStr := progress.FormatProgressBar()
+			
+			// Add cancellation status if cancelled
+			if cancelMgr.IsCancelled() {
+				progressStr += " [CANCELLING...]"
+			}
+			
+			// Only update if progress changed to reduce terminal spam
+			if progressStr != lastUpdate {
+				fmt.Printf("\r%s", progressStr)
+				lastUpdate = progressStr
+			}
+			
+		case <-cancelMgr.Context().Done():
+			fmt.Printf("\r%s [CANCELLED]\n", progress.FormatProgressBar())
+			return
+		}
+	}
+	
+	// Final progress update
+	finalMsg := progress.FormatProgressBar()
+	if cancelMgr.IsCancelled() {
+		finalMsg += " [CANCELLED]"
+	}
+	fmt.Printf("\r%s\n", finalMsg)
+}
+
 // ProcessJobsWithCancellation processes jobs with full cancellation support
-func ProcessJobsWithCancellation(jobs []WorkJob, numWorkers int) error {
+func ProcessJobsWithCancellation(jobs []WorkJob, numWorkers int, showProgress bool) error {
 	// Validate worker count (1-16 workers)
 	if numWorkers < 1 {
 		numWorkers = 1
@@ -183,8 +223,10 @@ func ProcessJobsWithCancellation(jobs []WorkJob, numWorkers int) error {
 	
 	// Start progress reporter
 	var progressWg sync.WaitGroup
-	progressWg.Add(1)
-	go cancellableProgressReporter(progress, &progressWg, cancelMgr)
+	if showProgress {
+		progressWg.Add(1)
+		go cancellableProgressBarReporter(progress, &progressWg, cancelMgr)
+	}
 	
 	// Send jobs
 	go func() {
@@ -223,7 +265,9 @@ func ProcessJobsWithCancellation(jobs []WorkJob, numWorkers int) error {
 	case <-resultsComplete:
 		// Normal completion
 		cancelMgr.Wait()
-		progressWg.Wait()
+		if showProgress {
+			progressWg.Wait()
+		}
 		
 	case <-cancelMgr.Context().Done():
 		// Cancellation requested
@@ -233,7 +277,9 @@ func ProcessJobsWithCancellation(jobs []WorkJob, numWorkers int) error {
 		if err := signalHandler.GracefulShutdown(30 * time.Second); err != nil {
 			fmt.Printf("⚠️  %v\n", err)
 		}
-		progressWg.Wait()
+		if showProgress {
+			progressWg.Wait()
+		}
 	}
 	
 	// Print final summary
