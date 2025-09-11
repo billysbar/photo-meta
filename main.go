@@ -926,7 +926,7 @@ func processMediaFileInternal(mediaPath, destBasePath string, dryRun bool) error
 			city = "unknown-city"
 		} else {
 			// Prompt for missing country/city information
-			country, city, err = promptForLocation(location)
+			country, city, err = promptForLocation(location, mediaPath, lat, lon)
 			if err != nil {
 				return fmt.Errorf("failed to get location information: %v", err)
 			}

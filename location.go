@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
@@ -33,15 +34,24 @@ func parseLocation(location string) (country, city string, err error) {
 }
 
 // promptForLocation prompts the user for missing country/city information
-func promptForLocation(location string) (country, city string, err error) {
-	fmt.Printf("\n⚠️  Unable to determine country and city from location: %s\n", location)
-	fmt.Println("Please provide the missing information:")
+func promptForLocation(location, mediaPath string, lat, lon float64) (country, city string, err error) {
+	// Make the prompt very visible
+	fmt.Println("\n" + strings.Repeat("=", 80))
+	fmt.Println("🚨 USER INPUT REQUIRED - LOCATION INFORMATION NEEDED")
+	fmt.Println(strings.Repeat("=", 80))
+	
+	fmt.Printf("📁 File: %s\n", mediaPath)
+	fmt.Printf("📂 Directory: %s\n", filepath.Dir(mediaPath))
+	fmt.Printf("📍 GPS Location: %s\n", location)
+	fmt.Printf("🌐 Coordinates: %.6f, %.6f\n", lat, lon)
+	fmt.Println("\n❓ Unable to automatically determine country and city from this location.")
+	fmt.Println("💡 Please provide the missing information to continue processing:")
 	
 	reader := bufio.NewReader(os.Stdin)
 	
 	// Prompt for country
 	for {
-		fmt.Print("Country: ")
+		fmt.Print("\n🏳️  Country: ")
 		countryInput, err := reader.ReadString('\n')
 		if err != nil {
 			return "", "", fmt.Errorf("failed to read country input: %v", err)
@@ -53,12 +63,12 @@ func promptForLocation(location string) (country, city string, err error) {
 		country = strings.ToLower(strings.ReplaceAll(country, " ", "-"))
 			break
 		}
-		fmt.Println("⚠️  Country cannot be empty. Please try again.")
+		fmt.Println("❌ Country cannot be empty. Please provide a country name (e.g., 'spain', 'united-kingdom', 'france').")
 	}
 	
 	// Prompt for city
 	for {
-		fmt.Print("City: ")
+		fmt.Print("🏙️  City: ")
 		cityInput, err := reader.ReadString('\n')
 		if err != nil {
 			return "", "", fmt.Errorf("failed to read city input: %v", err)
@@ -70,9 +80,12 @@ func promptForLocation(location string) (country, city string, err error) {
 		city = strings.ToLower(strings.ReplaceAll(city, " ", "-"))
 			break
 		}
-		fmt.Println("⚠️  City cannot be empty. Please try again.")
+		fmt.Println("❌ City cannot be empty. Please provide a city name (e.g., 'madrid', 'london', 'paris').")
 	}
 	
-	fmt.Printf("✅ Using: %s, %s\n\n", city, country)
+	fmt.Println(strings.Repeat("=", 80))
+	fmt.Printf("✅ Using location: %s, %s\n", city, country)
+	fmt.Println("✅ Continuing with file processing...")
+	fmt.Println(strings.Repeat("=", 80) + "\n")
 	return country, city, nil
 }

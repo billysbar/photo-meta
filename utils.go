@@ -50,6 +50,9 @@ func anglicizeName(name string) string {
 		"españa":     "spain",
 		"italia":     "italy",
 		"österreich": "austria",
+		"states":     "united-states",
+		"republic":   "czech-republic",
+		"czechia":    "czech-republic",
 		
 		// Additional Asian locations
 		"ha-ni":       "hanoi",          

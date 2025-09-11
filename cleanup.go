@@ -158,24 +158,35 @@ func removeEmptyDirectoriesPass(basePath string) (int, error) {
 	return removedCount, nil
 }
 
-// isDirectoryEmpty checks if a directory contains no files or subdirectories
+// isDirectoryEmpty checks if a directory contains no image or video files
+// A directory is considered "empty" if it contains no media files, regardless of other files
 func isDirectoryEmpty(dirPath string) (bool, error) {
 	entries, err := os.ReadDir(dirPath)
 	if err != nil {
 		return false, err
 	}
 	
-	// Check if there are any entries
+	// Check if there are any media files (photos or videos)
 	for _, entry := range entries {
-		// Skip hidden files like .DS_Store unless they're the only thing
+		// Skip hidden files like .DS_Store
 		if strings.HasPrefix(entry.Name(), ".") {
 			continue
 		}
-		// If we find any non-hidden entry, directory is not empty
-		return false, nil
+		
+		// Skip directories - we only care about files
+		if entry.IsDir() {
+			continue
+		}
+		
+		// Check if this file is a media file (photo or video)
+		filePath := filepath.Join(dirPath, entry.Name())
+		if isMediaFile(filePath) {
+			// Found a media file, directory is not empty
+			return false, nil
+		}
 	}
 	
-	// Directory is empty or only contains hidden files
+	// Directory is empty (contains no media files)
 	return true, nil
 }
 
