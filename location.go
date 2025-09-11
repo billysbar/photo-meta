@@ -11,10 +11,24 @@ func parseLocation(location string) (country, city string, err error) {
 	parts := strings.Split(location, "-")
 	
 	if len(parts) >= 2 {
-		// Handle multi-word countries like "united-kingdom"
+		// Handle multi-word countries like "united-kingdom", "czech-republic", and "united-states"
 		if len(parts) >= 3 && parts[len(parts)-2] == "united" && parts[len(parts)-1] == "kingdom" {
 			// Special case for "united-kingdom"
 			country = "united-kingdom"
+			city = strings.Join(parts[:len(parts)-2], "-")
+			return country, city, nil
+		}
+		
+		if len(parts) >= 3 && parts[len(parts)-2] == "czech" && parts[len(parts)-1] == "republic" {
+			// Special case for "czech-republic"
+			country = "czech-republic"
+			city = strings.Join(parts[:len(parts)-2], "-")
+			return country, city, nil
+		}
+		
+		if len(parts) >= 3 && parts[len(parts)-2] == "united" && parts[len(parts)-1] == "states" {
+			// Special case for "united-states"
+			country = "united-states"
 			city = strings.Join(parts[:len(parts)-2], "-")
 			return country, city, nil
 		}
