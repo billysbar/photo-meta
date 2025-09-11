@@ -1,0 +1,23 @@
+🔀 Merge Mode - Combining Photos from Source into Target
+📂 Source: /tmp/merge-test
+📁 Target: /tmp/2025
+🔍 DRY RUN1 MODE - Sample merge preview (1 file per type per directory)
+
+📋 Sampled 1 files from 1 directories (1 photos from 1 dirs, 0 videos from 0 dirs)
+📝 Found 1 media files to merge (1 photos, 0 videos)
+🚀 Starting 4 workers to process 1 jobs...
+📷 [DRY RUN] Merging photo: 2025-08-31-palma-6.JPG
+⚠️  [DRY RUN] File already exists in target: /tmp/2025/spain/palma/2025-08-31-palma-6.JPG
+[████████████████████████████████████████] 1/1 (100.0%) | 1s[████████████████████████████████████████] 1/1 (100.0%) | 1s
+
+📊 Processing Summary:
+✅ Status: COMPLETED
+📈 Progress: 1/1 processed
+✅ Total successful: 1
+📷 Photos successful: 1/1
+🎥 Videos successful: 0/0
+❌ Total failed: 0
+⏭️  Skipped: 0
+⏱️  Total time: 1s
+📊 Average time per file: 502ms
+📋 Completion: 100.0%

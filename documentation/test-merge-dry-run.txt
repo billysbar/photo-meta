@@ -1,0 +1,30 @@
+🔀 Merge Mode - Combining Photos from Source into Target
+📂 Source: /tmp/merge-test
+📁 Target: /tmp/2025
+🔍 DRY RUN MODE - No files will be moved
+
+📝 Found 5 media files to merge (5 photos, 0 videos)
+🚀 Starting 2 workers to process 5 jobs...
+📷 [DRY RUN] Merging photo: 2025-08-31-palma-6.JPG
+📷 [DRY RUN] Merging photo: 2025-08-31-palma-7.JPG
+⚠️  [DRY RUN] File already exists in target: /tmp/2025/spain/palma/2025-08-31-palma-6.JPG
+📷 [DRY RUN] Merging photo: 2025-09-01-palma-8.JPG
+⚠️  [DRY RUN] File already exists in target: /tmp/2025/spain/palma/2025-08-31-palma-7.JPG
+📷 [DRY RUN] Merging photo: 2025-09-03-palma-2.JPG
+⚠️  [DRY RUN] File already exists in target: /tmp/2025/spain/palma/2025-09-01-palma-8.JPG
+📷 [DRY RUN] Merging photo: 2025-09-03-palma-3.JPG
+⚠️  [DRY RUN] File already exists in target: /tmp/2025/spain/palma/2025-09-03-palma-2.JPG
+⚠️  [DRY RUN] File already exists in target: /tmp/2025/spain/palma/2025-09-03-palma-3.JPG
+[████████████████████████████████████████] 5/5 (100.0%) | 1s[████████████████████████████████████████] 5/5 (100.0%) | 1s
+
+📊 Processing Summary:
+✅ Status: COMPLETED
+📈 Progress: 5/5 processed
+✅ Total successful: 5
+📷 Photos successful: 5/5
+🎥 Videos successful: 0/0
+❌ Total failed: 0
+⏭️  Skipped: 0
+⏱️  Total time: 1s
+📊 Average time per file: 100ms
+📋 Completion: 100.0%

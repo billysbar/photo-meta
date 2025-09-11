@@ -1,0 +1,1573 @@
+🔍 Scanning media files from: /tmp/2025 Sept majorca
+📁 Destination: /tmp/2025
+📝 Found 610 media files to process (588 photos, 22 videos)
+🚀 Starting 4 workers to process 610 jobs...
+📷 Processing photo: 20250831121619.PNG
+📷 Processing photo: 20250831120851.HEIC
+📷 Processing photo: 20250831120839.HEIC
+📷 Processing photo: 20250831111122.HEIC
+📷 Processing photo: 20250831163841.PNG
+📍 Location: palma-spain (39.534664, 2.721469)
+📍 Location: palma-spain (39.534519, 2.714128)
+📍 Location: palma-spain (39.534547, 2.714144)
+📷 Processing photo: 20250831182447.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 Processing photo: 20250901130809.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-1.HEIC
+📷 Processing photo: 20250901133118.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-2.HEIC
+📷 Processing photo: 20250901190822.HEIC
+📍 Location: palma-spain (39.534519, 2.714281)
+📍 Location: palma-spain (39.534992, 2.720628)
+📍 Location: palma-spain (39.536156, 2.717367)
+📍 Location: palma-spain (39.534569, 2.713975)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-3.HEIC
+📷 Processing photo: 20250901190838.HEIC
+[░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6/610 (1.0%) | 1s | ETA: 51s | Failed: 2✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 Processing photo: 20250901191509.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-1.HEIC
+📷 Processing photo: 20250901204507.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-2.HEIC
+📷 Processing photo: 20250901204520.HEIC
+📍 Location: palma-spain (39.534619, 2.713950)
+📍 Location: palma-spain (39.536147, 2.716389)
+📍 Location: palma-spain (39.536147, 2.716422)
+📍 Location: palma-spain (39.534656, 2.713958)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-3.HEIC
+📷 Processing photo: 20250901204554.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-4.HEIC
+📷 Processing photo: 20250901210714.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-5.HEIC
+📷 Processing photo: 20250902133218.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-6.HEIC
+📷 Processing photo: 20250902133222.HEIC
+📍 Location: palma-spain (39.536125, 2.716394)
+📍 Location: palma-spain (39.534283, 2.714606)
+📍 Location: palma-spain (39.534164, 2.711089)
+📍 Location: palma-spain (39.534156, 2.711122)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-7.HEIC
+📷 Processing photo: 20250902133228.HEIC
+[░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 14/610 (2.3%) | 1s | ETA: 43s | Failed: 2✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-8.HEIC
+📷 Processing photo: 20250902142146.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 Processing photo: 20250902142304.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-1.HEIC
+📷 Processing photo: 20250902182339.HEIC
+📍 Location: palma-spain (39.534153, 2.711064)
+📍 Location: palma-spain (39.534661, 2.721428)
+📍 Location: palma-spain (39.534686, 2.721539)
+📍 Location: palma-spain (39.534828, 2.714228)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-2.HEIC
+📷 Processing photo: 20250902192415.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-3.HEIC
+📷 Processing photo: 20250902192418.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-4.HEIC
+🎥 Processing video: 20250902200725.MOV
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-5.HEIC
+🎥 Processing video: 20250902200740.MOV
+📍 Location: palma-spain (39.534967, 2.718706)
+📍 Location: palma-spain (39.535300, 2.719800)
+📍 Location: palma-spain (39.535300, 2.719700)
+📍 Location: palma-spain (39.534953, 2.718719)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-6.HEIC
+📷 Processing photo: 20250902201057.HEIC
+[█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 22/610 (3.6%) | 2s | ETA: 40s | Failed: 2✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma.MOV
+📷 Processing photo: 20250902201140.HEIC
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma-1.MOV
+📷 Processing photo: 20250903142527.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-7.HEIC
+📷 Processing photo: 20250903142533.HEIC
+📍 Location: palma-spain (39.534989, 2.718614)
+📍 Location: palma-spain (39.534867, 2.718208)
+📍 Location: palma-spain (39.538628, 2.707444)
+📍 Location: palma-spain (39.538619, 2.707472)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-8.HEIC
+📷 Processing photo: 20250903142535.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 Processing photo: 20250903142540.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-9.HEIC
+📷 Processing photo: 20250903144142.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-1.HEIC
+📷 Processing photo: 20250903144210.HEIC
+📍 Location: palma-spain (39.538619, 2.707475)
+📍 Location: palma-spain (39.536022, 2.710628)
+📍 Location: palma-spain (39.538619, 2.707478)
+📍 Location: palma-spain (39.536006, 2.710675)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-2.HEIC
+📷 Processing photo: 20250903144213.HEIC
+[█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 30/610 (4.9%) | 2s | ETA: 39s | Failed: 2✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-3.HEIC
+📷 Processing photo: 20250903174755.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-4.HEIC
+📷 Processing photo: 20250903174756.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-5.HEIC
+📷 Processing photo: 20250903174835.HEIC
+📍 Location: palma-spain (39.536011, 2.710664)
+📍 Location: palma-spain (39.534367, 2.714664)
+📍 Location: palma-spain (39.534386, 2.714739)
+📍 Location: palma-spain (39.534389, 2.714750)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-6.HEIC
+📷 Processing photo: 20250903175904.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-7.HEIC
+📷 Processing photo: 20250903181052.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-8.HEIC
+📷 Processing photo: 20250903181057.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-9.HEIC
+📷 Processing photo: 20250904084518.HEIC
+📷 Processing photo: 20250904100112.HEIC
+📍 Location: palma-spain (39.534303, 2.714419)
+📍 Location: palma-spain (39.534142, 2.714528)
+📍 Location: palma-spain (39.534797, 2.714142)
+📍 Location: palma-spain (39.534725, 2.714142)
+[██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 38/610 (6.2%) | 3s | ETA: 38s | Failed: 3✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-10.HEIC
+📷 Processing photo: 20250904100114.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-11.HEIC
+📷 Processing photo: 20250904101553.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 Processing photo: 20250904102547.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-1.HEIC
+📷 Processing photo: 20250904114542.HEIC
+📷 Processing photo: 20250904134322.HEIC
+📍 Location: palma-spain (39.534717, 2.714122)
+📍 Location: palma-spain (39.534714, 2.714183)
+📍 Location: palma-spain (39.534881, 2.714131)
+📍 Location: palma-spain (39.534672, 2.714203)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-2.HEIC
+📷 Processing photo: 20250904134344.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-3.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-4.HEIC
+📷 Processing photo: 20250904190333.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-5.HEIC
+📷 Processing photo: 20250904190703.HEIC
+📍 Location: palma-spain (39.534764, 2.714183)
+📍 Location: palma-spain (39.535344, 2.720922)
+[███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 47/610 (7.7%) | 3s | ETA: 36s | Failed: 4📍 Location: palma-spain (39.535375, 2.721053)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-6.HEIC
+📷 Processing photo: 20250904193708(1).HEIC
+📷 Processing photo: 20250904190327.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-7.HEIC
+📷 Processing photo: 20250904193708.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-8.HEIC
+📷 Processing photo: 20250904193717(1).HEIC
+📍 Location: palma-spain (39.535331, 2.720925)
+📍 Location: palma-spain (39.535400, 2.721078)
+📍 Location: palma-spain (39.535400, 2.721078)
+📍 Location: palma-spain (39.535419, 2.721064)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-9.HEIC
+📷 Processing photo: 20250904193717.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-10.HEIC
+📷 Processing photo: 20250904193718.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-11.HEIC
+📷 Processing photo: 20250904202734.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-12.HEIC
+📷 Processing photo: 20250904202735.HEIC
+📍 Location: palma-spain (39.535419, 2.721064)
+📍 Location: palma-spain (39.535419, 2.721064)
+📍 Location: palma-spain (39.534947, 2.717469)
+[███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 54/610 (8.9%) | 4s | ETA: 36s | Failed: 4📍 Location: palma-spain (39.534744, 2.717431)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-13.HEIC
+📷 Processing photo: 20250904202736.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-14.HEIC
+📷 Processing photo: 20250904202744.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-15.HEIC
+📷 Processing photo: 20250904202745.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-16.HEIC
+📷 Processing photo: 20250904214802.PNG
+📍 Location: palma-spain (39.534742, 2.717436)
+📍 Location: palma-spain (39.534744, 2.717442)
+📷 Processing photo: 20250904214845.PNG
+📍 Location: palma-spain (39.534744, 2.717442)
+📷 Processing photo: 20250905131401.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-17.HEIC
+📷 Processing photo: 20250905131517.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-18.HEIC
+📷 Processing photo: 20250905131521.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-19.HEIC
+📷 Processing photo: 20250905143620.PNG
+📍 Location: palma-spain (39.535767, 2.710433)
+📷 Processing photo: 20250905183536.HEIC
+📍 Location: palma-spain (39.535775, 2.710431)
+📍 Location: palma-spain (39.535775, 2.710431)
+[████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 64/610 (10.5%) | 4s | ETA: 34s | Failed: 7✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 Processing photo: 20250905183538.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-1.HEIC
+📷 Processing photo: 20250905183547.HEIC
+📍 Location: palma-spain (39.535344, 2.720847)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-2.HEIC
+📷 Processing photo: 20250905183549.HEIC
+📍 Location: palma-spain (39.535347, 2.720839)
+📍 Location: palma-spain (39.535422, 2.720881)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-3.HEIC
+📷 Processing photo: 20250905190707.HEIC
+📍 Location: palma-spain (39.535428, 2.720903)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-4.HEIC
+📷 Processing photo: 20250905190717.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-5.HEIC
+📷 Processing photo: 20250905190726.HEIC
+📍 Location: palma-spain (39.535233, 2.719589)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-6.HEIC
+📷 Processing photo: 20250905190731.HEIC
+📍 Location: palma-spain (39.535233, 2.719589)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-7.HEIC
+📷 Processing photo: 20250905192245.HEIC
+📍 Location: palma-spain (39.535222, 2.719589)
+📍 Location: palma-spain (39.535214, 2.719586)
+[████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 72/610 (11.8%) | 5s | ETA: 34s | Failed: 7✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-8.HEIC
+📷 Processing photo: 20250905192258.HEIC
+📍 Location: palma-spain (39.534497, 2.714092)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-9.HEIC
+📷 Processing photo: 20250905192303.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-10.HEIC
+📷 Processing photo: 20250906031701.HEIC
+📍 Location: palma-spain (39.534489, 2.714083)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-11.HEIC
+📷 Processing photo: 20250906031735.HEIC
+📍 Location: palma-spain (39.534819, 2.714169)
+📍 Location: palma-spain (39.534486, 2.714075)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-12.HEIC
+📷 Processing photo: 20250906033326.HEIC
+📍 Location: palma-spain (39.534814, 2.714158)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 Processing photo: 20250906054834.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-13.HEIC
+📷 Processing photo: 20250906092934.HEIC
+📍 Location: palma-spain (39.534828, 2.714197)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-1.HEIC
+📷 Processing photo: 20250906100212.HEIC
+📍 Location: palma-spain (39.550586, 2.720744)
+[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 80/610 (13.1%) | 5s | ETA: 33s | Failed: 7✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-2.HEIC
+📷 Processing photo: 20250906100217.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-3.HEIC
+📷 Processing photo: 20250831111122.HEIC
+📍 Location: manchester-united-kingdom (53.365261, -2.272361)
+📍 Location: palma-spain (39.534664, 2.721469)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 Processing photo: 20250831120839.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-4.HEIC
+📷 Processing photo: 20250831120851.HEIC
+📍 Location: palma-spain (39.534547, 2.714144)
+📍 Location: palma-spain (39.534519, 2.714128)
+[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 84/610 (13.8%) | 6s | ETA: 34s | Failed: 7✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-5.HEIC
+📷 Processing photo: 20250831121619.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-6.HEIC
+📷 Processing photo: 20250831163841.PNG
+📷 Processing photo: 20250831182447.HEIC
+📷 Processing photo: 20250901130809.HEIC
+📍 Location: palma-spain (39.534519, 2.714281)
+📍 Location: palma-spain (39.536156, 2.717367)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-7.HEIC
+📷 Processing photo: 20250901133118.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-9.HEIC
+📷 Processing photo: 20250901190822.HEIC
+[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 90/610 (14.8%) | 6s | ETA: 35s | Failed: 9📍 Location: palma-spain (39.534992, 2.720628)
+📍 Location: palma-spain (39.534569, 2.713975)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-10.HEIC
+📷 Processing photo: 20250901190838.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-11.HEIC
+📷 Processing photo: 20250901191509.HEIC
+📍 Location: manchester-united-kingdom (53.365161, -2.272106)
+📍 Location: palma-spain (39.534619, 2.713950)
+📍 Location: palma-spain (39.534656, 2.713958)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-1.HEIC
+📷 Processing photo: 20250901204507.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-12.HEIC
+📷 Processing photo: 20250901204520.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-13.HEIC
+📷 Processing photo: 20250901204554.HEIC
+📍 Location: palma-spain (39.536147, 2.716422)
+[██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 95/610 (15.6%) | 7s | ETA: 35s | Failed: 9📍 Location: palma-spain (39.536147, 2.716389)
+📍 Location: palma-spain (39.536125, 2.716394)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-14.HEIC
+📷 Processing photo: 20250901210714.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-15.HEIC
+📷 Processing photo: 20250902133218.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-16.HEIC
+📷 Processing photo: 20250902133222.HEIC
+📍 Location: palma-spain (39.534283, 2.714606)
+📍 Location: palma-spain (39.534156, 2.711122)
+📍 Location: palma-spain (39.534164, 2.711089)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-17.HEIC
+📷 Processing photo: 20250902133228.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-10.HEIC
+📷 Processing photo: 20250902142146.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-11.HEIC
+📷 Processing photo: 20250902142304.HEIC
+📍 Location: palma-spain (39.534153, 2.711064)
+[██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 101/610 (16.6%) | 7s | ETA: 35s | Failed: 9📍 Location: palma-spain (39.534661, 2.721428)
+📍 Location: palma-spain (39.534686, 2.721539)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-12.HEIC
+📷 Processing photo: 20250902182339.HEIC
+📍 Location: manchester-united-kingdom (53.365161, -2.272106)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-13.HEIC
+📷 Processing photo: 20250902192415.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-14.HEIC
+📷 Processing photo: 20250902192418.HEIC
+📍 Location: palma-spain (39.534828, 2.714228)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-2.HEIC
+🎥 Processing video: 20250902200725.MOV
+📍 Location: palma-spain (39.534967, 2.718706)
+📍 Location: palma-spain (39.534953, 2.718719)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-15.HEIC
+🎥 Processing video: 20250902200740.MOV
+📍 Location: palma-spain (39.535300, 2.719800)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-16.HEIC
+📷 Processing photo: 20250902201057.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-17.HEIC
+📷 Processing photo: 20250902201140.HEIC
+📍 Location: palma-spain (39.535300, 2.719700)
+[███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 108/610 (17.7%) | 8s | ETA: 35s | Failed: 9✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma-2.MOV
+📷 Processing photo: 20250903142527.HEIC
+📍 Location: palma-spain (39.534989, 2.718614)
+📍 Location: palma-spain (39.534867, 2.718208)
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma-3.MOV
+📷 Processing photo: 20250903142533.HEIC
+📍 Location: palma-spain (39.538628, 2.707444)
+📍 Location: palma-spain (39.538619, 2.707472)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-18.HEIC
+📷 Processing photo: 20250903142535.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-19.HEIC
+📷 Processing photo: 20250903142540.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-12.HEIC
+📷 Processing photo: 20250903144142.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-13.HEIC
+📷 Processing photo: 20250903144210.HEIC
+📍 Location: palma-spain (39.538619, 2.707478)
+📍 Location: palma-spain (39.538619, 2.707475)
+📍 Location: palma-spain (39.536022, 2.710628)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-14.HEIC
+📷 Processing photo: 20250903144213.HEIC
+📍 Location: palma-spain (39.536006, 2.710675)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-15.HEIC
+📷 Processing photo: 20250903174755.HEIC
+[███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 116/610 (19.0%) | 8s | ETA: 34s | Failed: 9✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-16.HEIC
+📷 Processing photo: 20250903174756.HEIC
+📍 Location: palma-spain (39.536011, 2.710664)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-17.HEIC
+📷 Processing photo: 20250903174835.HEIC
+📍 Location: palma-spain (39.534367, 2.714664)
+📍 Location: palma-spain (39.534386, 2.714739)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-18.HEIC
+📷 Processing photo: 20250903175904.PNG
+📍 Location: palma-spain (39.534389, 2.714750)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-19.HEIC
+📷 Processing photo: 20250903181052.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-20.HEIC
+📷 Processing photo: 20250903181057.HEIC
+📷 Processing photo: 20250904084518.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-21.HEIC
+📷 Processing photo: 20250904100112.HEIC
+📍 Location: palma-spain (39.534303, 2.714419)
+📍 Location: palma-spain (39.534142, 2.714528)
+📍 Location: palma-spain (39.534797, 2.714142)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-22.HEIC
+📷 Processing photo: 20250904100114.HEIC
+📍 Location: palma-spain (39.534725, 2.714142)
+[████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 124/610 (20.3%) | 9s | ETA: 33s | Failed: 10✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-23.HEIC
+📷 Processing photo: 20250904101553.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-20.HEIC
+📷 Processing photo: 20250904102547.PNG
+📍 Location: palma-spain (39.534717, 2.714122)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-21.HEIC
+📷 Processing photo: 20250904114542.HEIC
+📷 Processing photo: 20250904134322.HEIC
+📍 Location: palma-spain (39.534714, 2.714183)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-22.HEIC
+📷 Processing photo: 20250904134344.HEIC
+📍 Location: palma-spain (39.534881, 2.714131)
+📍 Location: palma-spain (39.534672, 2.714203)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-23.HEIC
+📷 Processing photo: 20250904190327.HEIC
+📍 Location: palma-spain (39.534764, 2.714183)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-24.HEIC
+📷 Processing photo: 20250904190333.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-25.HEIC
+📷 Processing photo: 20250904190703.HEIC
+📍 Location: palma-spain (39.535331, 2.720925)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-26.HEIC
+📷 Processing photo: 20250904193708(1).HEIC
+📍 Location: palma-spain (39.535344, 2.720922)
+[████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 133/610 (21.8%) | 9s | ETA: 32s | Failed: 11📍 Location: palma-spain (39.535375, 2.721053)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-27.HEIC
+📷 Processing photo: 20250904193708.HEIC
+📍 Location: palma-spain (39.535400, 2.721078)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-28.HEIC
+📷 Processing photo: 20250904193717(1).HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-29.HEIC
+📷 Processing photo: 20250904193717.HEIC
+📍 Location: palma-spain (39.535400, 2.721078)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-30.HEIC
+📷 Processing photo: 20250904193718.HEIC
+📍 Location: palma-spain (39.535419, 2.721064)
+📍 Location: palma-spain (39.535419, 2.721064)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-31.HEIC
+📷 Processing photo: 20250904202734.HEIC
+📍 Location: palma-spain (39.535419, 2.721064)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-32.HEIC
+📷 Processing photo: 20250904202735.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-33.HEIC
+📷 Processing photo: 20250904202736.HEIC
+📍 Location: palma-spain (39.534947, 2.717469)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-34.HEIC
+📷 Processing photo: 20250904202744.HEIC
+[█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 141/610 (23.1%) | 10s | ETA: 32s | Failed: 11📍 Location: palma-spain (39.534744, 2.717431)
+📍 Location: palma-spain (39.534742, 2.717436)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-35.HEIC
+📷 Processing photo: 20250904202745.HEIC
+📍 Location: palma-spain (39.534744, 2.717442)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-36.HEIC
+📷 Processing photo: 20250904214802.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-37.HEIC
+📷 Processing photo: 20250904214845.PNG
+📍 Location: palma-spain (39.534744, 2.717442)
+📷 Processing photo: 20250905131401.HEIC
+📷 Processing photo: 20250905131517.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-38.HEIC
+📍 Location: palma-spain (39.535767, 2.710433)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-39.HEIC
+📷 Processing photo: 20250905143620.PNG
+📷 Processing photo: 20250905131521.HEIC
+📍 Location: palma-spain (39.535775, 2.710431)
+📷 Processing photo: 20250905183536.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-14.HEIC
+📷 Processing photo: 20250905183538.HEIC
+📍 Location: palma-spain (39.535775, 2.710431)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-15.HEIC
+📷 Processing photo: 20250905183547.HEIC
+[█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 151/610 (24.8%) | 10s | ETA: 30s | Failed: 14📍 Location: palma-spain (39.535344, 2.720847)
+📍 Location: palma-spain (39.535347, 2.720839)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-16.HEIC
+📷 Processing photo: 20250905183549.HEIC
+📍 Location: palma-spain (39.535422, 2.720881)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-17.HEIC
+📷 Processing photo: 20250905190707.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-18.HEIC
+📷 Processing photo: 20250905190717.HEIC
+📍 Location: palma-spain (39.535428, 2.720903)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-19.HEIC
+📷 Processing photo: 20250905190726.HEIC
+📍 Location: palma-spain (39.535233, 2.719589)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-20.HEIC
+📷 Processing photo: 20250905190731.HEIC
+📍 Location: palma-spain (39.535233, 2.719589)
+📍 Location: palma-spain (39.535222, 2.719589)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-21.HEIC
+📷 Processing photo: 20250905192245.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-22.HEIC
+📷 Processing photo: 20250905192258.HEIC
+📍 Location: palma-spain (39.535214, 2.719586)
+[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 158/610 (25.9%) | 11s | ETA: 30s | Failed: 14✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-23.HEIC
+📷 Processing photo: 20250905192303.HEIC
+📍 Location: palma-spain (39.534497, 2.714092)
+📍 Location: palma-spain (39.534489, 2.714083)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-24.HEIC
+📷 Processing photo: 20250906031701.HEIC
+📍 Location: palma-spain (39.534486, 2.714075)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-25.HEIC
+📷 Processing photo: 20250906031735.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-26.HEIC
+📷 Processing photo: 20250906033326.HEIC
+📍 Location: palma-spain (39.534819, 2.714169)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-27.HEIC
+📷 Processing photo: 20250906054834.HEIC
+📍 Location: palma-spain (39.534814, 2.714158)
+📍 Location: palma-spain (39.534828, 2.714197)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-4.HEIC
+📷 Processing photo: 20250906092934.HEIC
+📍 Location: palma-spain (39.550586, 2.720744)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-5.HEIC
+📷 Processing photo: 20250906100212.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-6.HEIC
+📷 Processing photo: 20250906100217.HEIC
+[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 166/610 (27.2%) | 11s | ETA: 29s | Failed: 14✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-7.HEIC
+📷 Processing photo: 20250831053435.HEIC
+📍 Location: manchester-united-kingdom (53.365261, -2.272361)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-3.HEIC
+📷 Processing photo: 20250831054410.HEIC
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 168/610 (27.5%) | 12s | ETA: 30s | Failed: 14[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 168/610 (27.5%) | 12s | ETA: 32s | Failed: 14📍 Location: manchester-united-kingdom (53.365161, -2.272106)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-4.HEIC
+📷 Processing photo: 20250831054420.HEIC
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 169/610 (27.7%) | 13s | ETA: 33s | Failed: 14[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 169/610 (27.7%) | 13s | ETA: 34s | Failed: 14📍 Location: manchester-united-kingdom (53.365161, -2.272106)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-5.HEIC
+📷 Processing photo: 20250831082249.HEIC
+📍 Location: majorca-spain (39.527814, 2.908247)
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 170/610 (27.9%) | 14s | ETA: 35s | Failed: 14✅ Photo moved to: /tmp/2025/spain/majorca/2025-08-31-majorca.HEIC
+📷 Processing photo: 20250831083205.HEIC
+📍 Location: palma-spain (39.694978, 2.721864)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-8.HEIC
+📷 Processing photo: 20250831093504.HEIC
+📍 Location: palma-spain (39.548000, 2.728297)
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 172/610 (28.2%) | 14s | ETA: 36s | Failed: 14✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-9.HEIC
+📷 Processing photo: 20250831093509.HEIC
+📍 Location: palma-spain (39.548286, 2.728153)
+📍 Location: manchester-united-kingdom (53.362358, -2.278372)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-10.HEIC
+📷 Processing photo: 20250831094814.HEIC
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester.HEIC
+📷 Processing photo: 20250831101750.HEIC
+📍 Location: palma-spain (39.534572, 2.713933)
+📍 Location: palma-spain (39.534672, 2.714236)
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 175/610 (28.7%) | 15s | ETA: 36s | Failed: 14✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-11.HEIC
+📷 Processing photo: 20250831101804.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-12.HEIC
+📷 Processing photo: 20250831102223.HEIC
+📍 Location: palma-spain (39.534667, 2.714250)
+📍 Location: palma-spain (39.534672, 2.714244)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-13.HEIC
+📷 Processing photo: 20250831102228.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-14.HEIC
+📷 Processing photo: 20250831102231.HEIC
+📍 Location: palma-spain (39.534672, 2.714244)
+📍 Location: palma-spain (39.534672, 2.714244)
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 179/610 (29.3%) | 15s | ETA: 36s | Failed: 14✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-15.HEIC
+📷 Processing photo: 20250831103654.JPG
+📍 Location: manchester-united-kingdom (53.362244, -2.279886)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-16.HEIC
+📷 Processing photo: 20250831103702.JPG
+📷 Processing photo: 20250831103712.JPG
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester-1.HEIC
+📷 Processing photo: 20250831110340.HEIC
+📷 Processing photo: 20250831110354.HEIC
+📷 Processing photo: 20250831110403.HEIC
+📍 Location: palma-spain (39.535064, 2.720344)
+📍 Location: palma-spain (39.534983, 2.720525)
+📍 Location: palma-spain (39.534978, 2.720575)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-17.HEIC
+📷 Processing photo: 20250831110432.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-18.HEIC
+📷 Processing photo: 20250831110535.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-19.HEIC
+📷 Processing photo: 20250831110749.HEIC
+[████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 188/610 (30.8%) | 16s | ETA: 35s | Failed: 17📷 Processing photo: 20250831110924.HEIC
+📷 Processing photo: 20250831114855.HEIC
+📍 Location: palma-spain (39.534581, 2.721419)
+📍 Location: palma-spain (39.534653, 2.721492)
+📍 Location: palma-spain (39.534308, 2.714550)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-20.HEIC
+📷 Processing photo: 20250831115744.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-21.HEIC
+📷 Processing photo: 20250831115753.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-22.HEIC
+📷 Processing photo: 20250831120334.HEIC
+📍 Location: palma-spain (39.534572, 2.714197)
+📍 Location: palma-spain (39.534547, 2.714136)
+📍 Location: palma-spain (39.534558, 2.714156)
+[████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 193/610 (31.6%) | 16s | ETA: 35s | Failed: 19✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-23.HEIC
+📷 Processing photo: 20250831122120.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-24.HEIC
+📷 Processing photo: 20250831122123.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-25.HEIC
+🎥 Processing video: 20250831130611.MOV
+📍 Location: manchester-united-kingdom (53.362703, -2.279089)
+📍 Location: palma-spain (39.534519, 2.714017)
+📍 Location: palma-spain (39.534800, 2.714200)
+📍 Location: palma-spain (39.534492, 2.714131)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester-2.HEIC
+📷 Processing photo: 20250831134302.HEIC
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+🎥 Processing video: 20250831134742.MOV
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-26.HEIC
+📷 Processing photo: 20250831141707.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-27.HEIC
+📷 Processing photo: 20250831174336.HEIC
+📷 Processing photo: 20250831174727.HEIC
+📍 Location: palma-spain (39.534839, 2.714181)
+📍 Location: palma-spain (39.534900, 2.714100)
+📍 Location: palma-spain (39.534489, 2.714106)
+📍 Location: palma-spain (39.534542, 2.714097)
+[█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░] 201/610 (33.0%) | 17s | ETA: 34s | Failed: 20✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma-1.MOV
+📷 Processing photo: 20250831174741.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-28.HEIC
+📷 Processing photo: 20250831175226.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-29.HEIC
+📷 Processing photo: 20250831175230.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-30.HEIC
+📷 Processing photo: 20250831175246.HEIC
+📍 Location: palma-spain (39.534531, 2.714144)
+📍 Location: palma-spain (39.534492, 2.714061)
+📍 Location: palma-spain (39.534497, 2.714056)
+📍 Location: palma-spain (39.534619, 2.714147)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-31.HEIC
+📷 Processing photo: 20250831175334.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-32.HEIC
+📷 Processing photo: 20250831175351.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-33.HEIC
+🎥 Processing video: 20250831182704.MOV
+📷 Processing photo: 20250831185007.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-34.HEIC
+📷 Processing photo: 20250831185012.HEIC
+📍 Location: palma-spain (39.534539, 2.714186)
+📍 Location: palma-spain (39.534500, 2.714100)
+[█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░] 210/610 (34.4%) | 17s | ETA: 32s | Failed: 21📍 Location: palma-spain (39.534517, 2.714172)
+📍 Location: palma-spain (39.534542, 2.714164)
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma-2.MOV
+📷 Processing photo: 20250831192618.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-35.HEIC
+📷 Processing photo: 20250831193306.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-36.HEIC
+📷 Processing photo: 20250831193438.JPG
+📷 Processing photo: 20250831194137.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-37.HEIC
+📷 Processing photo: 20250831194140.HEIC
+🎥 Processing video: 20250831194541.MOV
+📷 Processing photo: 20250901083254.HEIC
+📍 Location: palma-spain (39.536400, 2.716500)
+📍 Location: palma-spain (39.536369, 2.716564)
+📍 Location: palma-spain (39.536369, 2.716564)
+📍 Location: palma-spain (39.534953, 2.714114)
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma-3.MOV
+📷 Processing photo: 20250901083443.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-38.HEIC
+📷 Processing photo: 20250901084056.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-39.HEIC
+📷 Processing photo: 20250901101907.PNG
+📷 Processing photo: 20250901104901.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-18.HEIC
+📷 Processing photo: 20250901111233.PNG
+[██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░] 222/610 (36.4%) | 18s | ETA: 31s | Failed: 25📍 Location: palma-spain (39.534819, 2.714158)
+📍 Location: palma-spain (39.534803, 2.714161)
+📷 Processing photo: 20250901132344.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-19.HEIC
+📷 Processing photo: 20250901132420.JPG
+📷 Processing photo: 20250901132412.JPG
+📷 Processing photo: 20250901132434.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-20.HEIC
+📷 Processing photo: 20250901132604.HEIC
+📷 Processing photo: 20250901132616.HEIC
+📷 Processing photo: 20250901140030.JPG
+📍 Location: palma-spain (39.535019, 2.720750)
+📍 Location: palma-spain (39.534989, 2.720753)
+📍 Location: palma-spain (39.535003, 2.720736)
+📷 Processing photo: 20250901140058.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-21.HEIC
+🎥 Processing video: 20250901140114.MOV
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-22.HEIC
+📷 Processing photo: 20250901171459.PNG
+[███████████████░░░░░░░░░░░░░░░░░░░░░░░░░] 232/610 (38.0%) | 18s | ETA: 29s | Failed: 31✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-23.HEIC
+📷 Processing photo: 20250901180702.HEIC
+📷 Processing photo: 20250901180706.HEIC
+📍 Location: palma-spain (39.534450, 2.714106)
+📍 Location: palma-spain (39.534600, 2.714000)
+📍 Location: palma-spain (39.535222, 2.719714)
+📍 Location: palma-spain (39.535236, 2.719694)
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-01-palma.MOV
+📷 Processing photo: 20250901181908.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-24.HEIC
+📷 Processing photo: 20250901181913.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-25.HEIC
+📷 Processing photo: 20250901181917.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-26.HEIC
+📷 Processing photo: 20250901183426.HEIC
+📍 Location: palma-spain (39.532478, 2.724839)
+📍 Location: palma-spain (39.532514, 2.724806)
+📍 Location: palma-spain (39.532519, 2.724806)
+📍 Location: palma-spain (39.536639, 2.716842)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-27.HEIC
+📷 Processing photo: 20250901184248.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-28.HEIC
+📷 Processing photo: 20250901184821.HEIC
+[███████████████░░░░░░░░░░░░░░░░░░░░░░░░░] 240/610 (39.3%) | 19s | ETA: 29s | Failed: 32✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-29.HEIC
+📷 Processing photo: 20250901192750.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-30.HEIC
+📷 Processing photo: 20250901192751.HEIC
+📍 Location: palma-spain (39.534703, 2.714139)
+📍 Location: palma-spain (39.534511, 2.714119)
+📍 Location: palma-spain (39.534581, 2.714094)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-31.HEIC
+📷 Processing photo: 20250901192753.HEIC
+📷 Processing photo: 20250901192748.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-32.HEIC
+📷 Processing photo: 20250901192755.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-33.HEIC
+📷 Processing photo: 20250901192759.HEIC
+📍 Location: palma-spain (39.534581, 2.714086)
+📍 Location: palma-spain (39.534489, 2.714097)
+📍 Location: palma-spain (39.534664, 2.714058)
+📍 Location: palma-spain (39.534406, 2.714214)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-34.HEIC
+📷 Processing photo: 20250901195835.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-35.HEIC
+📷 Processing photo: 20250901200449.JPG
+[████████████████░░░░░░░░░░░░░░░░░░░░░░░░] 248/610 (40.7%) | 19s | ETA: 28s | Failed: 33✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-36.HEIC
+📷 Processing photo: 20250901202923.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-37.HEIC
+📷 Processing photo: 20250902092344.PNG
+📷 Processing photo: 20250902144018.HEIC
+📷 Processing photo: 20250902144020.HEIC
+📷 Processing photo: 20250902144030.HEIC
+📍 Location: palma-spain (39.534492, 2.721375)
+📍 Location: palma-spain (39.534492, 2.721369)
+📍 Location: palma-spain (39.536144, 2.716378)
+📍 Location: palma-spain (39.534447, 2.721272)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-20.HEIC
+📷 Processing photo: 20250902145446.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-21.HEIC
+📷 Processing photo: 20250902145452.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-38.HEIC
+📷 Processing photo: 20250902145458.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-22.HEIC
+📷 Processing photo: 20250902145518.HEIC
+📍 Location: palma-spain (39.533864, 2.721222)
+📍 Location: palma-spain (39.533864, 2.721247)
+📍 Location: palma-spain (39.533856, 2.721228)
+📍 Location: palma-spain (39.533856, 2.721239)
+[████████████████░░░░░░░░░░░░░░░░░░░░░░░░] 257/610 (42.1%) | 20s | ETA: 27s | Failed: 36✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-23.HEIC
+📷 Processing photo: 20250902151300.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-24.HEIC
+📷 Processing photo: 20250902151310.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-25.HEIC
+📷 Processing photo: 20250902151354.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-26.HEIC
+📷 Processing photo: 20250902151358.HEIC
+📍 Location: palma-spain (39.532494, 2.724922)
+📍 Location: palma-spain (39.532489, 2.724939)
+📍 Location: palma-spain (39.532486, 2.724925)
+📍 Location: palma-spain (39.532486, 2.724922)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-27.HEIC
+📷 Processing photo: 20250902155409.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-28.HEIC
+📷 Processing photo: 20250902192104.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-29.HEIC
+📷 Processing photo: 20250902192106.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-30.HEIC
+📷 Processing photo: 20250902192113.HEIC
+📍 Location: palma-spain (39.534828, 2.714186)
+📍 Location: palma-spain (39.534775, 2.716819)
+📍 Location: palma-spain (39.534775, 2.716828)
+[█████████████████░░░░░░░░░░░░░░░░░░░░░░░] 265/610 (43.4%) | 20s | ETA: 26s | Failed: 36📍 Location: palma-spain (39.534778, 2.716867)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-31.HEIC
+📷 Processing photo: 20250902192351.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-32.HEIC
+📷 Processing photo: 20250902192354.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-33.HEIC
+📷 Processing photo: 20250902192357.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-34.HEIC
+📷 Processing photo: 20250902192406.HEIC
+📍 Location: palma-spain (39.534942, 2.718700)
+📍 Location: palma-spain (39.534953, 2.718700)
+📍 Location: palma-spain (39.534931, 2.718700)
+📍 Location: palma-spain (39.534928, 2.718703)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-35.HEIC
+📷 Processing photo: 20250902192717.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-36.HEIC
+📷 Processing photo: 20250902192728.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-37.HEIC
+📷 Processing photo: 20250902192738.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-38.HEIC
+📷 Processing photo: 20250902192743.HEIC
+📍 Location: palma-spain (39.535131, 2.720047)
+📍 Location: palma-spain (39.535136, 2.720039)
+📍 Location: palma-spain (39.535142, 2.720047)
+[█████████████████░░░░░░░░░░░░░░░░░░░░░░░] 273/610 (44.8%) | 21s | ETA: 25s | Failed: 36📍 Location: palma-spain (39.535142, 2.720044)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-39.HEIC
+🎥 Processing video: 20250902192925.MOV
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-40.HEIC
+📷 Processing photo: 20250902194318.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-41.HEIC
+📷 Processing photo: 20250902194322.JPG
+📷 Processing photo: 20250902194330.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-42.HEIC
+📷 Processing photo: 20250903122536.JPG
+📷 Processing photo: 20250903122602.JPG
+📍 Location: palma-spain (39.535100, 2.720400)
+📷 Processing photo: 20250903130514.HEIC
+📷 Processing photo: 20250903130536.JPG
+📷 Processing photo: 20250903142508.HEIC
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma-4.MOV
+📷 Processing photo: 20250903142512.HEIC
+📷 Processing photo: 20250903142645.JPG
+📍 Location: palma-spain (39.534733, 2.714106)
+📍 Location: palma-spain (39.538547, 2.707478)
+📍 Location: palma-spain (39.538567, 2.707475)
+[██████████████████░░░░░░░░░░░░░░░░░░░░░░] 284/610 (46.6%) | 21s | ETA: 24s | Failed: 42📷 Processing photo: 20250903144150.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-24.HEIC
+📷 Processing photo: 20250903144153.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-25.HEIC
+📷 Processing photo: 20250903144155.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-26.HEIC
+📷 Processing photo: 20250903144205.HEIC
+📍 Location: palma-spain (39.536019, 2.710700)
+📍 Location: palma-spain (39.536025, 2.710675)
+📍 Location: palma-spain (39.536031, 2.710667)
+📍 Location: palma-spain (39.536025, 2.710656)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-27.HEIC
+📷 Processing photo: 20250903145819.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-28.HEIC
+📷 Processing photo: 20250903145827.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-29.HEIC
+📷 Processing photo: 20250903152737.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-30.HEIC
+📷 Processing photo: 20250903182301.HEIC
+📷 Processing photo: 20250903182302.HEIC
+📷 Processing photo: 20250903182304.HEIC
+📷 Processing photo: 20250903185228.JPG
+📍 Location: palma-spain (39.534231, 2.714489)
+📍 Location: palma-spain (39.534283, 2.714544)
+📷 Processing photo: 20250903194653.HEIC
+📍 Location: palma-spain (39.534131, 2.714514)
+[███████████████████░░░░░░░░░░░░░░░░░░░░░] 296/610 (48.5%) | 22s | ETA: 23s | Failed: 47✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-31.HEIC
+📷 Processing photo: 20250903195003.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-32.HEIC
+📷 Processing photo: 20250903195013.HEIC
+📍 Location: palma-spain (39.534847, 2.714194)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-33.HEIC
+📷 Processing photo: 20250903195029.HEIC
+📍 Location: palma-spain (39.534789, 2.714181)
+📍 Location: palma-spain (39.534789, 2.714161)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-34.HEIC
+📍 Location: palma-spain (39.534817, 2.714136)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-35.HEIC
+📷 Processing photo: 20250903195041.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-36.HEIC
+📷 Processing photo: 20250903195053.HEIC
+📷 Processing photo: 20250903195033.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-37.HEIC
+📷 Processing photo: 20250903195438.HEIC
+📍 Location: palma-spain (39.534833, 2.714158)
+📍 Location: palma-spain (39.534825, 2.714144)
+📍 Location: palma-spain (39.534817, 2.714158)
+📍 Location: palma-spain (39.534819, 2.714161)
+[███████████████████░░░░░░░░░░░░░░░░░░░░░] 303/610 (49.7%) | 22s | ETA: 22s | Failed: 47✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-38.HEIC
+📷 Processing photo: 20250903200033.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-39.HEIC
+📷 Processing photo: 20250904083624.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-40.HEIC
+📷 Processing photo: 20250904094238.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-41.HEIC
+📷 Processing photo: 20250904095249.PNG
+📷 Processing photo: 20250904100020.HEIC
+📷 Processing photo: 20250904100023.HEIC
+📷 Processing photo: 20250904100024.HEIC
+📍 Location: palma-spain (39.534847, 2.714194)
+📍 Location: palma-spain (39.534722, 2.714186)
+📍 Location: palma-spain (39.534711, 2.714161)
+📍 Location: palma-spain (39.534714, 2.714167)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-42.HEIC
+📷 Processing photo: 20250904100025(1).HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-40.HEIC
+📷 Processing photo: 20250904100025.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-41.HEIC
+📷 Processing photo: 20250904100027.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-42.HEIC
+📷 Processing photo: 20250904100031(1).HEIC
+📍 Location: palma-spain (39.534717, 2.714169)
+[████████████████████░░░░░░░░░░░░░░░░░░░░] 314/610 (51.5%) | 23s | ETA: 21s | Failed: 50📍 Location: palma-spain (39.534717, 2.714169)
+📍 Location: palma-spain (39.534717, 2.714169)
+📍 Location: palma-spain (39.534722, 2.714178)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-43.HEIC
+📷 Processing photo: 20250904100031.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-44.HEIC
+📷 Processing photo: 20250904100038.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-45.HEIC
+📷 Processing photo: 20250904100050.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-46.HEIC
+📷 Processing photo: 20250904100207.HEIC
+📍 Location: palma-spain (39.534722, 2.714178)
+📍 Location: palma-spain (39.534725, 2.714186)
+📍 Location: palma-spain (39.534722, 2.714178)
+📍 Location: palma-spain (39.534814, 2.714150)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-47.HEIC
+📷 Processing photo: 20250904100253.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-48.HEIC
+📷 Processing photo: 20250904104440.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-49.HEIC
+📷 Processing photo: 20250904105900.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-50.HEIC
+📷 Processing photo: 20250904112723.HEIC
+📷 Processing photo: 20250904112744.PNG
+[█████████████████████░░░░░░░░░░░░░░░░░░░] 323/610 (53.0%) | 23s | ETA: 20s | Failed: 51📷 Processing photo: 20250904114508.JPG
+📍 Location: palma-spain (39.534764, 2.714131)
+📍 Location: palma-spain (39.534772, 2.714128)
+📍 Location: palma-spain (39.534742, 2.714153)
+📷 Processing photo: 20250904114516.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-51.HEIC
+📷 Processing photo: 20250904114830.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-52.HEIC
+📷 Processing photo: 20250904121036.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-53.HEIC
+📷 Processing photo: 20250904121344.HEIC
+📷 Processing photo: 20250904121527.HEIC
+📍 Location: palma-spain (39.534814, 2.714167)
+📍 Location: palma-spain (39.534756, 2.714108)
+📍 Location: palma-spain (39.534725, 2.714283)
+📍 Location: palma-spain (39.534778, 2.714108)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-54.HEIC
+📷 Processing photo: 20250904123306.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-55.HEIC
+📷 Processing photo: 20250904130714.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-56.HEIC
+📷 Processing photo: 20250904130728.JPG
+[█████████████████████░░░░░░░░░░░░░░░░░░░] 332/610 (54.4%) | 24s | ETA: 20s | Failed: 54✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-57.HEIC
+📷 Processing photo: 20250904130849.JPG
+🎥 Processing video: 20250904134212.MP4
+🎥 Processing video: 20250904144834.MP4
+📷 Processing photo: 20250904163536.PNG
+📷 Processing photo: 20250904190240.JPG
+📷 Processing photo: 20250904190302.JPG
+📷 Processing photo: 20250904190341.HEIC
+📷 Processing photo: 20250904190550.JPG
+📷 Processing photo: 20250904191312.HEIC
+📷 Processing photo: 20250904193940.JPG
+📍 Location: palma-spain (39.535308, 2.720967)
+📷 Processing photo: 20250904193947.JPG
+📍 Location: palma-spain (39.535294, 2.721025)
+📷 Processing photo: 20250904193952.JPG
+📷 Processing photo: 20250904211451.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-58.HEIC
+📷 Processing photo: 20250905082519.HEIC
+[██████████████████████░░░░░░░░░░░░░░░░░░] 346/610 (56.7%) | 24s | ETA: 18s | Failed: 66📷 Processing photo: 20250905082520.HEIC
+📷 Processing photo: 20250905082522.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-59.HEIC
+📷 Processing photo: 20250905082542.HEIC
+📍 Location: palma-spain (39.534953, 2.714256)
+📍 Location: palma-spain (39.534989, 2.714275)
+📍 Location: palma-spain (39.534992, 2.714294)
+📍 Location: palma-spain (39.534864, 2.714222)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-28.HEIC
+📷 Processing photo: 20250905082544.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-29.HEIC
+📷 Processing photo: 20250905082547.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-30.HEIC
+📷 Processing photo: 20250905095744.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-31.HEIC
+📷 Processing photo: 20250905131904.HEIC
+📍 Location: palma-spain (39.534875, 2.714244)
+📍 Location: palma-spain (39.534936, 2.714311)
+📍 Location: palma-spain (39.535769, 2.718167)
+📍 Location: palma-spain (39.535758, 2.710389)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-32.HEIC
+📷 Processing photo: 20250905132329.HEIC
+[███████████████████████░░░░░░░░░░░░░░░░░] 354/610 (58.0%) | 25s | ETA: 18s | Failed: 68✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-33.HEIC
+📷 Processing photo: 20250905133250.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-34.HEIC
+📷 Processing photo: 20250905133301.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-35.HEIC
+📷 Processing photo: 20250905134252.HEIC
+📍 Location: palma-spain (39.535781, 2.710428)
+📍 Location: palma-spain (39.535019, 2.712375)
+📍 Location: palma-spain (39.534961, 2.712311)
+📍 Location: palma-spain (39.534550, 2.714106)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-36.HEIC
+📷 Processing photo: 20250905134258.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-37.HEIC
+📷 Processing photo: 20250905134301.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-38.HEIC
+📷 Processing photo: 20250905134308.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-39.HEIC
+📷 Processing photo: 20250905134458.HEIC
+📍 Location: palma-spain (39.534572, 2.714078)
+📍 Location: palma-spain (39.534583, 2.714061)
+📍 Location: palma-spain (39.534581, 2.714072)
+📍 Location: palma-spain (39.534592, 2.714106)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-40.HEIC
+📷 Processing photo: 20250905134503.HEIC
+[███████████████████████░░░░░░░░░░░░░░░░░] 362/610 (59.3%) | 25s | ETA: 17s | Failed: 68✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-41.HEIC
+📷 Processing photo: 20250905134508.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-42.HEIC
+📷 Processing photo: 20250905140800.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-43.HEIC
+📷 Processing photo: 20250905142715.JPG
+📍 Location: palma-spain (39.534583, 2.714092)
+📷 Processing photo: 20250905142726.JPG
+📷 Processing photo: 20250905143623.HEIC
+📍 Location: palma-spain (39.534583, 2.714094)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-44.HEIC
+📷 Processing photo: 20250905162830.JPG
+🎥 Processing video: 20250905192153.MOV
+📍 Location: palma-spain (39.534564, 2.714117)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-45.HEIC
+📷 Processing photo: 20250906032935.HEIC
+📷 Processing photo: 20250906032943.HEIC
+📍 Location: palma-spain (39.534500, 2.714000)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-46.HEIC
+📷 Processing photo: 20250906033335.HEIC
+📍 Location: palma-spain (39.534819, 2.714281)
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-05-palma.MOV
+📷 Processing photo: 20250906042709.HEIC
+📍 Location: palma-spain (39.534825, 2.714261)
+[████████████████████████░░░░░░░░░░░░░░░░] 373/610 (61.1%) | 26s | ETA: 16s | Failed: 72📍 Location: palma-spain (39.534686, 2.714147)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-8.HEIC
+📷 Processing photo: 20250906051234.HEIC
+📍 Location: palma-spain (39.550475, 2.729667)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-9.HEIC
+📷 Processing photo: 20250906053709.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-10.HEIC
+📷 Processing photo: 20250906063005.HEIC
+📍 Location: palma-spain (39.549831, 2.727436)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-11.HEIC
+📷 Processing photo: 20250906063257.HEIC
+📍 Location: palma-spain (39.549972, 2.726703)
+📍 Location: palma-spain (39.554081, 2.758950)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-12.HEIC
+📷 Processing photo: 20250906063402.HEIC
+📍 Location: majorca-spain (39.543503, 2.961917)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-13.HEIC
+📷 Processing photo: 20250906084112.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-14.HEIC
+📷 Processing photo: 20250906084115.HEIC
+📍 Location: majorca-spain (39.686706, 2.905425)
+✅ Photo moved to: /tmp/2025/spain/majorca/2025-09-06-majorca.HEIC
+📷 Processing photo: 20250906095719.HEIC
+📷 Processing photo: 20250906095725.HEIC
+[█████████████████████████░░░░░░░░░░░░░░░] 382/610 (62.6%) | 26s | ETA: 16s | Failed: 73✅ Photo moved to: /tmp/2025/spain/majorca/2025-09-06-majorca-1.HEIC
+📷 Processing photo: 20250906121718.PNG
+📍 Location: high-peak-united-kingdom (53.368094, -1.895511)
+📷 Processing photo: 20250906130347.PNG
+📷 Processing photo: 20250906194812.PNG
+✅ Photo moved to: /tmp/2025/united-kingdom/high-peak/2025-09-06-high-peak.HEIC
+📷 Processing photo: 20250906220004.PNG
+📷 Processing photo: 20250831053435.HEIC
+📷 Processing photo: 20250831054410.HEIC
+[█████████████████████████░░░░░░░░░░░░░░░] 388/610 (63.6%) | 27s | ETA: 15s | Failed: 77📍 Location: manchester-united-kingdom (53.365069, -2.271942)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-6.HEIC
+📷 Processing photo: 20250831054420.HEIC
+[█████████████████████████░░░░░░░░░░░░░░░] 389/610 (63.8%) | 28s | ETA: 16s | Failed: 77📍 Location: manchester-united-kingdom (53.364972, -2.271878)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-7.HEIC
+📷 Processing photo: 20250831082249.HEIC
+📍 Location: majorca-spain (39.527814, 2.908247)
+[█████████████████████████░░░░░░░░░░░░░░░] 390/610 (63.9%) | 29s | ETA: 16s | Failed: 77✅ Photo moved to: /tmp/2025/spain/majorca/2025-08-31-majorca-1.HEIC
+📷 Processing photo: 20250831083205.HEIC
+📍 Location: palma-spain (39.694978, 2.721864)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-40.HEIC
+📷 Processing photo: 20250831093504.HEIC
+📍 Location: palma-spain (39.548000, 2.728297)
+[█████████████████████████░░░░░░░░░░░░░░░] 392/610 (64.3%) | 29s | ETA: 16s | Failed: 77✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-41.HEIC
+📷 Processing photo: 20250831093509.HEIC
+📍 Location: palma-spain (39.548286, 2.728153)
+📍 Location: manchester-united-kingdom (53.362358, -2.278372)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-42.HEIC
+📷 Processing photo: 20250831094814.HEIC
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester-3.HEIC
+📷 Processing photo: 20250831101750.HEIC
+📍 Location: palma-spain (39.534572, 2.713933)
+📍 Location: palma-spain (39.534672, 2.714236)
+[█████████████████████████░░░░░░░░░░░░░░░] 395/610 (64.8%) | 30s | ETA: 16s | Failed: 77✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-43.HEIC
+📷 Processing photo: 20250831101804.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-44.HEIC
+📷 Processing photo: 20250831102223.HEIC
+📍 Location: palma-spain (39.534667, 2.714250)
+📍 Location: palma-spain (39.534672, 2.714244)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-45.HEIC
+📷 Processing photo: 20250831102228.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-46.HEIC
+📷 Processing photo: 20250831102231.HEIC
+📍 Location: palma-spain (39.534672, 2.714244)
+📍 Location: palma-spain (39.534672, 2.714244)
+[██████████████████████████░░░░░░░░░░░░░░] 399/610 (65.4%) | 30s | ETA: 16s | Failed: 77✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-47.HEIC
+📷 Processing photo: 20250831103654.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-48.HEIC
+📷 Processing photo: 20250831103702.JPG
+📷 Processing photo: 20250831103712.JPG
+📍 Location: manchester-united-kingdom (53.362244, -2.279886)
+📷 Processing photo: 20250831110340.HEIC
+📷 Processing photo: 20250831110354.HEIC
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester-4.HEIC
+📷 Processing photo: 20250831110403.HEIC
+📍 Location: palma-spain (39.535064, 2.720344)
+📍 Location: palma-spain (39.534983, 2.720525)
+📍 Location: palma-spain (39.534978, 2.720575)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-49.HEIC
+📷 Processing photo: 20250831110432.JPG
+[██████████████████████████░░░░░░░░░░░░░░] 406/610 (66.6%) | 31s | ETA: 15s | Failed: 80✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-50.HEIC
+📷 Processing photo: 20250831110535.JPG
+📷 Processing photo: 20250831110749.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-51.HEIC
+📷 Processing photo: 20250831110924.HEIC
+📷 Processing photo: 20250831114855.HEIC
+📍 Location: palma-spain (39.534581, 2.721419)
+📍 Location: palma-spain (39.534653, 2.721492)
+📍 Location: palma-spain (39.534308, 2.714550)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-52.HEIC
+📷 Processing photo: 20250831115744.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-53.HEIC
+📷 Processing photo: 20250831115753.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-54.HEIC
+📷 Processing photo: 20250831120334.HEIC
+📍 Location: palma-spain (39.534572, 2.714197)
+📍 Location: palma-spain (39.534547, 2.714136)
+📍 Location: palma-spain (39.534558, 2.714156)
+[███████████████████████████░░░░░░░░░░░░░] 413/610 (67.7%) | 31s | ETA: 15s | Failed: 82✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-55.HEIC
+📷 Processing photo: 20250831122120.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-56.HEIC
+📷 Processing photo: 20250831122123.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-57.HEIC
+🎥 Processing video: 20250831130611.MOV
+📍 Location: palma-spain (39.534519, 2.714017)
+📍 Location: manchester-united-kingdom (53.362703, -2.279089)
+📍 Location: palma-spain (39.534492, 2.714131)
+📍 Location: palma-spain (39.534800, 2.714200)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-58.HEIC
+📷 Processing photo: 20250831134302.HEIC
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester-5.HEIC
+🎥 Processing video: 20250831134742.MOV
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-59.HEIC
+📷 Processing photo: 20250831141707.PNG
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma-4.MOV
+📷 Processing photo: 20250831174336.HEIC
+📷 Processing photo: 20250831174727.HEIC
+📍 Location: palma-spain (39.534900, 2.714100)
+📍 Location: palma-spain (39.534839, 2.714181)
+📍 Location: palma-spain (39.534489, 2.714106)
+📍 Location: palma-spain (39.534542, 2.714097)
+[███████████████████████████░░░░░░░░░░░░░] 421/610 (69.0%) | 32s | ETA: 14s | Failed: 83✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma-5.MOV
+📷 Processing photo: 20250831174741.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-60.HEIC
+📷 Processing photo: 20250831175226.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-61.HEIC
+📷 Processing photo: 20250831175230.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-62.HEIC
+📷 Processing photo: 20250831175246.HEIC
+📍 Location: palma-spain (39.534531, 2.714144)
+📍 Location: palma-spain (39.534492, 2.714061)
+📍 Location: palma-spain (39.534497, 2.714056)
+📍 Location: palma-spain (39.534619, 2.714147)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-63.HEIC
+📷 Processing photo: 20250831175334.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-64.HEIC
+📷 Processing photo: 20250831175351.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-65.HEIC
+🎥 Processing video: 20250831182704.MOV
+📷 Processing photo: 20250831185007.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-66.HEIC
+📷 Processing photo: 20250831185012.HEIC
+📍 Location: palma-spain (39.534539, 2.714186)
+📍 Location: palma-spain (39.534500, 2.714100)
+📍 Location: palma-spain (39.534517, 2.714172)
+📍 Location: palma-spain (39.534542, 2.714164)
+[████████████████████████████░░░░░░░░░░░░] 430/610 (70.5%) | 32s | ETA: 13s | Failed: 84✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-67.HEIC
+📷 Processing photo: 20250831192618.JPG
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma-6.MOV
+📷 Processing photo: 20250831193306.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-68.HEIC
+📷 Processing photo: 20250831193438.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-69.HEIC
+📷 Processing photo: 20250831194137.HEIC
+📷 Processing photo: 20250831194140.HEIC
+🎥 Processing video: 20250831194541.MOV
+📷 Processing photo: 20250901083254.HEIC
+📍 Location: palma-spain (39.536369, 2.716564)
+📍 Location: palma-spain (39.536400, 2.716500)
+📍 Location: palma-spain (39.536369, 2.716564)
+📍 Location: palma-spain (39.534953, 2.714114)
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma-7.MOV
+📷 Processing photo: 20250901083443.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-70.HEIC
+📷 Processing photo: 20250901084056.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-08-31-palma-71.HEIC
+📷 Processing photo: 20250901101907.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-39.HEIC
+📷 Processing photo: 20250901104901.JPG
+📷 Processing photo: 20250901111233.PNG
+[████████████████████████████░░░░░░░░░░░░] 441/610 (72.3%) | 33s | ETA: 12s | Failed: 87📍 Location: palma-spain (39.534819, 2.714158)
+📍 Location: palma-spain (39.534803, 2.714161)
+📷 Processing photo: 20250901132344.JPG
+📷 Processing photo: 20250901132412.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-40.HEIC
+📷 Processing photo: 20250901132420.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-41.HEIC
+📷 Processing photo: 20250901132434.HEIC
+📷 Processing photo: 20250901132604.HEIC
+📷 Processing photo: 20250901132616.HEIC
+📷 Processing photo: 20250901140030.JPG
+📍 Location: palma-spain (39.535019, 2.720750)
+📍 Location: palma-spain (39.534989, 2.720753)
+📍 Location: palma-spain (39.535003, 2.720736)
+📷 Processing photo: 20250901140058.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-42.HEIC
+🎥 Processing video: 20250901140114.MOV
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-43.HEIC
+📷 Processing photo: 20250901171459.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-44.HEIC
+📷 Processing photo: 20250901180702.HEIC
+📍 Location: palma-spain (39.534450, 2.714106)
+[█████████████████████████████░░░░░░░░░░░] 453/610 (74.3%) | 33s | ETA: 11s | Failed: 94📷 Processing photo: 20250901180706.HEIC
+📍 Location: palma-spain (39.534600, 2.714000)
+📍 Location: palma-spain (39.535236, 2.719694)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-45.HEIC
+📷 Processing photo: 20250901181908.HEIC
+📍 Location: palma-spain (39.535222, 2.719714)
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-01-palma-1.MOV
+📷 Processing photo: 20250901181913.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-46.HEIC
+📷 Processing photo: 20250901181917.HEIC
+📍 Location: palma-spain (39.532478, 2.724839)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-47.HEIC
+📷 Processing photo: 20250901183426.HEIC
+📍 Location: palma-spain (39.532514, 2.724806)
+📍 Location: palma-spain (39.532519, 2.724806)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-48.HEIC
+📷 Processing photo: 20250901184248.JPG
+📍 Location: palma-spain (39.536639, 2.716842)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-49.HEIC
+📷 Processing photo: 20250901184821.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-50.HEIC
+📷 Processing photo: 20250901192748.HEIC
+📷 Processing photo: 20250901192750.HEIC
+[██████████████████████████████░░░░░░░░░░] 462/610 (75.7%) | 34s | ETA: 11s | Failed: 96✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-51.HEIC
+📷 Processing photo: 20250901192751.HEIC
+📍 Location: palma-spain (39.534703, 2.714139)
+📍 Location: palma-spain (39.534511, 2.714119)
+📍 Location: palma-spain (39.534581, 2.714086)
+📍 Location: palma-spain (39.534581, 2.714094)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-52.HEIC
+📷 Processing photo: 20250901192753.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-53.HEIC
+📷 Processing photo: 20250901192755.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-54.HEIC
+📷 Processing photo: 20250901192759.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-55.HEIC
+📷 Processing photo: 20250901195835.JPG
+📍 Location: palma-spain (39.534489, 2.714097)
+📍 Location: palma-spain (39.534406, 2.714214)
+📍 Location: palma-spain (39.534664, 2.714058)
+📷 Processing photo: 20250901200449.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-56.HEIC
+📷 Processing photo: 20250901202923.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-57.HEIC
+📷 Processing photo: 20250902092344.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-58.HEIC
+📷 Processing photo: 20250902144018.HEIC
+📷 Processing photo: 20250902144020.HEIC
+[██████████████████████████████░░░░░░░░░░] 472/610 (77.4%) | 34s | ETA: 10s | Failed: 98📍 Location: palma-spain (39.536144, 2.716378)
+📷 Processing photo: 20250902144030.HEIC
+📍 Location: palma-spain (39.534492, 2.721375)
+📍 Location: palma-spain (39.534492, 2.721369)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-01-palma-59.HEIC
+📷 Processing photo: 20250902145446.HEIC
+📍 Location: palma-spain (39.534447, 2.721272)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-43.HEIC
+📷 Processing photo: 20250902145452.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-44.HEIC
+📷 Processing photo: 20250902145458.HEIC
+📍 Location: palma-spain (39.533864, 2.721247)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-45.HEIC
+📷 Processing photo: 20250902145518.HEIC
+📍 Location: palma-spain (39.533864, 2.721222)
+📍 Location: palma-spain (39.533856, 2.721228)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-46.HEIC
+📷 Processing photo: 20250902151300.HEIC
+📍 Location: palma-spain (39.533856, 2.721239)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-47.HEIC
+📷 Processing photo: 20250902151310.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-48.HEIC
+📷 Processing photo: 20250902151354.HEIC
+[███████████████████████████████░░░░░░░░░] 480/610 (78.7%) | 35s | ETA: 9s | Failed: 99📍 Location: palma-spain (39.532489, 2.724939)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-49.HEIC
+📷 Processing photo: 20250902151358.HEIC
+📍 Location: palma-spain (39.532494, 2.724922)
+📍 Location: palma-spain (39.532486, 2.724925)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-50.HEIC
+📷 Processing photo: 20250902155409.HEIC
+📍 Location: palma-spain (39.532486, 2.724922)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-51.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-52.HEIC
+📷 Processing photo: 20250902192106.HEIC
+📷 Processing photo: 20250902192104.HEIC
+📍 Location: palma-spain (39.534828, 2.714186)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-53.HEIC
+📷 Processing photo: 20250902192113.HEIC
+📍 Location: palma-spain (39.534775, 2.716819)
+📍 Location: palma-spain (39.534775, 2.716828)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-54.HEIC
+📷 Processing photo: 20250902192351.HEIC
+📍 Location: palma-spain (39.534778, 2.716867)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-55.HEIC
+📷 Processing photo: 20250902192354.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-56.HEIC
+📷 Processing photo: 20250902192357.HEIC
+[████████████████████████████████░░░░░░░░] 488/610 (80.0%) | 35s | ETA: 9s | Failed: 99📍 Location: palma-spain (39.534953, 2.718700)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-57.HEIC
+📷 Processing photo: 20250902192406.HEIC
+📍 Location: palma-spain (39.534942, 2.718700)
+📍 Location: palma-spain (39.534931, 2.718700)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-58.HEIC
+📷 Processing photo: 20250902192717.HEIC
+📍 Location: palma-spain (39.534928, 2.718703)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-59.HEIC
+📷 Processing photo: 20250902192728.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-60.HEIC
+📷 Processing photo: 20250902192738.HEIC
+📍 Location: palma-spain (39.535131, 2.720047)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-61.HEIC
+📍 Location: palma-spain (39.535136, 2.720039)
+📍 Location: palma-spain (39.535142, 2.720047)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-62.HEIC
+🎥 Processing video: 20250902192925.MOV
+[████████████████████████████████░░░░░░░░] 494/610 (81.0%) | 36s | ETA: 8s | Failed: 99✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-63.HEIC
+📷 Processing photo: 20250902194318.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-64.HEIC
+📷 Processing photo: 20250902194322.JPG
+📷 Processing photo: 20250902192743.HEIC
+📍 Location: palma-spain (39.535100, 2.720400)
+📷 Processing photo: 20250902194330.JPG
+📷 Processing photo: 20250903122536.JPG
+📍 Location: palma-spain (39.535142, 2.720044)
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma-5.MOV
+📷 Processing photo: 20250903122602.JPG
+📷 Processing photo: 20250903130514.HEIC
+📷 Processing photo: 20250903130536.JPG
+📷 Processing photo: 20250903142508.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-02-palma-65.HEIC
+📷 Processing photo: 20250903142512.HEIC
+📷 Processing photo: 20250903142645.JPG
+📍 Location: palma-spain (39.534733, 2.714106)
+📍 Location: palma-spain (39.538547, 2.707478)
+📍 Location: palma-spain (39.538567, 2.707475)
+📷 Processing photo: 20250903144150.HEIC
+[█████████████████████████████████░░░░░░░] 505/610 (82.8%) | 36s | ETA: 7s | Failed: 106✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-43.HEIC
+📷 Processing photo: 20250903144153.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-44.HEIC
+📷 Processing photo: 20250903144155.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-45.HEIC
+📷 Processing photo: 20250903144205.HEIC
+📍 Location: palma-spain (39.536019, 2.710700)
+📍 Location: palma-spain (39.536025, 2.710675)
+📍 Location: palma-spain (39.536031, 2.710667)
+📍 Location: palma-spain (39.536025, 2.710656)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-46.HEIC
+📷 Processing photo: 20250903145819.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-47.HEIC
+📷 Processing photo: 20250903145827.PNG
+📷 Processing photo: 20250903152737.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-48.HEIC
+📷 Processing photo: 20250903182301.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-49.HEIC
+📷 Processing photo: 20250903182302.HEIC
+📷 Processing photo: 20250903182304.HEIC
+📷 Processing photo: 20250903185228.JPG
+📍 Location: palma-spain (39.534231, 2.714489)
+📍 Location: palma-spain (39.534131, 2.714514)
+📍 Location: palma-spain (39.534283, 2.714544)
+📷 Processing photo: 20250903194653.HEIC
+[█████████████████████████████████░░░░░░░] 515/610 (84.4%) | 37s | ETA: 7s | Failed: 109✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-50.HEIC
+📷 Processing photo: 20250903195003.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-51.HEIC
+📷 Processing photo: 20250903195013.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-52.HEIC
+📷 Processing photo: 20250903195029.HEIC
+📍 Location: palma-spain (39.534847, 2.714194)
+📍 Location: palma-spain (39.534789, 2.714181)
+📍 Location: palma-spain (39.534789, 2.714161)
+📍 Location: palma-spain (39.534817, 2.714136)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-53.HEIC
+📷 Processing photo: 20250903195033.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-54.HEIC
+📷 Processing photo: 20250903195041.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-55.HEIC
+📷 Processing photo: 20250903195053.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-56.HEIC
+📷 Processing photo: 20250903195438.HEIC
+📍 Location: palma-spain (39.534825, 2.714144)
+📍 Location: palma-spain (39.534833, 2.714158)
+📍 Location: palma-spain (39.534819, 2.714161)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-57.HEIC
+📍 Location: palma-spain (39.534817, 2.714158)
+📷 Processing photo: 20250903200033.HEIC
+[██████████████████████████████████░░░░░░] 524/610 (85.9%) | 37s | ETA: 6s | Failed: 110✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-58.HEIC
+📷 Processing photo: 20250904083624.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-59.HEIC
+📷 Processing photo: 20250904094238.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-60.HEIC
+📷 Processing photo: 20250904095249.PNG
+📍 Location: palma-spain (39.534847, 2.714194)
+📷 Processing photo: 20250904100020.HEIC
+📷 Processing photo: 20250904100023.HEIC
+📷 Processing photo: 20250904100024.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-03-palma-61.HEIC
+📷 Processing photo: 20250904100025(1).HEIC
+📍 Location: palma-spain (39.534711, 2.714161)
+📍 Location: palma-spain (39.534722, 2.714186)
+📍 Location: palma-spain (39.534714, 2.714167)
+📍 Location: palma-spain (39.534717, 2.714169)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-60.HEIC
+📷 Processing photo: 20250904100025.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-61.HEIC
+📷 Processing photo: 20250904100027.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-62.HEIC
+📷 Processing photo: 20250904100031(1).HEIC
+[███████████████████████████████████░░░░░] 534/610 (87.5%) | 38s | ETA: 5s | Failed: 113✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-63.HEIC
+📷 Processing photo: 20250904100031.HEIC
+📍 Location: palma-spain (39.534717, 2.714169)
+📍 Location: palma-spain (39.534717, 2.714169)
+📍 Location: palma-spain (39.534722, 2.714178)
+📍 Location: palma-spain (39.534722, 2.714178)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-64.HEIC
+📷 Processing photo: 20250904100038.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-65.HEIC
+📷 Processing photo: 20250904100050.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-66.HEIC
+📷 Processing photo: 20250904100207.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-67.HEIC
+📷 Processing photo: 20250904100253.PNG
+📍 Location: palma-spain (39.534725, 2.714186)
+📍 Location: palma-spain (39.534722, 2.714178)
+📍 Location: palma-spain (39.534814, 2.714150)
+📷 Processing photo: 20250904104440.HEIC
+[███████████████████████████████████░░░░░] 540/610 (88.5%) | 38s | ETA: 5s | Failed: 114✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-68.HEIC
+📷 Processing photo: 20250904105900.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-69.HEIC
+📷 Processing photo: 20250904112723.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-70.HEIC
+📷 Processing photo: 20250904112744.PNG
+📍 Location: palma-spain (39.534772, 2.714128)
+📷 Processing photo: 20250904114508.JPG
+📍 Location: palma-spain (39.534764, 2.714131)
+📍 Location: palma-spain (39.534742, 2.714153)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-71.HEIC
+📷 Processing photo: 20250904114516.JPG
+📷 Processing photo: 20250904114830.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-72.HEIC
+📷 Processing photo: 20250904121036.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-73.HEIC
+📷 Processing photo: 20250904121344.HEIC
+📷 Processing photo: 20250904121527.HEIC
+📍 Location: palma-spain (39.534814, 2.714167)
+📍 Location: palma-spain (39.534725, 2.714283)
+📍 Location: palma-spain (39.534756, 2.714108)
+📍 Location: palma-spain (39.534778, 2.714108)
+[████████████████████████████████████░░░░] 549/610 (90.0%) | 39s | ETA: 4s | Failed: 117✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-74.HEIC
+📷 Processing photo: 20250904123306.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-75.HEIC
+📷 Processing photo: 20250904130714.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-76.HEIC
+📷 Processing photo: 20250904130728.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-77.HEIC
+📷 Processing photo: 20250904130849.JPG
+🎥 Processing video: 20250904134212.MP4
+🎥 Processing video: 20250904144834.MP4
+📷 Processing photo: 20250904163536.PNG
+📷 Processing photo: 20250904190240.JPG
+📷 Processing photo: 20250904190302.JPG
+📷 Processing photo: 20250904190341.HEIC
+📷 Processing photo: 20250904190550.JPG
+📷 Processing photo: 20250904191312.HEIC
+📷 Processing photo: 20250904193940.JPG
+📍 Location: palma-spain (39.535308, 2.720967)
+📷 Processing photo: 20250904193947.JPG
+📷 Processing photo: 20250904193952.JPG
+📍 Location: palma-spain (39.535294, 2.721025)
+[████████████████████████████████████░░░░] 564/610 (92.5%) | 39s | ETA: 3s | Failed: 128📷 Processing photo: 20250904211451.PNG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-78.HEIC
+📷 Processing photo: 20250905082520.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-04-palma-79.HEIC
+📷 Processing photo: 20250905082522.HEIC
+📷 Processing photo: 20250905082519.HEIC
+📷 Processing photo: 20250905082542.HEIC
+📍 Location: palma-spain (39.534989, 2.714275)
+📍 Location: palma-spain (39.534953, 2.714256)
+📍 Location: palma-spain (39.534992, 2.714294)
+📍 Location: palma-spain (39.534864, 2.714222)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-47.HEIC
+📷 Processing photo: 20250905082544.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-48.HEIC
+📷 Processing photo: 20250905082547.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-49.HEIC
+📷 Processing photo: 20250905095744.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-50.HEIC
+📷 Processing photo: 20250905131904.HEIC
+📍 Location: palma-spain (39.534875, 2.714244)
+📍 Location: palma-spain (39.535769, 2.718167)
+📍 Location: palma-spain (39.534936, 2.714311)
+📍 Location: palma-spain (39.535758, 2.710389)
+[█████████████████████████████████████░░░] 573/610 (93.9%) | 40s | ETA: 3s | Failed: 131✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-51.HEIC
+📷 Processing photo: 20250905132329.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-52.HEIC
+📷 Processing photo: 20250905133250.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-53.HEIC
+📷 Processing photo: 20250905133301.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-54.HEIC
+📷 Processing photo: 20250905134252.HEIC
+📍 Location: palma-spain (39.535781, 2.710428)
+📍 Location: palma-spain (39.534961, 2.712311)
+📍 Location: palma-spain (39.535019, 2.712375)
+📍 Location: palma-spain (39.534550, 2.714106)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-55.HEIC
+📷 Processing photo: 20250905134258.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-56.HEIC
+📷 Processing photo: 20250905134301.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-57.HEIC
+📷 Processing photo: 20250905134308.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-58.HEIC
+📷 Processing photo: 20250905134458.HEIC
+📍 Location: palma-spain (39.534572, 2.714078)
+📍 Location: palma-spain (39.534581, 2.714072)
+[██████████████████████████████████████░░] 581/610 (95.2%) | 40s | ETA: 2s | Failed: 131📍 Location: palma-spain (39.534583, 2.714061)
+📍 Location: palma-spain (39.534592, 2.714106)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-59.HEIC
+📷 Processing photo: 20250905134503.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-60.HEIC
+📷 Processing photo: 20250905134508.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-61.HEIC
+📷 Processing photo: 20250905140800.JPG
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-62.HEIC
+📷 Processing photo: 20250905142715.JPG
+📍 Location: palma-spain (39.534583, 2.714092)
+📷 Processing photo: 20250905142726.JPG
+📍 Location: palma-spain (39.534583, 2.714094)
+📷 Processing photo: 20250905143623.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-63.HEIC
+📷 Processing photo: 20250905162830.JPG
+🎥 Processing video: 20250905192153.MOV
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-64.HEIC
+📷 Processing photo: 20250906032935.HEIC
+📍 Location: palma-spain (39.534564, 2.714117)
+📷 Processing photo: 20250906032943.HEIC
+📍 Location: palma-spain (39.534500, 2.714000)
+[██████████████████████████████████████░░] 591/610 (96.9%) | 41s | ETA: 1s | Failed: 135📍 Location: palma-spain (39.534819, 2.714281)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-05-palma-65.HEIC
+📷 Processing photo: 20250906033335.HEIC
+✅ Video moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-05-palma-1.MOV
+📷 Processing photo: 20250906042709.HEIC
+📍 Location: palma-spain (39.534825, 2.714261)
+📍 Location: palma-spain (39.534686, 2.714147)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-15.HEIC
+📷 Processing photo: 20250906051234.HEIC
+📍 Location: palma-spain (39.550475, 2.729667)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-16.HEIC
+📷 Processing photo: 20250906053709.HEIC
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-17.HEIC
+📷 Processing photo: 20250906063005.HEIC
+📍 Location: palma-spain (39.549831, 2.727436)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-18.HEIC
+📷 Processing photo: 20250906063257.HEIC
+📍 Location: palma-spain (39.549972, 2.726703)
+📍 Location: palma-spain (39.554081, 2.758950)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-19.HEIC
+📷 Processing photo: 20250906063402.HEIC
+📍 Location: majorca-spain (39.543503, 2.961917)
+✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-20.HEIC
+📷 Processing photo: 20250906084112.HEIC
+[███████████████████████████████████████░] 599/610 (98.2%) | 41s | ETA: 1s | Failed: 135✅ Photo moved to: /tmp/2025/spain/palma/2025-09-06-palma-21.HEIC
+📷 Processing photo: 20250906084115.HEIC
+📍 Location: majorca-spain (39.686706, 2.905425)
+✅ Photo moved to: /tmp/2025/spain/majorca/2025-09-06-majorca-2.HEIC
+📷 Processing photo: 20250906095719.HEIC
+📷 Processing photo: 20250906095725.HEIC
+✅ Photo moved to: /tmp/2025/spain/majorca/2025-09-06-majorca-3.HEIC
+📷 Processing photo: 20250906121718.PNG
+📍 Location: high-peak-united-kingdom (53.368094, -1.895511)
+📷 Processing photo: 20250906130347.PNG
+📷 Processing photo: 20250906194812.PNG
+✅ Photo moved to: /tmp/2025/united-kingdom/high-peak/2025-09-06-high-peak-1.HEIC
+📷 Processing photo: 20250906220004.PNG
+[███████████████████████████████████████░] 608/610 (99.7%) | 42s | ETA: 0s | Failed: 140📍 Location: manchester-united-kingdom (53.365069, -2.271942)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-8.HEIC
+[███████████████████████████████████████░] 609/610 (99.8%) | 43s | ETA: 0s | Failed: 140📍 Location: manchester-united-kingdom (53.364972, -2.271878)
+✅ Photo moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester-9.HEIC
+[████████████████████████████████████████] 610/610 (100.0%) | 44s | Failed: 140[████████████████████████████████████████] 610/610 (100.0%) | 44s | Failed: 140
+
+📊 Processing Summary:
+✅ Status: COMPLETED
+📈 Progress: 610/610 processed
+✅ Total successful: 470
+📷 Photos successful: 452/588
+🎥 Videos successful: 18/22
+❌ Total failed: 140
+⏭️  Skipped: 0
+⏱️  Total time: 44s
+📊 Average time per file: 71ms
+📋 Completion: 100.0%
+
+❌ Error breakdown:
+   - Photo: No GPS data: 136 files (136 photos)
+   - Video: No GPS data: 4 files (4 videos)
+
+🎥 Videos organized in VIDEO-FILES/ directory structure

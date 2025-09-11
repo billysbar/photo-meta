@@ -10,12 +10,22 @@ A powerful, concurrent photo organization tool that processes photos and videos 
 - **🔀 Smart Merging**: Combines photo collections while preserving structure
 - **🧹 Duplicate Detection**: Intelligent duplicate removal with structure-based prioritization
 - **📊 Progress Visualization**: Enhanced progress bars with ETA and real-time statistics
+- **📋 Comprehensive Reporting**: Detailed analysis with summary, duplicates, and statistics reports
 - **🔍 Dry-Run Modes**: Safe preview modes including quick sampling (dry-run1)
 - **🎥 Video Support**: Full video file processing with separate VIDEO-FILES organization
 - **⏹️ Graceful Cancellation**: Ctrl+C support with proper cleanup
 - **🌍 Global Coverage**: 200+ cities offline mapping + OpenStreetMap fallback
 
 ## 📋 Command Glossary
+
+| Command | Purpose | Best For |
+|---------|---------|----------|
+| **`process`** | GPS-based organization | Photos/videos with location data |
+| **`datetime`** | Date-based matching | Files without GPS data |
+| **`clean`** | Duplicate removal | Removing redundant files |
+| **`merge`** | Collection combining | Merging photo libraries |
+| **`summary`** | Quick analysis | Initial directory assessment |
+| **`report`** | Detailed reporting | Comprehensive analysis & documentation |
 
 ### 🔧 Installation & Setup
 
@@ -224,6 +234,97 @@ Merges photos from source directory into target directory while preserving YEAR/
 
 ---
 
+### 5. **SUMMARY** - Quick Directory Analysis
+
+Provides a quick overview of what's in a directory and what processing is needed.
+
+```bash
+./photo-meta summary /source/path
+```
+
+#### **Benefits:**
+- ✅ **Quick Assessment**: Instant overview of photos, videos, and file types
+- ✅ **GPS Analysis**: Shows files with/without GPS data
+- ✅ **Processing Guidance**: Recommends which commands to use next
+- ✅ **Date Analysis**: Shows extractable dates and date ranges
+- ✅ **Directory Structure**: File counts per subdirectory
+
+#### **Examples:**
+```bash
+# Quick overview of directory contents
+./photo-meta summary ~/vacation-photos
+
+# Assess processing needs for large collection
+./photo-meta summary /massive-photo-collection
+```
+
+---
+
+### 6. **REPORT** - Comprehensive Analysis & Reporting
+
+Generates detailed reports for directory analysis, duplicate detection, and statistics with optional file export.
+
+```bash
+./photo-meta report <type> /source/path [OPTIONS]
+```
+
+#### **Report Types:**
+- **`summary`** - Comprehensive directory analysis with processing status
+- **`duplicates`** - Find and analyze duplicate files with quality scoring
+- **`stats`** - General file statistics and extension breakdown
+
+#### **Options:**
+- `--save` - Export report to timestamped .txt file
+- `--progress` - Show scanning progress (default: enabled)
+- `--verbose` - Detailed output with additional information
+
+#### **Benefits:**
+- ✅ **Detailed Analysis**: In-depth directory structure and file analysis
+- ✅ **Processing Status**: Shows which files are processed vs unprocessed
+- ✅ **Duplicate Intelligence**: SHA-256 hashing with quality-based prioritization
+- ✅ **Space Analysis**: Calculate potential space savings from duplicates
+- ✅ **Export Capability**: Save reports as timestamped text files
+- ✅ **Non-Destructive**: All reports are read-only analysis
+
+#### **Examples:**
+```bash
+# Quick statistics overview
+./photo-meta report stats ~/photos
+
+# Comprehensive directory analysis with export
+./photo-meta report summary ~/photos --save --progress
+
+# Find duplicates with quality analysis
+./photo-meta report duplicates ~/photos --save
+
+# Analyze processing completion status
+./photo-meta report summary ~/organized-photos --verbose
+```
+
+#### **Report Outputs:**
+
+**Summary Report:**
+- Processing completion percentage
+- Processed vs unprocessed files by location
+- Files that would be moved to VIDEO-FILES
+- Directory structure with file counts
+- Date ranges and file type breakdown
+
+**Duplicates Report:**
+- Duplicate groups with SHA-256 hashes
+- Quality scores for intelligent prioritization
+- Wasted space calculations
+- File modification dates and paths
+- Recommendations for which files to keep
+
+**Stats Report:**
+- File type statistics (photos, videos, other)
+- Extension breakdown sorted by frequency
+- Total file counts and sizes
+- Quick analysis timing
+
+---
+
 ## ⚙️ Performance & Configuration
 
 ### **Worker Configuration**
@@ -281,24 +382,36 @@ Merges photos from source directory into target directory while preserving YEAR/
 ### **Complete Photo Organization Workflow**
 
 ```bash
-# 1. Quick assessment of what you have
+# 1. Initial assessment of what you have
+./photo-meta summary ~/messy-photos
+
+# 2. Quick assessment with detailed reporting
+./photo-meta report summary ~/messy-photos --save
+
+# 3. Quick process preview to understand structure
 ./photo-meta process ~/messy-photos ~/organized --dry-run1
 
-# 2. Full preview to understand structure
+# 4. Full preview to verify operations
 ./photo-meta process ~/messy-photos ~/organized --dry-run
 
-# 3. Process GPS-enabled photos
+# 5. Process GPS-enabled photos
 ./photo-meta process ~/messy-photos ~/organized --workers 6 --progress
 
-# 4. Handle remaining files by date matching
+# 6. Handle remaining files by date matching
 ./photo-meta datetime ~/leftover-photos ~/organized --dry-run1
 ./photo-meta datetime ~/leftover-photos ~/organized --progress
 
-# 5. Clean up any duplicates
+# 7. Check for duplicates before cleaning
+./photo-meta report duplicates ~/organized --save
+
+# 8. Clean up any duplicates
 ./photo-meta clean ~/organized --dry-run1
 ./photo-meta clean ~/organized --progress
 
-# 6. Merge additional collections as needed
+# 9. Generate final statistics report
+./photo-meta report stats ~/organized --save
+
+# 10. Merge additional collections as needed
 ./photo-meta merge ~/new-photos ~/organized --dry-run1
 ./photo-meta merge ~/new-photos ~/organized --progress
 ```
@@ -320,14 +433,36 @@ Merges photos from source directory into target directory while preserving YEAR/
 ### **Safe Duplicate Cleaning**
 
 ```bash
-# 1. Get overview of duplicates
+# 1. Generate comprehensive duplicate analysis report
+./photo-meta report duplicates ~/organized --save --verbose
+
+# 2. Get overview of duplicates for cleaning
 ./photo-meta clean ~/organized --dry-run1
 
-# 2. Detailed analysis
+# 3. Detailed cleaning analysis
 ./photo-meta clean ~/organized --dry-run --verbose
 
-# 3. Clean duplicates
+# 4. Clean duplicates
 ./photo-meta clean ~/organized --progress
+```
+
+### **Comprehensive Reporting Workflow**
+
+```bash
+# 1. Quick directory assessment
+./photo-meta summary ~/photos
+
+# 2. Detailed processing status analysis
+./photo-meta report summary ~/photos --save --progress
+
+# 3. Duplicate analysis with quality scoring
+./photo-meta report duplicates ~/photos --save
+
+# 4. Final statistics and file breakdown
+./photo-meta report stats ~/photos --save
+
+# All reports are saved with timestamps for tracking
+ls ~/photos/summary_* ~/photos/duplicates_* ~/photos/stats_*
 ```
 
 ---
@@ -335,7 +470,7 @@ Merges photos from source directory into target directory while preserving YEAR/
 ## 🗂️ Supported File Formats
 
 ### **Photo Formats (25+ formats)**
-- **Common**: JPG, JPEG, HEIC, HEIF, TIFF, PNG
+- **Common**: JPG, JPEG, HEIC, HEIF, TIFF, TIF, PNG
 - **RAW**: CR2 (Canon), NEF (Nikon), ARW (Sony), ORF (Olympus), RW2 (Panasonic), RAF (Fuji), DNG, and more
 
 ### **Video Formats**

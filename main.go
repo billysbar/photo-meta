@@ -271,10 +271,289 @@ func main() {
 			log.Fatal(err)
 		}
 		
+	case "summary":
+		if len(os.Args) < 3 {
+			fmt.Println("Usage: ./photo-metadata-editor summary /source/path")
+			os.Exit(1)
+		}
+		
+		sourcePath := os.Args[2]
+		
+		// Check if source path exists
+		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
+			log.Fatalf("Source path does not exist: %s", sourcePath)
+		}
+		
+		// Process summary
+		if err := processSummary(sourcePath); err != nil {
+			log.Fatal(err)
+		}
+		
+	case "report":
+		if len(os.Args) < 4 {
+			fmt.Println("Usage: ./photo-metadata-editor report <type> /source/path [--save] [--progress] [--verbose]")
+			fmt.Println("Types: summary, duplicates, stats")
+			os.Exit(1)
+		}
+		
+		reportTypeStr := os.Args[2]
+		sourcePath := os.Args[3]
+		
+		// Parse report type
+		var reportType ReportType
+		switch reportTypeStr {
+		case "summary":
+			reportType = ReportTypeSummary
+		case "duplicates":
+			reportType = ReportTypeDuplicates
+		case "stats":
+			reportType = ReportTypeStats
+		default:
+			fmt.Printf("Invalid report type: %s\n", reportTypeStr)
+			fmt.Println("Valid types: summary, duplicates, stats")
+			os.Exit(1)
+		}
+		
+		// Parse additional flags
+		var saveFile bool
+		var showProgress = true
+		var verbose bool
+		
+		for i := 4; i < len(os.Args); i++ {
+			arg := os.Args[i]
+			switch arg {
+			case "--save":
+				saveFile = true
+			case "--progress":
+				showProgress = true
+			case "--no-progress":
+				showProgress = false
+			case "--verbose":
+				verbose = true
+			}
+		}
+		
+		// Check if source path exists
+		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
+			log.Fatalf("Source path does not exist: %s", sourcePath)
+		}
+		
+		// Configure report
+		config := ReportConfig{
+			GenerateFile:  saveFile,
+			ShowProgress:  showProgress,
+			VerboseOutput: verbose,
+			DateFormat:    "2006-01-02",
+		}
+		
+		// Generate report
+		if err := processReport(sourcePath, reportType, config); err != nil {
+			log.Fatal(err)
+		}
+		
 	default:
 		showUsage()
 		os.Exit(1)
 	}
+}
+
+// processSummary analyzes the source directory and shows what remains unprocessed
+func processSummary(sourcePath string) error {
+	fmt.Printf("📋 Source Directory Summary\n")
+	fmt.Printf("🔍 Analyzing: %s\n\n", sourcePath)
+
+	// Counters for different file types and categories
+	var totalFiles int
+	var totalPhotos int
+	var totalVideos int
+	var gpsPhotos int
+	var gpsVideos int
+	var nonGPSPhotos int
+	var nonGPSVideos int
+	var unsupportedFiles int
+	
+	// File extension breakdown
+	photoExtensions := make(map[string]int)
+	videoExtensions := make(map[string]int)
+	unsupportedExtensions := make(map[string]int)
+	
+	// Date extraction stats
+	var filesWithDates int
+	var filesWithoutDates int
+	dateRanges := make(map[string]int) // YYYY-MM format
+	
+	// Directory structure analysis
+	subdirs := make(map[string]int) // relative path -> file count
+
+	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+
+		// Skip directories
+		if info.IsDir() {
+			return nil
+		}
+
+		totalFiles++
+		
+		// Get file extension
+		ext := strings.ToLower(filepath.Ext(path))
+		
+		// Get subdirectory
+		relPath, err := filepath.Rel(sourcePath, path)
+		if err == nil {
+			subDir := filepath.Dir(relPath)
+			if subDir == "." {
+				subDir = "root"
+			}
+			subdirs[subDir]++
+		}
+
+		// Classify file type
+		if isPhotoFile(path) {
+			totalPhotos++
+			photoExtensions[ext]++
+			
+			// Check for GPS data
+			_, _, err := extractGPSCoordinates(path)
+			if err == nil {
+				gpsPhotos++
+			} else {
+				nonGPSPhotos++
+			}
+			
+			// Try to extract date
+			filename := filepath.Base(path)
+			if _, err := extractDateFromFilename(filename); err == nil {
+				filesWithDates++
+				// Extract year-month for date range analysis
+				if date, err := extractDateFromFilename(filename); err == nil && len(date) >= 7 {
+					yearMonth := date[:7] // YYYY-MM
+					dateRanges[yearMonth]++
+				}
+			} else {
+				filesWithoutDates++
+			}
+			
+		} else if isVideoFile(path) {
+			totalVideos++
+			videoExtensions[ext]++
+			
+			// Check for GPS data
+			_, _, err := extractGPSCoordinates(path)
+			if err == nil {
+				gpsVideos++
+			} else {
+				nonGPSVideos++
+			}
+			
+			// Try to extract date
+			filename := filepath.Base(path)
+			if _, err := extractDateFromFilename(filename); err == nil {
+				filesWithDates++
+				// Extract year-month for date range analysis
+				if date, err := extractDateFromFilename(filename); err == nil && len(date) >= 7 {
+					yearMonth := date[:7] // YYYY-MM
+					dateRanges[yearMonth]++
+				}
+			} else {
+				filesWithoutDates++
+			}
+			
+		} else {
+			unsupportedFiles++
+			unsupportedExtensions[ext]++
+		}
+
+		return nil
+	})
+
+	if err != nil {
+		return fmt.Errorf("failed to analyze directory: %v", err)
+	}
+
+	// Display summary
+	fmt.Printf("📊 File Type Summary:\n")
+	fmt.Printf("  📷 Photos: %d\n", totalPhotos)
+	fmt.Printf("  🎥 Videos: %d\n", totalVideos)
+	fmt.Printf("  ❌ Unsupported: %d\n", unsupportedFiles)
+	fmt.Printf("  📁 Total files: %d\n\n", totalFiles)
+
+	fmt.Printf("🗺️  GPS Processing Status:\n")
+	fmt.Printf("  📷 Photos with GPS: %d (can be processed with 'process')\n", gpsPhotos)
+	fmt.Printf("  📷 Photos without GPS: %d (need 'datetime' matching)\n", nonGPSPhotos)
+	fmt.Printf("  🎥 Videos with GPS: %d (can be processed with 'process')\n", gpsVideos)
+	fmt.Printf("  🎥 Videos without GPS: %d (need 'datetime' matching)\n", nonGPSVideos)
+	fmt.Printf("\n")
+
+	fmt.Printf("📅 Date Extraction Status:\n")
+	fmt.Printf("  ✅ Files with extractable dates: %d\n", filesWithDates)
+	fmt.Printf("  ❌ Files without extractable dates: %d\n", filesWithoutDates)
+	fmt.Printf("\n")
+
+	if len(dateRanges) > 0 {
+		fmt.Printf("📆 Date Ranges Found:\n")
+		for yearMonth, count := range dateRanges {
+			fmt.Printf("  %s: %d files\n", yearMonth, count)
+		}
+		fmt.Printf("\n")
+	}
+
+	fmt.Printf("📂 Directory Structure:\n")
+	for subDir, count := range subdirs {
+		if subDir == "root" {
+			fmt.Printf("  📁 (root): %d files\n", count)
+		} else {
+			fmt.Printf("  📁 %s: %d files\n", subDir, count)
+		}
+	}
+	fmt.Printf("\n")
+
+	if totalPhotos > 0 {
+		fmt.Printf("📷 Photo Extensions:\n")
+		for ext, count := range photoExtensions {
+			fmt.Printf("  %s: %d files\n", ext, count)
+		}
+		fmt.Printf("\n")
+	}
+
+	if totalVideos > 0 {
+		fmt.Printf("🎥 Video Extensions:\n")
+		for ext, count := range videoExtensions {
+			fmt.Printf("  %s: %d files\n", ext, count)
+		}
+		fmt.Printf("\n")
+	}
+
+	if unsupportedFiles > 0 {
+		fmt.Printf("❌ Unsupported Extensions:\n")
+		for ext, count := range unsupportedExtensions {
+			if ext == "" {
+				fmt.Printf("  (no extension): %d files\n", count)
+			} else {
+				fmt.Printf("  %s: %d files\n", ext, count)
+			}
+		}
+		fmt.Printf("\n")
+	}
+
+	// Recommendations
+	fmt.Printf("💡 Recommendations:\n")
+	if gpsPhotos > 0 || gpsVideos > 0 {
+		fmt.Printf("  1. Run 'process' command first for %d files with GPS data\n", gpsPhotos+gpsVideos)
+	}
+	if nonGPSPhotos > 0 || nonGPSVideos > 0 {
+		fmt.Printf("  2. Run 'datetime' command for %d files without GPS data\n", nonGPSPhotos+nonGPSVideos)
+	}
+	if filesWithoutDates > 0 {
+		fmt.Printf("  3. %d files have no extractable dates and may need manual organization\n", filesWithoutDates)
+	}
+	if unsupportedFiles > 0 {
+		fmt.Printf("  4. %d unsupported files will be ignored during processing\n", unsupportedFiles)
+	}
+
+	return nil
 }
 
 func showUsage() {
@@ -285,6 +564,13 @@ func showUsage() {
 	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--dry-run1] [--verbose] [--workers N] [--progress]")
 	fmt.Println("  ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
+	fmt.Println("  ./photo-metadata-editor summary /source/path")
+	fmt.Println("  ./photo-metadata-editor report <type> /source/path [--save] [--progress] [--verbose]")
+	fmt.Println()
+	fmt.Println("Report Types:")
+	fmt.Println("  summary      Comprehensive directory analysis with processing status")
+	fmt.Println("  duplicates   Find and analyze duplicate files with quality scoring")  
+	fmt.Println("  stats        General file statistics and extension breakdown")
 	fmt.Println()
 	fmt.Println("Performance Options:")
 	fmt.Println("  --workers N    Number of concurrent workers (1-16, default: 4)")

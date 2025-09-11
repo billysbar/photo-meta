@@ -1,0 +1,71 @@
+📸 Photo Metadata Editor - High Performance Concurrent Version
+
+Commands:
+  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]
+  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]
+  ./photo-metadata-editor clean /target/path [--dry-run] [--dry-run1] [--verbose] [--workers N] [--progress]
+  ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run] [--dry-run1] [--progress]
+  ./photo-metadata-editor summary /source/path
+  ./photo-metadata-editor report <type> /source/path [--save] [--progress] [--verbose]
+
+Report Types:
+  summary      Comprehensive directory analysis with processing status
+  duplicates   Find and analyze duplicate files with quality scoring
+  stats        General file statistics and extension breakdown
+
+Performance Options:
+  --workers N    Number of concurrent workers (1-16, default: 4)
+               Higher values process more files simultaneously
+               Lower values reduce system load and memory usage
+  --progress     Show enhanced progress bar (default: true)
+  --no-progress  Disable progress bar display
+
+Process Features:
+  - 🚀 Concurrent processing with configurable worker pools
+  - 🔒 Thread-safe file operations with intelligent locking
+  - 📊 Enhanced progress bars with visual indicators and ETA
+  - ⏹️  Graceful cancellation (Ctrl+C) with cleanup
+  - 🔍 --dry-run mode for safe preview without moving files
+  - 🔍 --dry-run1 mode for quick overview (1 file per type per directory)
+  - 📍 Extracts GPS location data from photos and videos
+  - 📁 Photos organized in YEAR/COUNTRY/CITY structure
+  - 🎥 Videos organized in VIDEO-FILES/YEAR/COUNTRY/CITY structure
+  - 🔄 Smart duplicate handling with counter suffixes
+
+DateTime Features:
+  - 🔄 Concurrent date-based file matching for photos and videos
+  - 📊 Enhanced progress bars with visual feedback
+  - 🔍 --dry-run mode for safe preview without moving files
+  - 🔍 --dry-run1 mode for quick overview (1 file per type per directory)
+  - 🗃️  Uses processed photos as location database
+  - 🎥 Video files organized in VIDEO-FILES/YYYY/COUNTRY/CITY
+  - 📷 Photo files placed in regular YYYY/COUNTRY/CITY structure
+  - 🤝 Interactive verification prompts
+
+Clean Features:
+  - ⚡ High-speed duplicate detection using SHA-256
+  - 🧠 Intelligent file prioritization
+  - 🔒 Safe concurrent duplicate removal
+  - 📊 Enhanced progress bars (disabled in --verbose mode)
+  - 🔍 --dry-run mode for safe preview
+  - 🔍 --dry-run1 mode for quick summary (samples first 3 duplicate groups)
+  - 📝 --verbose mode for detailed logging
+
+Merge Features:
+  - 🔀 Merge photos from source into target using YEAR/COUNTRY/CITY structure
+  - 🚀 Concurrent processing with configurable worker pools
+  - 📊 Enhanced progress bars with visual feedback
+  - 🔍 --dry-run mode for safe preview without copying files
+  - 🔍 --dry-run1 mode for quick overview (1 file per type per directory)
+  - 📍 GPS-based location detection or intelligent inference
+  - 🔄 Smart duplicate detection to avoid overwriting existing files
+  - 🎥 Videos organized in VIDEO-FILES/YEAR/COUNTRY/CITY structure
+  - 📷 Photos organized in YEAR/COUNTRY/CITY structure
+  - 💾 Copies files (preserves originals in source)
+
+Performance Tips:
+  - Use --workers 8-16 for large photo collections
+  - Use --workers 1-4 for slower storage (USB drives)
+  - Press Ctrl+C for graceful cancellation
+  - Monitor system resources during processing
+

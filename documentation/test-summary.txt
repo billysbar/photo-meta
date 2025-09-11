@@ -1,0 +1,50 @@
+📋 Source Directory Summary
+🔍 Analyzing: /tmp/2025 Sept majorca
+
+📊 File Type Summary:
+  📷 Photos: 588
+  🎥 Videos: 22
+  ❌ Unsupported: 5
+  📁 Total files: 615
+
+🗺️  GPS Processing Status:
+  📷 Photos with GPS: 452 (can be processed with 'process')
+  📷 Photos without GPS: 136 (need 'datetime' matching)
+  🎥 Videos with GPS: 18 (can be processed with 'process')
+  🎥 Videos without GPS: 4 (need 'datetime' matching)
+
+📅 Date Extraction Status:
+  ✅ Files with extractable dates: 610
+  ❌ Files without extractable dates: 0
+
+📆 Date Ranges Found:
+  2025-08: 112 files
+  2025-09: 498 files
+
+📂 Directory Structure:
+  📁 alan/orig/All: 85 files
+  📁 shani: 1 files
+  📁 shani/jpeg/All: 220 files
+  📁 alan/orig: 1 files
+  📁 shani/orig: 1 files
+  📁 shani/orig/All: 220 files
+  📁 (root): 1 files
+  📁 alan: 1 files
+  📁 alan/jpeg/All: 85 files
+
+📷 Photo Extensions:
+  .heic: 454 files
+  .png: 52 files
+  .jpg: 82 files
+
+🎥 Video Extensions:
+  .mp4: 4 files
+  .mov: 18 files
+
+❌ Unsupported Extensions:
+  .ds_store: 5 files
+
+💡 Recommendations:
+  1. Run 'process' command first for 470 files with GPS data
+  2. Run 'datetime' command for 140 files without GPS data
+  4. 5 unsupported files will be ignored during processing

@@ -1,0 +1,53 @@
+Photo Metadata Editor - Directory Summary
+Generated: 2025-09-11 14:07:46
+Directory: /tmp/2025 Sept majorca
+============================================================
+
+📊 DIRECTORY SUMMARY
+🗂️  Total image files found: 588
+✅ Processed files: 0
+⏳ Unprocessed files: 588
+📈 Processing completion: 0.0%
+
+⏳ UNPROCESSED FILES BY DIRECTORY:
+UNPROCESSED IN alan/jpeg/All/ (83 files)
+UNPROCESSED IN alan/orig/All/ (83 files)
+UNPROCESSED IN shani/jpeg/All/ (211 files)
+UNPROCESSED IN shani/orig/All/ (211 files)
+
+📁 MOVED NON-IMAGE FILES (28 files):
+   📄 .DS_Store -> VIDEO-FILES/.DS_Store
+   📄 alan/.DS_Store -> VIDEO-FILES/.DS_Store
+   📄 alan/jpeg/All/20250902200725.MOV -> VIDEO-FILES/20250902200725.MOV
+   📄 alan/jpeg/All/20250902200740.MOV -> VIDEO-FILES/20250902200740.MOV
+   📄 alan/orig/.DS_Store -> VIDEO-FILES/.DS_Store
+   📄 alan/orig/All/20250902200725.MOV -> VIDEO-FILES/20250902200725.MOV
+   📄 alan/orig/All/20250902200740.MOV -> VIDEO-FILES/20250902200740.MOV
+   📄 shani/.DS_Store -> VIDEO-FILES/.DS_Store
+   📄 shani/jpeg/All/20250831130611.MOV -> VIDEO-FILES/20250831130611.MOV
+   📄 shani/jpeg/All/20250831134742.MOV -> VIDEO-FILES/20250831134742.MOV
+   📄 shani/jpeg/All/20250831182704.MOV -> VIDEO-FILES/20250831182704.MOV
+   📄 shani/jpeg/All/20250831194541.MOV -> VIDEO-FILES/20250831194541.MOV
+   📄 shani/jpeg/All/20250901140114.MOV -> VIDEO-FILES/20250901140114.MOV
+   📄 shani/jpeg/All/20250902192925.MOV -> VIDEO-FILES/20250902192925.MOV
+   📄 shani/jpeg/All/20250904134212.MP4 -> VIDEO-FILES/20250904134212.MP4
+   📄 shani/jpeg/All/20250904144834.MP4 -> VIDEO-FILES/20250904144834.MP4
+   📄 shani/jpeg/All/20250905192153.MOV -> VIDEO-FILES/20250905192153.MOV
+   📄 shani/orig/.DS_Store -> VIDEO-FILES/.DS_Store
+   📄 shani/orig/All/20250831130611.MOV -> VIDEO-FILES/20250831130611.MOV
+   📄 shani/orig/All/20250831134742.MOV -> VIDEO-FILES/20250831134742.MOV
+   📄 shani/orig/All/20250831182704.MOV -> VIDEO-FILES/20250831182704.MOV
+   📄 shani/orig/All/20250831194541.MOV -> VIDEO-FILES/20250831194541.MOV
+   📄 shani/orig/All/20250901140114.MOV -> VIDEO-FILES/20250901140114.MOV
+   📄 shani/orig/All/20250902192925.MOV -> VIDEO-FILES/20250902192925.MOV
+   📄 shani/orig/All/20250904134212.MP4 -> VIDEO-FILES/20250904134212.MP4
+   📄 shani/orig/All/20250904144834.MP4 -> VIDEO-FILES/20250904144834.MP4
+   📄 shani/orig/All/20250905192153.MOV -> VIDEO-FILES/20250905192153.MOV
+   📄 stats_2025-Sept-majorca_2025-09-11_14-07-31.txt -> VIDEO-FILES/stats_2025-Sept-majorca_2025-09-11_14-07-31.txt
+
+📹 VIDEO-FILES DIRECTORY SUMMARY (22 files):
+   .mov: 18 files
+   .mp4: 4 files
+
+⏱️  Scan completed in: 4ms
+📊 Files scanned: 616

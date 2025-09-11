@@ -30,7 +30,7 @@ func processDateTimeMatching(sourcePath, destPath string, dryRun bool, dryRun1 b
 
 	if dryRun {
 		if dryRun1 {
-			fmt.Println("🔍 DRY RUN1 MODE - Sample only 1 file per type per directory")
+			fmt.Println("🔍 DRY RUN1 MODE - Sample only 1 file per type per subdirectory")
 		} else {
 			fmt.Println("🔍 DRY RUN MODE - No files will be moved")
 		}
@@ -453,10 +453,10 @@ func promptForConfirmation(prompt string) bool {
 
 // collectSampleFilesForDatetime collects sample files for datetime dry-run1 mode
 func collectSampleFilesForDatetime(sourcePath string) ([]string, error) {
-	// Map to track files by directory and type
-	dirFiles := make(map[string]map[string][]string) // directory -> {photos: [], videos: []}
+	// Map to track files by subdirectory and type
+	dirFiles := make(map[string]map[string][]string) // subdirectory -> {photos: [], videos: []}
 
-	// Collect all files grouped by directory and type
+	// Collect all files grouped by subdirectory and type
 	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -472,12 +472,21 @@ func collectSampleFilesForDatetime(sourcePath string) ([]string, error) {
 			return nil
 		}
 
-		// Get directory path
-		dir := filepath.Dir(path)
+		// Get relative subdirectory path from source
+		relPath, err := filepath.Rel(sourcePath, path)
+		if err != nil {
+			return err
+		}
+		subDir := filepath.Dir(relPath)
+		
+		// Use "." for files directly in source path (no subdirectory)
+		if subDir == "." {
+			subDir = "root"
+		}
 
-		// Initialize directory map if needed
-		if dirFiles[dir] == nil {
-			dirFiles[dir] = map[string][]string{
+		// Initialize subdirectory map if needed
+		if dirFiles[subDir] == nil {
+			dirFiles[subDir] = map[string][]string{
 				"photos": []string{},
 				"videos": []string{},
 			}
@@ -485,9 +494,9 @@ func collectSampleFilesForDatetime(sourcePath string) ([]string, error) {
 
 		// Add to appropriate type list
 		if isVideoFile(path) {
-			dirFiles[dir]["videos"] = append(dirFiles[dir]["videos"], path)
+			dirFiles[subDir]["videos"] = append(dirFiles[subDir]["videos"], path)
 		} else {
-			dirFiles[dir]["photos"] = append(dirFiles[dir]["photos"], path)
+			dirFiles[subDir]["photos"] = append(dirFiles[subDir]["photos"], path)
 		}
 
 		return nil
@@ -497,16 +506,16 @@ func collectSampleFilesForDatetime(sourcePath string) ([]string, error) {
 		return nil, err
 	}
 
-	// Sample files: 1 photo and 1 video per directory (if available)
+	// Sample files: 1 photo and 1 video per subdirectory (if available)
 	var sampleFiles []string
 
 	for _, files := range dirFiles {
-		// Sample 1 photo per directory
+		// Sample 1 photo per subdirectory
 		if len(files["photos"]) > 0 {
 			sampleFiles = append(sampleFiles, files["photos"][0])
 		}
 
-		// Sample 1 video per directory
+		// Sample 1 video per subdirectory
 		if len(files["videos"]) > 0 {
 			sampleFiles = append(sampleFiles, files["videos"][0])
 		}

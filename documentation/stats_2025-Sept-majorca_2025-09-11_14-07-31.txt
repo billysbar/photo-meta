@@ -1,0 +1,13 @@
+Photo Metadata Editor - Statistics Report
+Generated: 2025-09-11 14:07:31
+Directory: /tmp/2025 Sept majorca
+============================================================
+
+File Statistics:
+  Photos: 588
+  Videos: 22
+  Other files: 5
+  Total files: 615
+  Total size: 2.2 GB
+
+Analysis completed in: 5ms

@@ -1,0 +1,89 @@
+🕒 DateTime Matching Mode
+🔍 Source: /tmp/2025 Sept majorca
+📁 Destination: /tmp/2025
+🔍 DRY RUN1 MODE - Sample only 1 file per type per subdirectory
+
+🔍 Step 1: Checking for GPS data in source path...
+✅ No GPS data found in source - proceeding with datetime matching
+
+📚 Step 2: Building date-location database from destination...
+📅 Added: 2025-08-31 -> spain/palma
+📅 Added: 2025-09-01 -> spain/palma
+📅 Added: 2025-09-02 -> spain/palma
+📅 Added: 2025-09-05 -> spain/palma
+🔄 Date 2025-08-31: keeping spain/palma, ignoring spain/majorca
+🔄 Date 2025-08-31: keeping spain/palma, ignoring spain/majorca
+📅 Added: 2025-09-06 -> spain/majorca
+📅 Added: 2025-09-03 -> spain/palma
+📅 Added: 2025-09-04 -> spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring spain/palma
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/high-peak
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/high-peak
+🔄 Date 2025-08-31: keeping spain/palma, ignoring united-kingdom/manchester
+🔄 Date 2025-08-31: keeping spain/palma, ignoring united-kingdom/manchester
+🔄 Date 2025-08-31: keeping spain/palma, ignoring united-kingdom/manchester
+🔄 Date 2025-08-31: keeping spain/palma, ignoring united-kingdom/manchester
+🔄 Date 2025-08-31: keeping spain/palma, ignoring united-kingdom/manchester
+🔄 Date 2025-08-31: keeping spain/palma, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+🔄 Date 2025-09-06: keeping spain/majorca, ignoring united-kingdom/manchester
+✅ Built database with 7 date-location mappings
+
+📋 Date-Location Database:
+  2025-08-31 -> spain/palma
+  2025-09-01 -> spain/palma
+  2025-09-02 -> spain/palma
+  2025-09-05 -> spain/palma
+  2025-09-06 -> spain/majorca
+  2025-09-03 -> spain/palma
+  2025-09-04 -> spain/palma
+
+🔄 Step 3: Processing files in source path...
+📋 Sampled 6 files for datetime matching preview
+📷 [DRY RUN] Processing photo file: 20250831121619.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.PNG
+📷 [DRY RUN] Processing photo file: 20250831121619.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.PNG
+📷 [DRY RUN] Processing photo file: 20250831103654.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.JPG
+🎥 [DRY RUN] Processing video file: 20250904134212.MP4
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-04-palma.MP4
+📷 [DRY RUN] Processing photo file: 20250831103654.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.JPG
+🎥 [DRY RUN] Processing video file: 20250904134212.MP4
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-04-palma.MP4
+
+📊 DateTime Processing Summary:
+✅ Total files processed: 6
+📷 Photos processed: 4
+🎥 Videos processed: 2 (moved to VIDEO-FILES/)
+⚠️  Files unmatched: 0

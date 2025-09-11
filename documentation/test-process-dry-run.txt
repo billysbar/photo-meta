@@ -1,0 +1,1575 @@
+🔍 Scanning media files from: /tmp/2025 Sept majorca
+📁 Destination: /tmp/2025
+🔍 DRY RUN MODE - No files will be moved
+
+📝 Found 610 media files to process (588 photos, 22 videos)
+🚀 Starting 2 workers to process 610 jobs...
+📷 [DRY RUN] Processing photo: 20250831111122.HEIC
+📷 [DRY RUN] Processing photo: 20250831120839.HEIC
+📍 Location: palma-spain (39.534664, 2.721469)
+📍 Location: palma-spain (39.534547, 2.714144)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831120851.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831121619.PNG
+📷 [DRY RUN] Processing photo: 20250831163841.PNG
+📍 Location: palma-spain (39.534519, 2.714128)
+📷 [DRY RUN] Processing photo: 20250831182447.HEIC
+[░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4/610 (0.7%) | 1s | ETA: 1m16s | Failed: 2✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901130809.HEIC
+📍 Location: palma-spain (39.534519, 2.714281)
+📍 Location: palma-spain (39.536156, 2.717367)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901133118.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901190822.HEIC
+📍 Location: palma-spain (39.534992, 2.720628)
+📍 Location: palma-spain (39.534569, 2.713975)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901190838.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901191509.HEIC
+[░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 9/610 (1.5%) | 1s | ETA: 1m7s | Failed: 2📍 Location: palma-spain (39.534619, 2.713950)
+📍 Location: palma-spain (39.534656, 2.713958)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901204507.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901204520.HEIC
+📍 Location: palma-spain (39.536147, 2.716422)
+📍 Location: palma-spain (39.536147, 2.716389)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901204554.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901210714.HEIC
+[░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 13/610 (2.1%) | 2s | ETA: 1m9s | Failed: 2📍 Location: palma-spain (39.536125, 2.716394)
+📍 Location: palma-spain (39.534283, 2.714606)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902133218.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902133222.HEIC
+📍 Location: palma-spain (39.534156, 2.711122)
+📍 Location: palma-spain (39.534164, 2.711089)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902133228.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902142146.HEIC
+[█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 17/610 (2.8%) | 2s | ETA: 1m10s | Failed: 2📍 Location: palma-spain (39.534153, 2.711064)
+📍 Location: palma-spain (39.534661, 2.721428)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902142304.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902182339.HEIC
+📍 Location: palma-spain (39.534686, 2.721539)
+📍 Location: palma-spain (39.534828, 2.714228)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192415.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192418.HEIC
+[█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 21/610 (3.4%) | 3s | ETA: 1m10s | Failed: 2📍 Location: palma-spain (39.534967, 2.718706)
+📍 Location: palma-spain (39.534953, 2.718719)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250902200725.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250902200740.MOV
+📍 Location: palma-spain (39.535300, 2.719800)
+📍 Location: palma-spain (39.535300, 2.719700)
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma.MOV
+📷 [DRY RUN] Processing photo: 20250902201057.HEIC
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma.MOV
+📷 [DRY RUN] Processing photo: 20250902201140.HEIC
+📍 Location: palma-spain (39.534989, 2.718614)
+[█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 25/610 (4.1%) | 3s | ETA: 1m10s | Failed: 2📍 Location: palma-spain (39.534867, 2.718208)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142527.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142533.HEIC
+📍 Location: palma-spain (39.538628, 2.707444)
+📍 Location: palma-spain (39.538619, 2.707472)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142535.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142540.HEIC
+📍 Location: palma-spain (39.538619, 2.707475)
+[█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 29/610 (4.8%) | 4s | ETA: 1m10s | Failed: 2📍 Location: palma-spain (39.538619, 2.707478)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144142.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144210.HEIC
+📍 Location: palma-spain (39.536022, 2.710628)
+📍 Location: palma-spain (39.536006, 2.710675)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144213.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903174755.HEIC
+📍 Location: palma-spain (39.536011, 2.710664)
+[██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 33/610 (5.4%) | 4s | ETA: 1m10s | Failed: 2📍 Location: palma-spain (39.534367, 2.714664)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903174756.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903174835.HEIC
+📍 Location: palma-spain (39.534386, 2.714739)
+📍 Location: palma-spain (39.534389, 2.714750)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903175904.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903181052.HEIC
+📷 [DRY RUN] Processing photo: 20250903181057.HEIC
+[██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 38/610 (6.2%) | 5s | ETA: 1m8s | Failed: 3📍 Location: palma-spain (39.534303, 2.714419)
+📍 Location: palma-spain (39.534142, 2.714528)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904084518.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100112.HEIC
+📍 Location: palma-spain (39.534797, 2.714142)
+📍 Location: palma-spain (39.534725, 2.714142)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100114.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904101553.HEIC
+[██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 42/610 (6.9%) | 5s | ETA: 1m8s | Failed: 3📍 Location: palma-spain (39.534717, 2.714122)
+📍 Location: palma-spain (39.534714, 2.714183)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904102547.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904114542.HEIC
+📷 [DRY RUN] Processing photo: 20250904134322.HEIC
+📍 Location: palma-spain (39.534672, 2.714203)
+📍 Location: palma-spain (39.534881, 2.714131)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904134344.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904190327.HEIC
+[███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 47/610 (7.7%) | 6s | ETA: 1m6s | Failed: 4📍 Location: palma-spain (39.534764, 2.714183)
+📍 Location: palma-spain (39.535331, 2.720925)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904190333.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904190703.HEIC
+📍 Location: palma-spain (39.535344, 2.720922)
+📍 Location: palma-spain (39.535375, 2.721053)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193708(1).HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193708.HEIC
+[███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 51/610 (8.4%) | 6s | ETA: 1m6s | Failed: 4📍 Location: palma-spain (39.535400, 2.721078)
+📍 Location: palma-spain (39.535400, 2.721078)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193717(1).HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193717.HEIC
+📍 Location: palma-spain (39.535419, 2.721064)
+📍 Location: palma-spain (39.535419, 2.721064)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193718.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202734.HEIC
+[███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 55/610 (9.0%) | 7s | ETA: 1m6s | Failed: 4📍 Location: palma-spain (39.535419, 2.721064)
+📍 Location: palma-spain (39.534947, 2.717469)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202735.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202736.HEIC
+📍 Location: palma-spain (39.534744, 2.717431)
+📍 Location: palma-spain (39.534742, 2.717436)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202744.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202745.HEIC
+[███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 59/610 (9.7%) | 7s | ETA: 1m5s | Failed: 4📍 Location: palma-spain (39.534744, 2.717442)
+📍 Location: palma-spain (39.534744, 2.717442)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904214802.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904214845.PNG
+📷 [DRY RUN] Processing photo: 20250905131401.HEIC
+📷 [DRY RUN] Processing photo: 20250905131517.HEIC
+📍 Location: palma-spain (39.535775, 2.710431)
+📍 Location: palma-spain (39.535767, 2.710433)
+[████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 63/610 (10.3%) | 8s | ETA: 1m5s | Failed: 6✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905131521.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905143620.PNG
+📷 [DRY RUN] Processing photo: 20250905183536.HEIC
+📍 Location: palma-spain (39.535775, 2.710431)
+📍 Location: palma-spain (39.535344, 2.720847)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905183538.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905183547.HEIC
+📍 Location: palma-spain (39.535347, 2.720839)
+📍 Location: palma-spain (39.535422, 2.720881)
+[████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 68/610 (11.1%) | 8s | ETA: 1m4s | Failed: 7✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905183549.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905190707.HEIC
+📍 Location: palma-spain (39.535428, 2.720903)
+📍 Location: palma-spain (39.535233, 2.719589)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905190717.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905190726.HEIC
+📍 Location: palma-spain (39.535233, 2.719589)
+📍 Location: palma-spain (39.535222, 2.719589)
+[████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 72/610 (11.8%) | 9s | ETA: 1m4s | Failed: 7✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905190731.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905192245.HEIC
+📍 Location: palma-spain (39.535214, 2.719586)
+📍 Location: palma-spain (39.534497, 2.714092)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905192258.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905192303.HEIC
+📍 Location: palma-spain (39.534489, 2.714083)
+📍 Location: palma-spain (39.534486, 2.714075)
+[████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 76/610 (12.5%) | 9s | ETA: 1m3s | Failed: 7✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906031701.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906031735.HEIC
+📍 Location: palma-spain (39.534819, 2.714169)
+📍 Location: palma-spain (39.534814, 2.714158)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906033326.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906054834.HEIC
+📍 Location: palma-spain (39.534828, 2.714197)
+📍 Location: palma-spain (39.550586, 2.720744)
+[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 80/610 (13.1%) | 10s | ETA: 1m3s | Failed: 7✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906092934.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906100212.HEIC
+📍 Location: manchester-united-kingdom (53.365261, -2.272361)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250906100217.HEIC
+[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 83/610 (13.6%) | 10s | ETA: 1m3s | Failed: 7[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 83/610 (13.6%) | 11s | ETA: 1m7s | Failed: 7📍 Location: manchester-united-kingdom (53.365161, -2.272106)
+[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 83/610 (13.6%) | 11s | ETA: 1m10s | Failed: 7✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831111122.HEIC
+📍 Location: palma-spain (39.534664, 2.721469)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831120839.HEIC
+📍 Location: palma-spain (39.534547, 2.714144)
+[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 85/610 (13.9%) | 12s | ETA: 1m11s | Failed: 7✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831120851.HEIC
+📍 Location: palma-spain (39.534519, 2.714128)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831121619.PNG
+📷 [DRY RUN] Processing photo: 20250831163841.PNG
+📍 Location: manchester-united-kingdom (53.365161, -2.272106)
+📷 [DRY RUN] Processing photo: 20250831182447.HEIC
+[█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 89/610 (14.6%) | 12s | ETA: 1m10s | Failed: 9✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250901130809.HEIC
+📍 Location: palma-spain (39.534519, 2.714281)
+📍 Location: palma-spain (39.536156, 2.717367)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901133118.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901190822.HEIC
+📍 Location: palma-spain (39.534992, 2.720628)
+📍 Location: palma-spain (39.534569, 2.713975)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901190838.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901191509.HEIC
+[██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 94/610 (15.4%) | 13s | ETA: 1m9s | Failed: 9📍 Location: palma-spain (39.534619, 2.713950)
+📍 Location: palma-spain (39.534656, 2.713958)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901204507.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901204520.HEIC
+📍 Location: palma-spain (39.536147, 2.716422)
+📍 Location: palma-spain (39.536147, 2.716389)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901204554.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901210714.HEIC
+[██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 98/610 (16.1%) | 13s | ETA: 1m8s | Failed: 9📍 Location: palma-spain (39.536125, 2.716394)
+📍 Location: palma-spain (39.534283, 2.714606)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902133218.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902133222.HEIC
+📍 Location: palma-spain (39.534156, 2.711122)
+📍 Location: palma-spain (39.534164, 2.711089)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902133228.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902142146.HEIC
+[██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 102/610 (16.7%) | 14s | ETA: 1m7s | Failed: 9📍 Location: palma-spain (39.534153, 2.711064)
+📍 Location: palma-spain (39.534661, 2.721428)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902142304.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902182339.HEIC
+📍 Location: palma-spain (39.534686, 2.721539)
+📍 Location: palma-spain (39.534828, 2.714228)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192415.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192418.HEIC
+[██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 106/610 (17.4%) | 14s | ETA: 1m7s | Failed: 9📍 Location: palma-spain (39.534967, 2.718706)
+📍 Location: palma-spain (39.534953, 2.718719)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250902200725.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250902200740.MOV
+📍 Location: palma-spain (39.535300, 2.719800)
+📍 Location: palma-spain (39.535300, 2.719700)
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma.MOV
+📷 [DRY RUN] Processing photo: 20250902201057.HEIC
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma.MOV
+📷 [DRY RUN] Processing photo: 20250902201140.HEIC
+📍 Location: palma-spain (39.534989, 2.718614)
+[███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 110/610 (18.0%) | 15s | ETA: 1m6s | Failed: 9📍 Location: palma-spain (39.534867, 2.718208)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142527.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142533.HEIC
+📍 Location: palma-spain (39.538628, 2.707444)
+📍 Location: palma-spain (39.538619, 2.707472)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142535.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142540.HEIC
+📍 Location: palma-spain (39.538619, 2.707475)
+[███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 114/610 (18.7%) | 15s | ETA: 1m5s | Failed: 9📍 Location: palma-spain (39.538619, 2.707478)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144142.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144210.HEIC
+📍 Location: palma-spain (39.536022, 2.710628)
+📍 Location: palma-spain (39.536006, 2.710675)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144213.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903174755.HEIC
+📍 Location: palma-spain (39.536011, 2.710664)
+[███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 118/610 (19.3%) | 16s | ETA: 1m5s | Failed: 9📍 Location: palma-spain (39.534367, 2.714664)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903174756.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903174835.HEIC
+📍 Location: palma-spain (39.534386, 2.714739)
+📍 Location: palma-spain (39.534389, 2.714750)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903175904.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903181052.HEIC
+📷 [DRY RUN] Processing photo: 20250903181057.HEIC
+[████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 123/610 (20.2%) | 16s | ETA: 1m3s | Failed: 10📍 Location: palma-spain (39.534303, 2.714419)
+📍 Location: palma-spain (39.534142, 2.714528)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904084518.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100112.HEIC
+📍 Location: palma-spain (39.534797, 2.714142)
+📍 Location: palma-spain (39.534725, 2.714142)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100114.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904101553.HEIC
+[████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 127/610 (20.8%) | 17s | ETA: 1m3s | Failed: 10📍 Location: palma-spain (39.534717, 2.714122)
+📍 Location: palma-spain (39.534714, 2.714183)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904102547.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904114542.HEIC
+📷 [DRY RUN] Processing photo: 20250904134322.HEIC
+📍 Location: palma-spain (39.534881, 2.714131)
+📍 Location: palma-spain (39.534672, 2.714203)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904134344.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904190327.HEIC
+[████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 132/610 (21.6%) | 17s | ETA: 1m2s | Failed: 11📍 Location: palma-spain (39.534764, 2.714183)
+📍 Location: palma-spain (39.535331, 2.720925)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904190333.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904190703.HEIC
+📍 Location: palma-spain (39.535344, 2.720922)
+📍 Location: palma-spain (39.535375, 2.721053)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193708(1).HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193708.HEIC
+[████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 136/610 (22.3%) | 18s | ETA: 1m1s | Failed: 11📍 Location: palma-spain (39.535400, 2.721078)
+📍 Location: palma-spain (39.535400, 2.721078)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193717(1).HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193717.HEIC
+📍 Location: palma-spain (39.535419, 2.721064)
+📍 Location: palma-spain (39.535419, 2.721064)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193718.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202734.HEIC
+[█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 140/610 (23.0%) | 18s | ETA: 1m0s | Failed: 11📍 Location: palma-spain (39.535419, 2.721064)
+📍 Location: palma-spain (39.534947, 2.717469)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202735.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202736.HEIC
+📍 Location: palma-spain (39.534744, 2.717431)
+📍 Location: palma-spain (39.534742, 2.717436)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202744.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904202745.HEIC
+[█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 144/610 (23.6%) | 19s | ETA: 1m0s | Failed: 11📍 Location: palma-spain (39.534744, 2.717442)
+📍 Location: palma-spain (39.534744, 2.717442)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904214802.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904214845.PNG
+📷 [DRY RUN] Processing photo: 20250905131401.HEIC
+📷 [DRY RUN] Processing photo: 20250905131517.HEIC
+📍 Location: palma-spain (39.535767, 2.710433)
+📍 Location: palma-spain (39.535775, 2.710431)
+[█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 148/610 (24.3%) | 19s | ETA: 59s | Failed: 13✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905131521.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905143620.PNG
+📷 [DRY RUN] Processing photo: 20250905183536.HEIC
+📍 Location: palma-spain (39.535775, 2.710431)
+📍 Location: palma-spain (39.535344, 2.720847)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905183538.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905183547.HEIC
+📍 Location: palma-spain (39.535347, 2.720839)
+📍 Location: palma-spain (39.535422, 2.720881)
+[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 153/610 (25.1%) | 20s | ETA: 58s | Failed: 14✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905183549.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905190707.HEIC
+📍 Location: palma-spain (39.535428, 2.720903)
+📍 Location: palma-spain (39.535233, 2.719589)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905190717.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905190726.HEIC
+📍 Location: palma-spain (39.535233, 2.719589)
+📍 Location: palma-spain (39.535222, 2.719589)
+[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 157/610 (25.7%) | 20s | ETA: 58s | Failed: 14✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905190731.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905192245.HEIC
+📍 Location: palma-spain (39.535214, 2.719586)
+📍 Location: palma-spain (39.534497, 2.714092)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905192258.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905192303.HEIC
+📍 Location: palma-spain (39.534489, 2.714083)
+📍 Location: palma-spain (39.534486, 2.714075)
+[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 161/610 (26.4%) | 21s | ETA: 57s | Failed: 14✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906031701.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906031735.HEIC
+📍 Location: palma-spain (39.534819, 2.714169)
+📍 Location: palma-spain (39.534814, 2.714158)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906033326.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906054834.HEIC
+📍 Location: palma-spain (39.534828, 2.714197)
+📍 Location: palma-spain (39.550586, 2.720744)
+[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 165/610 (27.0%) | 21s | ETA: 57s | Failed: 14✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906092934.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906100212.HEIC
+📍 Location: manchester-united-kingdom (53.365261, -2.272361)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250906100217.HEIC
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 168/610 (27.5%) | 22s | ETA: 57s | Failed: 14[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 168/610 (27.5%) | 22s | ETA: 58s | Failed: 14📍 Location: manchester-united-kingdom (53.365161, -2.272106)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831053435.HEIC
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 169/610 (27.7%) | 23s | ETA: 59s | Failed: 14[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 169/610 (27.7%) | 23s | ETA: 1m0s | Failed: 14📍 Location: manchester-united-kingdom (53.365161, -2.272106)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831054410.HEIC
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 170/610 (27.9%) | 24s | ETA: 1m1s | Failed: 14[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 170/610 (27.9%) | 24s | ETA: 1m2s | Failed: 14📍 Location: manchester-united-kingdom (53.362358, -2.278372)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831054420.HEIC
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 171/610 (28.0%) | 25s | ETA: 1m3s | Failed: 14[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 171/610 (28.0%) | 25s | ETA: 1m4s | Failed: 14📍 Location: manchester-united-kingdom (53.362244, -2.279886)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831082249.HEIC
+📍 Location: majorca-spain (39.527814, 2.908247)
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 172/610 (28.2%) | 26s | ETA: 1m5s | Failed: 14✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/majorca/2025-08-31-majorca.HEIC
+📷 [DRY RUN] Processing photo: 20250831083205.HEIC
+📍 Location: palma-spain (39.694978, 2.721864)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831093504.HEIC
+📍 Location: palma-spain (39.548000, 2.728297)
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 174/610 (28.5%) | 26s | ETA: 1m5s | Failed: 14✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831093509.HEIC
+📍 Location: palma-spain (39.548286, 2.728153)
+📍 Location: manchester-united-kingdom (53.362703, -2.279089)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831094814.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831101750.HEIC
+📍 Location: palma-spain (39.534572, 2.713933)
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 177/610 (29.0%) | 27s | ETA: 1m5s | Failed: 14📍 Location: palma-spain (39.534672, 2.714236)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831101804.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831102223.HEIC
+📍 Location: palma-spain (39.534667, 2.714250)
+📍 Location: palma-spain (39.534672, 2.714244)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831102228.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831102231.HEIC
+📍 Location: palma-spain (39.534672, 2.714244)
+[███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 181/610 (29.7%) | 27s | ETA: 1m4s | Failed: 14📍 Location: palma-spain (39.534672, 2.714244)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831103654.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831103702.JPG
+📷 [DRY RUN] Processing photo: 20250831103712.JPG
+📷 [DRY RUN] Processing photo: 20250831110340.HEIC
+📷 [DRY RUN] Processing photo: 20250831110354.HEIC
+📍 Location: palma-spain (39.535064, 2.720344)
+📍 Location: palma-spain (39.534983, 2.720525)
+[████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 186/610 (30.5%) | 28s | ETA: 1m3s | Failed: 17✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831110403.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831110432.JPG
+📷 [DRY RUN] Processing photo: 20250831110535.JPG
+📍 Location: palma-spain (39.534978, 2.720575)
+📷 [DRY RUN] Processing photo: 20250831110749.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831110924.HEIC
+📍 Location: palma-spain (39.534581, 2.721419)
+📍 Location: palma-spain (39.534653, 2.721492)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831114855.HEIC
+[████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 192/610 (31.5%) | 28s | ETA: 1m1s | Failed: 19✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831115744.HEIC
+📍 Location: palma-spain (39.534308, 2.714550)
+📍 Location: palma-spain (39.534572, 2.714197)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831115753.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831120334.HEIC
+📍 Location: palma-spain (39.534547, 2.714136)
+📍 Location: palma-spain (39.534558, 2.714156)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831122120.HEIC
+[████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 196/610 (32.1%) | 29s | ETA: 1m0s | Failed: 19✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831122123.HEIC
+📍 Location: palma-spain (39.534519, 2.714017)
+📍 Location: palma-spain (39.534492, 2.714131)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250831130611.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831134302.HEIC
+📍 Location: palma-spain (39.534800, 2.714200)
+📍 Location: palma-spain (39.534839, 2.714181)
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+🎥 [DRY RUN] Processing video: 20250831134742.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831141707.PNG
+[█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░] 201/610 (33.0%) | 29s | ETA: 59s | Failed: 19📷 [DRY RUN] Processing photo: 20250831174336.HEIC
+📍 Location: palma-spain (39.534900, 2.714100)
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+📷 [DRY RUN] Processing photo: 20250831174727.HEIC
+📍 Location: palma-spain (39.534489, 2.714106)
+📍 Location: palma-spain (39.534542, 2.714097)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831174741.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831175226.HEIC
+📍 Location: palma-spain (39.534531, 2.714144)
+[█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░] 205/610 (33.6%) | 30s | ETA: 58s | Failed: 20📍 Location: palma-spain (39.534492, 2.714061)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831175230.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831175246.HEIC
+📍 Location: palma-spain (39.534497, 2.714056)
+📍 Location: palma-spain (39.534619, 2.714147)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831175334.JPG
+📷 [DRY RUN] Processing photo: 20250831175351.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250831182704.MOV
+[█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░] 210/610 (34.4%) | 30s | ETA: 57s | Failed: 21📍 Location: palma-spain (39.534500, 2.714100)
+📍 Location: palma-spain (39.534539, 2.714186)
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+📷 [DRY RUN] Processing photo: 20250831185007.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831185012.HEIC
+📍 Location: palma-spain (39.534517, 2.714172)
+📍 Location: palma-spain (39.534542, 2.714164)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831192618.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831193306.JPG
+📷 [DRY RUN] Processing photo: 20250831193438.JPG
+[██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░] 215/610 (35.2%) | 31s | ETA: 56s | Failed: 22📷 [DRY RUN] Processing photo: 20250831194137.HEIC
+📷 [DRY RUN] Processing photo: 20250831194140.HEIC
+📍 Location: palma-spain (39.536369, 2.716564)
+📍 Location: palma-spain (39.536369, 2.716564)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250831194541.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901083254.HEIC
+📍 Location: palma-spain (39.536400, 2.716500)
+📍 Location: palma-spain (39.534953, 2.714114)
+[██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░] 219/610 (35.9%) | 31s | ETA: 55s | Failed: 24✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+📷 [DRY RUN] Processing photo: 20250901083443.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901084056.HEIC
+📍 Location: palma-spain (39.534819, 2.714158)
+📍 Location: palma-spain (39.534803, 2.714161)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901101907.PNG
+📷 [DRY RUN] Processing photo: 20250901104901.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901111233.PNG
+📷 [DRY RUN] Processing photo: 20250901132344.JPG
+📷 [DRY RUN] Processing photo: 20250901132412.JPG
+📷 [DRY RUN] Processing photo: 20250901132420.JPG
+[██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░] 227/610 (37.2%) | 32s | ETA: 53s | Failed: 28📷 [DRY RUN] Processing photo: 20250901132434.HEIC
+📷 [DRY RUN] Processing photo: 20250901132604.HEIC
+📍 Location: palma-spain (39.535019, 2.720750)
+📍 Location: palma-spain (39.534989, 2.720753)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901132616.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901140030.JPG
+📍 Location: palma-spain (39.535003, 2.720736)
+📷 [DRY RUN] Processing photo: 20250901140058.HEIC
+[███████████████░░░░░░░░░░░░░░░░░░░░░░░░░] 232/610 (38.0%) | 32s | ETA: 52s | Failed: 31✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250901140114.MOV
+📍 Location: palma-spain (39.534450, 2.714106)
+📍 Location: palma-spain (39.534600, 2.714000)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901171459.PNG
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-01-palma.MOV
+📷 [DRY RUN] Processing photo: 20250901180702.HEIC
+📷 [DRY RUN] Processing photo: 20250901180706.HEIC
+📍 Location: palma-spain (39.535236, 2.719694)
+📍 Location: palma-spain (39.535222, 2.719714)
+[███████████████░░░░░░░░░░░░░░░░░░░░░░░░░] 236/610 (38.7%) | 33s | ETA: 52s | Failed: 32✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901181908.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901181913.HEIC
+📍 Location: palma-spain (39.532478, 2.724839)
+📍 Location: palma-spain (39.532514, 2.724806)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901181917.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901183426.HEIC
+📍 Location: palma-spain (39.532519, 2.724806)
+📍 Location: palma-spain (39.536639, 2.716842)
+[███████████████░░░░░░░░░░░░░░░░░░░░░░░░░] 240/610 (39.3%) | 33s | ETA: 51s | Failed: 32✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901184248.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901184821.HEIC
+📷 [DRY RUN] Processing photo: 20250901192748.HEIC
+📍 Location: palma-spain (39.534703, 2.714139)
+📍 Location: palma-spain (39.534581, 2.714086)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192750.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192751.HEIC
+📍 Location: palma-spain (39.534511, 2.714119)
+📍 Location: palma-spain (39.534581, 2.714094)
+[████████████████░░░░░░░░░░░░░░░░░░░░░░░░] 245/610 (40.2%) | 34s | ETA: 50s | Failed: 33✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192753.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192755.HEIC
+📍 Location: palma-spain (39.534489, 2.714097)
+📍 Location: palma-spain (39.534406, 2.714214)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192759.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901195835.JPG
+📍 Location: palma-spain (39.534664, 2.714058)
+📷 [DRY RUN] Processing photo: 20250901200449.JPG
+[████████████████░░░░░░░░░░░░░░░░░░░░░░░░] 250/610 (41.0%) | 34s | ETA: 49s | Failed: 34✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901202923.HEIC
+📷 [DRY RUN] Processing photo: 20250902092344.PNG
+📷 [DRY RUN] Processing photo: 20250902144018.HEIC
+📍 Location: palma-spain (39.536144, 2.716378)
+📍 Location: palma-spain (39.534492, 2.721375)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902144020.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902144030.HEIC
+📍 Location: palma-spain (39.534492, 2.721369)
+[████████████████░░░░░░░░░░░░░░░░░░░░░░░░] 255/610 (41.8%) | 35s | ETA: 48s | Failed: 36📍 Location: palma-spain (39.534447, 2.721272)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902145446.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902145452.HEIC
+📍 Location: palma-spain (39.533864, 2.721247)
+📍 Location: palma-spain (39.533864, 2.721222)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902145458.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902145518.HEIC
+📍 Location: palma-spain (39.533856, 2.721228)
+[████████████████░░░░░░░░░░░░░░░░░░░░░░░░] 259/610 (42.5%) | 35s | ETA: 47s | Failed: 36📍 Location: palma-spain (39.533856, 2.721239)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902151300.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902151310.HEIC
+📍 Location: palma-spain (39.532489, 2.724939)
+📍 Location: palma-spain (39.532494, 2.724922)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902151354.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902151358.HEIC
+📍 Location: palma-spain (39.532486, 2.724925)
+[█████████████████░░░░░░░░░░░░░░░░░░░░░░░] 263/610 (43.1%) | 36s | ETA: 47s | Failed: 36📍 Location: palma-spain (39.532486, 2.724922)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902155409.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192104.HEIC
+📍 Location: palma-spain (39.534828, 2.714186)
+📍 Location: palma-spain (39.534775, 2.716819)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192106.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192113.HEIC
+📍 Location: palma-spain (39.534775, 2.716828)
+[█████████████████░░░░░░░░░░░░░░░░░░░░░░░] 267/610 (43.8%) | 36s | ETA: 46s | Failed: 36📍 Location: palma-spain (39.534778, 2.716867)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192351.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192354.HEIC
+📍 Location: palma-spain (39.534953, 2.718700)
+📍 Location: palma-spain (39.534942, 2.718700)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192357.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192406.HEIC
+📍 Location: palma-spain (39.534931, 2.718700)
+[█████████████████░░░░░░░░░░░░░░░░░░░░░░░] 271/610 (44.4%) | 37s | ETA: 46s | Failed: 36📍 Location: palma-spain (39.534928, 2.718703)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192717.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192728.HEIC
+📍 Location: palma-spain (39.535131, 2.720047)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192738.HEIC
+📍 Location: palma-spain (39.535142, 2.720047)
+📍 Location: palma-spain (39.535136, 2.720039)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192743.HEIC
+[██████████████████░░░░░░░░░░░░░░░░░░░░░░] 275/610 (45.1%) | 37s | ETA: 45s | Failed: 36✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250902192925.MOV
+📍 Location: palma-spain (39.535142, 2.720044)
+📍 Location: palma-spain (39.535100, 2.720400)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902194318.JPG
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma.MOV
+📷 [DRY RUN] Processing photo: 20250902194322.JPG
+📷 [DRY RUN] Processing photo: 20250902194330.JPG
+📷 [DRY RUN] Processing photo: 20250903122536.JPG
+📷 [DRY RUN] Processing photo: 20250903122602.JPG
+📷 [DRY RUN] Processing photo: 20250903130514.HEIC
+📷 [DRY RUN] Processing photo: 20250903130536.JPG
+[██████████████████░░░░░░░░░░░░░░░░░░░░░░] 283/610 (46.4%) | 38s | ETA: 43s | Failed: 41📍 Location: palma-spain (39.534733, 2.714106)
+📷 [DRY RUN] Processing photo: 20250903142508.HEIC
+📍 Location: palma-spain (39.538547, 2.707478)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142512.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142645.JPG
+📍 Location: palma-spain (39.538567, 2.707475)
+📷 [DRY RUN] Processing photo: 20250903144150.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144153.HEIC
+[██████████████████░░░░░░░░░░░░░░░░░░░░░░] 288/610 (47.2%) | 38s | ETA: 42s | Failed: 43📍 Location: palma-spain (39.536019, 2.710700)
+📍 Location: palma-spain (39.536025, 2.710675)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144155.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144205.HEIC
+📍 Location: palma-spain (39.536031, 2.710667)
+📍 Location: palma-spain (39.536025, 2.710656)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903145819.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903145827.PNG
+[███████████████████░░░░░░░░░░░░░░░░░░░░░] 292/610 (47.9%) | 39s | ETA: 42s | Failed: 43📷 [DRY RUN] Processing photo: 20250903152737.PNG
+📷 [DRY RUN] Processing photo: 20250903182301.HEIC
+📷 [DRY RUN] Processing photo: 20250903182302.HEIC
+📍 Location: palma-spain (39.534231, 2.714489)
+📍 Location: palma-spain (39.534283, 2.714544)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903182304.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903185228.JPG
+📍 Location: palma-spain (39.534131, 2.714514)
+📷 [DRY RUN] Processing photo: 20250903194653.HEIC
+[███████████████████░░░░░░░░░░░░░░░░░░░░░] 298/610 (48.9%) | 39s | ETA: 41s | Failed: 47✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195003.HEIC
+📍 Location: palma-spain (39.534847, 2.714194)
+📍 Location: palma-spain (39.534789, 2.714181)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195013.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195029.HEIC
+📍 Location: palma-spain (39.534789, 2.714161)
+📍 Location: palma-spain (39.534817, 2.714136)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195033.HEIC
+[███████████████████░░░░░░░░░░░░░░░░░░░░░] 302/610 (49.5%) | 40s | ETA: 40s | Failed: 47✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195041.HEIC
+📍 Location: palma-spain (39.534825, 2.714144)
+📍 Location: palma-spain (39.534833, 2.714158)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195053.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195438.HEIC
+📍 Location: palma-spain (39.534817, 2.714158)
+📍 Location: palma-spain (39.534819, 2.714161)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903200033.HEIC
+[████████████████████░░░░░░░░░░░░░░░░░░░░] 306/610 (50.2%) | 40s | ETA: 40s | Failed: 47✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904083624.PNG
+📍 Location: palma-spain (39.534847, 2.714194)
+📷 [DRY RUN] Processing photo: 20250904094238.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904095249.PNG
+📷 [DRY RUN] Processing photo: 20250904100020.HEIC
+📷 [DRY RUN] Processing photo: 20250904100023.HEIC
+📍 Location: palma-spain (39.534722, 2.714186)
+📍 Location: palma-spain (39.534711, 2.714161)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100024.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100025(1).HEIC
+[████████████████████░░░░░░░░░░░░░░░░░░░░] 313/610 (51.3%) | 41s | ETA: 38s | Failed: 50📍 Location: palma-spain (39.534714, 2.714167)
+📍 Location: palma-spain (39.534717, 2.714169)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100025.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100027.HEIC
+📍 Location: palma-spain (39.534717, 2.714169)
+📍 Location: palma-spain (39.534717, 2.714169)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100031(1).HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100031.HEIC
+[████████████████████░░░░░░░░░░░░░░░░░░░░] 317/610 (52.0%) | 41s | ETA: 38s | Failed: 50📍 Location: palma-spain (39.534722, 2.714178)
+📍 Location: palma-spain (39.534722, 2.714178)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100038.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100050.HEIC
+📍 Location: palma-spain (39.534725, 2.714186)
+📍 Location: palma-spain (39.534722, 2.714178)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100207.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100253.PNG
+[█████████████████████░░░░░░░░░░░░░░░░░░░] 321/610 (52.6%) | 42s | ETA: 37s | Failed: 50📷 [DRY RUN] Processing photo: 20250904104440.HEIC
+📍 Location: palma-spain (39.534814, 2.714150)
+📍 Location: palma-spain (39.534772, 2.714128)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904105900.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904112723.HEIC
+📍 Location: palma-spain (39.534764, 2.714131)
+📍 Location: palma-spain (39.534742, 2.714153)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904112744.PNG
+[█████████████████████░░░░░░░░░░░░░░░░░░░] 325/610 (53.3%) | 42s | ETA: 37s | Failed: 51📷 [DRY RUN] Processing photo: 20250904114508.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904114516.JPG
+📷 [DRY RUN] Processing photo: 20250904114830.HEIC
+📷 [DRY RUN] Processing photo: 20250904121036.HEIC
+📍 Location: palma-spain (39.534814, 2.714167)
+📍 Location: palma-spain (39.534725, 2.714283)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904121344.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904121527.HEIC
+📍 Location: palma-spain (39.534756, 2.714108)
+[█████████████████████░░░░░░░░░░░░░░░░░░░] 331/610 (54.3%) | 43s | ETA: 36s | Failed: 54📍 Location: palma-spain (39.534778, 2.714108)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904123306.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904130714.JPG
+📷 [DRY RUN] Processing photo: 20250904130728.JPG
+📷 [DRY RUN] Processing photo: 20250904130849.JPG
+🎥 [DRY RUN] Processing video: 20250904134212.MP4
+🎥 [DRY RUN] Processing video: 20250904144834.MP4
+📷 [DRY RUN] Processing photo: 20250904163536.PNG
+📷 [DRY RUN] Processing photo: 20250904190240.JPG
+📷 [DRY RUN] Processing photo: 20250904190302.JPG
+[██████████████████████░░░░░░░░░░░░░░░░░░] 340/610 (55.7%) | 43s | ETA: 34s | Failed: 61📷 [DRY RUN] Processing photo: 20250904190341.HEIC
+📷 [DRY RUN] Processing photo: 20250904190550.JPG
+📍 Location: palma-spain (39.535308, 2.720967)
+📷 [DRY RUN] Processing photo: 20250904191312.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193940.JPG
+📍 Location: palma-spain (39.535294, 2.721025)
+📷 [DRY RUN] Processing photo: 20250904193947.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193952.JPG
+📷 [DRY RUN] Processing photo: 20250904211451.PNG
+[██████████████████████░░░░░░░░░░░░░░░░░░] 347/610 (56.9%) | 44s | ETA: 33s | Failed: 66📷 [DRY RUN] Processing photo: 20250905082519.HEIC
+📷 [DRY RUN] Processing photo: 20250905082520.HEIC
+📍 Location: palma-spain (39.534953, 2.714256)
+📍 Location: palma-spain (39.534989, 2.714275)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905082522.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905082542.HEIC
+📍 Location: palma-spain (39.534992, 2.714294)
+📍 Location: palma-spain (39.534864, 2.714222)
+[███████████████████████░░░░░░░░░░░░░░░░░] 351/610 (57.5%) | 44s | ETA: 32s | Failed: 68✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905082544.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905082547.HEIC
+📍 Location: palma-spain (39.534875, 2.714244)
+📍 Location: palma-spain (39.534936, 2.714311)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905095744.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905131904.HEIC
+📍 Location: palma-spain (39.535769, 2.718167)
+📍 Location: palma-spain (39.535758, 2.710389)
+[███████████████████████░░░░░░░░░░░░░░░░░] 355/610 (58.2%) | 45s | ETA: 32s | Failed: 68✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905132329.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905133250.HEIC
+📍 Location: palma-spain (39.535781, 2.710428)
+📍 Location: palma-spain (39.534961, 2.712311)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905133301.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134252.HEIC
+📍 Location: palma-spain (39.535019, 2.712375)
+📍 Location: palma-spain (39.534550, 2.714106)
+[███████████████████████░░░░░░░░░░░░░░░░░] 359/610 (58.9%) | 45s | ETA: 31s | Failed: 68✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134258.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134301.HEIC
+📍 Location: palma-spain (39.534572, 2.714078)
+📍 Location: palma-spain (39.534581, 2.714072)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134308.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134458.HEIC
+📍 Location: palma-spain (39.534583, 2.714061)
+📍 Location: palma-spain (39.534592, 2.714106)
+[███████████████████████░░░░░░░░░░░░░░░░░] 363/610 (59.5%) | 46s | ETA: 31s | Failed: 68✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134503.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134508.HEIC
+📍 Location: palma-spain (39.534583, 2.714092)
+📍 Location: palma-spain (39.534583, 2.714094)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905140800.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905142715.JPG
+📷 [DRY RUN] Processing photo: 20250905142726.JPG
+📷 [DRY RUN] Processing photo: 20250905143623.HEIC
+📷 [DRY RUN] Processing photo: 20250905162830.JPG
+[████████████████████████░░░░░░░░░░░░░░░░] 370/610 (60.7%) | 46s | ETA: 30s | Failed: 71📍 Location: palma-spain (39.534564, 2.714117)
+🎥 [DRY RUN] Processing video: 20250905192153.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906032935.HEIC
+📍 Location: palma-spain (39.534500, 2.714000)
+📍 Location: palma-spain (39.534819, 2.714281)
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-05-palma.MOV
+📷 [DRY RUN] Processing photo: 20250906032943.HEIC
+📍 Location: palma-spain (39.534825, 2.714261)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906033335.HEIC
+[████████████████████████░░░░░░░░░░░░░░░░] 374/610 (61.3%) | 47s | ETA: 29s | Failed: 72📍 Location: palma-spain (39.534686, 2.714147)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906042709.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906051234.HEIC
+📍 Location: palma-spain (39.550475, 2.729667)
+📍 Location: palma-spain (39.549831, 2.727436)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906053709.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906063005.HEIC
+📍 Location: palma-spain (39.549972, 2.726703)
+[████████████████████████░░░░░░░░░░░░░░░░] 378/610 (62.0%) | 47s | ETA: 29s | Failed: 72📍 Location: palma-spain (39.554081, 2.758950)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906063257.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906063402.HEIC
+📍 Location: majorca-spain (39.543503, 2.961917)
+📍 Location: majorca-spain (39.686706, 2.905425)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/majorca/2025-09-06-majorca.HEIC
+📷 [DRY RUN] Processing photo: 20250906084112.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/majorca/2025-09-06-majorca.HEIC
+📷 [DRY RUN] Processing photo: 20250906084115.HEIC
+📷 [DRY RUN] Processing photo: 20250906095719.HEIC
+[█████████████████████████░░░░░░░░░░░░░░░] 383/610 (62.8%) | 48s | ETA: 28s | Failed: 73📍 Location: manchester-united-kingdom (53.364972, -2.271878)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250906095725.HEIC
+[█████████████████████████░░░░░░░░░░░░░░░] 384/610 (63.0%) | 48s | ETA: 28s | Failed: 73[█████████████████████████░░░░░░░░░░░░░░░] 384/610 (63.0%) | 49s | ETA: 29s | Failed: 73📍 Location: high-peak-united-kingdom (53.368094, -1.895511)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/high-peak/2025-09-06-high-peak.HEIC
+📷 [DRY RUN] Processing photo: 20250906121718.PNG
+📷 [DRY RUN] Processing photo: 20250906130347.PNG
+[█████████████████████████░░░░░░░░░░░░░░░] 386/610 (63.3%) | 49s | ETA: 28s | Failed: 74📷 [DRY RUN] Processing photo: 20250906194812.PNG
+📷 [DRY RUN] Processing photo: 20250906220004.PNG
+📷 [DRY RUN] Processing photo: 20250831053435.HEIC
+[█████████████████████████░░░░░░░░░░░░░░░] 389/610 (63.8%) | 50s | ETA: 28s | Failed: 77📍 Location: manchester-united-kingdom (53.365069, -2.271942)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831054410.HEIC
+[█████████████████████████░░░░░░░░░░░░░░░] 390/610 (63.9%) | 50s | ETA: 28s | Failed: 77[█████████████████████████░░░░░░░░░░░░░░░] 390/610 (63.9%) | 51s | ETA: 28s | Failed: 77📍 Location: manchester-united-kingdom (53.362358, -2.278372)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831054420.HEIC
+[█████████████████████████░░░░░░░░░░░░░░░] 391/610 (64.1%) | 51s | ETA: 29s | Failed: 77[█████████████████████████░░░░░░░░░░░░░░░] 391/610 (64.1%) | 52s | ETA: 29s | Failed: 77📍 Location: manchester-united-kingdom (53.362244, -2.279886)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831082249.HEIC
+📍 Location: majorca-spain (39.527814, 2.908247)
+[█████████████████████████░░░░░░░░░░░░░░░] 392/610 (64.3%) | 52s | ETA: 29s | Failed: 77✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/majorca/2025-08-31-majorca.HEIC
+📷 [DRY RUN] Processing photo: 20250831083205.HEIC
+📍 Location: palma-spain (39.694978, 2.721864)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831093504.HEIC
+📍 Location: palma-spain (39.548000, 2.728297)
+[█████████████████████████░░░░░░░░░░░░░░░] 394/610 (64.6%) | 53s | ETA: 29s | Failed: 77✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831093509.HEIC
+📍 Location: manchester-united-kingdom (53.362703, -2.279089)
+📍 Location: palma-spain (39.548286, 2.728153)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-08-31-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250831094814.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831101750.HEIC
+📍 Location: palma-spain (39.534572, 2.713933)
+📍 Location: palma-spain (39.534672, 2.714236)
+[██████████████████████████░░░░░░░░░░░░░░] 397/610 (65.1%) | 53s | ETA: 28s | Failed: 77✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831101804.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831102223.HEIC
+📍 Location: palma-spain (39.534667, 2.714250)
+📍 Location: palma-spain (39.534672, 2.714244)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831102228.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831102231.HEIC
+📍 Location: palma-spain (39.534672, 2.714244)
+📍 Location: palma-spain (39.534672, 2.714244)
+[██████████████████████████░░░░░░░░░░░░░░] 401/610 (65.7%) | 54s | ETA: 28s | Failed: 77✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831103654.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831103702.JPG
+📷 [DRY RUN] Processing photo: 20250831103712.JPG
+📷 [DRY RUN] Processing photo: 20250831110340.HEIC
+📷 [DRY RUN] Processing photo: 20250831110354.HEIC
+📍 Location: palma-spain (39.535064, 2.720344)
+📍 Location: palma-spain (39.534983, 2.720525)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831110403.HEIC
+[██████████████████████████░░░░░░░░░░░░░░] 407/610 (66.7%) | 54s | ETA: 27s | Failed: 80✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831110432.JPG
+📍 Location: palma-spain (39.534978, 2.720575)
+📷 [DRY RUN] Processing photo: 20250831110535.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831110749.HEIC
+📷 [DRY RUN] Processing photo: 20250831110924.HEIC
+📍 Location: palma-spain (39.534581, 2.721419)
+📍 Location: palma-spain (39.534653, 2.721492)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831114855.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831115744.HEIC
+[███████████████████████████░░░░░░░░░░░░░] 413/610 (67.7%) | 55s | ETA: 26s | Failed: 82📍 Location: palma-spain (39.534308, 2.714550)
+📍 Location: palma-spain (39.534572, 2.714197)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831115753.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831120334.HEIC
+📍 Location: palma-spain (39.534547, 2.714136)
+📍 Location: palma-spain (39.534558, 2.714156)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831122120.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831122123.HEIC
+[███████████████████████████░░░░░░░░░░░░░] 417/610 (68.4%) | 55s | ETA: 25s | Failed: 82📍 Location: palma-spain (39.534519, 2.714017)
+📍 Location: palma-spain (39.534492, 2.714131)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250831130611.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831134302.HEIC
+📍 Location: palma-spain (39.534800, 2.714200)
+📍 Location: palma-spain (39.534839, 2.714181)
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+🎥 [DRY RUN] Processing video: 20250831134742.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831141707.PNG
+📷 [DRY RUN] Processing photo: 20250831174336.HEIC
+📍 Location: palma-spain (39.534900, 2.714100)
+[███████████████████████████░░░░░░░░░░░░░] 422/610 (69.2%) | 56s | ETA: 25s | Failed: 83✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+📷 [DRY RUN] Processing photo: 20250831174727.HEIC
+📍 Location: palma-spain (39.534489, 2.714106)
+📍 Location: palma-spain (39.534542, 2.714097)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831174741.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831175226.HEIC
+📍 Location: palma-spain (39.534531, 2.714144)
+📍 Location: palma-spain (39.534492, 2.714061)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831175230.HEIC
+[███████████████████████████░░░░░░░░░░░░░] 426/610 (69.8%) | 56s | ETA: 24s | Failed: 83✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831175246.HEIC
+📍 Location: palma-spain (39.534497, 2.714056)
+📍 Location: palma-spain (39.534619, 2.714147)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831175334.JPG
+📷 [DRY RUN] Processing photo: 20250831175351.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250831182704.MOV
+📍 Location: palma-spain (39.534500, 2.714100)
+📍 Location: palma-spain (39.534539, 2.714186)
+[████████████████████████████░░░░░░░░░░░░] 430/610 (70.5%) | 57s | ETA: 24s | Failed: 84✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+📷 [DRY RUN] Processing photo: 20250831185007.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831185012.HEIC
+📍 Location: palma-spain (39.534517, 2.714172)
+📍 Location: palma-spain (39.534542, 2.714164)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831192618.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250831193306.JPG
+📷 [DRY RUN] Processing photo: 20250831193438.JPG
+📷 [DRY RUN] Processing photo: 20250831194137.HEIC
+[████████████████████████████░░░░░░░░░░░░] 436/610 (71.5%) | 57s | ETA: 23s | Failed: 86📷 [DRY RUN] Processing photo: 20250831194140.HEIC
+📍 Location: palma-spain (39.536369, 2.716564)
+📍 Location: palma-spain (39.536369, 2.716564)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250831194541.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-08-31-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901083254.HEIC
+📍 Location: palma-spain (39.536400, 2.716500)
+📍 Location: palma-spain (39.534953, 2.714114)
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-08-31-palma.MOV
+📷 [DRY RUN] Processing photo: 20250901083443.HEIC
+[████████████████████████████░░░░░░░░░░░░] 440/610 (72.1%) | 58s | ETA: 22s | Failed: 87✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901084056.HEIC
+📍 Location: palma-spain (39.534819, 2.714158)
+📍 Location: palma-spain (39.534803, 2.714161)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901101907.PNG
+📷 [DRY RUN] Processing photo: 20250901104901.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901111233.PNG
+📷 [DRY RUN] Processing photo: 20250901132344.JPG
+📷 [DRY RUN] Processing photo: 20250901132412.JPG
+📷 [DRY RUN] Processing photo: 20250901132420.JPG
+📷 [DRY RUN] Processing photo: 20250901132434.HEIC
+[█████████████████████████████░░░░░░░░░░░] 448/610 (73.4%) | 58s | ETA: 21s | Failed: 92📷 [DRY RUN] Processing photo: 20250901132604.HEIC
+📍 Location: palma-spain (39.535019, 2.720750)
+📍 Location: palma-spain (39.534989, 2.720753)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901132616.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901140030.JPG
+📍 Location: palma-spain (39.535003, 2.720736)
+📷 [DRY RUN] Processing photo: 20250901140058.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250901140114.MOV
+📍 Location: palma-spain (39.534450, 2.714106)
+[█████████████████████████████░░░░░░░░░░░] 453/610 (74.3%) | 59s | ETA: 20s | Failed: 94📍 Location: palma-spain (39.534600, 2.714000)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901171459.PNG
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-01-palma.MOV
+📷 [DRY RUN] Processing photo: 20250901180702.HEIC
+📷 [DRY RUN] Processing photo: 20250901180706.HEIC
+📍 Location: palma-spain (39.535236, 2.719694)
+📍 Location: palma-spain (39.535222, 2.719714)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901181908.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901181913.HEIC
+📍 Location: palma-spain (39.532478, 2.724839)
+[██████████████████████████████░░░░░░░░░░] 458/610 (75.1%) | 59s | ETA: 20s | Failed: 95📍 Location: palma-spain (39.532514, 2.724806)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901181917.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901183426.HEIC
+📍 Location: palma-spain (39.532519, 2.724806)
+📍 Location: palma-spain (39.536639, 2.716842)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901184248.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901184821.HEIC
+📷 [DRY RUN] Processing photo: 20250901192748.HEIC
+[██████████████████████████████░░░░░░░░░░] 463/610 (75.9%) | 1m0s | ETA: 19s | Failed: 96📍 Location: palma-spain (39.534703, 2.714139)
+📍 Location: palma-spain (39.534581, 2.714086)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192750.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192751.HEIC
+📍 Location: palma-spain (39.534511, 2.714119)
+📍 Location: palma-spain (39.534581, 2.714094)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192753.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192755.HEIC
+[██████████████████████████████░░░░░░░░░░] 467/610 (76.6%) | 1m0s | ETA: 18s | Failed: 96📍 Location: palma-spain (39.534489, 2.714097)
+📍 Location: palma-spain (39.534406, 2.714214)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901192759.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901195835.JPG
+📍 Location: palma-spain (39.534664, 2.714058)
+📷 [DRY RUN] Processing photo: 20250901200449.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250901202923.HEIC
+📷 [DRY RUN] Processing photo: 20250902092344.PNG
+📷 [DRY RUN] Processing photo: 20250902144018.HEIC
+[███████████████████████████████░░░░░░░░░] 473/610 (77.5%) | 1m1s | ETA: 18s | Failed: 99📍 Location: palma-spain (39.536144, 2.716378)
+📍 Location: palma-spain (39.534492, 2.721375)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-01-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902144020.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902144030.HEIC
+📍 Location: palma-spain (39.534492, 2.721369)
+📍 Location: palma-spain (39.534447, 2.721272)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902145446.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902145452.HEIC
+[███████████████████████████████░░░░░░░░░] 477/610 (78.2%) | 1m1s | ETA: 17s | Failed: 99📍 Location: palma-spain (39.533864, 2.721247)
+📍 Location: palma-spain (39.533864, 2.721222)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902145458.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902145518.HEIC
+📍 Location: palma-spain (39.533856, 2.721228)
+📍 Location: palma-spain (39.533856, 2.721239)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902151300.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902151310.HEIC
+[███████████████████████████████░░░░░░░░░] 481/610 (78.9%) | 1m2s | ETA: 16s | Failed: 99📍 Location: palma-spain (39.532489, 2.724939)
+📍 Location: palma-spain (39.532494, 2.724922)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902151354.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902151358.HEIC
+📍 Location: palma-spain (39.532486, 2.724925)
+📍 Location: palma-spain (39.532486, 2.724922)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902155409.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192104.HEIC
+[███████████████████████████████░░░░░░░░░] 485/610 (79.5%) | 1m2s | ETA: 16s | Failed: 99📍 Location: palma-spain (39.534828, 2.714186)
+📍 Location: palma-spain (39.534775, 2.716819)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192106.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192113.HEIC
+📍 Location: palma-spain (39.534775, 2.716828)
+📍 Location: palma-spain (39.534778, 2.716867)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192351.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192354.HEIC
+[████████████████████████████████░░░░░░░░] 489/610 (80.2%) | 1m3s | ETA: 15s | Failed: 99📍 Location: palma-spain (39.534953, 2.718700)
+📍 Location: palma-spain (39.534942, 2.718700)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192357.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192406.HEIC
+📍 Location: palma-spain (39.534931, 2.718700)
+📍 Location: palma-spain (39.534928, 2.718703)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192717.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192728.HEIC
+[████████████████████████████████░░░░░░░░] 493/610 (80.8%) | 1m3s | ETA: 15s | Failed: 99📍 Location: palma-spain (39.535131, 2.720047)
+📍 Location: palma-spain (39.535142, 2.720047)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192738.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902192743.HEIC
+📍 Location: palma-spain (39.535136, 2.720039)
+📍 Location: palma-spain (39.535142, 2.720044)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+🎥 [DRY RUN] Processing video: 20250902192925.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-02-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250902194318.JPG
+[████████████████████████████████░░░░░░░░] 497/610 (81.5%) | 1m4s | ETA: 14s | Failed: 99📍 Location: palma-spain (39.535100, 2.720400)
+📷 [DRY RUN] Processing photo: 20250902194322.JPG
+✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-02-palma.MOV
+📷 [DRY RUN] Processing photo: 20250902194330.JPG
+📷 [DRY RUN] Processing photo: 20250903122536.JPG
+📷 [DRY RUN] Processing photo: 20250903122602.JPG
+📷 [DRY RUN] Processing photo: 20250903130514.HEIC
+📷 [DRY RUN] Processing photo: 20250903130536.JPG
+📷 [DRY RUN] Processing photo: 20250903142508.HEIC
+📍 Location: palma-spain (39.534733, 2.714106)
+[█████████████████████████████████░░░░░░░] 504/610 (82.6%) | 1m4s | ETA: 13s | Failed: 105📍 Location: palma-spain (39.538547, 2.707478)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142512.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903142645.JPG
+📍 Location: palma-spain (39.538567, 2.707475)
+📷 [DRY RUN] Processing photo: 20250903144150.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144153.HEIC
+📍 Location: palma-spain (39.536019, 2.710700)
+📍 Location: palma-spain (39.536025, 2.710675)
+[█████████████████████████████████░░░░░░░] 508/610 (83.3%) | 1m5s | ETA: 13s | Failed: 106✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144155.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903144205.HEIC
+📍 Location: palma-spain (39.536031, 2.710667)
+📍 Location: palma-spain (39.536025, 2.710656)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903145819.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903145827.PNG
+📷 [DRY RUN] Processing photo: 20250903152737.PNG
+📷 [DRY RUN] Processing photo: 20250903182301.HEIC
+📷 [DRY RUN] Processing photo: 20250903182302.HEIC
+[█████████████████████████████████░░░░░░░] 515/610 (84.4%) | 1m5s | ETA: 12s | Failed: 109📍 Location: palma-spain (39.534231, 2.714489)
+📍 Location: palma-spain (39.534283, 2.714544)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903182304.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903185228.JPG
+📍 Location: palma-spain (39.534131, 2.714514)
+📷 [DRY RUN] Processing photo: 20250903194653.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195003.HEIC
+📍 Location: palma-spain (39.534847, 2.714194)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195013.HEIC
+📍 Location: palma-spain (39.534789, 2.714181)
+[██████████████████████████████████░░░░░░] 520/610 (85.2%) | 1m6s | ETA: 11s | Failed: 110✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195029.HEIC
+📍 Location: palma-spain (39.534789, 2.714161)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195033.HEIC
+📍 Location: palma-spain (39.534817, 2.714136)
+📍 Location: palma-spain (39.534825, 2.714144)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195041.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195053.HEIC
+📍 Location: palma-spain (39.534833, 2.714158)
+[██████████████████████████████████░░░░░░] 524/610 (85.9%) | 1m6s | ETA: 11s | Failed: 110✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903195438.HEIC
+📍 Location: palma-spain (39.534817, 2.714158)
+📍 Location: palma-spain (39.534819, 2.714161)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250903200033.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904083624.PNG
+📍 Location: palma-spain (39.534847, 2.714194)
+📷 [DRY RUN] Processing photo: 20250904094238.PNG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-03-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904095249.PNG
+[██████████████████████████████████░░░░░░] 529/610 (86.7%) | 1m7s | ETA: 10s | Failed: 111📷 [DRY RUN] Processing photo: 20250904100020.HEIC
+📷 [DRY RUN] Processing photo: 20250904100023.HEIC
+📍 Location: palma-spain (39.534722, 2.714186)
+📍 Location: palma-spain (39.534711, 2.714161)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100024.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100025(1).HEIC
+📍 Location: palma-spain (39.534714, 2.714167)
+📍 Location: palma-spain (39.534717, 2.714169)
+[██████████████████████████████████░░░░░░] 533/610 (87.4%) | 1m7s | ETA: 10s | Failed: 113✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100025.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100027.HEIC
+📍 Location: palma-spain (39.534717, 2.714169)
+📍 Location: palma-spain (39.534717, 2.714169)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100031(1).HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100031.HEIC
+📍 Location: palma-spain (39.534722, 2.714178)
+📍 Location: palma-spain (39.534722, 2.714178)
+[███████████████████████████████████░░░░░] 537/610 (88.0%) | 1m8s | ETA: 9s | Failed: 113✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100038.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100050.HEIC
+📍 Location: palma-spain (39.534725, 2.714186)
+📍 Location: palma-spain (39.534722, 2.714178)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100207.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904100253.PNG
+📷 [DRY RUN] Processing photo: 20250904104440.HEIC
+📍 Location: palma-spain (39.534814, 2.714150)
+[███████████████████████████████████░░░░░] 542/610 (88.9%) | 1m8s | ETA: 9s | Failed: 114📍 Location: palma-spain (39.534772, 2.714128)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904105900.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904112723.HEIC
+📍 Location: palma-spain (39.534764, 2.714131)
+📍 Location: palma-spain (39.534742, 2.714153)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904112744.PNG
+📷 [DRY RUN] Processing photo: 20250904114508.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904114516.JPG
+📷 [DRY RUN] Processing photo: 20250904114830.HEIC
+📷 [DRY RUN] Processing photo: 20250904121036.HEIC
+[████████████████████████████████████░░░░] 549/610 (90.0%) | 1m9s | ETA: 8s | Failed: 117📍 Location: palma-spain (39.534814, 2.714167)
+📍 Location: palma-spain (39.534725, 2.714283)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904121344.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904121527.HEIC
+📍 Location: palma-spain (39.534756, 2.714108)
+📍 Location: palma-spain (39.534778, 2.714108)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904123306.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904130714.JPG
+[████████████████████████████████████░░░░] 553/610 (90.7%) | 1m9s | ETA: 7s | Failed: 117📷 [DRY RUN] Processing photo: 20250904130728.JPG
+📷 [DRY RUN] Processing photo: 20250904130849.JPG
+🎥 [DRY RUN] Processing video: 20250904134212.MP4
+🎥 [DRY RUN] Processing video: 20250904144834.MP4
+📷 [DRY RUN] Processing photo: 20250904163536.PNG
+📷 [DRY RUN] Processing photo: 20250904190240.JPG
+📷 [DRY RUN] Processing photo: 20250904190302.JPG
+📷 [DRY RUN] Processing photo: 20250904190341.HEIC
+📷 [DRY RUN] Processing photo: 20250904190550.JPG
+📍 Location: palma-spain (39.535308, 2.720967)
+📷 [DRY RUN] Processing photo: 20250904191312.HEIC
+[████████████████████████████████████░░░░] 563/610 (92.3%) | 1m10s | ETA: 6s | Failed: 127✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193940.JPG
+📍 Location: palma-spain (39.535294, 2.721025)
+📷 [DRY RUN] Processing photo: 20250904193947.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-04-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250904193952.JPG
+📷 [DRY RUN] Processing photo: 20250904211451.PNG
+📷 [DRY RUN] Processing photo: 20250905082519.HEIC
+📷 [DRY RUN] Processing photo: 20250905082520.HEIC
+📍 Location: palma-spain (39.534953, 2.714256)
+📍 Location: palma-spain (39.534989, 2.714275)
+[█████████████████████████████████████░░░] 569/610 (93.3%) | 1m10s | ETA: 5s | Failed: 131✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905082522.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905082542.HEIC
+📍 Location: palma-spain (39.534992, 2.714294)
+📍 Location: palma-spain (39.534864, 2.714222)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905082544.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905082547.HEIC
+📍 Location: palma-spain (39.534875, 2.714244)
+📍 Location: palma-spain (39.534936, 2.714311)
+[█████████████████████████████████████░░░] 573/610 (93.9%) | 1m11s | ETA: 5s | Failed: 131✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905095744.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905131904.HEIC
+📍 Location: palma-spain (39.535769, 2.718167)
+📍 Location: palma-spain (39.535758, 2.710389)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905132329.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905133250.HEIC
+📍 Location: palma-spain (39.535781, 2.710428)
+📍 Location: palma-spain (39.534961, 2.712311)
+[█████████████████████████████████████░░░] 577/610 (94.6%) | 1m11s | ETA: 4s | Failed: 131✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905133301.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134252.HEIC
+📍 Location: palma-spain (39.535019, 2.712375)
+📍 Location: palma-spain (39.534550, 2.714106)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134258.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134301.HEIC
+📍 Location: palma-spain (39.534572, 2.714078)
+📍 Location: palma-spain (39.534581, 2.714072)
+[██████████████████████████████████████░░] 581/610 (95.2%) | 1m12s | ETA: 4s | Failed: 131✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134308.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134458.HEIC
+📍 Location: palma-spain (39.534583, 2.714061)
+📍 Location: palma-spain (39.534592, 2.714106)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134503.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905134508.HEIC
+📍 Location: palma-spain (39.534583, 2.714092)
+📍 Location: palma-spain (39.534583, 2.714094)
+[██████████████████████████████████████░░] 585/610 (95.9%) | 1m12s | ETA: 3s | Failed: 131✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905140800.JPG
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250905142715.JPG
+📷 [DRY RUN] Processing photo: 20250905142726.JPG
+📷 [DRY RUN] Processing photo: 20250905143623.HEIC
+📷 [DRY RUN] Processing photo: 20250905162830.JPG
+📍 Location: palma-spain (39.534564, 2.714117)
+🎥 [DRY RUN] Processing video: 20250905192153.MOV
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-05-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906032935.HEIC
+📍 Location: palma-spain (39.534500, 2.714000)
+[██████████████████████████████████████░░] 592/610 (97.0%) | 1m13s | ETA: 2s | Failed: 135✅ [DRY RUN] Video would be moved to: /tmp/2025/VIDEO-FILES/spain/palma/2025-09-05-palma.MOV
+📷 [DRY RUN] Processing photo: 20250906032943.HEIC
+📍 Location: palma-spain (39.534819, 2.714281)
+📍 Location: palma-spain (39.534825, 2.714261)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906033335.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906042709.HEIC
+📍 Location: palma-spain (39.534686, 2.714147)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906051234.HEIC
+📍 Location: palma-spain (39.550475, 2.729667)
+[███████████████████████████████████████░] 596/610 (97.7%) | 1m13s | ETA: 2s | Failed: 135📍 Location: palma-spain (39.549831, 2.727436)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906053709.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906063005.HEIC
+📍 Location: palma-spain (39.549972, 2.726703)
+📍 Location: palma-spain (39.554081, 2.758950)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906063257.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/palma/2025-09-06-palma.HEIC
+📷 [DRY RUN] Processing photo: 20250906063402.HEIC
+📍 Location: majorca-spain (39.543503, 2.961917)
+[███████████████████████████████████████░] 600/610 (98.4%) | 1m14s | ETA: 1s | Failed: 135📍 Location: majorca-spain (39.686706, 2.905425)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/majorca/2025-09-06-majorca.HEIC
+📷 [DRY RUN] Processing photo: 20250906084112.HEIC
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/spain/majorca/2025-09-06-majorca.HEIC
+📷 [DRY RUN] Processing photo: 20250906084115.HEIC
+📷 [DRY RUN] Processing photo: 20250906095719.HEIC
+📍 Location: high-peak-united-kingdom (53.368094, -1.895511)
+[███████████████████████████████████████░] 603/610 (98.9%) | 1m14s | ETA: 1s | Failed: 136✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/high-peak/2025-09-06-high-peak.HEIC
+📷 [DRY RUN] Processing photo: 20250906095725.HEIC
+[███████████████████████████████████████░] 604/610 (99.0%) | 1m15s | ETA: 1s | Failed: 136📍 Location: manchester-united-kingdom (53.364972, -2.271878)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+📷 [DRY RUN] Processing photo: 20250906121718.PNG
+📷 [DRY RUN] Processing photo: 20250906130347.PNG
+📷 [DRY RUN] Processing photo: 20250906194812.PNG
+[███████████████████████████████████████░] 607/610 (99.5%) | 1m16s | ETA: 0s | Failed: 138📷 [DRY RUN] Processing photo: 20250906220004.PNG
+[███████████████████████████████████████░] 609/610 (99.8%) | 1m16s | ETA: 0s | Failed: 140📍 Location: manchester-united-kingdom (53.365069, -2.271942)
+✅ [DRY RUN] Photo would be moved to: /tmp/2025/united-kingdom/manchester/2025-09-06-manchester.HEIC
+[████████████████████████████████████████] 610/610 (100.0%) | 1m17s | Failed: 140[████████████████████████████████████████] 610/610 (100.0%) | 1m17s | Failed: 140
+
+📊 Processing Summary:
+✅ Status: COMPLETED
+📈 Progress: 610/610 processed
+✅ Total successful: 470
+📷 Photos successful: 452/588
+🎥 Videos successful: 18/22
+❌ Total failed: 140
+⏭️  Skipped: 0
+⏱️  Total time: 1m17s
+📊 Average time per file: 125ms
+📋 Completion: 100.0%
+
+❌ Error breakdown:
+   - Photo: No GPS data: 136 files (136 photos)
+   - Video: No GPS data: 4 files (4 videos)
+
+🎥 Videos organized in VIDEO-FILES/ directory structure

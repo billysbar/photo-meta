@@ -1,0 +1,3658 @@
+📋 Report Generation - Duplicates
+🔍 Analyzing: /tmp/2025 Sept majorca
+⏰ Started: 2025-09-11 14:07:52
+
+🔍 Scanning... 50 files hashed🔍 Scanning... 100 files hashed🔍 Scanning... 150 files hashed🔍 Scanning... 200 files hashed🔍 Scanning... 250 files hashed🔍 Scanning... 300 files hashed🔍 Scanning... 350 files hashed🔍 Scanning... 400 files hashed🔍 Scanning... 450 files hashed🔍 Scanning... 500 files hashed🔍 Scanning... 550 files hashed🔍 Scanning... 600 files hashed🔍 Analyzing duplicates...
+Photo Metadata Editor - Duplicate Files Report
+Generated: 2025-09-11 14:07:54
+Directory: /tmp/2025 Sept majorca
+============================================================
+
+🔍 Found 305 duplicate groups
+💾 Total wasted space: 1.1 GB
+
+=== Group 1: 2 files (64.0 MB each) ===
+Hash: 7372e8cdcc8bce40...
+Wasted space: 64.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831130611.MOV (KEEP)
+     Modified: 2025-08-31 13:06:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831130611.MOV (duplicate)
+     Modified: 2025-08-31 13:06:00
+
+=== Group 2: 2 files (46.3 MB each) ===
+Hash: 1a74607abc12cfc8...
+Wasted space: 46.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831134742.MOV (KEEP)
+     Modified: 2025-08-31 13:47:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831134742.MOV (duplicate)
+     Modified: 2025-08-31 13:47:00
+
+=== Group 3: 2 files (43.2 MB each) ===
+Hash: b9111528626f61f9...
+Wasted space: 43.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831182704.MOV (KEEP)
+     Modified: 2025-08-31 18:27:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831182704.MOV (duplicate)
+     Modified: 2025-08-31 18:27:00
+
+=== Group 4: 2 files (40.4 MB each) ===
+Hash: 1117efc3e5ccfb2d...
+Wasted space: 40.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902200740.MOV (KEEP)
+     Modified: 2025-09-02 20:07:00
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902200740.MOV (duplicate)
+     Modified: 2025-09-02 20:07:00
+
+=== Group 5: 2 files (35.7 MB each) ===
+Hash: 2399d254c62f32ca...
+Wasted space: 35.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904144834.MP4 (KEEP)
+     Modified: 2025-09-04 14:48:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904144834.MP4 (duplicate)
+     Modified: 2025-09-04 14:48:00
+
+=== Group 6: 2 files (34.4 MB each) ===
+Hash: 0fbcfedd7967264d...
+Wasted space: 34.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901140114.MOV (KEEP)
+     Modified: 2025-09-01 14:01:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901140114.MOV (duplicate)
+     Modified: 2025-09-01 14:01:00
+
+=== Group 7: 2 files (33.4 MB each) ===
+Hash: 736659f354b6bb52...
+Wasted space: 33.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905192153.MOV (KEEP)
+     Modified: 2025-09-05 19:21:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905192153.MOV (duplicate)
+     Modified: 2025-09-05 19:21:00
+
+=== Group 8: 2 files (26.1 MB each) ===
+Hash: 29fd7275d7a35192...
+Wasted space: 26.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192925.MOV (KEEP)
+     Modified: 2025-09-02 19:29:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192925.MOV (duplicate)
+     Modified: 2025-09-02 19:29:00
+
+=== Group 9: 2 files (24.6 MB each) ===
+Hash: e8bd2c85119a64e0...
+Wasted space: 24.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831194541.MOV (KEEP)
+     Modified: 2025-08-31 19:45:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831194541.MOV (duplicate)
+     Modified: 2025-08-31 19:45:00
+
+=== Group 10: 2 files (24.4 MB each) ===
+Hash: a54123b5b001a07e...
+Wasted space: 24.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904134212.MP4 (KEEP)
+     Modified: 2025-09-04 13:42:00
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904134212.MP4 (duplicate)
+     Modified: 2025-09-04 13:42:00
+
+=== Group 11: 2 files (11.5 MB each) ===
+Hash: 3365f973afe98d91...
+Wasted space: 11.5 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902200725.MOV (KEEP)
+     Modified: 2025-09-02 20:07:00
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902200725.MOV (duplicate)
+     Modified: 2025-09-02 20:07:00
+
+=== Group 12: 2 files (10.8 MB each) ===
+Hash: b6b3cdb4516f965b...
+Wasted space: 10.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904094238.PNG (KEEP)
+     Modified: 2025-09-04 09:42:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904094238.PNG (duplicate)
+     Modified: 2025-09-04 09:42:00
+     Quality score: 3
+
+=== Group 13: 2 files (8.3 MB each) ===
+Hash: 654ad8e5457b8307...
+Wasted space: 8.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100253.PNG (KEEP)
+     Modified: 2025-09-04 10:02:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100253.PNG (duplicate)
+     Modified: 2025-09-04 10:02:00
+     Quality score: 3
+
+=== Group 14: 2 files (8.0 MB each) ===
+Hash: cd53d5513511d159...
+Wasted space: 8.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903175904.PNG (KEEP)
+     Modified: 2025-09-03 17:59:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903175904.PNG (duplicate)
+     Modified: 2025-09-03 17:59:00
+     Quality score: 3
+
+=== Group 15: 2 files (7.4 MB each) ===
+Hash: c4f927dcb8fb6a37...
+Wasted space: 7.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906194812.PNG (KEEP)
+     Modified: 2025-09-06 19:48:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906194812.PNG (duplicate)
+     Modified: 2025-09-06 19:48:00
+     Quality score: 3
+
+=== Group 16: 2 files (5.5 MB each) ===
+Hash: 5bda59a08660744d...
+Wasted space: 5.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903142508.HEIC (KEEP)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903142508.HEIC (duplicate)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+=== Group 17: 2 files (5.3 MB each) ===
+Hash: ff202625b4172645...
+Wasted space: 5.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903144153.HEIC (KEEP)
+     Modified: 2025-09-03 14:41:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903144153.HEIC (duplicate)
+     Modified: 2025-09-03 14:41:00
+     Quality score: 5
+
+=== Group 18: 2 files (5.3 MB each) ===
+Hash: 252aa0d21a00ef9e...
+Wasted space: 5.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906220004.PNG (KEEP)
+     Modified: 2025-09-06 22:00:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906220004.PNG (duplicate)
+     Modified: 2025-09-06 22:00:00
+     Quality score: 3
+
+=== Group 19: 2 files (5.1 MB each) ===
+Hash: 51bef68eb1b58855...
+Wasted space: 5.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903144155.HEIC (KEEP)
+     Modified: 2025-09-03 14:41:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903144155.HEIC (duplicate)
+     Modified: 2025-09-03 14:41:00
+     Quality score: 5
+
+=== Group 20: 2 files (4.9 MB each) ===
+Hash: f7be869b5f2f7968...
+Wasted space: 4.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906095719.HEIC (KEEP)
+     Modified: 2025-09-06 09:57:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906095719.HEIC (duplicate)
+     Modified: 2025-09-06 09:57:00
+     Quality score: 5
+
+=== Group 21: 2 files (4.9 MB each) ===
+Hash: 0e3f532e0cd16b0e...
+Wasted space: 4.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903144150.HEIC (KEEP)
+     Modified: 2025-09-03 14:41:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903144150.HEIC (duplicate)
+     Modified: 2025-09-03 14:41:00
+     Quality score: 5
+
+=== Group 22: 2 files (4.6 MB each) ===
+Hash: a68f60545ae9a365...
+Wasted space: 4.6 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904102547.PNG (KEEP)
+     Modified: 2025-09-04 10:25:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904102547.PNG (duplicate)
+     Modified: 2025-09-04 10:25:00
+     Quality score: 3
+
+=== Group 23: 2 files (4.4 MB each) ===
+Hash: de179bcba7b8dbe4...
+Wasted space: 4.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901180706.HEIC (KEEP)
+     Modified: 2025-09-01 18:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901180706.HEIC (duplicate)
+     Modified: 2025-09-01 18:07:00
+     Quality score: 5
+
+=== Group 24: 2 files (4.4 MB each) ===
+Hash: af3e11e943cab11e...
+Wasted space: 4.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902145452.HEIC (KEEP)
+     Modified: 2025-09-02 14:54:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902145452.HEIC (duplicate)
+     Modified: 2025-09-02 14:54:00
+     Quality score: 5
+
+=== Group 25: 2 files (4.3 MB each) ===
+Hash: e4a5cd1b77a54cdd...
+Wasted space: 4.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902151358.HEIC (KEEP)
+     Modified: 2025-09-02 15:13:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902151358.HEIC (duplicate)
+     Modified: 2025-09-02 15:13:00
+     Quality score: 5
+
+=== Group 26: 2 files (4.3 MB each) ===
+Hash: 1765b3b650265b75...
+Wasted space: 4.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902145446.HEIC (KEEP)
+     Modified: 2025-09-02 14:54:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902145446.HEIC (duplicate)
+     Modified: 2025-09-02 14:54:00
+     Quality score: 5
+
+=== Group 27: 2 files (4.3 MB each) ===
+Hash: 221bc7056b7dea15...
+Wasted space: 4.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903142512.HEIC (KEEP)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903142512.HEIC (duplicate)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+=== Group 28: 2 files (4.1 MB each) ===
+Hash: 6c61ee796b6c4cd8...
+Wasted space: 4.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831114855.HEIC (KEEP)
+     Modified: 2025-08-31 11:48:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831114855.HEIC (duplicate)
+     Modified: 2025-08-31 11:48:00
+     Quality score: 5
+
+=== Group 29: 2 files (4.1 MB each) ===
+Hash: 99418eb372b904c7...
+Wasted space: 4.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902133222.HEIC (KEEP)
+     Modified: 2025-09-02 13:32:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902133222.HEIC (duplicate)
+     Modified: 2025-09-02 13:32:00
+     Quality score: 5
+
+=== Group 30: 2 files (4.1 MB each) ===
+Hash: 9b82d11266d64097...
+Wasted space: 4.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905133301.HEIC (KEEP)
+     Modified: 2025-09-05 13:33:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905133301.HEIC (duplicate)
+     Modified: 2025-09-05 13:33:00
+     Quality score: 5
+
+=== Group 31: 2 files (4.0 MB each) ===
+Hash: bd97d1e8be2b4155...
+Wasted space: 4.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901181908.HEIC (KEEP)
+     Modified: 2025-09-01 18:19:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901181908.HEIC (duplicate)
+     Modified: 2025-09-01 18:19:00
+     Quality score: 5
+
+=== Group 32: 2 files (4.0 MB each) ===
+Hash: c02d68a2a790fd27...
+Wasted space: 4.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831110354.HEIC (KEEP)
+     Modified: 2025-08-31 11:03:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831110354.HEIC (duplicate)
+     Modified: 2025-08-31 11:03:00
+     Quality score: 5
+
+=== Group 33: 2 files (3.9 MB each) ===
+Hash: 8da92091a407e2b2...
+Wasted space: 3.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902133218.HEIC (KEEP)
+     Modified: 2025-09-02 13:32:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902133218.HEIC (duplicate)
+     Modified: 2025-09-02 13:32:00
+     Quality score: 5
+
+=== Group 34: 2 files (3.9 MB each) ===
+Hash: 910d2a3ebd5de0c6...
+Wasted space: 3.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906121718.PNG (KEEP)
+     Modified: 2025-09-06 12:17:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906121718.PNG (duplicate)
+     Modified: 2025-09-06 12:17:00
+     Quality score: 3
+
+=== Group 35: 2 files (3.9 MB each) ===
+Hash: 7d423fdfd5b3c6ea...
+Wasted space: 3.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901180702.HEIC (KEEP)
+     Modified: 2025-09-01 18:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901180702.HEIC (duplicate)
+     Modified: 2025-09-01 18:07:00
+     Quality score: 5
+
+=== Group 36: 2 files (3.9 MB each) ===
+Hash: b209fb2f24df55b5...
+Wasted space: 3.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902144020.HEIC (KEEP)
+     Modified: 2025-09-02 14:40:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902144020.HEIC (duplicate)
+     Modified: 2025-09-02 14:40:00
+     Quality score: 5
+
+=== Group 37: 2 files (3.9 MB each) ===
+Hash: 87bc3c6ce8df35c8...
+Wasted space: 3.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901183426.HEIC (KEEP)
+     Modified: 2025-09-01 18:34:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901183426.HEIC (duplicate)
+     Modified: 2025-09-01 18:34:00
+     Quality score: 5
+
+=== Group 38: 2 files (3.9 MB each) ===
+Hash: 331fea7a1240b252...
+Wasted space: 3.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831175246.HEIC (KEEP)
+     Modified: 2025-08-31 17:52:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831175246.HEIC (duplicate)
+     Modified: 2025-08-31 17:52:00
+     Quality score: 5
+
+=== Group 39: 2 files (3.8 MB each) ===
+Hash: 1d2ee00c327c76ef...
+Wasted space: 3.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905132329.HEIC (KEEP)
+     Modified: 2025-09-05 13:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905132329.HEIC (duplicate)
+     Modified: 2025-09-05 13:23:00
+     Quality score: 5
+
+=== Group 40: 2 files (3.8 MB each) ===
+Hash: 996efa2224632745...
+Wasted space: 3.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905131904.HEIC (KEEP)
+     Modified: 2025-09-05 13:19:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905131904.HEIC (duplicate)
+     Modified: 2025-09-05 13:19:00
+     Quality score: 5
+
+=== Group 41: 2 files (3.8 MB each) ===
+Hash: bcfdb5ea3e9b2848...
+Wasted space: 3.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901132604.HEIC (KEEP)
+     Modified: 2025-09-01 13:26:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901132604.HEIC (duplicate)
+     Modified: 2025-09-01 13:26:00
+     Quality score: 5
+
+=== Group 42: 2 files (3.8 MB each) ===
+Hash: 932346a22b30f95d...
+Wasted space: 3.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905133250.HEIC (KEEP)
+     Modified: 2025-09-05 13:32:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905133250.HEIC (duplicate)
+     Modified: 2025-09-05 13:32:00
+     Quality score: 5
+
+=== Group 43: 2 files (3.8 MB each) ===
+Hash: 1c424a012dcf16af...
+Wasted space: 3.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904121344.HEIC (KEEP)
+     Modified: 2025-09-04 12:13:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904121344.HEIC (duplicate)
+     Modified: 2025-09-04 12:13:00
+     Quality score: 5
+
+=== Group 44: 2 files (3.7 MB each) ===
+Hash: 5f54ffd59eb6f83c...
+Wasted space: 3.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901181913.HEIC (KEEP)
+     Modified: 2025-09-01 18:19:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901181913.HEIC (duplicate)
+     Modified: 2025-09-01 18:19:00
+     Quality score: 5
+
+=== Group 45: 2 files (3.6 MB each) ===
+Hash: 2525a8f17e329bf5...
+Wasted space: 3.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905134258.HEIC (KEEP)
+     Modified: 2025-09-05 13:42:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905134258.HEIC (duplicate)
+     Modified: 2025-09-05 13:42:00
+     Quality score: 5
+
+=== Group 46: 2 files (3.6 MB each) ===
+Hash: ca18b425d0e69bf8...
+Wasted space: 3.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831110340.HEIC (KEEP)
+     Modified: 2025-08-31 11:03:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831110340.HEIC (duplicate)
+     Modified: 2025-08-31 11:03:00
+     Quality score: 5
+
+=== Group 47: 2 files (3.5 MB each) ===
+Hash: 9acf99d05d63cde1...
+Wasted space: 3.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831175226.HEIC (KEEP)
+     Modified: 2025-08-31 17:52:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831175226.HEIC (duplicate)
+     Modified: 2025-08-31 17:52:00
+     Quality score: 5
+
+=== Group 48: 2 files (3.5 MB each) ===
+Hash: c4c1323c7e8d39b0...
+Wasted space: 3.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100024.HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100024.HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 49: 2 files (3.5 MB each) ===
+Hash: 7764cd408528791d...
+Wasted space: 3.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831083205.HEIC (KEEP)
+     Modified: 2025-08-31 08:32:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831083205.HEIC (duplicate)
+     Modified: 2025-08-31 08:32:00
+     Quality score: 5
+
+=== Group 50: 2 files (3.5 MB each) ===
+Hash: 9b5bab9475b7a9c5...
+Wasted space: 3.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831175230.HEIC (KEEP)
+     Modified: 2025-08-31 17:52:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831175230.HEIC (duplicate)
+     Modified: 2025-08-31 17:52:00
+     Quality score: 5
+
+=== Group 51: 2 files (3.5 MB each) ===
+Hash: e8e0b54d3f4cc39a...
+Wasted space: 3.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902144018.HEIC (KEEP)
+     Modified: 2025-09-02 14:40:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902144018.HEIC (duplicate)
+     Modified: 2025-09-02 14:40:00
+     Quality score: 5
+
+=== Group 52: 2 files (3.4 MB each) ===
+Hash: 2bc324e2037bebda...
+Wasted space: 3.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905190707.HEIC (KEEP)
+     Modified: 2025-09-05 19:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905190707.HEIC (duplicate)
+     Modified: 2025-09-05 19:07:00
+     Quality score: 5
+
+=== Group 53: 2 files (3.4 MB each) ===
+Hash: b23b7bb7034ee955...
+Wasted space: 3.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192406.HEIC (KEEP)
+     Modified: 2025-09-02 19:24:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192406.HEIC (duplicate)
+     Modified: 2025-09-02 19:24:00
+     Quality score: 5
+
+=== Group 54: 2 files (3.4 MB each) ===
+Hash: 360ac521fa788ca0...
+Wasted space: 3.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904114542.HEIC (KEEP)
+     Modified: 2025-09-04 11:45:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904114542.HEIC (duplicate)
+     Modified: 2025-09-04 11:45:00
+     Quality score: 5
+
+=== Group 55: 2 files (3.4 MB each) ===
+Hash: a98c8ec6cc883825...
+Wasted space: 3.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904190341.HEIC (KEEP)
+     Modified: 2025-09-04 19:03:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904190341.HEIC (duplicate)
+     Modified: 2025-09-04 19:03:00
+     Quality score: 5
+
+=== Group 56: 2 files (3.4 MB each) ===
+Hash: da1aaab2641e5f71...
+Wasted space: 3.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906042709.HEIC (KEEP)
+     Modified: 2025-09-06 04:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906042709.HEIC (duplicate)
+     Modified: 2025-09-06 04:27:00
+     Quality score: 5
+
+=== Group 57: 2 files (3.4 MB each) ===
+Hash: 50b06bbfed6b87d7...
+Wasted space: 3.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905190726.HEIC (KEEP)
+     Modified: 2025-09-05 19:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905190726.HEIC (duplicate)
+     Modified: 2025-09-05 19:07:00
+     Quality score: 5
+
+=== Group 58: 2 files (3.3 MB each) ===
+Hash: a2ca1a927d162313...
+Wasted space: 3.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100027.HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100027.HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 59: 2 files (3.3 MB each) ===
+Hash: 0c556b6b554a33a1...
+Wasted space: 3.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901181917.HEIC (KEEP)
+     Modified: 2025-09-01 18:19:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901181917.HEIC (duplicate)
+     Modified: 2025-09-01 18:19:00
+     Quality score: 5
+
+=== Group 60: 2 files (3.3 MB each) ===
+Hash: bbcb145ff228266f...
+Wasted space: 3.3 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250906100212.HEIC (KEEP)
+     Modified: 2025-09-06 10:02:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250906100212.HEIC (duplicate)
+     Modified: 2025-09-06 10:02:00
+     Quality score: 5
+
+=== Group 61: 2 files (3.3 MB each) ===
+Hash: d7d8721254d1158b...
+Wasted space: 3.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901140058.HEIC (KEEP)
+     Modified: 2025-09-01 14:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901140058.HEIC (duplicate)
+     Modified: 2025-09-01 14:00:00
+     Quality score: 5
+
+=== Group 62: 2 files (3.3 MB each) ===
+Hash: 3a5d7778e45db577...
+Wasted space: 3.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904163536.PNG (KEEP)
+     Modified: 2025-09-04 16:35:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904163536.PNG (duplicate)
+     Modified: 2025-09-04 16:35:00
+     Quality score: 3
+
+=== Group 63: 2 files (3.3 MB each) ===
+Hash: 7ddce42bd21d2ce1...
+Wasted space: 3.3 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903142527.HEIC (KEEP)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903142527.HEIC (duplicate)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+=== Group 64: 2 files (3.2 MB each) ===
+Hash: 0882b48baf61c49c...
+Wasted space: 3.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100025.HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100025.HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 65: 2 files (3.2 MB each) ===
+Hash: be1eff35af746b90...
+Wasted space: 3.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100025(1).HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100025(1).HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 66: 2 files (3.2 MB each) ===
+Hash: 525078e9dfecfb58...
+Wasted space: 3.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905134308.HEIC (KEEP)
+     Modified: 2025-09-05 13:43:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905134308.HEIC (duplicate)
+     Modified: 2025-09-05 13:43:00
+     Quality score: 5
+
+=== Group 67: 2 files (3.2 MB each) ===
+Hash: 282a487f157e97dd...
+Wasted space: 3.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100023.HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100023.HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 68: 2 files (3.2 MB each) ===
+Hash: 7944518278a16bcb...
+Wasted space: 3.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904083624.PNG (KEEP)
+     Modified: 2025-09-04 08:36:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904083624.PNG (duplicate)
+     Modified: 2025-09-04 08:36:00
+     Quality score: 3
+
+=== Group 69: 2 files (3.2 MB each) ===
+Hash: 2038f69d285e4d66...
+Wasted space: 3.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250906100217.HEIC (KEEP)
+     Modified: 2025-09-06 10:02:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250906100217.HEIC (duplicate)
+     Modified: 2025-09-06 10:02:00
+     Quality score: 5
+
+=== Group 70: 2 files (3.2 MB each) ===
+Hash: 0a08080f29ae30b7...
+Wasted space: 3.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902151354.HEIC (KEEP)
+     Modified: 2025-09-02 15:13:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902151354.HEIC (duplicate)
+     Modified: 2025-09-02 15:13:00
+     Quality score: 5
+
+=== Group 71: 2 files (3.2 MB each) ===
+Hash: 160f3f45073d9184...
+Wasted space: 3.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904084518.HEIC (KEEP)
+     Modified: 2025-09-04 08:45:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904084518.HEIC (duplicate)
+     Modified: 2025-09-04 08:45:00
+     Quality score: 5
+
+=== Group 72: 2 files (3.1 MB each) ===
+Hash: 23942940d9184187...
+Wasted space: 3.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904101553.HEIC (KEEP)
+     Modified: 2025-09-04 10:15:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904101553.HEIC (duplicate)
+     Modified: 2025-09-04 10:15:00
+     Quality score: 5
+
+=== Group 73: 2 files (3.1 MB each) ===
+Hash: c14ae2f5f925be1b...
+Wasted space: 3.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901190822.HEIC (KEEP)
+     Modified: 2025-09-01 19:08:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901190822.HEIC (duplicate)
+     Modified: 2025-09-01 19:08:00
+     Quality score: 5
+
+=== Group 74: 2 files (3.1 MB each) ===
+Hash: 0b339dd8ab9a9ed6...
+Wasted space: 3.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904121527.HEIC (KEEP)
+     Modified: 2025-09-04 12:15:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904121527.HEIC (duplicate)
+     Modified: 2025-09-04 12:15:00
+     Quality score: 5
+
+=== Group 75: 2 files (3.1 MB each) ===
+Hash: 8963cad41b35bb22...
+Wasted space: 3.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904190327.HEIC (KEEP)
+     Modified: 2025-09-04 19:03:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904190327.HEIC (duplicate)
+     Modified: 2025-09-04 19:03:00
+     Quality score: 5
+
+=== Group 76: 2 files (3.1 MB each) ===
+Hash: 252dcd4090204c02...
+Wasted space: 3.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904130714.JPG (KEEP)
+     Modified: 2025-09-04 13:07:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904130714.JPG (duplicate)
+     Modified: 2025-09-04 13:07:00
+     Quality score: 10
+
+=== Group 77: 2 files (3.1 MB each) ===
+Hash: 0cf18afe76c7bab6...
+Wasted space: 3.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903145827.PNG (KEEP)
+     Modified: 2025-09-03 14:58:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903145827.PNG (duplicate)
+     Modified: 2025-09-03 14:58:00
+     Quality score: 3
+
+=== Group 78: 2 files (3.1 MB each) ===
+Hash: ef98503d618a8703...
+Wasted space: 3.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901083443.HEIC (KEEP)
+     Modified: 2025-09-01 08:34:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901083443.HEIC (duplicate)
+     Modified: 2025-09-01 08:34:00
+     Quality score: 5
+
+=== Group 79: 2 files (3.0 MB each) ===
+Hash: 146cb6f4dcaa7769...
+Wasted space: 3.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905134301.HEIC (KEEP)
+     Modified: 2025-09-05 13:43:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905134301.HEIC (duplicate)
+     Modified: 2025-09-05 13:43:00
+     Quality score: 5
+
+=== Group 80: 2 files (3.0 MB each) ===
+Hash: 14bbefdf1c525669...
+Wasted space: 3.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904130849.JPG (KEEP)
+     Modified: 2025-09-04 13:08:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904130849.JPG (duplicate)
+     Modified: 2025-09-04 13:08:00
+     Quality score: 10
+
+=== Group 81: 2 files (3.0 MB each) ===
+Hash: 805324e6da19f87e...
+Wasted space: 3.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192354.HEIC (KEEP)
+     Modified: 2025-09-02 19:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192354.HEIC (duplicate)
+     Modified: 2025-09-02 19:23:00
+     Quality score: 5
+
+=== Group 82: 2 files (2.9 MB each) ===
+Hash: dff5c1bcaf39b5e9...
+Wasted space: 2.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904100112.HEIC (KEEP)
+     Modified: 2025-09-04 10:01:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904100112.HEIC (duplicate)
+     Modified: 2025-09-04 10:01:00
+     Quality score: 5
+
+=== Group 83: 2 files (2.9 MB each) ===
+Hash: 125d0489e11b1ee2...
+Wasted space: 2.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901171459.PNG (KEEP)
+     Modified: 2025-09-01 17:14:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901171459.PNG (duplicate)
+     Modified: 2025-09-01 17:14:00
+     Quality score: 3
+
+=== Group 84: 2 files (2.9 MB each) ===
+Hash: 184e0f4cebbd7586...
+Wasted space: 2.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901101907.PNG (KEEP)
+     Modified: 2025-09-01 10:19:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901101907.PNG (duplicate)
+     Modified: 2025-09-01 10:19:00
+     Quality score: 3
+
+=== Group 85: 2 files (2.9 MB each) ===
+Hash: 824eeb3f519446dc...
+Wasted space: 2.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901202923.HEIC (KEEP)
+     Modified: 2025-09-01 20:29:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901202923.HEIC (duplicate)
+     Modified: 2025-09-01 20:29:00
+     Quality score: 5
+
+=== Group 86: 2 files (2.9 MB each) ===
+Hash: d2f874c841c5623a...
+Wasted space: 2.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904193717.HEIC (KEEP)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904193717.HEIC (duplicate)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+=== Group 87: 2 files (2.9 MB each) ===
+Hash: 5dff3d04358a5eb3...
+Wasted space: 2.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831110749.HEIC (KEEP)
+     Modified: 2025-08-31 11:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831110749.HEIC (duplicate)
+     Modified: 2025-08-31 11:07:00
+     Quality score: 5
+
+=== Group 88: 2 files (2.9 MB each) ===
+Hash: 2da8097d61c32014...
+Wasted space: 2.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831054410.HEIC (KEEP)
+     Modified: 2025-08-31 05:44:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831054410.HEIC (duplicate)
+     Modified: 2025-08-31 05:44:00
+     Quality score: 5
+
+=== Group 89: 2 files (2.8 MB each) ===
+Hash: f56a291687449505...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906095725.HEIC (KEEP)
+     Modified: 2025-09-06 09:57:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906095725.HEIC (duplicate)
+     Modified: 2025-09-06 09:57:00
+     Quality score: 5
+
+=== Group 90: 2 files (2.8 MB each) ===
+Hash: 51f7ada24a9a934c...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831194137.HEIC (KEEP)
+     Modified: 2025-08-31 19:41:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831194137.HEIC (duplicate)
+     Modified: 2025-08-31 19:41:00
+     Quality score: 5
+
+=== Group 91: 2 files (2.8 MB each) ===
+Hash: dfe2df2d7456f637...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831102228.HEIC (KEEP)
+     Modified: 2025-08-31 10:22:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831102228.HEIC (duplicate)
+     Modified: 2025-08-31 10:22:00
+     Quality score: 5
+
+=== Group 92: 2 files (2.8 MB each) ===
+Hash: 748d91418b7fc438...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901140030.JPG (KEEP)
+     Modified: 2025-09-01 14:00:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901140030.JPG (duplicate)
+     Modified: 2025-09-01 14:00:00
+     Quality score: 10
+
+=== Group 93: 2 files (2.8 MB each) ===
+Hash: a8a7877717652198...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831134302.HEIC (KEEP)
+     Modified: 2025-08-31 13:43:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831134302.HEIC (duplicate)
+     Modified: 2025-08-31 13:43:00
+     Quality score: 5
+
+=== Group 94: 2 files (2.8 MB each) ===
+Hash: 78efcae9bbc119b1...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831110432.JPG (KEEP)
+     Modified: 2025-08-31 11:04:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831110432.JPG (duplicate)
+     Modified: 2025-08-31 11:04:00
+     Quality score: 10
+
+=== Group 95: 2 files (2.8 MB each) ===
+Hash: 6fc82e00b82d762a...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902092344.PNG (KEEP)
+     Modified: 2025-09-02 09:23:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902092344.PNG (duplicate)
+     Modified: 2025-09-02 09:23:00
+     Quality score: 3
+
+=== Group 96: 2 files (2.8 MB each) ===
+Hash: 14f796e5c8dc0575...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904121036.HEIC (KEEP)
+     Modified: 2025-09-04 12:10:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904121036.HEIC (duplicate)
+     Modified: 2025-09-04 12:10:00
+     Quality score: 5
+
+=== Group 97: 2 files (2.8 MB each) ===
+Hash: ed9c08531a75197b...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904193717(1).HEIC (KEEP)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904193717(1).HEIC (duplicate)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+=== Group 98: 2 files (2.8 MB each) ===
+Hash: 1b6825edcdec07c5...
+Wasted space: 2.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905082544.HEIC (KEEP)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905082544.HEIC (duplicate)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+=== Group 99: 2 files (2.7 MB each) ===
+Hash: 74ce34d5e8861524...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831082249.HEIC (KEEP)
+     Modified: 2025-08-31 08:22:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831082249.HEIC (duplicate)
+     Modified: 2025-08-31 08:22:00
+     Quality score: 5
+
+=== Group 100: 2 files (2.7 MB each) ===
+Hash: b5c346c61ece2cd4...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905082547.HEIC (KEEP)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905082547.HEIC (duplicate)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+=== Group 101: 2 files (2.7 MB each) ===
+Hash: b55a71ec1a90df01...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901192759.HEIC (KEEP)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901192759.HEIC (duplicate)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+=== Group 102: 2 files (2.7 MB each) ===
+Hash: f14d95c6d831d26b...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901132434.HEIC (KEEP)
+     Modified: 2025-09-01 13:24:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901132434.HEIC (duplicate)
+     Modified: 2025-09-01 13:24:00
+     Quality score: 5
+
+=== Group 103: 2 files (2.7 MB each) ===
+Hash: 7c79e4afca786703...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903195003.HEIC (KEEP)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903195003.HEIC (duplicate)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+=== Group 104: 2 files (2.7 MB each) ===
+Hash: be016911603d73bb...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901132344.JPG (KEEP)
+     Modified: 2025-09-01 13:23:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901132344.JPG (duplicate)
+     Modified: 2025-09-01 13:23:00
+     Quality score: 10
+
+=== Group 105: 2 files (2.7 MB each) ===
+Hash: a67d740a150e7c8c...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905095744.HEIC (KEEP)
+     Modified: 2025-09-05 09:57:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905095744.HEIC (duplicate)
+     Modified: 2025-09-05 09:57:00
+     Quality score: 5
+
+=== Group 106: 2 files (2.7 MB each) ===
+Hash: dbb5f970a7ae8b1a...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831110535.JPG (KEEP)
+     Modified: 2025-08-31 11:05:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831110535.JPG (duplicate)
+     Modified: 2025-08-31 11:05:00
+     Quality score: 10
+
+=== Group 107: 2 files (2.7 MB each) ===
+Hash: a2277ddccd2dd277...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904190333.HEIC (KEEP)
+     Modified: 2025-09-04 19:03:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904190333.HEIC (duplicate)
+     Modified: 2025-09-04 19:03:00
+     Quality score: 5
+
+=== Group 108: 2 files (2.7 MB each) ===
+Hash: ec3161dda6b07d02...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905082522.HEIC (KEEP)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905082522.HEIC (duplicate)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+=== Group 109: 2 files (2.7 MB each) ===
+Hash: 2f9ab958799b625f...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250831182447.HEIC (KEEP)
+     Modified: 2025-08-31 18:24:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250831182447.HEIC (duplicate)
+     Modified: 2025-08-31 18:24:00
+     Quality score: 5
+
+=== Group 110: 2 files (2.7 MB each) ===
+Hash: fccfbdb70f9db2be...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905134252.HEIC (KEEP)
+     Modified: 2025-09-05 13:42:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905134252.HEIC (duplicate)
+     Modified: 2025-09-05 13:42:00
+     Quality score: 5
+
+=== Group 111: 2 files (2.7 MB each) ===
+Hash: 4034fbcfc6a3d640...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192743.HEIC (KEEP)
+     Modified: 2025-09-02 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192743.HEIC (duplicate)
+     Modified: 2025-09-02 19:27:00
+     Quality score: 5
+
+=== Group 112: 2 files (2.7 MB each) ===
+Hash: aa78b517dd0e908a...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831102231.HEIC (KEEP)
+     Modified: 2025-08-31 10:22:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831102231.HEIC (duplicate)
+     Modified: 2025-08-31 10:22:00
+     Quality score: 5
+
+=== Group 113: 2 files (2.7 MB each) ===
+Hash: 18024fd9986b80a2...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903152737.PNG (KEEP)
+     Modified: 2025-09-03 15:27:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903152737.PNG (duplicate)
+     Modified: 2025-09-03 15:27:00
+     Quality score: 3
+
+=== Group 114: 2 files (2.7 MB each) ===
+Hash: 3090e790f2a469eb...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905082519.HEIC (KEEP)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905082519.HEIC (duplicate)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+=== Group 115: 2 files (2.7 MB each) ===
+Hash: 0d7e94b2c4895952...
+Wasted space: 2.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903195013.HEIC (KEEP)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903195013.HEIC (duplicate)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+=== Group 116: 2 files (2.6 MB each) ===
+Hash: f4088384c521c3a4...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831102223.HEIC (KEEP)
+     Modified: 2025-08-31 10:22:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831102223.HEIC (duplicate)
+     Modified: 2025-08-31 10:22:00
+     Quality score: 5
+
+=== Group 117: 2 files (2.6 MB each) ===
+Hash: 9473f7a81fab4f61...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904202744.HEIC (KEEP)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904202744.HEIC (duplicate)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+=== Group 118: 2 files (2.6 MB each) ===
+Hash: 4205769c327a50de...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905082520.HEIC (KEEP)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905082520.HEIC (duplicate)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+=== Group 119: 2 files (2.6 MB each) ===
+Hash: d8c244541a86c029...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192104.HEIC (KEEP)
+     Modified: 2025-09-02 19:21:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192104.HEIC (duplicate)
+     Modified: 2025-09-02 19:21:00
+     Quality score: 5
+
+=== Group 120: 2 files (2.6 MB each) ===
+Hash: 054a580e00c8d1b4...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905162830.JPG (KEEP)
+     Modified: 2025-09-05 16:28:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905162830.JPG (duplicate)
+     Modified: 2025-09-05 16:28:00
+     Quality score: 10
+
+=== Group 121: 2 files (2.6 MB each) ===
+Hash: ac9a554dfdfa2311...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905082542.HEIC (KEEP)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905082542.HEIC (duplicate)
+     Modified: 2025-09-05 08:25:00
+     Quality score: 5
+
+=== Group 122: 2 files (2.6 MB each) ===
+Hash: 957a174775862f32...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903145819.PNG (KEEP)
+     Modified: 2025-09-03 14:58:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903145819.PNG (duplicate)
+     Modified: 2025-09-03 14:58:00
+     Quality score: 3
+
+=== Group 123: 2 files (2.6 MB each) ===
+Hash: bba359b2059b63cb...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831093509.HEIC (KEEP)
+     Modified: 2025-08-31 09:35:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831093509.HEIC (duplicate)
+     Modified: 2025-08-31 09:35:00
+     Quality score: 5
+
+=== Group 124: 2 files (2.6 MB each) ===
+Hash: 1ec9315e58b4c45d...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903174755.HEIC (KEEP)
+     Modified: 2025-09-03 17:47:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903174755.HEIC (duplicate)
+     Modified: 2025-09-03 17:47:00
+     Quality score: 5
+
+=== Group 125: 2 files (2.6 MB each) ===
+Hash: 1d041e7190a1d74e...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903182302.HEIC (KEEP)
+     Modified: 2025-09-03 18:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903182302.HEIC (duplicate)
+     Modified: 2025-09-03 18:23:00
+     Quality score: 5
+
+=== Group 126: 2 files (2.6 MB each) ===
+Hash: 202276b387b7ea82...
+Wasted space: 2.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192106.HEIC (KEEP)
+     Modified: 2025-09-02 19:21:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192106.HEIC (duplicate)
+     Modified: 2025-09-02 19:21:00
+     Quality score: 5
+
+=== Group 127: 2 files (2.5 MB each) ===
+Hash: 1610e074de82940c...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905134458.HEIC (KEEP)
+     Modified: 2025-09-05 13:44:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905134458.HEIC (duplicate)
+     Modified: 2025-09-05 13:44:00
+     Quality score: 5
+
+=== Group 128: 2 files (2.5 MB each) ===
+Hash: 0d7c33d881e30ed0...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831094814.HEIC (KEEP)
+     Modified: 2025-08-31 09:48:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831094814.HEIC (duplicate)
+     Modified: 2025-08-31 09:48:00
+     Quality score: 5
+
+=== Group 129: 2 files (2.5 MB each) ===
+Hash: 96f8ee221af683d8...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192351.HEIC (KEEP)
+     Modified: 2025-09-02 19:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192351.HEIC (duplicate)
+     Modified: 2025-09-02 19:23:00
+     Quality score: 5
+
+=== Group 130: 2 files (2.5 MB each) ===
+Hash: bed2d4e9259063be...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906032935.HEIC (KEEP)
+     Modified: 2025-09-06 03:29:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906032935.HEIC (duplicate)
+     Modified: 2025-09-06 03:29:00
+     Quality score: 5
+
+=== Group 131: 2 files (2.5 MB each) ===
+Hash: 3c23002aee93281b...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904202745.HEIC (KEEP)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904202745.HEIC (duplicate)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+=== Group 132: 2 files (2.5 MB each) ===
+Hash: 70246f4febb98b08...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903200033.HEIC (KEEP)
+     Modified: 2025-09-03 20:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903200033.HEIC (duplicate)
+     Modified: 2025-09-03 20:00:00
+     Quality score: 5
+
+=== Group 133: 2 files (2.5 MB each) ===
+Hash: 4914f6a0569a4c73...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903194653.HEIC (KEEP)
+     Modified: 2025-09-03 19:46:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903194653.HEIC (duplicate)
+     Modified: 2025-09-03 19:46:00
+     Quality score: 5
+
+=== Group 134: 2 files (2.5 MB each) ===
+Hash: 41191a532a524eff...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903195438.HEIC (KEEP)
+     Modified: 2025-09-03 19:54:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903195438.HEIC (duplicate)
+     Modified: 2025-09-03 19:54:00
+     Quality score: 5
+
+=== Group 135: 2 files (2.5 MB each) ===
+Hash: 3f68e9227946874b...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906032943.HEIC (KEEP)
+     Modified: 2025-09-06 03:29:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906032943.HEIC (duplicate)
+     Modified: 2025-09-06 03:29:00
+     Quality score: 5
+
+=== Group 136: 2 files (2.5 MB each) ===
+Hash: fd43e745c76de17e...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903174835.HEIC (KEEP)
+     Modified: 2025-09-03 17:48:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903174835.HEIC (duplicate)
+     Modified: 2025-09-03 17:48:00
+     Quality score: 5
+
+=== Group 137: 2 files (2.5 MB each) ===
+Hash: f2100315838dec4e...
+Wasted space: 2.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904191312.HEIC (KEEP)
+     Modified: 2025-09-04 19:13:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904191312.HEIC (duplicate)
+     Modified: 2025-09-04 19:13:00
+     Quality score: 5
+
+=== Group 138: 2 files (2.4 MB each) ===
+Hash: 54fd04107dcecb9a...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902201057.HEIC (KEEP)
+     Modified: 2025-09-02 20:10:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902201057.HEIC (duplicate)
+     Modified: 2025-09-02 20:10:00
+     Quality score: 5
+
+=== Group 139: 2 files (2.4 MB each) ===
+Hash: 0ceda78c20c56122...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903195029.HEIC (KEEP)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903195029.HEIC (duplicate)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+=== Group 140: 2 files (2.4 MB each) ===
+Hash: 2b72e1667161e484...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901132420.JPG (KEEP)
+     Modified: 2025-09-01 13:24:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901132420.JPG (duplicate)
+     Modified: 2025-09-01 13:24:00
+     Quality score: 10
+
+=== Group 141: 2 files (2.4 MB each) ===
+Hash: da61df6af842276e...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901191509.HEIC (KEEP)
+     Modified: 2025-09-01 19:15:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901191509.HEIC (duplicate)
+     Modified: 2025-09-01 19:15:00
+     Quality score: 5
+
+=== Group 142: 2 files (2.4 MB each) ===
+Hash: abca3cd744460f71...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903174756.HEIC (KEEP)
+     Modified: 2025-09-03 17:47:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903174756.HEIC (duplicate)
+     Modified: 2025-09-03 17:47:00
+     Quality score: 5
+
+=== Group 143: 2 files (2.4 MB each) ===
+Hash: 3a4ce6ff81d48d01...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903182301.HEIC (KEEP)
+     Modified: 2025-09-03 18:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903182301.HEIC (duplicate)
+     Modified: 2025-09-03 18:23:00
+     Quality score: 5
+
+=== Group 144: 2 files (2.4 MB each) ===
+Hash: e96da7045c8780f1...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903182304.HEIC (KEEP)
+     Modified: 2025-09-03 18:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903182304.HEIC (duplicate)
+     Modified: 2025-09-03 18:23:00
+     Quality score: 5
+
+=== Group 145: 2 files (2.4 MB each) ===
+Hash: e45efb4f7c919fbb...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831120334.HEIC (KEEP)
+     Modified: 2025-08-31 12:03:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831120334.HEIC (duplicate)
+     Modified: 2025-08-31 12:03:00
+     Quality score: 5
+
+=== Group 146: 2 files (2.4 MB each) ===
+Hash: 04516a4c740b7008...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901132616.HEIC (KEEP)
+     Modified: 2025-09-01 13:26:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901132616.HEIC (duplicate)
+     Modified: 2025-09-01 13:26:00
+     Quality score: 5
+
+=== Group 147: 2 files (2.4 MB each) ===
+Hash: 1ecf39ff335c1b92...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905190731.HEIC (KEEP)
+     Modified: 2025-09-05 19:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905190731.HEIC (duplicate)
+     Modified: 2025-09-05 19:07:00
+     Quality score: 5
+
+=== Group 148: 2 files (2.4 MB each) ===
+Hash: 1bc015f8f1082606...
+Wasted space: 2.4 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902192415.HEIC (KEEP)
+     Modified: 2025-09-02 19:24:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902192415.HEIC (duplicate)
+     Modified: 2025-09-02 19:24:00
+     Quality score: 5
+
+=== Group 149: 2 files (2.3 MB each) ===
+Hash: 95f1018a0dd2f422...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904193718.HEIC (KEEP)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904193718.HEIC (duplicate)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+=== Group 150: 2 files (2.3 MB each) ===
+Hash: e7ec0f226e0e7ddf...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831194140.HEIC (KEEP)
+     Modified: 2025-08-31 19:41:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831194140.HEIC (duplicate)
+     Modified: 2025-08-31 19:41:00
+     Quality score: 5
+
+=== Group 151: 2 files (2.3 MB each) ===
+Hash: f668379d4a715d6f...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192738.HEIC (KEEP)
+     Modified: 2025-09-02 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192738.HEIC (duplicate)
+     Modified: 2025-09-02 19:27:00
+     Quality score: 5
+
+=== Group 152: 2 files (2.3 MB each) ===
+Hash: 13a73d20811193ce...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192357.HEIC (KEEP)
+     Modified: 2025-09-02 19:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192357.HEIC (duplicate)
+     Modified: 2025-09-02 19:23:00
+     Quality score: 5
+
+=== Group 153: 2 files (2.3 MB each) ===
+Hash: 710ad5bf8a682ef2...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901192750.HEIC (KEEP)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901192750.HEIC (duplicate)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+=== Group 154: 2 files (2.3 MB each) ===
+Hash: 3dce65488d209ed6...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902182339.HEIC (KEEP)
+     Modified: 2025-09-02 18:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902182339.HEIC (duplicate)
+     Modified: 2025-09-02 18:23:00
+     Quality score: 5
+
+=== Group 155: 2 files (2.3 MB each) ===
+Hash: fef74d18ae7d2bb8...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901192753.HEIC (KEEP)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901192753.HEIC (duplicate)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+=== Group 156: 2 files (2.3 MB each) ===
+Hash: 9299822f29de5b24...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903144210.HEIC (KEEP)
+     Modified: 2025-09-03 14:42:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903144210.HEIC (duplicate)
+     Modified: 2025-09-03 14:42:00
+     Quality score: 5
+
+=== Group 157: 2 files (2.3 MB each) ===
+Hash: 1b90407c90dbaaf9...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903130514.HEIC (KEEP)
+     Modified: 2025-09-03 13:05:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903130514.HEIC (duplicate)
+     Modified: 2025-09-03 13:05:00
+     Quality score: 5
+
+=== Group 158: 2 files (2.3 MB each) ===
+Hash: 1c98036b2012d76b...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902155409.HEIC (KEEP)
+     Modified: 2025-09-02 15:54:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902155409.HEIC (duplicate)
+     Modified: 2025-09-02 15:54:00
+     Quality score: 5
+
+=== Group 159: 2 files (2.3 MB each) ===
+Hash: a6ef1a1b2e8caf24...
+Wasted space: 2.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831122123.HEIC (KEEP)
+     Modified: 2025-08-31 12:21:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831122123.HEIC (duplicate)
+     Modified: 2025-08-31 12:21:00
+     Quality score: 5
+
+=== Group 160: 2 files (2.2 MB each) ===
+Hash: 19a1fc1b20ed79da...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901192751.HEIC (KEEP)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901192751.HEIC (duplicate)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+=== Group 161: 2 files (2.2 MB each) ===
+Hash: bd262cd241f86342...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905183536.HEIC (KEEP)
+     Modified: 2025-09-05 18:35:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905183536.HEIC (duplicate)
+     Modified: 2025-09-05 18:35:00
+     Quality score: 5
+
+=== Group 162: 2 files (2.2 MB each) ===
+Hash: 06c895f578fa571b...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905183538.HEIC (KEEP)
+     Modified: 2025-09-05 18:35:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905183538.HEIC (duplicate)
+     Modified: 2025-09-05 18:35:00
+     Quality score: 5
+
+=== Group 163: 2 files (2.2 MB each) ===
+Hash: 5044964fb66938e5...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901192748.HEIC (KEEP)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901192748.HEIC (duplicate)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+=== Group 164: 2 files (2.2 MB each) ===
+Hash: 5a4ea709fb2d0858...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901133118.HEIC (KEEP)
+     Modified: 2025-09-01 13:31:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901133118.HEIC (duplicate)
+     Modified: 2025-09-01 13:31:00
+     Quality score: 5
+
+=== Group 165: 2 files (2.2 MB each) ===
+Hash: e3ca7cf428a25d04...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192717.HEIC (KEEP)
+     Modified: 2025-09-02 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192717.HEIC (duplicate)
+     Modified: 2025-09-02 19:27:00
+     Quality score: 5
+
+=== Group 166: 2 files (2.2 MB each) ===
+Hash: aa60135793e68e97...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904190302.JPG (KEEP)
+     Modified: 2025-09-04 19:03:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904190302.JPG (duplicate)
+     Modified: 2025-09-04 19:03:00
+     Quality score: 10
+
+=== Group 167: 2 files (2.2 MB each) ===
+Hash: c2ac270febb4dad3...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831185012.HEIC (KEEP)
+     Modified: 2025-08-31 18:50:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831185012.HEIC (duplicate)
+     Modified: 2025-08-31 18:50:00
+     Quality score: 5
+
+=== Group 168: 2 files (2.2 MB each) ===
+Hash: c3e90e585015efb2...
+Wasted space: 2.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903142540.HEIC (KEEP)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903142540.HEIC (duplicate)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+=== Group 169: 2 files (2.1 MB each) ===
+Hash: 36e4cec135d79d22...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901192755.HEIC (KEEP)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901192755.HEIC (duplicate)
+     Modified: 2025-09-01 19:27:00
+     Quality score: 5
+
+=== Group 170: 2 files (2.1 MB each) ===
+Hash: 33c121215398eabd...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902194330.JPG (KEEP)
+     Modified: 2025-09-02 19:43:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902194330.JPG (duplicate)
+     Modified: 2025-09-02 19:43:00
+     Quality score: 10
+
+=== Group 171: 2 files (2.1 MB each) ===
+Hash: 24bf48b4cee2249b...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905183547.HEIC (KEEP)
+     Modified: 2025-09-05 18:35:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905183547.HEIC (duplicate)
+     Modified: 2025-09-05 18:35:00
+     Quality score: 5
+
+=== Group 172: 2 files (2.1 MB each) ===
+Hash: 06bdc5fe9844f1c7...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906084112.HEIC (KEEP)
+     Modified: 2025-09-06 08:41:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906084112.HEIC (duplicate)
+     Modified: 2025-09-06 08:41:00
+     Quality score: 5
+
+=== Group 173: 2 files (2.1 MB each) ===
+Hash: eeae01c0e0ed7975...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192728.HEIC (KEEP)
+     Modified: 2025-09-02 19:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192728.HEIC (duplicate)
+     Modified: 2025-09-02 19:27:00
+     Quality score: 5
+
+=== Group 174: 2 files (2.1 MB each) ===
+Hash: c2214827b934a1de...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906063402.HEIC (KEEP)
+     Modified: 2025-09-06 06:34:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906063402.HEIC (duplicate)
+     Modified: 2025-09-06 06:34:00
+     Quality score: 5
+
+=== Group 175: 2 files (2.1 MB each) ===
+Hash: 2b984b5a09879435...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903144213.HEIC (KEEP)
+     Modified: 2025-09-03 14:42:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903144213.HEIC (duplicate)
+     Modified: 2025-09-03 14:42:00
+     Quality score: 5
+
+=== Group 176: 2 files (2.1 MB each) ===
+Hash: 66d0bd3e0d005577...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903144142.HEIC (KEEP)
+     Modified: 2025-09-03 14:41:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903144142.HEIC (duplicate)
+     Modified: 2025-09-03 14:41:00
+     Quality score: 5
+
+=== Group 177: 2 files (2.1 MB each) ===
+Hash: fef5fdbe1df50faf...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831174727.HEIC (KEEP)
+     Modified: 2025-08-31 17:47:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831174727.HEIC (duplicate)
+     Modified: 2025-08-31 17:47:00
+     Quality score: 5
+
+=== Group 178: 2 files (2.1 MB each) ===
+Hash: 5359f6b86d771ea4...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831174336.HEIC (KEEP)
+     Modified: 2025-08-31 17:43:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831174336.HEIC (duplicate)
+     Modified: 2025-08-31 17:43:00
+     Quality score: 5
+
+=== Group 179: 2 files (2.1 MB each) ===
+Hash: 8ee0e3d68a8afce5...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901130809.HEIC (KEEP)
+     Modified: 2025-09-01 13:08:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901130809.HEIC (duplicate)
+     Modified: 2025-09-01 13:08:00
+     Quality score: 5
+
+=== Group 180: 2 files (2.1 MB each) ===
+Hash: d066096afb540e72...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100050.HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100050.HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 181: 2 files (2.1 MB each) ===
+Hash: 317b5e107514e946...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904193708.HEIC (KEEP)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904193708.HEIC (duplicate)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+=== Group 182: 2 files (2.1 MB each) ===
+Hash: 4dd43e099955b92f...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831101804.HEIC (KEEP)
+     Modified: 2025-08-31 10:18:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831101804.HEIC (duplicate)
+     Modified: 2025-08-31 10:18:00
+     Quality score: 5
+
+=== Group 183: 2 files (2.1 MB each) ===
+Hash: 65b69110a255798c...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901204520.HEIC (KEEP)
+     Modified: 2025-09-01 20:45:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901204520.HEIC (duplicate)
+     Modified: 2025-09-01 20:45:00
+     Quality score: 5
+
+=== Group 184: 2 files (2.1 MB each) ===
+Hash: 7091f099f79cb732...
+Wasted space: 2.1 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905183549.HEIC (KEEP)
+     Modified: 2025-09-05 18:35:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905183549.HEIC (duplicate)
+     Modified: 2025-09-05 18:35:00
+     Quality score: 5
+
+=== Group 185: 2 files (2.0 MB each) ===
+Hash: 2d1d9ef6c0a559c9...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831174741.HEIC (KEEP)
+     Modified: 2025-08-31 17:47:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831174741.HEIC (duplicate)
+     Modified: 2025-08-31 17:47:00
+     Quality score: 5
+
+=== Group 186: 2 files (2.0 MB each) ===
+Hash: d409e5d27d89ae48...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903142535.HEIC (KEEP)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903142535.HEIC (duplicate)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+=== Group 187: 2 files (2.0 MB each) ===
+Hash: d5b3db48e0d54d0e...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903181052.HEIC (KEEP)
+     Modified: 2025-09-03 18:10:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903181052.HEIC (duplicate)
+     Modified: 2025-09-03 18:10:00
+     Quality score: 5
+
+=== Group 188: 2 files (2.0 MB each) ===
+Hash: 8625a8fc77bad153...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906063005.HEIC (KEEP)
+     Modified: 2025-09-06 06:30:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906063005.HEIC (duplicate)
+     Modified: 2025-09-06 06:30:00
+     Quality score: 5
+
+=== Group 189: 2 files (2.0 MB each) ===
+Hash: 780021121dae9a78...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904193708(1).HEIC (KEEP)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904193708(1).HEIC (duplicate)
+     Modified: 2025-09-04 19:37:00
+     Quality score: 5
+
+=== Group 190: 2 files (2.0 MB each) ===
+Hash: 2978b101a9ea5c5f...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903142645.JPG (KEEP)
+     Modified: 2025-09-03 14:26:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903142645.JPG (duplicate)
+     Modified: 2025-09-03 14:26:00
+     Quality score: 10
+
+=== Group 191: 2 files (2.0 MB each) ===
+Hash: 3542c94d8544c8b0...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904190703.HEIC (KEEP)
+     Modified: 2025-09-04 19:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904190703.HEIC (duplicate)
+     Modified: 2025-09-04 19:07:00
+     Quality score: 5
+
+=== Group 192: 2 files (2.0 MB each) ===
+Hash: b2d102558af1c7e3...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903142533.HEIC (KEEP)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903142533.HEIC (duplicate)
+     Modified: 2025-09-03 14:25:00
+     Quality score: 5
+
+=== Group 193: 2 files (2.0 MB each) ===
+Hash: 8fbe6cd7a8825022...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831115744.HEIC (KEEP)
+     Modified: 2025-08-31 11:57:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831115744.HEIC (duplicate)
+     Modified: 2025-08-31 11:57:00
+     Quality score: 5
+
+=== Group 194: 2 files (2.0 MB each) ===
+Hash: 3b4afe7e7bbc0345...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904104440.HEIC (KEEP)
+     Modified: 2025-09-04 10:44:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904104440.HEIC (duplicate)
+     Modified: 2025-09-04 10:44:00
+     Quality score: 5
+
+=== Group 195: 2 files (2.0 MB each) ===
+Hash: 227f7a01ffcae0bf...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901195835.JPG (KEEP)
+     Modified: 2025-09-01 19:58:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901195835.JPG (duplicate)
+     Modified: 2025-09-01 19:58:00
+     Quality score: 10
+
+=== Group 196: 2 files (2.0 MB each) ===
+Hash: 5ed7f9b2fb9774de...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831101750.HEIC (KEEP)
+     Modified: 2025-08-31 10:17:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831101750.HEIC (duplicate)
+     Modified: 2025-08-31 10:17:00
+     Quality score: 5
+
+=== Group 197: 2 files (2.0 MB each) ===
+Hash: 56aeed1e1aef53cf...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901204554.HEIC (KEEP)
+     Modified: 2025-09-01 20:45:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901204554.HEIC (duplicate)
+     Modified: 2025-09-01 20:45:00
+     Quality score: 5
+
+=== Group 198: 2 files (2.0 MB each) ===
+Hash: 88a376582a5c268b...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250906054834.HEIC (KEEP)
+     Modified: 2025-09-06 05:48:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250906054834.HEIC (duplicate)
+     Modified: 2025-09-06 05:48:00
+     Quality score: 5
+
+=== Group 199: 2 files (2.0 MB each) ===
+Hash: 7cb1dfb85ddb1b1c...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831185007.HEIC (KEEP)
+     Modified: 2025-08-31 18:50:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831185007.HEIC (duplicate)
+     Modified: 2025-08-31 18:50:00
+     Quality score: 5
+
+=== Group 200: 2 files (2.0 MB each) ===
+Hash: acb260a0128ff8ee...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831110924.HEIC (KEEP)
+     Modified: 2025-08-31 11:09:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831110924.HEIC (duplicate)
+     Modified: 2025-08-31 11:09:00
+     Quality score: 5
+
+=== Group 201: 2 files (2.0 MB each) ===
+Hash: 1def01cf58ea1227...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902201140.HEIC (KEEP)
+     Modified: 2025-09-02 20:11:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902201140.HEIC (duplicate)
+     Modified: 2025-09-02 20:11:00
+     Quality score: 5
+
+=== Group 202: 2 files (2.0 MB each) ===
+Hash: 67cf72f06990e0c7...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905134503.HEIC (KEEP)
+     Modified: 2025-09-05 13:45:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905134503.HEIC (duplicate)
+     Modified: 2025-09-05 13:45:00
+     Quality score: 5
+
+=== Group 203: 2 files (2.0 MB each) ===
+Hash: eac956eef2f6c038...
+Wasted space: 2.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906084115.HEIC (KEEP)
+     Modified: 2025-09-06 08:41:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906084115.HEIC (duplicate)
+     Modified: 2025-09-06 08:41:00
+     Quality score: 5
+
+=== Group 204: 2 files (1.9 MB each) ===
+Hash: 946ae2936e7c7167...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904193952.JPG (KEEP)
+     Modified: 2025-09-04 19:39:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904193952.JPG (duplicate)
+     Modified: 2025-09-04 19:39:00
+     Quality score: 10
+
+=== Group 205: 2 files (1.9 MB each) ===
+Hash: cba7714c427c2626...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902133228.HEIC (KEEP)
+     Modified: 2025-09-02 13:32:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902133228.HEIC (duplicate)
+     Modified: 2025-09-02 13:32:00
+     Quality score: 5
+
+=== Group 206: 2 files (1.9 MB each) ===
+Hash: a72a854e47e2f018...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902142146.HEIC (KEEP)
+     Modified: 2025-09-02 14:21:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902142146.HEIC (duplicate)
+     Modified: 2025-09-02 14:21:00
+     Quality score: 5
+
+=== Group 207: 2 files (1.9 MB each) ===
+Hash: 6b91ec535f28e1df...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904130728.JPG (KEEP)
+     Modified: 2025-09-04 13:07:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904130728.JPG (duplicate)
+     Modified: 2025-09-04 13:07:00
+     Quality score: 10
+
+=== Group 208: 2 files (1.9 MB each) ===
+Hash: e996f859de636f28...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902194322.JPG (KEEP)
+     Modified: 2025-09-02 19:43:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902194322.JPG (duplicate)
+     Modified: 2025-09-02 19:43:00
+     Quality score: 10
+
+=== Group 209: 2 files (1.9 MB each) ===
+Hash: 591fab25909a3936...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904095249.PNG (KEEP)
+     Modified: 2025-09-04 09:52:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904095249.PNG (duplicate)
+     Modified: 2025-09-04 09:52:00
+     Quality score: 3
+
+=== Group 210: 2 files (1.9 MB each) ===
+Hash: 59948fbadb222e94...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904112723.HEIC (KEEP)
+     Modified: 2025-09-04 11:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904112723.HEIC (duplicate)
+     Modified: 2025-09-04 11:27:00
+     Quality score: 5
+
+=== Group 211: 2 files (1.9 MB each) ===
+Hash: 22312e234ddeef77...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250831120839.HEIC (KEEP)
+     Modified: 2025-08-31 12:08:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250831120839.HEIC (duplicate)
+     Modified: 2025-08-31 12:08:00
+     Quality score: 5
+
+=== Group 212: 2 files (1.9 MB each) ===
+Hash: 5becec23e59ca94d...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905192303.HEIC (KEEP)
+     Modified: 2025-09-05 19:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905192303.HEIC (duplicate)
+     Modified: 2025-09-05 19:23:00
+     Quality score: 5
+
+=== Group 213: 2 files (1.9 MB each) ===
+Hash: f8af9b2340b17f51...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250903181057.HEIC (KEEP)
+     Modified: 2025-09-03 18:10:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250903181057.HEIC (duplicate)
+     Modified: 2025-09-03 18:10:00
+     Quality score: 5
+
+=== Group 214: 2 files (1.9 MB each) ===
+Hash: 7319a11f25c7f5f2...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901204507.HEIC (KEEP)
+     Modified: 2025-09-01 20:45:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901204507.HEIC (duplicate)
+     Modified: 2025-09-01 20:45:00
+     Quality score: 5
+
+=== Group 215: 2 files (1.9 MB each) ===
+Hash: ef176a347642aefa...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901190838.HEIC (KEEP)
+     Modified: 2025-09-01 19:08:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901190838.HEIC (duplicate)
+     Modified: 2025-09-01 19:08:00
+     Quality score: 5
+
+=== Group 216: 2 files (1.9 MB each) ===
+Hash: 03a23874406ca5fd...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831122120.HEIC (KEEP)
+     Modified: 2025-08-31 12:21:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831122120.HEIC (duplicate)
+     Modified: 2025-08-31 12:21:00
+     Quality score: 5
+
+=== Group 217: 2 files (1.9 MB each) ===
+Hash: a11053bb9bef63d1...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901184821.HEIC (KEEP)
+     Modified: 2025-09-01 18:48:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901184821.HEIC (duplicate)
+     Modified: 2025-09-01 18:48:00
+     Quality score: 5
+
+=== Group 218: 2 files (1.9 MB each) ===
+Hash: f9be5efa0accd5d4...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902192418.HEIC (KEEP)
+     Modified: 2025-09-02 19:24:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902192418.HEIC (duplicate)
+     Modified: 2025-09-02 19:24:00
+     Quality score: 5
+
+=== Group 219: 2 files (1.9 MB each) ===
+Hash: 6a95721eb08b7b76...
+Wasted space: 1.9 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904190550.JPG (KEEP)
+     Modified: 2025-09-04 19:05:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904190550.JPG (duplicate)
+     Modified: 2025-09-04 19:05:00
+     Quality score: 10
+
+=== Group 220: 2 files (1.8 MB each) ===
+Hash: ed0e1e6c4bc79ee1...
+Wasted space: 1.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904190240.JPG (KEEP)
+     Modified: 2025-09-04 19:02:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904190240.JPG (duplicate)
+     Modified: 2025-09-04 19:02:00
+     Quality score: 10
+
+=== Group 221: 2 files (1.8 MB each) ===
+Hash: 610f1f73f3d26047...
+Wasted space: 1.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903195053.HEIC (KEEP)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903195053.HEIC (duplicate)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+=== Group 222: 2 files (1.8 MB each) ===
+Hash: fe6b5b04a1f50575...
+Wasted space: 1.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904114830.HEIC (KEEP)
+     Modified: 2025-09-04 11:48:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904114830.HEIC (duplicate)
+     Modified: 2025-09-04 11:48:00
+     Quality score: 5
+
+=== Group 223: 2 files (1.8 MB each) ===
+Hash: aa770b0251beb233...
+Wasted space: 1.8 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250831111122.HEIC (KEEP)
+     Modified: 2025-08-31 11:11:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250831111122.HEIC (duplicate)
+     Modified: 2025-08-31 11:11:00
+     Quality score: 5
+
+=== Group 224: 2 files (1.8 MB each) ===
+Hash: 967b87cb6a3ec6a2...
+Wasted space: 1.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905142726.JPG (KEEP)
+     Modified: 2025-09-05 14:27:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905142726.JPG (duplicate)
+     Modified: 2025-09-05 14:27:00
+     Quality score: 10
+
+=== Group 225: 2 files (1.8 MB each) ===
+Hash: 11e586acd1abf0f8...
+Wasted space: 1.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902194318.JPG (KEEP)
+     Modified: 2025-09-02 19:43:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902194318.JPG (duplicate)
+     Modified: 2025-09-02 19:43:00
+     Quality score: 10
+
+=== Group 226: 2 files (1.8 MB each) ===
+Hash: b97fb9ea09a3a653...
+Wasted space: 1.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831175334.JPG (KEEP)
+     Modified: 2025-08-31 17:53:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831175334.JPG (duplicate)
+     Modified: 2025-08-31 17:53:00
+     Quality score: 10
+
+=== Group 227: 2 files (1.8 MB each) ===
+Hash: b70181930916010d...
+Wasted space: 1.8 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100207.HEIC (KEEP)
+     Modified: 2025-09-04 10:02:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100207.HEIC (duplicate)
+     Modified: 2025-09-04 10:02:00
+     Quality score: 5
+
+=== Group 228: 2 files (1.7 MB each) ===
+Hash: 0c964c79d3412233...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903185228.JPG (KEEP)
+     Modified: 2025-09-03 18:52:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903185228.JPG (duplicate)
+     Modified: 2025-09-03 18:52:00
+     Quality score: 10
+
+=== Group 229: 2 files (1.7 MB each) ===
+Hash: e498e51bf03615ac...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904105900.HEIC (KEEP)
+     Modified: 2025-09-04 10:59:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904105900.HEIC (duplicate)
+     Modified: 2025-09-04 10:59:00
+     Quality score: 5
+
+=== Group 230: 2 files (1.7 MB each) ===
+Hash: ccb3324700ed56d9...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901132412.JPG (KEEP)
+     Modified: 2025-09-01 13:24:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901132412.JPG (duplicate)
+     Modified: 2025-09-01 13:24:00
+     Quality score: 10
+
+=== Group 231: 2 files (1.7 MB each) ===
+Hash: 41873055930aabd8...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250831120851.HEIC (KEEP)
+     Modified: 2025-08-31 12:08:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250831120851.HEIC (duplicate)
+     Modified: 2025-08-31 12:08:00
+     Quality score: 5
+
+=== Group 232: 2 files (1.7 MB each) ===
+Hash: 033e91d26f6dbad8...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904114516.JPG (KEEP)
+     Modified: 2025-09-04 11:45:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904114516.JPG (duplicate)
+     Modified: 2025-09-04 11:45:00
+     Quality score: 10
+
+=== Group 233: 2 files (1.7 MB each) ===
+Hash: 301075fe0c767409...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250902142304.HEIC (KEEP)
+     Modified: 2025-09-02 14:23:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250902142304.HEIC (duplicate)
+     Modified: 2025-09-02 14:23:00
+     Quality score: 5
+
+=== Group 234: 2 files (1.7 MB each) ===
+Hash: a4be59b2535457ea...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905192258.HEIC (KEEP)
+     Modified: 2025-09-05 19:22:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905192258.HEIC (duplicate)
+     Modified: 2025-09-05 19:22:00
+     Quality score: 5
+
+=== Group 235: 2 files (1.7 MB each) ===
+Hash: 6632282c0891ab7d...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901200449.JPG (KEEP)
+     Modified: 2025-09-01 20:04:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901200449.JPG (duplicate)
+     Modified: 2025-09-01 20:04:00
+     Quality score: 10
+
+=== Group 236: 2 files (1.7 MB each) ===
+Hash: 595a683d74ddd0a9...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904100114.HEIC (KEEP)
+     Modified: 2025-09-04 10:01:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904100114.HEIC (duplicate)
+     Modified: 2025-09-04 10:01:00
+     Quality score: 5
+
+=== Group 237: 2 files (1.7 MB each) ===
+Hash: bb3cc668b9574d6d...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100031(1).HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100031(1).HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 238: 2 files (1.7 MB each) ===
+Hash: b41e7a8fa009f299...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901084056.HEIC (KEEP)
+     Modified: 2025-09-01 08:40:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901084056.HEIC (duplicate)
+     Modified: 2025-09-01 08:40:00
+     Quality score: 5
+
+=== Group 239: 2 files (1.7 MB each) ===
+Hash: 28bf4b2b4e81d137...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831193306.JPG (KEEP)
+     Modified: 2025-08-31 19:33:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831193306.JPG (duplicate)
+     Modified: 2025-08-31 19:33:00
+     Quality score: 10
+
+=== Group 240: 2 files (1.7 MB each) ===
+Hash: e944260f4254202b...
+Wasted space: 1.7 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903122602.JPG (KEEP)
+     Modified: 2025-09-03 12:26:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903122602.JPG (duplicate)
+     Modified: 2025-09-03 12:26:00
+     Quality score: 10
+
+=== Group 241: 2 files (1.6 MB each) ===
+Hash: 450bed9186de7197...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100031.HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100031.HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 242: 2 files (1.6 MB each) ===
+Hash: 87db1615c5ac7a98...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905134508.HEIC (KEEP)
+     Modified: 2025-09-05 13:45:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905134508.HEIC (duplicate)
+     Modified: 2025-09-05 13:45:00
+     Quality score: 5
+
+=== Group 243: 2 files (1.6 MB each) ===
+Hash: 1f14dcb9aac6ea05...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901184248.JPG (KEEP)
+     Modified: 2025-09-01 18:42:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901184248.JPG (duplicate)
+     Modified: 2025-09-01 18:42:00
+     Quality score: 10
+
+=== Group 244: 2 files (1.6 MB each) ===
+Hash: e0d946174fca49f4...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906063257.HEIC (KEEP)
+     Modified: 2025-09-06 06:32:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906063257.HEIC (duplicate)
+     Modified: 2025-09-06 06:32:00
+     Quality score: 5
+
+=== Group 245: 2 files (1.6 MB each) ===
+Hash: b900f02b76d0701a...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904211451.PNG (KEEP)
+     Modified: 2025-09-04 21:14:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904211451.PNG (duplicate)
+     Modified: 2025-09-04 21:14:00
+     Quality score: 3
+
+=== Group 246: 2 files (1.6 MB each) ===
+Hash: 7d3ef249e336453f...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250906092934.HEIC (KEEP)
+     Modified: 2025-09-06 09:29:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250906092934.HEIC (duplicate)
+     Modified: 2025-09-06 09:29:00
+     Quality score: 5
+
+=== Group 247: 2 files (1.6 MB each) ===
+Hash: 52b5ae6ced112c6c...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905190717.HEIC (KEEP)
+     Modified: 2025-09-05 19:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905190717.HEIC (duplicate)
+     Modified: 2025-09-05 19:07:00
+     Quality score: 5
+
+=== Group 248: 2 files (1.6 MB each) ===
+Hash: d5b6be33212b1b14...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904193947.JPG (KEEP)
+     Modified: 2025-09-04 19:39:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904193947.JPG (duplicate)
+     Modified: 2025-09-04 19:39:00
+     Quality score: 10
+
+=== Group 249: 2 files (1.6 MB each) ===
+Hash: d30f0e57701128ba...
+Wasted space: 1.6 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905192245.HEIC (KEEP)
+     Modified: 2025-09-05 19:22:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905192245.HEIC (duplicate)
+     Modified: 2025-09-05 19:22:00
+     Quality score: 5
+
+=== Group 250: 2 files (1.5 MB each) ===
+Hash: 9b4a04c4cc5b3746...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100020.HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100020.HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 251: 2 files (1.5 MB each) ===
+Hash: 57880a8501c1484a...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904114508.JPG (KEEP)
+     Modified: 2025-09-04 11:45:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904114508.JPG (duplicate)
+     Modified: 2025-09-04 11:45:00
+     Quality score: 10
+
+=== Group 252: 2 files (1.5 MB each) ===
+Hash: 51027cc3972d970b...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902151300.HEIC (KEEP)
+     Modified: 2025-09-02 15:13:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902151300.HEIC (duplicate)
+     Modified: 2025-09-02 15:13:00
+     Quality score: 5
+
+=== Group 253: 2 files (1.5 MB each) ===
+Hash: 66f07847c2ef9f56...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904193940.JPG (KEEP)
+     Modified: 2025-09-04 19:39:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904193940.JPG (duplicate)
+     Modified: 2025-09-04 19:39:00
+     Quality score: 10
+
+=== Group 254: 2 files (1.5 MB each) ===
+Hash: dc033a3b624e5e15...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831192618.JPG (KEEP)
+     Modified: 2025-08-31 19:26:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831192618.JPG (duplicate)
+     Modified: 2025-08-31 19:26:00
+     Quality score: 10
+
+=== Group 255: 2 files (1.5 MB each) ===
+Hash: 9c2d4f1c1fa8b0ca...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831193438.JPG (KEEP)
+     Modified: 2025-08-31 19:34:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831193438.JPG (duplicate)
+     Modified: 2025-08-31 19:34:00
+     Quality score: 10
+
+=== Group 256: 2 files (1.5 MB each) ===
+Hash: b382c14cf32ed016...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250831163841.PNG (KEEP)
+     Modified: 2025-08-31 16:38:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250831163841.PNG (duplicate)
+     Modified: 2025-08-31 16:38:00
+     Quality score: 3
+
+=== Group 257: 2 files (1.5 MB each) ===
+Hash: 08f847af2e5c5cc1...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906033335.HEIC (KEEP)
+     Modified: 2025-09-06 03:33:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906033335.HEIC (duplicate)
+     Modified: 2025-09-06 03:33:00
+     Quality score: 5
+
+=== Group 258: 2 files (1.5 MB each) ===
+Hash: 893f2ef7165219ab...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903144205.HEIC (KEEP)
+     Modified: 2025-09-03 14:42:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903144205.HEIC (duplicate)
+     Modified: 2025-09-03 14:42:00
+     Quality score: 5
+
+=== Group 259: 2 files (1.5 MB each) ===
+Hash: e59145734c112019...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831103712.JPG (KEEP)
+     Modified: 2025-08-31 10:37:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831103712.JPG (duplicate)
+     Modified: 2025-08-31 10:37:00
+     Quality score: 10
+
+=== Group 260: 2 files (1.5 MB each) ===
+Hash: 90973e3c8bbfc9a1...
+Wasted space: 1.5 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901083254.HEIC (KEEP)
+     Modified: 2025-09-01 08:32:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901083254.HEIC (duplicate)
+     Modified: 2025-09-01 08:32:00
+     Quality score: 5
+
+=== Group 261: 2 files (1.4 MB each) ===
+Hash: a7957536abbe7302...
+Wasted space: 1.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904100038.HEIC (KEEP)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904100038.HEIC (duplicate)
+     Modified: 2025-09-04 10:00:00
+     Quality score: 5
+
+=== Group 262: 2 files (1.4 MB each) ===
+Hash: 48aaec6e22cabd8c...
+Wasted space: 1.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903195033.HEIC (KEEP)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903195033.HEIC (duplicate)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+=== Group 263: 2 files (1.4 MB each) ===
+Hash: aa0792f37841abcd...
+Wasted space: 1.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831093504.HEIC (KEEP)
+     Modified: 2025-08-31 09:35:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831093504.HEIC (duplicate)
+     Modified: 2025-08-31 09:35:00
+     Quality score: 5
+
+=== Group 264: 2 files (1.4 MB each) ===
+Hash: aacb8944f8f6a8a9...
+Wasted space: 1.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902151310.HEIC (KEEP)
+     Modified: 2025-09-02 15:13:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902151310.HEIC (duplicate)
+     Modified: 2025-09-02 15:13:00
+     Quality score: 5
+
+=== Group 265: 2 files (1.4 MB each) ===
+Hash: c5d1dc68b9c43d55...
+Wasted space: 1.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902144030.HEIC (KEEP)
+     Modified: 2025-09-02 14:40:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902144030.HEIC (duplicate)
+     Modified: 2025-09-02 14:40:00
+     Quality score: 5
+
+=== Group 266: 2 files (1.4 MB each) ===
+Hash: 54abce53fa6dec68...
+Wasted space: 1.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831053435.HEIC (KEEP)
+     Modified: 2025-08-31 05:34:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831053435.HEIC (duplicate)
+     Modified: 2025-08-31 05:34:00
+     Quality score: 5
+
+=== Group 267: 2 files (1.4 MB each) ===
+Hash: 0f9e3ef5d9edc7a5...
+Wasted space: 1.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903122536.JPG (KEEP)
+     Modified: 2025-09-03 12:25:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903122536.JPG (duplicate)
+     Modified: 2025-09-03 12:25:00
+     Quality score: 10
+
+=== Group 268: 2 files (1.4 MB each) ===
+Hash: 73ede1df3fb89075...
+Wasted space: 1.4 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831103702.JPG (KEEP)
+     Modified: 2025-08-31 10:37:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831103702.JPG (duplicate)
+     Modified: 2025-08-31 10:37:00
+     Quality score: 10
+
+=== Group 269: 2 files (1.3 MB each) ===
+Hash: fa34fce2f8740c9d...
+Wasted space: 1.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904123306.JPG (KEEP)
+     Modified: 2025-09-04 12:33:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904123306.JPG (duplicate)
+     Modified: 2025-09-04 12:33:00
+     Quality score: 10
+
+=== Group 270: 2 files (1.3 MB each) ===
+Hash: 2e1d875d29ada8fd...
+Wasted space: 1.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905143623.HEIC (KEEP)
+     Modified: 2025-09-05 14:36:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905143623.HEIC (duplicate)
+     Modified: 2025-09-05 14:36:00
+     Quality score: 5
+
+=== Group 271: 2 files (1.3 MB each) ===
+Hash: c34c49f728d1e5c5...
+Wasted space: 1.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831103654.JPG (KEEP)
+     Modified: 2025-08-31 10:36:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831103654.JPG (duplicate)
+     Modified: 2025-08-31 10:36:00
+     Quality score: 10
+
+=== Group 272: 2 files (1.3 MB each) ===
+Hash: 8686daf167e83125...
+Wasted space: 1.3 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831175351.HEIC (KEEP)
+     Modified: 2025-08-31 17:53:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831175351.HEIC (duplicate)
+     Modified: 2025-08-31 17:53:00
+     Quality score: 5
+
+=== Group 273: 2 files (1.2 MB each) ===
+Hash: 2bf40d4aa8efec59...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905140800.JPG (KEEP)
+     Modified: 2025-09-05 14:08:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905140800.JPG (duplicate)
+     Modified: 2025-09-05 14:08:00
+     Quality score: 10
+
+=== Group 274: 2 files (1.2 MB each) ===
+Hash: 717915a2d963dc8f...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831115753.HEIC (KEEP)
+     Modified: 2025-08-31 11:57:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831115753.HEIC (duplicate)
+     Modified: 2025-08-31 11:57:00
+     Quality score: 5
+
+=== Group 275: 2 files (1.2 MB each) ===
+Hash: 995d2d60ab2f8bfb...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903195041.HEIC (KEEP)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903195041.HEIC (duplicate)
+     Modified: 2025-09-03 19:50:00
+     Quality score: 5
+
+=== Group 276: 2 files (1.2 MB each) ===
+Hash: 4bd5d18baf811bfc...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902145458.HEIC (KEEP)
+     Modified: 2025-09-02 14:54:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902145458.HEIC (duplicate)
+     Modified: 2025-09-02 14:54:00
+     Quality score: 5
+
+=== Group 277: 2 files (1.2 MB each) ===
+Hash: 2b0171ff53148968...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904202734.HEIC (KEEP)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904202734.HEIC (duplicate)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+=== Group 278: 2 files (1.2 MB each) ===
+Hash: 9b42b6048f1b5f42...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904202736.HEIC (KEEP)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904202736.HEIC (duplicate)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+=== Group 279: 2 files (1.2 MB each) ===
+Hash: 49a6772ffeb14ead...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904202735.HEIC (KEEP)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904202735.HEIC (duplicate)
+     Modified: 2025-09-04 20:27:00
+     Quality score: 5
+
+=== Group 280: 2 files (1.2 MB each) ===
+Hash: 1007516da352ff38...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250903130536.JPG (KEEP)
+     Modified: 2025-09-03 13:05:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250903130536.JPG (duplicate)
+     Modified: 2025-09-03 13:05:00
+     Quality score: 10
+
+=== Group 281: 2 files (1.2 MB each) ===
+Hash: e2b32852fa2681a2...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250906031701.HEIC (KEEP)
+     Modified: 2025-09-06 03:17:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250906031701.HEIC (duplicate)
+     Modified: 2025-09-06 03:17:00
+     Quality score: 5
+
+=== Group 282: 2 files (1.2 MB each) ===
+Hash: 816bc62f51393f54...
+Wasted space: 1.2 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904134322.HEIC (KEEP)
+     Modified: 2025-09-04 13:43:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904134322.HEIC (duplicate)
+     Modified: 2025-09-04 13:43:00
+     Quality score: 5
+
+=== Group 283: 2 files (1.1 MB each) ===
+Hash: 37c203ea5e21d2a5...
+Wasted space: 1.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250905142715.JPG (KEEP)
+     Modified: 2025-09-05 14:27:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250905142715.JPG (duplicate)
+     Modified: 2025-09-05 14:27:00
+     Quality score: 10
+
+=== Group 284: 2 files (1.1 MB each) ===
+Hash: d1d6fe3debe930be...
+Wasted space: 1.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901104901.JPG (KEEP)
+     Modified: 2025-09-01 10:49:00
+     Quality score: 10
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901104901.JPG (duplicate)
+     Modified: 2025-09-01 10:49:00
+     Quality score: 10
+
+=== Group 285: 2 files (1.1 MB each) ===
+Hash: d366ebc5ab9ee73a...
+Wasted space: 1.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902192113.HEIC (KEEP)
+     Modified: 2025-09-02 19:21:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902192113.HEIC (duplicate)
+     Modified: 2025-09-02 19:21:00
+     Quality score: 5
+
+=== Group 286: 2 files (1.1 MB each) ===
+Hash: a4c6509ee1f297a5...
+Wasted space: 1.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906130347.PNG (KEEP)
+     Modified: 2025-09-06 13:03:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906130347.PNG (duplicate)
+     Modified: 2025-09-06 13:03:00
+     Quality score: 3
+
+=== Group 287: 2 files (1.1 MB each) ===
+Hash: 1b4912b938dc2840...
+Wasted space: 1.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250904112744.PNG (KEEP)
+     Modified: 2025-09-04 11:27:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250904112744.PNG (duplicate)
+     Modified: 2025-09-04 11:27:00
+     Quality score: 3
+
+=== Group 288: 2 files (1.1 MB each) ===
+Hash: 1c157a22afb386eb...
+Wasted space: 1.1 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831110403.HEIC (KEEP)
+     Modified: 2025-08-31 11:04:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831110403.HEIC (duplicate)
+     Modified: 2025-08-31 11:04:00
+     Quality score: 5
+
+=== Group 289: 2 files (1.0 MB each) ===
+Hash: bb487f1126591b28...
+Wasted space: 1.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906051234.HEIC (KEEP)
+     Modified: 2025-09-06 05:12:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906051234.HEIC (duplicate)
+     Modified: 2025-09-06 05:12:00
+     Quality score: 5
+
+=== Group 290: 2 files (1.0 MB each) ===
+Hash: 7305f65a5892f664...
+Wasted space: 1.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831054420.HEIC (KEEP)
+     Modified: 2025-08-31 05:44:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831054420.HEIC (duplicate)
+     Modified: 2025-08-31 05:44:00
+     Quality score: 5
+
+=== Group 291: 2 files (1.0 MB each) ===
+Hash: 0c24377aad8719b9...
+Wasted space: 1.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250906053709.HEIC (KEEP)
+     Modified: 2025-09-06 05:37:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250906053709.HEIC (duplicate)
+     Modified: 2025-09-06 05:37:00
+     Quality score: 5
+
+=== Group 292: 2 files (1.0 MB each) ===
+Hash: 7f6cd456de320467...
+Wasted space: 1.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904134344.HEIC (KEEP)
+     Modified: 2025-09-04 13:43:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904134344.HEIC (duplicate)
+     Modified: 2025-09-04 13:43:00
+     Quality score: 5
+
+=== Group 293: 2 files (1.0 MB each) ===
+Hash: 5ffae64c7f2d784f...
+Wasted space: 1.0 MB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250901210714.HEIC (KEEP)
+     Modified: 2025-09-01 21:07:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250901210714.HEIC (duplicate)
+     Modified: 2025-09-01 21:07:00
+     Quality score: 5
+
+=== Group 294: 2 files (1.0 MB each) ===
+Hash: bd9c5fd1466ce7ff...
+Wasted space: 1.0 MB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250902145518.HEIC (KEEP)
+     Modified: 2025-09-02 14:55:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250902145518.HEIC (duplicate)
+     Modified: 2025-09-02 14:55:00
+     Quality score: 5
+
+=== Group 295: 2 files (1015.8 KB each) ===
+Hash: 2adca0a6396e9e35...
+Wasted space: 1015.8 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250906033326.HEIC (KEEP)
+     Modified: 2025-09-06 03:33:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250906033326.HEIC (duplicate)
+     Modified: 2025-09-06 03:33:00
+     Quality score: 5
+
+=== Group 296: 2 files (1008.8 KB each) ===
+Hash: c8b902136a1f572e...
+Wasted space: 1008.8 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905131401.HEIC (KEEP)
+     Modified: 2025-09-05 13:14:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905131401.HEIC (duplicate)
+     Modified: 2025-09-05 13:14:00
+     Quality score: 5
+
+=== Group 297: 2 files (980.0 KB each) ===
+Hash: a21eec76275520b6...
+Wasted space: 980.0 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250906031735.HEIC (KEEP)
+     Modified: 2025-09-06 03:17:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250906031735.HEIC (duplicate)
+     Modified: 2025-09-06 03:17:00
+     Quality score: 5
+
+=== Group 298: 2 files (868.1 KB each) ===
+Hash: 4ee7c072b06f54be...
+Wasted space: 868.1 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905131517.HEIC (KEEP)
+     Modified: 2025-09-05 13:15:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905131517.HEIC (duplicate)
+     Modified: 2025-09-05 13:15:00
+     Quality score: 5
+
+=== Group 299: 2 files (824.4 KB each) ===
+Hash: da2459101558cb92...
+Wasted space: 824.4 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904214845.PNG (KEEP)
+     Modified: 2025-09-04 21:48:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904214845.PNG (duplicate)
+     Modified: 2025-09-04 21:48:00
+     Quality score: 3
+
+=== Group 300: 2 files (737.6 KB each) ===
+Hash: d36612187a572d68...
+Wasted space: 737.6 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905131521.HEIC (KEEP)
+     Modified: 2025-09-05 13:15:00
+     Quality score: 5
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905131521.HEIC (duplicate)
+     Modified: 2025-09-05 13:15:00
+     Quality score: 5
+
+=== Group 301: 2 files (676.2 KB each) ===
+Hash: 4e8f5539fad500af...
+Wasted space: 676.2 KB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250901111233.PNG (KEEP)
+     Modified: 2025-09-01 11:12:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250901111233.PNG (duplicate)
+     Modified: 2025-09-01 11:12:00
+     Quality score: 3
+
+=== Group 302: 2 files (672.3 KB each) ===
+Hash: fbd3171b6eed7277...
+Wasted space: 672.3 KB
+
+  1. /tmp/2025 Sept majorca/shani/jpeg/All/20250831141707.PNG (KEEP)
+     Modified: 2025-08-31 14:17:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/shani/orig/All/20250831141707.PNG (duplicate)
+     Modified: 2025-08-31 14:17:00
+     Quality score: 3
+
+=== Group 303: 2 files (666.0 KB each) ===
+Hash: 1cc5cf425f62c286...
+Wasted space: 666.0 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250904214802.PNG (KEEP)
+     Modified: 2025-09-04 21:48:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250904214802.PNG (duplicate)
+     Modified: 2025-09-04 21:48:00
+     Quality score: 3
+
+=== Group 304: 2 files (575.6 KB each) ===
+Hash: ce9322736870eae8...
+Wasted space: 575.6 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250831121619.PNG (KEEP)
+     Modified: 2025-08-31 12:16:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250831121619.PNG (duplicate)
+     Modified: 2025-08-31 12:16:00
+     Quality score: 3
+
+=== Group 305: 2 files (358.4 KB each) ===
+Hash: 00a0da6e0bad207b...
+Wasted space: 358.4 KB
+
+  1. /tmp/2025 Sept majorca/alan/jpeg/All/20250905143620.PNG (KEEP)
+     Modified: 2025-09-05 14:36:00
+     Quality score: 3
+
+  2. /tmp/2025 Sept majorca/alan/orig/All/20250905143620.PNG (duplicate)
+     Modified: 2025-09-05 14:36:00
+     Quality score: 3
+
+=== Summary ===
+Total files scanned: 610
+Total duplicate groups: 305
+Total wasted space: 1.1 GB
+Scan completed in: 2.255s
+
+📄 Report saved to: duplicates_2025-Sept-majorca_2025-09-11_14-07-54.txt
