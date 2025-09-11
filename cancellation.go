@@ -253,6 +253,32 @@ func printCancellableProcessingSummary(results []WorkResult, progress *ProgressT
 	
 	total, completed, failed, skipped, elapsed := progress.GetStats()
 	
+	// Count file types
+	photoCount := 0
+	videoCount := 0
+	photoSuccess := 0
+	videoSuccess := 0
+	photoFailed := 0
+	videoFailed := 0
+	
+	for _, result := range results {
+		if isVideoFile(result.Job.PhotoPath) {
+			videoCount++
+			if result.Success {
+				videoSuccess++
+			} else {
+				videoFailed++
+			}
+		} else {
+			photoCount++
+			if result.Success {
+				photoSuccess++
+			} else {
+				photoFailed++
+			}
+		}
+	}
+	
 	fmt.Printf("\n📊 Processing Summary:\n")
 	
 	if cancelMgr.IsCancelled() {
@@ -262,8 +288,10 @@ func printCancellableProcessingSummary(results []WorkResult, progress *ProgressT
 	}
 	
 	fmt.Printf("📈 Progress: %d/%d processed\n", completed, total)
-	fmt.Printf("✅ Successful: %d\n", completed-failed)
-	fmt.Printf("❌ Failed: %d\n", failed)
+	fmt.Printf("✅ Total successful: %d\n", completed-failed)
+	fmt.Printf("📷 Photos successful: %d/%d\n", photoSuccess, photoCount)
+	fmt.Printf("🎥 Videos successful: %d/%d\n", videoSuccess, videoCount)
+	fmt.Printf("❌ Total failed: %d\n", failed)
 	fmt.Printf("⏭️  Skipped: %d\n", skipped)
 	fmt.Printf("⏱️  Total time: %v\n", elapsed.Round(time.Second))
 	
@@ -279,25 +307,53 @@ func printCancellableProcessingSummary(results []WorkResult, progress *ProgressT
 	}
 	fmt.Printf("📋 Completion: %.1f%%\n", percentage)
 	
-	// Group errors by type
+	// Group errors by type and file type
 	errorCounts := make(map[string]int)
+	photoErrors := make(map[string]int)
+	videoErrors := make(map[string]int)
+	
 	for _, result := range results {
-		if !result.Success && result.Error != nil {
+		if !result.Success {
 			errorType := "Unknown error"
-			if isNoGPSError(result.Error) {
-				errorType = "No GPS data"
-			} else {
-				errorType = result.Error.Error()
+			if result.Error != nil {
+				if isNoGPSError(result.Error) {
+					errorType = "No GPS data"
+				} else {
+					errorType = result.Error.Error()
+				}
+			} else if result.Message != "" {
+				errorType = result.Message
 			}
+			
 			errorCounts[errorType]++
+			
+			if isVideoFile(result.Job.PhotoPath) {
+				videoErrors[errorType]++
+			} else {
+				photoErrors[errorType]++
+			}
 		}
 	}
 	
 	if len(errorCounts) > 0 {
 		fmt.Printf("\n❌ Error breakdown:\n")
 		for errorType, count := range errorCounts {
-			fmt.Printf("   - %s: %d files\n", errorType, count)
+			photoCount := photoErrors[errorType]
+			videoCount := videoErrors[errorType]
+			fmt.Printf("   - %s: %d files", errorType, count)
+			if photoCount > 0 && videoCount > 0 {
+				fmt.Printf(" (%d photos, %d videos)", photoCount, videoCount)
+			} else if videoCount > 0 {
+				fmt.Printf(" (%d videos)", videoCount)
+			} else if photoCount > 0 {
+				fmt.Printf(" (%d photos)", photoCount)
+			}
+			fmt.Println()
 		}
+	}
+	
+	if videoSuccess > 0 {
+		fmt.Printf("\n🎥 Videos organized in VIDEO-FILES/ directory structure\n")
 	}
 	
 	if cancelMgr.IsCancelled() {

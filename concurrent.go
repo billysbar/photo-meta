@@ -12,6 +12,7 @@ type WorkJob struct {
 	PhotoPath string
 	DestPath  string
 	JobType   string // "process", "datetime", "clean"
+	DryRun    bool   // whether this is a dry run
 }
 
 // WorkResult represents the result of processing a job
@@ -233,17 +234,35 @@ func processJob(job WorkJob, ctx context.Context) WorkResult {
 	var err error
 	switch job.JobType {
 	case "process":
-		err = processPhoto(job.PhotoPath, job.DestPath)
+		err = processPhotoWithDryRun(job.PhotoPath, job.DestPath, job.DryRun)
 		if err != nil {
 			if isNoGPSError(err) {
-				result.Message = "No GPS data"
+				// Determine file type for better error messages
+				fileType := "Photo"
+				if isVideoFile(job.PhotoPath) {
+					fileType = "Video"
+				}
+				result.Message = fmt.Sprintf("%s: No GPS data", fileType)
 				result.Success = false // Still mark as unsuccessful for stats
 			} else {
 				result.Error = err
 			}
 		} else {
 			result.Success = true
-			result.Message = "Processed successfully"
+			// Determine file type for success messages
+			if isVideoFile(job.PhotoPath) {
+				if job.DryRun {
+					result.Message = "Video would be processed (dry run)"
+				} else {
+					result.Message = "Video processed successfully"
+				}
+			} else {
+				if job.DryRun {
+					result.Message = "Photo would be processed (dry run)"
+				} else {
+					result.Message = "Photo processed successfully"
+				}
+			}
 		}
 		
 	case "datetime":

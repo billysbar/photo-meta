@@ -22,10 +22,14 @@ func NewDateLocationDB() *DateLocationDB {
 }
 
 // processDateTimeMatching handles the datetime command workflow
-func processDateTimeMatching(sourcePath, destPath string) error {
+func processDateTimeMatching(sourcePath, destPath string, dryRun bool) error {
 	fmt.Printf("🕒 DateTime Matching Mode\n")
 	fmt.Printf("🔍 Source: %s\n", sourcePath)
 	fmt.Printf("📁 Destination: %s\n", destPath)
+	
+	if dryRun {
+		fmt.Println("🔍 DRY RUN MODE - No files will be moved")
+	}
 	fmt.Println()
 
 	// Step 1: Check for GPS data in source path
@@ -66,7 +70,7 @@ func processDateTimeMatching(sourcePath, destPath string) error {
 
 	// Step 3: Process files in source path
 	fmt.Println("🔄 Step 3: Processing files in source path...")
-	return processFilesWithDateTimeMatching(sourcePath, destPath, db)
+	return processFilesWithDateTimeMatching(sourcePath, destPath, db, dryRun)
 }
 
 // checkForGPSInSource scans source path for any files with GPS data
@@ -84,8 +88,8 @@ func checkForGPSInSource(sourcePath string) (bool, string, error) {
 			return nil
 		}
 
-		// Check if it's a photo file
-		if !isPhotoFile(path) {
+		// Check if it's a media file (photo or video)
+		if !isMediaFile(path) {
 			return nil
 		}
 
@@ -121,8 +125,8 @@ func buildDateLocationDB(destPath string) (*DateLocationDB, error) {
 			return nil
 		}
 
-		// Check if it's a photo file
-		if !isPhotoFile(path) {
+		// Check if it's a media file (photo or video)
+		if !isMediaFile(path) {
 			return nil
 		}
 
@@ -183,8 +187,10 @@ func extractDateLocationFromPath(filePath, basePath string) (string, string, err
 }
 
 // processFilesWithDateTimeMatching processes source files using datetime matching
-func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocationDB) error {
+func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocationDB, dryRun bool) error {
 	processedCount := 0
+	videoCount := 0
+	photoCount := 0
 	unmatchedFiles := []string{}
 
 	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
@@ -197,8 +203,8 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 			return nil
 		}
 
-		// Check if it's a photo file
-		if !isPhotoFile(path) {
+		// Check if it's a media file (photo or video)
+		if !isMediaFile(path) {
 			return nil
 		}
 
@@ -230,17 +236,24 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 		//}
 
 		// Move file to matched location
-		if err := moveFileToLocation(path, destPath, location, date); err != nil {
+		if err := moveFileToLocation(path, destPath, location, date, dryRun); err != nil {
 			return fmt.Errorf("failed to move %s: %v", filepath.Base(path), err)
 		}
 
 		processedCount++
+		if isVideoFile(path) {
+			videoCount++
+		} else {
+			photoCount++
+		}
 		return nil
 	})
 
 	// Summary
 	fmt.Printf("\n📊 DateTime Processing Summary:\n")
-	fmt.Printf("✅ Files processed: %d\n", processedCount)
+	fmt.Printf("✅ Total files processed: %d\n", processedCount)
+	fmt.Printf("📷 Photos processed: %d\n", photoCount)
+	fmt.Printf("🎥 Videos processed: %d (moved to VIDEO-FILES/)\n", videoCount)
 	fmt.Printf("⚠️  Files unmatched: %d\n", len(unmatchedFiles))
 
 	if len(unmatchedFiles) > 0 {
@@ -278,8 +291,8 @@ func extractDateFromFilename(filename string) (string, error) {
 	return "", fmt.Errorf("no date pattern found in filename")
 }
 
-// moveFileToLocation moves file to the specified location path
-func moveFileToLocation(sourcePath, destBasePath, location, date string) error {
+// moveFileToLocation moves file to the specified location path, with special handling for video files
+func moveFileToLocation(sourcePath, destBasePath, location, date string, dryRun bool) error {
 	// Parse location to get components for filename
 	locationParts := strings.Split(location, string(filepath.Separator))
 	var city string
@@ -293,11 +306,33 @@ func moveFileToLocation(sourcePath, destBasePath, location, date string) error {
 	ext := filepath.Ext(sourcePath)
 	newFilename := fmt.Sprintf("%s-%s%s", date, city, ext)
 
-	// Full destination path
-	destDir := filepath.Join(destBasePath, location)
+	var destDir string
+	var fileType string
+
+	// Check if this is a video file
+	if isVideoFile(sourcePath) {
+		// For video files, place in VIDEO-FILES/YYYY/COUNTRY/CITY structure
+		fileType = "video"
+		destDir = filepath.Join(destBasePath, "VIDEO-FILES", location)
+		if dryRun {
+			fmt.Printf("🎥 [DRY RUN] Processing video file: %s\n", filepath.Base(sourcePath))
+		} else {
+			fmt.Printf("🎥 Processing video file: %s\n", filepath.Base(sourcePath))
+		}
+	} else {
+		// For photo files, use the regular location structure
+		fileType = "photo"
+		destDir = filepath.Join(destBasePath, location)
+		if dryRun {
+			fmt.Printf("📷 [DRY RUN] Processing photo file: %s\n", filepath.Base(sourcePath))
+		} else {
+			fmt.Printf("📷 Processing photo file: %s\n", filepath.Base(sourcePath))
+		}
+	}
+
 	destPath := filepath.Join(destDir, newFilename)
 
-	// Handle duplicates
+	// Handle duplicates simulation
 	finalPath := destPath
 	counter := 1
 	for {
@@ -315,12 +350,31 @@ func moveFileToLocation(sourcePath, destBasePath, location, date string) error {
 		}
 	}
 
+	if dryRun {
+		// Dry run mode - just show what would happen
+		if fileType == "video" {
+			fmt.Printf("✅ [DRY RUN] Video would be moved to: %s\n", finalPath)
+		} else {
+			fmt.Printf("✅ [DRY RUN] Photo would be moved to: %s\n", finalPath)
+		}
+		return nil
+	}
+
+	// Create directory structure if it doesn't exist
+	if err := os.MkdirAll(destDir, 0755); err != nil {
+		return fmt.Errorf("failed to create directory %s: %v", destDir, err)
+	}
+
 	// Move the file
 	if err := os.Rename(sourcePath, finalPath); err != nil {
 		return err
 	}
 
-	fmt.Printf("✅ Moved to: %s\n", finalPath)
+	if fileType == "video" {
+		fmt.Printf("✅ Video moved to: %s\n", finalPath)
+	} else {
+		fmt.Printf("✅ Photo moved to: %s\n", finalPath)
+	}
 	return nil
 }
 
