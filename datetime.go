@@ -187,7 +187,7 @@ func extractDateLocationFromPath(filePath, basePath string) (string, string, err
 	// Extract location from directory path
 	dirPath := filepath.Dir(relPath)
 	location := dirPath
-	
+
 	// Strip VIDEO-FILES/ prefix if present to get the actual location
 	if strings.HasPrefix(location, "VIDEO-FILES/") {
 		location = strings.TrimPrefix(location, "VIDEO-FILES/")
@@ -258,34 +258,16 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 				fmt.Printf("   File date: %s\n", date)
 				fmt.Printf("   Nearby date: %s -> %s\n", nearbyDate, nearbyLocation)
 
-				// Prompt user for confirmation
-				if promptForTemporalMatch(filepath.Base(path), date, nearbyDate, nearbyLocation) {
-					// User confirmed - use the nearby location and add to database
-					location = nearbyLocation
-					db.DateToLocation[date] = location
-					fmt.Printf("✅ Added %s -> %s to location database\n", date, location)
-				} else {
-					fmt.Println("⏭️  Skipped by user")
-					unmatchedFiles = append(unmatchedFiles, path)
-					continue
-				}
+				// Automatically use the nearby location and add to database
+				location = nearbyLocation
+				db.DateToLocation[date] = location
+				fmt.Printf("✅ Added %s -> %s to location database\n", date, location)
 			} else {
 				unmatchedFiles = append(unmatchedFiles, path)
 				continue
 			}
 		}
-
-		// Interactive prompt for verification
-		//fmt.Printf("\n📷 File: %s\n", filepath.Base(path))
-		//fmt.Printf("📅 Extracted Date: %s\n", date)
-		//fmt.Printf("📍 Matched Location: %s\n", location)
-		//
-		//if !promptForConfirmation("Process this file? (y/n): ") {
-		//	fmt.Println("⏭️  Skipped by user")
-		//	unmatchedFiles = append(unmatchedFiles, path)
-		//	continue
-		//}
-
+		
 		// Move file to matched location
 		if err := moveFileToLocation(path, destPath, location, date, dryRun); err != nil {
 			return fmt.Errorf("failed to move %s: %v", filepath.Base(path), err)
@@ -335,6 +317,13 @@ func extractDateFromFilename(filename string) (string, error) {
 	pattern3 := regexp.MustCompile(`^(\d{4})(\d{2})(\d{2})`)
 	if matches := pattern3.FindStringSubmatch(filename); len(matches) >= 4 {
 		year, month, day := matches[1], matches[2], matches[3]
+		return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+	}
+
+	// Pattern 4: DD-MM-YYYY format (e.g., 10-10-2018-DSC_0996.JPG)
+	pattern4 := regexp.MustCompile(`^(\d{2})-(\d{2})-(\d{4})`)
+	if matches := pattern4.FindStringSubmatch(filename); len(matches) >= 4 {
+		day, month, year := matches[1], matches[2], matches[3]
 		return fmt.Sprintf("%s-%s-%s", year, month, day), nil
 	}
 
@@ -478,7 +467,7 @@ func collectSampleFilesForDatetime(sourcePath string) ([]string, error) {
 			return err
 		}
 		subDir := filepath.Dir(relPath)
-		
+
 		// Use "." for files directly in source path (no subdirectory)
 		if subDir == "." {
 			subDir = "root"
@@ -567,15 +556,4 @@ func findNearbyDateMatch(db *DateLocationDB, targetDate, filePath string) (locat
 	}
 
 	return "", "", false
-}
-
-// promptForTemporalMatch prompts user to confirm using a nearby date's location
-func promptForTemporalMatch(filename, fileDate, nearbyDate, location string) bool {
-	fmt.Printf("\n🤔 Temporal Match Found\n")
-	fmt.Printf("File: %s\n", filename)
-	fmt.Printf("File date: %s (no location data)\n", fileDate)
-	fmt.Printf("Nearby date: %s has location: %s\n", nearbyDate, location)
-	fmt.Printf("Use this location for %s? (y/n): ", filename)
-
-	return promptForConfirmation("")
 }
