@@ -1,40 +1,77 @@
 package main
 
 import (
+	"bufio"
+	"embed"
 	"fmt"
 	"strings"
+	"sync"
 )
+
+//go:embed multi-word-countries.txt
+var countryListFS embed.FS
+
+var (
+	multiWordCountries []string
+	countryListOnce    sync.Once
+)
+
+// loadMultiWordCountries loads the list of multi-word countries from the embedded file
+func loadMultiWordCountries() {
+	countryListOnce.Do(func() {
+		file, err := countryListFS.Open("multi-word-countries.txt")
+		if err != nil {
+			fmt.Printf("Warning: Could not load multi-word countries list: %v\n", err)
+			return
+		}
+		defer file.Close()
+		
+		scanner := bufio.NewScanner(file)
+		for scanner.Scan() {
+			line := strings.TrimSpace(scanner.Text())
+			// Skip comments and empty lines
+			if line == "" || strings.HasPrefix(line, "#") {
+				continue
+			}
+			multiWordCountries = append(multiWordCountries, line)
+		}
+		
+		if err := scanner.Err(); err != nil {
+			fmt.Printf("Warning: Error reading multi-word countries list: %v\n", err)
+		}
+	})
+}
 
 // parseLocation attempts to extract country and city from a location string
 func parseLocation(location string) (country, city string, err error) {
-	// Location format is typically "city-country" like "manchester-united-kingdom"
-	parts := strings.Split(location, "-")
+	// Load the multi-word countries list
+	loadMultiWordCountries()
 	
+	// Location format is typically "city-country" like "manchester-united-kingdom"
+	location = strings.ToLower(location)
+	
+	// Try to match against known multi-word countries (longest first)
+	for _, countryName := range multiWordCountries {
+		if strings.HasSuffix(location, "-"+countryName) {
+			// Found a match - extract city by removing the country suffix
+			cityPart := strings.TrimSuffix(location, "-"+countryName)
+			if cityPart != "" {
+				return countryName, cityPart, nil
+			}
+			// If no city part, the whole location is just the country
+			return countryName, countryName, nil
+		}
+		
+		// Also check if the entire location is just the country name
+		if location == countryName {
+			return countryName, countryName, nil
+		}
+	}
+	
+	// If no multi-word country matched, fall back to simple parsing
+	parts := strings.Split(location, "-")
 	if len(parts) >= 2 {
-		// Handle multi-word countries like "united-kingdom", "czech-republic", and "united-states"
-		if len(parts) >= 3 && parts[len(parts)-2] == "united" && parts[len(parts)-1] == "kingdom" {
-			// Special case for "united-kingdom"
-			country = "united-kingdom"
-			city = strings.Join(parts[:len(parts)-2], "-")
-			return country, city, nil
-		}
-		
-		if len(parts) >= 3 && parts[len(parts)-2] == "czech" && parts[len(parts)-1] == "republic" {
-			// Special case for "czech-republic"
-			country = "czech-republic"
-			city = strings.Join(parts[:len(parts)-2], "-")
-			return country, city, nil
-		}
-		
-		if len(parts) >= 3 && parts[len(parts)-2] == "united" && parts[len(parts)-1] == "states" {
-			// Special case for "united-states"
-			country = "united-states"
-			city = strings.Join(parts[:len(parts)-2], "-")
-			return country, city, nil
-		}
-		
-		// Handle other multi-word countries if needed
-		// For now, take the last part as country, everything before as city
+		// Take the last part as country, everything before as city
 		country = parts[len(parts)-1]
 		city = strings.Join(parts[:len(parts)-1], "-")
 		return country, city, nil

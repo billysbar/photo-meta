@@ -1,0 +1,50 @@
+# Multi-word countries in hyphenated format for geographic parsing
+# Format: each country name on a separate line, lowercase with hyphens
+# Ordered by length (longest first) to match the longest possible country first
+
+# 6+ words
+united-kingdom-of-great-britain-and-northern-ireland
+saint-vincent-and-the-grenadines
+
+# 4-5 words  
+democratic-republic-of-the-congo
+central-african-republic
+united-arab-emirates
+sao-tome-and-principe
+saint-kitts-and-nevis
+antigua-and-barbuda
+bosnia-and-herzegovina
+papua-new-guinea
+trinidad-and-tobago
+
+# 3 words
+burkina-faso
+costa-rica
+czech-republic
+el-salvador
+equatorial-guinea
+guinea-bissau
+new-zealand
+north-korea
+saudi-arabia
+sierra-leone
+solomon-islands
+south-africa
+south-korea
+south-sudan
+sri-lanka
+united-kingdom
+united-states
+
+# 2 words - territories and dependencies (for completeness)
+cayman-islands
+cook-islands
+faroe-islands
+french-guiana
+french-polynesia
+marshall-islands
+new-caledonia
+northern-mariana-islands
+puerto-rico
+turks-and-caicos-islands
+virgin-islands
