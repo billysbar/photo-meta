@@ -49,39 +49,11 @@ func promptForLocation(location, mediaPath string, lat, lon float64) (country, c
 	
 	reader := bufio.NewReader(os.Stdin)
 	
-	// Prompt for country
-	for {
-		fmt.Print("\n🏳️  Country: ")
-		countryInput, err := reader.ReadString('\n')
-		if err != nil {
-			return "", "", fmt.Errorf("failed to read country input: %v", err)
-		}
-		
-		country = strings.TrimSpace(countryInput)
-		if country != "" {
-			country = anglicizeName(country)
-		country = strings.ToLower(strings.ReplaceAll(country, " ", "-"))
-			break
-		}
-		fmt.Println("❌ Country cannot be empty. Please provide a country name (e.g., 'spain', 'united-kingdom', 'france').")
-	}
+	// Default country to 'unknown-country'
+	country = "unknown-country"
 	
-	// Prompt for city
-	for {
-		fmt.Print("🏙️  City: ")
-		cityInput, err := reader.ReadString('\n')
-		if err != nil {
-			return "", "", fmt.Errorf("failed to read city input: %v", err)
-		}
-		
-		city = strings.TrimSpace(cityInput)
-		if city != "" {
-			city = anglicizeName(city)
-		city = strings.ToLower(strings.ReplaceAll(city, " ", "-"))
-			break
-		}
-		fmt.Println("❌ City cannot be empty. Please provide a city name (e.g., 'madrid', 'london', 'paris').")
-	}
+	// Default city to 'unknown-city'
+	city = "unknown-city"
 	
 	fmt.Println(strings.Repeat("=", 80))
 	fmt.Printf("✅ Using location: %s, %s\n", city, country)
