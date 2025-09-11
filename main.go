@@ -429,6 +429,7 @@ func isPhotoFile(path string) bool {
 	supportedFormats := map[string]bool{
 		".jpg":   true,
 		".jpeg":  true,
+		".png":   true,
 		".heic":  true,
 		".heif":  true,
 		".tiff":  true,

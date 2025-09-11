@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
+	"time"
 )
 
 // DateLocationDB stores date to location mappings
@@ -26,7 +27,7 @@ func processDateTimeMatching(sourcePath, destPath string, dryRun bool, dryRun1 b
 	fmt.Printf("🕒 DateTime Matching Mode\n")
 	fmt.Printf("🔍 Source: %s\n", sourcePath)
 	fmt.Printf("📁 Destination: %s\n", destPath)
-	
+
 	if dryRun {
 		if dryRun1 {
 			fmt.Println("🔍 DRY RUN1 MODE - Sample only 1 file per type per directory")
@@ -186,6 +187,11 @@ func extractDateLocationFromPath(filePath, basePath string) (string, string, err
 	// Extract location from directory path
 	dirPath := filepath.Dir(relPath)
 	location := dirPath
+	
+	// Strip VIDEO-FILES/ prefix if present to get the actual location
+	if strings.HasPrefix(location, "VIDEO-FILES/") {
+		location = strings.TrimPrefix(location, "VIDEO-FILES/")
+	}
 
 	return date, location, nil
 }
@@ -199,7 +205,7 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 
 	// Collect files to process
 	var filesToProcess []string
-	
+
 	if dryRun1 {
 		// Sample files for dry-run1 mode
 		var err error
@@ -229,7 +235,7 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 			return err
 		}
 	}
-	
+
 	// Process the collected files
 	for _, path := range filesToProcess {
 		// Extract date from filename
@@ -244,8 +250,29 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 		location, exists := db.DateToLocation[date]
 		if !exists {
 			fmt.Printf("🔍 DEBUG: %s - date %s not found in database\n", filepath.Base(path), date)
-			unmatchedFiles = append(unmatchedFiles, path)
-			continue
+
+			// Try temporal proximity matching
+			nearbyLocation, nearbyDate, found := findNearbyDateMatch(db, date, path)
+			if found {
+				fmt.Printf("📅 Found nearby match for %s:\n", filepath.Base(path))
+				fmt.Printf("   File date: %s\n", date)
+				fmt.Printf("   Nearby date: %s -> %s\n", nearbyDate, nearbyLocation)
+
+				// Prompt user for confirmation
+				if promptForTemporalMatch(filepath.Base(path), date, nearbyDate, nearbyLocation) {
+					// User confirmed - use the nearby location and add to database
+					location = nearbyLocation
+					db.DateToLocation[date] = location
+					fmt.Printf("✅ Added %s -> %s to location database\n", date, location)
+				} else {
+					fmt.Println("⏭️  Skipped by user")
+					unmatchedFiles = append(unmatchedFiles, path)
+					continue
+				}
+			} else {
+				unmatchedFiles = append(unmatchedFiles, path)
+				continue
+			}
 		}
 
 		// Interactive prompt for verification
@@ -428,26 +455,26 @@ func promptForConfirmation(prompt string) bool {
 func collectSampleFilesForDatetime(sourcePath string) ([]string, error) {
 	// Map to track files by directory and type
 	dirFiles := make(map[string]map[string][]string) // directory -> {photos: [], videos: []}
-	
+
 	// Collect all files grouped by directory and type
 	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
-		
+
 		// Skip directories
 		if info.IsDir() {
 			return nil
 		}
-		
+
 		// Check if it's a media file
 		if !isMediaFile(path) {
 			return nil
 		}
-		
+
 		// Get directory path
 		dir := filepath.Dir(path)
-		
+
 		// Initialize directory map if needed
 		if dirFiles[dir] == nil {
 			dirFiles[dir] = map[string][]string{
@@ -455,35 +482,91 @@ func collectSampleFilesForDatetime(sourcePath string) ([]string, error) {
 				"videos": []string{},
 			}
 		}
-		
+
 		// Add to appropriate type list
 		if isVideoFile(path) {
 			dirFiles[dir]["videos"] = append(dirFiles[dir]["videos"], path)
 		} else {
 			dirFiles[dir]["photos"] = append(dirFiles[dir]["photos"], path)
 		}
-		
+
 		return nil
 	})
-	
+
 	if err != nil {
 		return nil, err
 	}
-	
+
 	// Sample files: 1 photo and 1 video per directory (if available)
 	var sampleFiles []string
-	
+
 	for _, files := range dirFiles {
 		// Sample 1 photo per directory
 		if len(files["photos"]) > 0 {
 			sampleFiles = append(sampleFiles, files["photos"][0])
 		}
-		
+
 		// Sample 1 video per directory
 		if len(files["videos"]) > 0 {
 			sampleFiles = append(sampleFiles, files["videos"][0])
 		}
 	}
-	
+
 	return sampleFiles, nil
+}
+
+// findNearbyDateMatch looks for dates within a reasonable proximity (±3 days) to infer location
+func findNearbyDateMatch(db *DateLocationDB, targetDate, filePath string) (location, nearbyDate string, found bool) {
+	// Parse the target date
+	targetTime, err := time.Parse("2006-01-02", targetDate)
+	if err != nil {
+		return "", "", false
+	}
+
+	// Define search range (±3 days)
+	const searchDays = 3
+	var closestMatch string
+	var closestLocation string
+	var closestDistance time.Duration
+
+	// Search through all dates in the database
+	for dbDate, dbLocation := range db.DateToLocation {
+		dbTime, err := time.Parse("2006-01-02", dbDate)
+		if err != nil {
+			continue
+		}
+
+		// Calculate time difference
+		diff := targetTime.Sub(dbTime)
+		if diff < 0 {
+			diff = -diff
+		}
+
+		// Check if within search range
+		if diff <= searchDays*24*time.Hour {
+			// Check if this is closer than our current best match
+			if closestMatch == "" || diff < closestDistance {
+				closestMatch = dbDate
+				closestLocation = dbLocation
+				closestDistance = diff
+			}
+		}
+	}
+
+	if closestMatch != "" {
+		return closestLocation, closestMatch, true
+	}
+
+	return "", "", false
+}
+
+// promptForTemporalMatch prompts user to confirm using a nearby date's location
+func promptForTemporalMatch(filename, fileDate, nearbyDate, location string) bool {
+	fmt.Printf("\n🤔 Temporal Match Found\n")
+	fmt.Printf("File: %s\n", filename)
+	fmt.Printf("File date: %s (no location data)\n", fileDate)
+	fmt.Printf("Nearby date: %s has location: %s\n", nearbyDate, location)
+	fmt.Printf("Use this location for %s? (y/n): ", filename)
+
+	return promptForConfirmation("")
 }
