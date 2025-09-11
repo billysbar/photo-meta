@@ -1,10 +1,7 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"path/filepath"
 	"strings"
 )
 
@@ -33,31 +30,13 @@ func parseLocation(location string) (country, city string, err error) {
 	return "", "", fmt.Errorf("unable to parse location: %s", location)
 }
 
-// promptForLocation prompts the user for missing country/city information
+// promptForLocation defaults to unknown country/city when location cannot be parsed
 func promptForLocation(location, mediaPath string, lat, lon float64) (country, city string, err error) {
-	// Make the prompt very visible
-	fmt.Println("\n" + strings.Repeat("=", 80))
-	fmt.Println("🚨 USER INPUT REQUIRED - LOCATION INFORMATION NEEDED")
-	fmt.Println(strings.Repeat("=", 80))
-	
-	fmt.Printf("📁 File: %s\n", mediaPath)
-	fmt.Printf("📂 Directory: %s\n", filepath.Dir(mediaPath))
-	fmt.Printf("📍 GPS Location: %s\n", location)
-	fmt.Printf("🌐 Coordinates: %.6f, %.6f\n", lat, lon)
-	fmt.Println("\n❓ Unable to automatically determine country and city from this location.")
-	fmt.Println("💡 Please provide the missing information to continue processing:")
-	
-	reader := bufio.NewReader(os.Stdin)
-	
 	// Default country to 'unknown-country'
 	country = "unknown-country"
 	
 	// Default city to 'unknown-city'
 	city = "unknown-city"
 	
-	fmt.Println(strings.Repeat("=", 80))
-	fmt.Printf("✅ Using location: %s, %s\n", city, country)
-	fmt.Println("✅ Continuing with file processing...")
-	fmt.Println(strings.Repeat("=", 80) + "\n")
 	return country, city, nil
 }

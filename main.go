@@ -423,6 +423,53 @@ func main() {
 			log.Fatal(err)
 		}
 		
+	case "cleanup":
+		if len(os.Args) < 3 {
+			fmt.Println("Usage: ./photo-metadata-editor cleanup /target/path [--dry-run] [--dry-run1]")
+			os.Exit(1)
+		}
+		
+		targetPath := os.Args[2]
+		
+		// Check if target path exists
+		if _, err := os.Stat(targetPath); os.IsNotExist(err) {
+			log.Fatalf("Target path does not exist: %s", targetPath)
+		}
+		
+		// Check for incorrectly formatted dry-run arguments
+		for i := 3; i < len(os.Args); i++ {
+			arg := strings.ToLower(os.Args[i])
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" && arg != "--dry-run1" {
+				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
+				fmt.Println("Use '--dry-run' or '--dry-run1' instead")
+				os.Exit(1)
+			}
+		}
+		
+		// Parse optional flags
+		dryRun := false
+		for i := 3; i < len(os.Args); i++ {
+			switch os.Args[i] {
+			case "--dry-run":
+				dryRun = true
+			case "--dry-run1":
+				dryRun = true // dry-run1 same as dry-run for cleanup
+			}
+		}
+		
+		// Run cleanup
+		fmt.Printf("🧹 Standalone Empty Directory Cleanup\n")
+		fmt.Printf("🔍 Target: %s\n", targetPath)
+		
+		if dryRun {
+			fmt.Println("🔍 DRY RUN MODE - No directories will be removed")
+		}
+		fmt.Println()
+		
+		if err := cleanupEmptyDirectories(targetPath, dryRun); err != nil {
+			log.Fatal(err)
+		}
+		
 	default:
 		showUsage()
 		os.Exit(1)
@@ -636,6 +683,7 @@ func showUsage() {
 	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 	fmt.Println("  ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--dry-run1] [--verbose] [--workers N] [--progress]")
+	fmt.Println("  ./photo-metadata-editor cleanup /target/path [--dry-run] [--dry-run1]")
 	fmt.Println("  ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 	fmt.Println("  ./photo-metadata-editor summary /source/path")
 	fmt.Println("  ./photo-metadata-editor report <type> /source/path [--save] [--progress] [--verbose]")
@@ -692,6 +740,14 @@ func showUsage() {
 	fmt.Println("  - 🔍 --dry-run mode for safe preview")
 	fmt.Println("  - 🔍 --dry-run1 mode for quick summary (samples first 3 duplicate groups)")
 	fmt.Println("  - 📝 --verbose mode for detailed logging")
+	fmt.Println()
+	fmt.Println("Cleanup Features:")
+	fmt.Println("  - 🧹 Standalone empty directory removal")
+	fmt.Println("  - 🔍 Intelligent empty directory detection (ignores non-media files)")
+	fmt.Println("  - 🔄 Multi-pass removal for nested empty directories")
+	fmt.Println("  - 🔍 --dry-run mode to preview what would be removed")
+	fmt.Println("  - 📁 Safe operation - only removes directories with no media files")
+	fmt.Println("  - 🗑️  Detailed logging of removed directories")
 	fmt.Println()
 	fmt.Println("Merge Features:")
 	fmt.Println("  - 🔀 Merge photos from source into target using YEAR/COUNTRY/CITY structure")

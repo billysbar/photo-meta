@@ -10,6 +10,7 @@ A powerful, concurrent photo organization tool that processes photos and videos 
 - **📅 Fallback Organization**: Organizes files by date into YYYY/Month structure when location matching fails
 - **🔀 Smart Merging**: Combines photo collections while preserving structure
 - **🧹 Duplicate Detection**: Intelligent duplicate removal with structure-based prioritization
+- **🗑️ Empty Directory Cleanup**: Standalone tool for removing empty directories
 - **📊 Progress Visualization**: Enhanced progress bars with ETA and real-time statistics
 - **📋 Comprehensive Reporting**: Detailed analysis with summary, duplicates, and statistics reports
 - **🔍 Dry-Run Modes**: Safe preview modes including quick sampling (dry-run1)
@@ -21,13 +22,14 @@ A powerful, concurrent photo organization tool that processes photos and videos 
 
 | Command | Purpose | Best For |
 |---------|---------|----------|
+| **`clean`** | Duplicate removal | Removing redundant files |
 | **`process`** | GPS-based organization | Photos/videos with location data |
 | **`datetime`** | Date-based matching | Files without GPS data |
 | **`fallback`** | Simple date organization | Files with dates but no location matches |
-| **`clean`** | Duplicate removal | Removing redundant files |
 | **`merge`** | Collection combining | Merging photo libraries |
 | **`summary`** | Quick analysis | Initial directory assessment |
 | **`report`** | Detailed reporting | Comprehensive analysis & documentation |
+| **`cleanup`** | Empty directory removal | Cleaning up after processing |
 
 ### 🔧 Installation & Setup
 
@@ -213,6 +215,12 @@ organized/
 - `YYYY-MM-DD-*` → Already standardized format
 - `YYYYMMDD-*` → 20180310-IMG.jpg → 2018-03-10.jpg
 
+#### **Date Validation:**
+- ✅ **Year Range**: Only accepts years 1900-2030 (current year + 5)
+- ✅ **Month Validation**: Validates months 01-12
+- ✅ **Day Validation**: Validates days 01-31
+- ❌ **Invalid Patterns**: Rejects files like `08941020123456.jpg` (invalid year 0894)
+
 ---
 
 ### 4. **CLEAN** - Intelligent Duplicate Detection & Removal
@@ -262,7 +270,64 @@ Detects and removes duplicate photos using SHA-256 hashing with intelligent file
 
 ---
 
-### 5. **MERGE** - Smart Collection Combining
+### 5. **CLEANUP** - Standalone Empty Directory Removal
+
+Removes empty directories that contain no media files, providing a clean way to tidy up after processing operations.
+
+```bash
+./photo-meta cleanup /target/path [OPTIONS]
+```
+
+#### **Options:**
+- `--dry-run` - Preview what directories would be removed
+- `--dry-run1` - Same as dry-run for cleanup operations
+
+#### **Benefits:**
+- ✅ **Standalone Operation**: Can be run independently without other processing
+- ✅ **Intelligent Detection**: Only removes directories with no media files
+- ✅ **Multi-Pass Removal**: Handles nested empty directories properly
+- ✅ **Safe Operation**: Ignores hidden files (.DS_Store) when determining emptiness
+- ✅ **Detailed Logging**: Shows exactly which directories are removed
+- ✅ **Non-Media Aware**: Considers directories empty if they only contain non-media files
+
+#### **Examples:**
+```bash
+# Preview what would be cleaned up
+./photo-meta cleanup ~/organized --dry-run
+
+# Remove empty directories after processing
+./photo-meta cleanup ~/organized
+
+# Clean up after batch processing
+./photo-meta cleanup /photo-library
+```
+
+#### **Use Cases:**
+- 🧹 **Post-Processing Cleanup**: Remove empty directories left after organizing photos
+- 📁 **Directory Maintenance**: Keep organized collections clean and tidy
+- 🔄 **Batch Operations**: Clean up after multiple processing operations
+- 💾 **Storage Optimization**: Remove unnecessary directory structure
+
+#### **How It Works:**
+1. **Scans** target directory for empty directories
+2. **Analyzes** each directory to check for media files only
+3. **Removes** directories with no photos or videos (ignores .DS_Store, text files, etc.)
+4. **Multi-Pass** processing removes nested empty directories
+5. **Reports** exactly which directories were removed
+
+#### **Example Output:**
+```bash
+🧹 Standalone Empty Directory Cleanup
+🔍 Target: /photo-library
+🧹 Cleaning up empty directories in: /photo-library
+🗑️  Removed empty directory: 2024/spain/empty-folder
+🗑️  Removed empty directory: 2025/temp/processing
+✅ Cleanup complete: Removed 2 empty directories total
+```
+
+---
+
+### 6. **MERGE** - Smart Collection Combining
 
 Merges photos from source directory into target directory while preserving YEAR/COUNTRY/CITY structure.
 
@@ -305,7 +370,7 @@ Merges photos from source directory into target directory while preserving YEAR/
 
 ---
 
-### 6. **SUMMARY** - Quick Directory Analysis
+### 7. **SUMMARY** - Quick Directory Analysis
 
 Provides a quick overview of what's in a directory and what processing is needed.
 
@@ -331,7 +396,7 @@ Provides a quick overview of what's in a directory and what processing is needed
 
 ---
 
-### 7. **REPORT** - Comprehensive Analysis & Reporting
+### 8. **REPORT** - Comprehensive Analysis & Reporting
 
 Generates detailed reports for directory analysis, duplicate detection, and statistics with optional file export.
 
@@ -483,10 +548,14 @@ Generates detailed reports for directory analysis, duplicate detection, and stat
 ./photo-meta clean ~/organized --dry-run1
 ./photo-meta clean ~/organized --progress
 
-# 10. Generate final statistics report
+# 10. Remove any empty directories left behind
+./photo-meta cleanup ~/organized --dry-run
+./photo-meta cleanup ~/organized
+
+# 11. Generate final statistics report
 ./photo-meta report stats ~/organized --save
 
-# 11. Merge additional collections as needed
+# 12. Merge additional collections as needed
 ./photo-meta merge ~/new-photos ~/organized --dry-run1
 ./photo-meta merge ~/new-photos ~/organized --progress
 ```
@@ -519,6 +588,9 @@ Generates detailed reports for directory analysis, duplicate detection, and stat
 
 # 4. Clean duplicates
 ./photo-meta clean ~/organized --progress
+
+# 5. Clean up empty directories
+./photo-meta cleanup ~/organized
 ```
 
 ### **Comprehensive Reporting Workflow**
@@ -621,6 +693,22 @@ go build -o photo-meta .
 # Verify installation
 ./photo-meta --help
 ```
+
+---
+
+## 📝 Recent Updates
+
+### v1.1 - Enhanced Date Validation & Cleanup
+- **🆕 Standalone Cleanup Command**: Added `cleanup` command for removing empty directories independently
+- **🔧 Improved Date Validation**: Enhanced fallback command with robust year validation (1900-2030)
+- **🛡️ Better Error Prevention**: Prevents creation of invalid year directories (e.g., "0894")
+- **📖 Documentation**: Comprehensive README updates with new workflows and examples
+
+### Key Improvements:
+- ✅ **Date Pattern Validation**: Validates year, month, and day ranges before processing
+- ✅ **Empty Directory Management**: Intelligent cleanup that preserves directories with non-media files
+- ✅ **Multi-Pass Cleanup**: Handles nested empty directories properly
+- ✅ **Enhanced Safety**: Better validation prevents invalid directory structures
 
 ---
 

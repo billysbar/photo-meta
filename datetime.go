@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -82,8 +83,33 @@ func processDateTimeMatching(sourcePath, destPath string, dryRun bool, dryRun1 b
 func checkForGPSInSource(sourcePath string) (bool, string, error) {
 	var hasGPS bool
 	var gpsFile string
-
+	
+	// First pass: count total media files
+	fmt.Print("📊 Counting files...")
+	var totalFiles int
 	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if !info.IsDir() && isMediaFile(path) {
+			totalFiles++
+		}
+		return nil
+	})
+	if err != nil {
+		return false, "", err
+	}
+	fmt.Printf(" found %d media files\n", totalFiles)
+	
+	if totalFiles == 0 {
+		return false, "", nil
+	}
+	
+	// Second pass: check for GPS with progress bar
+	progress := NewProgressTracker(totalFiles)
+	scannedCount := 0
+	
+	err = filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
@@ -97,17 +123,33 @@ func checkForGPSInSource(sourcePath string) (bool, string, error) {
 		if !isMediaFile(path) {
 			return nil
 		}
+		
+		scannedCount++
+		
+		// Update progress
+		progress.Update(true)
+		
+		// Show progress bar every 10 files or on last file
+		if scannedCount%10 == 0 || scannedCount == totalFiles {
+			fmt.Printf("\r%s", progress.FormatProgressBar())
+		}
 
 		// Quick check for GPS data
 		_, _, err = extractGPSCoordinates(path)
 		if err == nil {
 			hasGPS = true
 			gpsFile = path
+			fmt.Printf("\r%s\n", progress.FormatProgressBar()) // Final update
 			return fmt.Errorf("found GPS") // Early termination
 		}
 
 		return nil
 	})
+	
+	// Ensure final progress update is shown
+	if err == nil || err.Error() != "found GPS" {
+		fmt.Printf("\r%s\n", progress.FormatProgressBar())
+	}
 
 	if err != nil && err.Error() == "found GPS" {
 		return hasGPS, gpsFile, nil
@@ -299,32 +341,70 @@ func processFilesWithDateTimeMatching(sourcePath, destPath string, db *DateLocat
 }
 
 // extractDateFromFilename extracts date from filename patterns
+// isValidYear checks if a year is reasonable for photo dates
+func isValidYear(yearStr string) bool {
+	year, err := strconv.Atoi(yearStr)
+	if err != nil {
+		return false
+	}
+	currentYear := time.Now().Year()
+	// Accept years from 1900 to current year + 5
+	return year >= 1900 && year <= (currentYear+5)
+}
+
+// isValidMonth checks if a month is valid (01-12)
+func isValidMonth(monthStr string) bool {
+	month, err := strconv.Atoi(monthStr)
+	if err != nil {
+		return false
+	}
+	return month >= 1 && month <= 12
+}
+
+// isValidDay checks if a day is valid (01-31)
+func isValidDay(dayStr string) bool {
+	day, err := strconv.Atoi(dayStr)
+	if err != nil {
+		return false
+	}
+	return day >= 1 && day <= 31
+}
+
 func extractDateFromFilename(filename string) (string, error) {
 	// Pattern 1: YYYYMMDDHHMMSS format (e.g., 20250903175904.PNG)
 	pattern1 := regexp.MustCompile(`^(\d{4})(\d{2})(\d{2})\d{6}`)
 	if matches := pattern1.FindStringSubmatch(filename); len(matches) >= 4 {
 		year, month, day := matches[1], matches[2], matches[3]
-		return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+		if isValidYear(year) && isValidMonth(month) && isValidDay(day) {
+			return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+		}
 	}
 
 	// Pattern 2: YYYY-MM-DD format already in filename
-	pattern2 := regexp.MustCompile(`(\d{4}-\d{2}-\d{2})`)
-	if matches := pattern2.FindStringSubmatch(filename); len(matches) >= 2 {
-		return matches[1], nil
+	pattern2 := regexp.MustCompile(`(\d{4})-(\d{2})-(\d{2})`)
+	if matches := pattern2.FindStringSubmatch(filename); len(matches) >= 4 {
+		year, month, day := matches[1], matches[2], matches[3]
+		if isValidYear(year) && isValidMonth(month) && isValidDay(day) {
+			return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+		}
 	}
 
 	// Pattern 3: YYYYMMDD format
 	pattern3 := regexp.MustCompile(`^(\d{4})(\d{2})(\d{2})`)
 	if matches := pattern3.FindStringSubmatch(filename); len(matches) >= 4 {
 		year, month, day := matches[1], matches[2], matches[3]
-		return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+		if isValidYear(year) && isValidMonth(month) && isValidDay(day) {
+			return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+		}
 	}
 
 	// Pattern 4: DD-MM-YYYY format (e.g., 10-10-2018-DSC_0996.JPG)
 	pattern4 := regexp.MustCompile(`^(\d{2})-(\d{2})-(\d{4})`)
 	if matches := pattern4.FindStringSubmatch(filename); len(matches) >= 4 {
 		day, month, year := matches[1], matches[2], matches[3]
-		return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+		if isValidYear(year) && isValidMonth(month) && isValidDay(day) {
+			return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+		}
 	}
 
 	return "", fmt.Errorf("no date pattern found in filename")
