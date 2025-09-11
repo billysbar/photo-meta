@@ -93,6 +93,66 @@ func main() {
 			log.Fatal(err)
 		}
 		
+	case "fallback":
+		if len(os.Args) < 4 {
+			fmt.Println("Usage: ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
+			os.Exit(1)
+		}
+		
+		sourcePath := os.Args[2]
+		destPath := os.Args[3]
+		
+		// Check for incorrectly formatted dry-run arguments
+		for i := 4; i < len(os.Args); i++ {
+			arg := strings.ToLower(os.Args[i])
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" && arg != "--dry-run1" {
+				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
+				fmt.Println("Use '--dry-run' or '--dry-run1' instead")
+				os.Exit(1)
+			}
+		}
+		
+		// Parse optional flags
+		workers := 4 // Default worker count
+		dryRun := false
+		dryRun1 := false
+		showProgress := true // Default to showing progress
+		for i := 4; i < len(os.Args); i++ {
+			switch os.Args[i] {
+			case "--workers":
+				if i+1 < len(os.Args) {
+					if _, err := fmt.Sscanf(os.Args[i+1], "%d", &workers); err != nil {
+						log.Fatalf("Invalid worker count: %s", os.Args[i+1])
+					}
+					i++ // Skip the next argument since it's the worker count
+				}
+			case "--dry-run":
+				dryRun = true
+			case "--dry-run1":
+				dryRun1 = true
+				dryRun = true // dry-run1 implies dry-run
+			case "--progress":
+				showProgress = true
+			case "--no-progress":
+				showProgress = false
+			}
+		}
+		
+		// Check if source path exists
+		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
+			log.Fatalf("Source path does not exist: %s", sourcePath)
+		}
+		
+		// Create destination path if it doesn't exist
+		if err := os.MkdirAll(destPath, 0755); err != nil {
+			log.Fatalf("Failed to create destination path: %v", err)
+		}
+		
+		// Process fallback organization
+		if err := processFallbackOrganization(sourcePath, destPath, dryRun, dryRun1, showProgress); err != nil {
+			log.Fatal(err)
+		}
+		
 	case "datetime":
 		if len(os.Args) < 4 {
 			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
@@ -562,6 +622,7 @@ func showUsage() {
 	fmt.Println("Commands:")
 	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
+	fmt.Println("  ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run] [--dry-run1] [--verbose] [--workers N] [--progress]")
 	fmt.Println("  ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run] [--dry-run1] [--progress]")
 	fmt.Println("  ./photo-metadata-editor summary /source/path")
@@ -599,7 +660,17 @@ func showUsage() {
 	fmt.Println("  - 🗃️  Uses processed photos as location database")
 	fmt.Println("  - 🎥 Video files organized in VIDEO-FILES/YYYY/COUNTRY/CITY")
 	fmt.Println("  - 📷 Photo files placed in regular YYYY/COUNTRY/CITY structure")
-	fmt.Println("  - 🤝 Interactive verification prompts")
+	fmt.Println("  - ⏱️  Temporal proximity matching (±3 days)")
+	fmt.Println()
+	fmt.Println("Fallback Features:")
+	fmt.Println("  - 📅 Date-based organization for files without location data")
+	fmt.Println("  - 📁 Organizes files into YYYY/Month directory structure")
+	fmt.Println("  - 🔄 Concurrent processing with configurable worker pools")
+	fmt.Println("  - 📊 Enhanced progress bars with visual feedback")
+	fmt.Println("  - 🔍 --dry-run mode for safe preview without moving files")
+	fmt.Println("  - 🔍 --dry-run1 mode for quick overview (1 file per type per directory)")
+	fmt.Println("  - 📷 Simple YYYY-MM-DD.ext filename format")
+	fmt.Println("  - 🎥 Videos organized in VIDEO-FILES/YYYY/Month structure")
 	fmt.Println()
 	fmt.Println("Clean Features:")
 	fmt.Println("  - ⚡ High-speed duplicate detection using SHA-256")

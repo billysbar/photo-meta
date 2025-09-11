@@ -6,7 +6,8 @@ A powerful, concurrent photo organization tool that processes photos and videos 
 
 - **🔥 High Performance**: Concurrent processing with configurable worker pools (1-16 workers)
 - **📍 GPS-Based Organization**: Extracts GPS coordinates from photos/videos and organizes by location
-- **📅 Date-Time Organization**: Matches files by date when GPS data is unavailable
+- **📅 Date-Time Organization**: Matches files by date when GPS data is unavailable  
+- **📅 Fallback Organization**: Organizes files by date into YYYY/Month structure when location matching fails
 - **🔀 Smart Merging**: Combines photo collections while preserving structure
 - **🧹 Duplicate Detection**: Intelligent duplicate removal with structure-based prioritization
 - **📊 Progress Visualization**: Enhanced progress bars with ETA and real-time statistics
@@ -22,6 +23,7 @@ A powerful, concurrent photo organization tool that processes photos and videos 
 |---------|---------|----------|
 | **`process`** | GPS-based organization | Photos/videos with location data |
 | **`datetime`** | Date-based matching | Files without GPS data |
+| **`fallback`** | Simple date organization | Files with dates but no location matches |
 | **`clean`** | Duplicate removal | Removing redundant files |
 | **`merge`** | Collection combining | Merging photo libraries |
 | **`summary`** | Quick analysis | Initial directory assessment |
@@ -144,7 +146,76 @@ Matches files without GPS data to existing organized structure based on date/tim
 
 ---
 
-### 3. **CLEAN** - Intelligent Duplicate Detection & Removal
+### 3. **FALLBACK** - Simple Date-Based Organization
+
+Organizes files with extractable dates into a simple YYYY/Month directory structure when location-based organization isn't possible.
+
+```bash
+./photo-meta fallback /source/path /destination/path [OPTIONS]
+```
+
+#### **Options:**
+- `--workers N` - Number of concurrent workers (1-16, default: 4)
+- `--dry-run` - Preview organization operations
+- `--dry-run1` - Quick preview with samples
+- `--progress` - Show progress bar (default: enabled)
+- `--no-progress` - Disable progress bar
+
+#### **Benefits:**
+- ✅ **Date-Only Organization**: Uses only extractable dates from filenames
+- ✅ **Simple Structure**: Clean YYYY/Month folder organization
+- ✅ **Standardized Names**: Converts all files to YYYY-MM-DD.ext format
+- ✅ **Multiple Date Formats**: Handles DD-MM-YYYY, YYYYMMDD, YYYYMMDDHHMMSS patterns
+- ✅ **Automatic Processing**: No user prompts or intervention required
+- ✅ **Video Separation**: Places videos in VIDEO-FILES/YYYY/Month structure
+
+#### **Examples:**
+```bash
+# Quick preview of fallback organization
+./photo-meta fallback ~/mixed-photos ~/organized --dry-run1
+
+# Organize files by date when GPS/location isn't available
+./photo-meta fallback ~/old-photos ~/organized --progress
+
+# Preview full fallback organization
+./photo-meta fallback ~/photos ~/organized --dry-run
+```
+
+#### **Output Structure:**
+```
+organized/
+├── 2018/
+│   └── October/
+│       ├── 2018-10-10.JPG
+│       ├── 2018-10-11.jpeg
+│       └── 2018-10-16.jpg
+├── 2020/
+│   ├── March/
+│   │   ├── 2020-03-09.jpeg
+│   │   └── 2020-03-17.JPG
+│   └── April/
+│       └── 2020-04-22.jpeg
+└── VIDEO-FILES/
+    └── 2025/
+        └── September/
+            └── 2025-09-02.MOV
+```
+
+#### **Use Cases:**
+- 📅 **Simple Date Organization**: When location doesn't matter, only chronological order
+- 🔄 **Final Processing Step**: For files that datetime command can't match to locations
+- 📱 **Mixed Sources**: Photos from multiple devices/sources with inconsistent metadata
+- 🏃 **Quick Organization**: Fast way to get files into a basic organized structure
+
+#### **Supported Date Patterns:**
+- `DD-MM-YYYY-*` → 10-10-2018-DSC_0996.JPG → 2018-10-10.JPG
+- `YYYYMMDDHHMMSS` → 20250831120839.HEIC → 2025-08-31.HEIC
+- `YYYY-MM-DD-*` → Already standardized format
+- `YYYYMMDD-*` → 20180310-IMG.jpg → 2018-03-10.jpg
+
+---
+
+### 4. **CLEAN** - Intelligent Duplicate Detection & Removal
 
 Detects and removes duplicate photos using SHA-256 hashing with intelligent file prioritization.
 
@@ -191,7 +262,7 @@ Detects and removes duplicate photos using SHA-256 hashing with intelligent file
 
 ---
 
-### 4. **MERGE** - Smart Collection Combining
+### 5. **MERGE** - Smart Collection Combining
 
 Merges photos from source directory into target directory while preserving YEAR/COUNTRY/CITY structure.
 
@@ -234,7 +305,7 @@ Merges photos from source directory into target directory while preserving YEAR/
 
 ---
 
-### 5. **SUMMARY** - Quick Directory Analysis
+### 6. **SUMMARY** - Quick Directory Analysis
 
 Provides a quick overview of what's in a directory and what processing is needed.
 
@@ -260,7 +331,7 @@ Provides a quick overview of what's in a directory and what processing is needed
 
 ---
 
-### 6. **REPORT** - Comprehensive Analysis & Reporting
+### 7. **REPORT** - Comprehensive Analysis & Reporting
 
 Generates detailed reports for directory analysis, duplicate detection, and statistics with optional file export.
 
@@ -401,17 +472,21 @@ Generates detailed reports for directory analysis, duplicate detection, and stat
 ./photo-meta datetime ~/leftover-photos ~/organized --dry-run1
 ./photo-meta datetime ~/leftover-photos ~/organized --progress
 
-# 7. Check for duplicates before cleaning
+# 7. Fallback organization for any remaining dated files
+./photo-meta fallback ~/still-leftover-photos ~/organized --dry-run1
+./photo-meta fallback ~/still-leftover-photos ~/organized --progress
+
+# 8. Check for duplicates before cleaning
 ./photo-meta report duplicates ~/organized --save
 
-# 8. Clean up any duplicates
+# 9. Clean up any duplicates
 ./photo-meta clean ~/organized --dry-run1
 ./photo-meta clean ~/organized --progress
 
-# 9. Generate final statistics report
+# 10. Generate final statistics report
 ./photo-meta report stats ~/organized --save
 
-# 10. Merge additional collections as needed
+# 11. Merge additional collections as needed
 ./photo-meta merge ~/new-photos ~/organized --dry-run1
 ./photo-meta merge ~/new-photos ~/organized --progress
 ```

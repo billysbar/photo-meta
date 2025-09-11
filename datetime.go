@@ -330,6 +330,7 @@ func extractDateFromFilename(filename string) (string, error) {
 	return "", fmt.Errorf("no date pattern found in filename")
 }
 
+
 // moveFileToLocation moves file to the specified location path, with special handling for video files
 func moveFileToLocation(sourcePath, destBasePath, location, date string, dryRun bool) error {
 	// Parse location to get components for filename
