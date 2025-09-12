@@ -287,7 +287,7 @@ func main() {
 		
 	case "datetime":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--reset-db]")
 			os.Exit(1)
 		}
 		
@@ -310,6 +310,7 @@ func main() {
 		dryRunSampleSize := 0
 		showProgress := true // Default to showing progress
 		generateInfo := false // Generate info_ directory summary file
+		resetDB := false // Reset GPS cache database
 		for i := 4; i < len(os.Args); i++ {
 			switch os.Args[i] {
 			case "--workers":
@@ -335,6 +336,8 @@ func main() {
 				showProgress = false
 			case "--info":
 				generateInfo = true
+			case "--reset-db":
+				resetDB = true
 			}
 		}
 		
@@ -352,6 +355,24 @@ func main() {
 		// Check if destination path exists
 		if _, err := os.Stat(destPath); os.IsNotExist(err) {
 			log.Fatalf("Destination path does not exist: %s", destPath)
+		}
+		
+		// Initialize GPS cache
+		if err := InitGPSCache(); err != nil {
+			log.Fatalf("Failed to initialize GPS cache: %v", err)
+		}
+		defer CloseGPSCache()
+		
+		// Handle database reset if requested
+		if resetDB {
+			cache := GetGPSCache()
+			if cache != nil {
+				fmt.Println("🗑️ Clearing GPS cache database...")
+				if err := cache.Clear(); err != nil {
+					log.Fatalf("Failed to clear GPS cache: %v", err)
+				}
+				fmt.Println("✅ GPS cache database cleared")
+			}
 		}
 		
 		// Process datetime matching
@@ -945,7 +966,7 @@ func showUsage() {
 	fmt.Println()
 	fmt.Println("Commands:")
 	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--resume FILE]")
-	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--reset-db]")
 	fmt.Println("  ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run [N]] [--verbose] [--workers N] [--progress]")
 	fmt.Println("  ./photo-metadata-editor cleanup /target/path [--dry-run [N]]")
@@ -966,6 +987,7 @@ func showUsage() {
 	fmt.Println("  --no-progress  Disable progress bar display")
 	fmt.Println("  --info         Generate PhotoXX-style info_ directory summary file")
 	fmt.Println("  --resume FILE  Resume from a previous interrupted operation")
+	fmt.Println("  --reset-db     Clear the GPS cache database (for datetime command)")
 	fmt.Println()
 	fmt.Println("Process Features:")
 	fmt.Println("  - 🚀 Concurrent processing with configurable worker pools")
@@ -990,6 +1012,8 @@ func showUsage() {
 	fmt.Println("  - 🎥 Video files organized in VIDEO-FILES/YYYY/COUNTRY/CITY")
 	fmt.Println("  - 📷 Photo files placed in regular YYYY/COUNTRY/CITY structure")
 	fmt.Println("  - ⏱️  Temporal proximity matching (±3 days)")
+	fmt.Println("  - 💾 GPS cache database for faster subsequent scans")
+	fmt.Println("  - 🗑️  --reset-db flag to clear the GPS cache when needed")
 	fmt.Println()
 	fmt.Println("Fallback Features:")
 	fmt.Println("  - 📅 Date-based organization for files without location data")

@@ -39,6 +39,8 @@ Matches files without GPS data to existing organized structure based on date/tim
 ./photo-meta datetime /path/to/unorganized /path/to/organized
 # Add --info to generate PhotoXX-style directory summary
 ./photo-meta datetime /path/to/unorganized /path/to/organized --info
+# Clear GPS cache database for fresh scanning
+./photo-meta datetime /path/to/unorganized /path/to/organized --reset-db
 ```
 
 ### 4. **FALLBACK** - Simple Date-Based Organization
@@ -80,5 +82,7 @@ Provides a quick overview of what's in a directory and what processing is needed
 Generates detailed reports for directory analysis, duplicate detection, and statistics with optional file export.
 
 ```bash
-./photo-meta report /path/to/photos
+./photo-meta report summary /path/to/photos
+./photo-meta report duplicates /path/to/photos
+./photo-meta report stats /path/to/photos
 ```
