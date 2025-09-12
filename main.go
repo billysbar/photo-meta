@@ -77,7 +77,7 @@ func main() {
 	switch command {
 	case "process":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress]")
+			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 			os.Exit(1)
 		}
 		
@@ -99,6 +99,7 @@ func main() {
 		dryRun := false
 		dryRunSampleSize := 0
 		showProgress := true // Default to showing progress
+		generateInfo := false // Generate info_ directory summary file
 		for i := 4; i < len(os.Args); i++ {
 			switch os.Args[i] {
 			case "--workers":
@@ -122,6 +123,8 @@ func main() {
 				showProgress = true
 			case "--no-progress":
 				showProgress = false
+			case "--info":
+				generateInfo = true
 			}
 		}
 		
@@ -149,9 +152,19 @@ func main() {
 		// Clean up empty directories after processing
 		cleanupEmptyDirectoriesIfNeeded("process", sourcePath, dryRun, -1) // -1 means always run cleanup
 		
+		// Generate info directory summary file if requested
+		if generateInfo && !dryRun {
+			fmt.Printf("\n📋 Generating PhotoXX-style directory summary...\n")
+			if err := generateInfoDirectorySummary(destPath, ""); err != nil {
+				fmt.Printf("⚠️  Warning: Failed to generate info directory summary: %v\n", err)
+			} else {
+				fmt.Printf("✅ Info directory summary generated successfully\n")
+			}
+		}
+		
 	case "fallback":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress]")
+			fmt.Println("Usage: ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 			os.Exit(1)
 		}
 		
@@ -173,6 +186,7 @@ func main() {
 		dryRun := false
 		dryRunSampleSize := 0
 		showProgress := true // Default to showing progress
+		generateInfo := false // Generate info_ directory summary file
 		for i := 4; i < len(os.Args); i++ {
 			switch os.Args[i] {
 			case "--workers":
@@ -196,6 +210,8 @@ func main() {
 				showProgress = true
 			case "--no-progress":
 				showProgress = false
+			case "--info":
+				generateInfo = true
 			}
 		}
 		
@@ -223,9 +239,19 @@ func main() {
 		// Clean up empty directories after fallback processing
 		cleanupEmptyDirectoriesIfNeeded("fallback", sourcePath, dryRun, -1)
 		
+		// Generate info directory summary file if requested
+		if generateInfo && !dryRun {
+			fmt.Printf("\n📋 Generating PhotoXX-style directory summary...\n")
+			if err := generateInfoDirectorySummary(destPath, ""); err != nil {
+				fmt.Printf("⚠️  Warning: Failed to generate info directory summary: %v\n", err)
+			} else {
+				fmt.Printf("✅ Info directory summary generated successfully\n")
+			}
+		}
+		
 	case "datetime":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress]")
+			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 			os.Exit(1)
 		}
 		
@@ -247,6 +273,7 @@ func main() {
 		dryRun := false
 		dryRunSampleSize := 0
 		showProgress := true // Default to showing progress
+		generateInfo := false // Generate info_ directory summary file
 		for i := 4; i < len(os.Args); i++ {
 			switch os.Args[i] {
 			case "--workers":
@@ -270,6 +297,8 @@ func main() {
 				showProgress = true
 			case "--no-progress":
 				showProgress = false
+			case "--info":
+				generateInfo = true
 			}
 		}
 		
@@ -296,6 +325,16 @@ func main() {
 		
 		// Clean up empty directories after datetime processing
 		cleanupEmptyDirectoriesIfNeeded("datetime", sourcePath, dryRun, -1)
+		
+		// Generate info directory summary file if requested
+		if generateInfo && !dryRun {
+			fmt.Printf("\n📋 Generating PhotoXX-style directory summary...\n")
+			if err := generateInfoDirectorySummary(destPath, ""); err != nil {
+				fmt.Printf("⚠️  Warning: Failed to generate info directory summary: %v\n", err)
+			} else {
+				fmt.Printf("✅ Info directory summary generated successfully\n")
+			}
+		}
 		
 	case "clean":
 		if len(os.Args) < 3 {
@@ -792,9 +831,9 @@ func showUsage() {
 	fmt.Println("📸 Photo Metadata Editor - High Performance Concurrent Version")
 	fmt.Println()
 	fmt.Println("Commands:")
-	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress]")
-	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress]")
-	fmt.Println("  ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress]")
+	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+	fmt.Println("  ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run [N]] [--verbose] [--workers N] [--progress]")
 	fmt.Println("  ./photo-metadata-editor cleanup /target/path [--dry-run [N]]")
 	fmt.Println("  ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run [N]] [--progress]")
@@ -812,6 +851,7 @@ func showUsage() {
 	fmt.Println("               Lower values reduce system load and memory usage")
 	fmt.Println("  --progress     Show enhanced progress bar (default: true)")
 	fmt.Println("  --no-progress  Disable progress bar display")
+	fmt.Println("  --info         Generate PhotoXX-style info_ directory summary file")
 	fmt.Println()
 	fmt.Println("Process Features:")
 	fmt.Println("  - 🚀 Concurrent processing with configurable worker pools")

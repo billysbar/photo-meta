@@ -27,6 +27,8 @@ Organizes photos and videos by extracting GPS location data and creating YEAR/CO
 
 ```bash
 ./photo-meta process /path/to/photos /path/to/organized
+# Add --info to generate PhotoXX-style directory summary
+./photo-meta process /path/to/photos /path/to/organized --info
 ```
 
 ### 3. **DATETIME** - Date-Based File Matching
@@ -35,6 +37,8 @@ Matches files without GPS data to existing organized structure based on date/tim
 
 ```bash
 ./photo-meta datetime /path/to/unorganized /path/to/organized
+# Add --info to generate PhotoXX-style directory summary
+./photo-meta datetime /path/to/unorganized /path/to/organized --info
 ```
 
 ### 4. **FALLBACK** - Simple Date-Based Organization
@@ -43,6 +47,8 @@ Organizes files with extractable dates into a simple YYYY/Month directory struct
 
 ```bash
 ./photo-meta fallback /path/to/photos /path/to/organized
+# Add --info to generate PhotoXX-style directory summary
+./photo-meta fallback /path/to/photos /path/to/organized --info
 ```
 
 ### 5. **CLEANUP** - Standalone Empty Directory Removal

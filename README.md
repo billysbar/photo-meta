@@ -13,6 +13,7 @@ A powerful, concurrent photo organization tool that processes photos and videos 
 - **🗑️ Empty Directory Cleanup**: Standalone tool for removing empty directories
 - **📊 Progress Visualization**: Enhanced progress bars with ETA and real-time statistics
 - **📋 Comprehensive Reporting**: Detailed analysis with summary, duplicates, and statistics reports
+- **📄 PhotoXX-Style Info Files**: Automatic generation of `info_DIRNAME XX_timestamp.txt` directory summaries
 - **🔍 Dry-Run Modes**: Safe preview modes including quick sampling (dry-run1)
 - **🎥 Video Support**: Full video file processing with separate VIDEO-FILES organization
 - **⏹️ Graceful Cancellation**: Ctrl+C support with proper cleanup
@@ -62,6 +63,7 @@ Organizes photos and videos by extracting GPS location data and creating YEAR/CO
 - `--dry-run1` - Quick preview (1 file per type per directory)
 - `--progress` - Show enhanced progress bar (default: enabled)
 - `--no-progress` - Disable progress bar
+- `--info` - Generate PhotoXX-style info_ directory summary file after processing
 
 #### **Benefits:**
 - ✅ **Automatic Organization**: Creates logical YEAR/COUNTRY/CITY folder structure
@@ -84,6 +86,9 @@ Organizes photos and videos by extracting GPS location data and creating YEAR/CO
 
 # Safe full preview
 ./photo-meta process ~/photos ~/organized --dry-run
+
+# Process with automatic info summary generation
+./photo-meta process ~/photos ~/organized --info
 ```
 
 #### **Output Structure:**
@@ -120,6 +125,7 @@ Matches files without GPS data to existing organized structure based on date/tim
 - `--dry-run1` - Quick preview with samples
 - `--progress` - Show progress bar (default: enabled)
 - `--no-progress` - Disable progress bar
+- `--info` - Generate PhotoXX-style info_ directory summary file after processing
 
 #### **Benefits:**
 - ✅ **GPS-Free Organization**: Organizes files without GPS by matching dates
@@ -138,6 +144,9 @@ Matches files without GPS data to existing organized structure based on date/tim
 
 # Quick sample of datetime matches
 ./photo-meta datetime ~/photos ~/organized --dry-run1
+
+# Process with info summary generation
+./photo-meta datetime ~/photos ~/organized --info
 ```
 
 #### **Use Cases:**
@@ -162,6 +171,7 @@ Organizes files with extractable dates into a simple YYYY/Month directory struct
 - `--dry-run1` - Quick preview with samples
 - `--progress` - Show progress bar (default: enabled)
 - `--no-progress` - Disable progress bar
+- `--info` - Generate PhotoXX-style info_ directory summary file after processing
 
 #### **Benefits:**
 - ✅ **Date-Only Organization**: Uses only extractable dates from filenames
@@ -181,6 +191,9 @@ Organizes files with extractable dates into a simple YYYY/Month directory struct
 
 # Preview full fallback organization
 ./photo-meta fallback ~/photos ~/organized --dry-run
+
+# Process with info summary generation
+./photo-meta fallback ~/photos ~/organized --info
 ```
 
 #### **Output Structure:**
@@ -481,6 +494,13 @@ Generates detailed reports for directory analysis, duplicate detection, and stat
 - **Per Worker**: ~5-10MB additional memory per concurrent worker
 - **Large Collections**: Automatically optimizes for 10k+ files
 
+### **PhotoXX-Style Info Files**
+- **Purpose**: Generate directory summary files compatible with PhotoXX format
+- **Naming**: `info_DIRNAME XX_YYYY-MM-DD_HH-MM-SS.txt`
+- **Contents**: Directory analysis, processing recommendations, file statistics
+- **Usage**: Add `--info` flag to process, datetime, or fallback commands
+- **Behavior**: Only generated in live mode (not in dry-run modes)
+
 ---
 
 ## 🔍 Dry-Run Modes Comparison
@@ -530,16 +550,16 @@ Generates detailed reports for directory analysis, duplicate detection, and stat
 # 4. Full preview to verify operations
 ./photo-meta process ~/messy-photos ~/organized --dry-run
 
-# 5. Process GPS-enabled photos
-./photo-meta process ~/messy-photos ~/organized --workers 6 --progress
+# 5. Process GPS-enabled photos with info summary
+./photo-meta process ~/messy-photos ~/organized --workers 6 --progress --info
 
 # 6. Handle remaining files by date matching
 ./photo-meta datetime ~/leftover-photos ~/organized --dry-run1
-./photo-meta datetime ~/leftover-photos ~/organized --progress
+./photo-meta datetime ~/leftover-photos ~/organized --progress --info
 
 # 7. Fallback organization for any remaining dated files
 ./photo-meta fallback ~/still-leftover-photos ~/organized --dry-run1
-./photo-meta fallback ~/still-leftover-photos ~/organized --progress
+./photo-meta fallback ~/still-leftover-photos ~/organized --progress --info
 
 # 8. Check for duplicates before cleaning
 ./photo-meta report duplicates ~/organized --save
@@ -563,15 +583,17 @@ Generates detailed reports for directory analysis, duplicate detection, and stat
 ### **Large Collection Processing**
 
 ```bash
-# For 10,000+ photos with high-performance system
+# For 10,000+ photos with high-performance system and info generation
 ./photo-meta process /massive-collection /organized \
   --workers 12 \
-  --progress
+  --progress \
+  --info
 
 # For network storage or slower systems
 ./photo-meta process /network-photos /organized \
   --workers 2 \
-  --progress
+  --progress \
+  --info
 ```
 
 ### **Safe Duplicate Cleaning**
