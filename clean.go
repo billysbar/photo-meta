@@ -39,12 +39,12 @@ const (
 )
 
 // processClean handles the clean command workflow
-func processClean(targetPath string, dryRun bool, dryRun1 bool, verbose bool, workers int, showProgress bool) error {
+func processClean(targetPath string, dryRun bool, dryRunSampleSize int, verbose bool, workers int, showProgress bool) error {
 	fmt.Printf("🧹 Clean Mode - Duplicate Detection and Removal\n")
 	fmt.Printf("📁 Target: %s\n", targetPath)
 	if dryRun {
-		if dryRun1 {
-			fmt.Println("🔍 DRY RUN1 MODE - Sample analysis of duplicate files")
+		if dryRunSampleSize > 0 {
+			fmt.Printf("🔍 DRY RUN MODE - Sample analysis of %d duplicate groups\n", dryRunSampleSize)
 		} else {
 			fmt.Println("🔍 DRY RUN MODE - No files will be deleted")
 		}
@@ -62,10 +62,10 @@ func processClean(targetPath string, dryRun bool, dryRun1 bool, verbose bool, wo
 		return nil
 	}
 
-	// Sample duplicate groups if dry-run1 mode
-	if dryRun1 && len(duplicateGroups) > 0 {
-		// For dry-run1, show only first 3 duplicate groups as sample
-		maxGroups := 3
+	// Sample duplicate groups if sampling mode
+	if dryRunSampleSize > 0 && len(duplicateGroups) > 0 {
+		// For sampling mode, show only first N duplicate groups as sample
+		maxGroups := dryRunSampleSize
 		if len(duplicateGroups) < maxGroups {
 			maxGroups = len(duplicateGroups)
 		}

@@ -10,14 +10,14 @@ import (
 )
 
 // processMerge handles the merge command workflow
-func processMerge(sourcePath, targetPath string, workers int, dryRun bool, dryRun1 bool, showProgress bool) error {
+func processMerge(sourcePath, targetPath string, workers int, dryRun bool, dryRunSampleSize int, showProgress bool) error {
 	fmt.Printf("🔀 Merge Mode - Combining Photos from Source into Target\n")
 	fmt.Printf("📂 Source: %s\n", sourcePath)
 	fmt.Printf("📁 Target: %s\n", targetPath)
 	
 	if dryRun {
-		if dryRun1 {
-			fmt.Println("🔍 DRY RUN1 MODE - Sample merge preview (1 file per type per directory)")
+		if dryRunSampleSize > 0 {
+			fmt.Printf("🔍 DRY RUN MODE - Sample merge preview (%d file(s) per type per directory)\n", dryRunSampleSize)
 		} else {
 			fmt.Println("🔍 DRY RUN MODE - No files will be moved")
 		}
@@ -28,9 +28,9 @@ func processMerge(sourcePath, targetPath string, workers int, dryRun bool, dryRu
 	var jobs []WorkJob
 	var err error
 	
-	if dryRun1 {
-		// For dry-run1, sample 1 photo and 1 video per directory
-		jobs, err = collectSampleFilesForMerge(sourcePath, targetPath, dryRun)
+	if dryRunSampleSize > 0 {
+		// For sampling mode, sample N photos and N videos per directory
+		jobs, err = collectSampleFilesForMerge(sourcePath, targetPath, dryRun, dryRunSampleSize)
 	} else {
 		// Collect all files from source
 		err = filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
@@ -86,7 +86,7 @@ func processMerge(sourcePath, targetPath string, workers int, dryRun bool, dryRu
 }
 
 // collectSampleFilesForMerge collects a sample of files for merge dry-run1 mode
-func collectSampleFilesForMerge(sourcePath, targetPath string, dryRun bool) ([]WorkJob, error) {
+func collectSampleFilesForMerge(sourcePath, targetPath string, dryRun bool, sampleSize int) ([]WorkJob, error) {
 	// Map to track files by directory and type
 	dirFiles := make(map[string]map[string][]string) // directory -> {photos: [], videos: []}
 	
@@ -131,7 +131,7 @@ func collectSampleFilesForMerge(sourcePath, targetPath string, dryRun bool) ([]W
 		return nil, err
 	}
 	
-	// Sample files: 1 photo and 1 video per directory (if available)
+	// Sample files: N photos and N videos per directory (if available)
 	var jobs []WorkJob
 	totalPhotos := 0
 	totalVideos := 0
@@ -139,29 +139,41 @@ func collectSampleFilesForMerge(sourcePath, targetPath string, dryRun bool) ([]W
 	directoriesWithVideos := 0
 	
 	for _, files := range dirFiles {
-		// Sample 1 photo per directory
+		// Sample N photos per directory
 		if len(files["photos"]) > 0 {
-			photoPath := files["photos"][0] // Take first photo
-			jobs = append(jobs, WorkJob{
-				PhotoPath: photoPath,
-				DestPath:  targetPath,
-				JobType:   "merge",
-				DryRun:    dryRun,
-			})
-			totalPhotos++
+			count := sampleSize
+			if count > len(files["photos"]) {
+				count = len(files["photos"])
+			}
+			for i := 0; i < count; i++ {
+				photoPath := files["photos"][i]
+				jobs = append(jobs, WorkJob{
+					PhotoPath: photoPath,
+					DestPath:  targetPath,
+					JobType:   "merge",
+					DryRun:    dryRun,
+				})
+				totalPhotos++
+			}
 			directoriesWithPhotos++
 		}
 		
-		// Sample 1 video per directory
+		// Sample N videos per directory
 		if len(files["videos"]) > 0 {
-			videoPath := files["videos"][0] // Take first video
-			jobs = append(jobs, WorkJob{
-				PhotoPath: videoPath,
-				DestPath:  targetPath,
-				JobType:   "merge",
-				DryRun:    dryRun,
-			})
-			totalVideos++
+			count := sampleSize
+			if count > len(files["videos"]) {
+				count = len(files["videos"])
+			}
+			for i := 0; i < count; i++ {
+				videoPath := files["videos"][i]
+				jobs = append(jobs, WorkJob{
+					PhotoPath: videoPath,
+					DestPath:  targetPath,
+					JobType:   "merge",
+					DryRun:    dryRun,
+				})
+				totalVideos++
+			}
 			directoriesWithVideos++
 		}
 	}

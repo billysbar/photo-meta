@@ -8,14 +8,14 @@ import (
 )
 
 // processFallbackOrganization handles the fallback command workflow
-func processFallbackOrganization(sourcePath, destPath string, dryRun bool, dryRun1 bool, showProgress bool) error {
+func processFallbackOrganization(sourcePath, destPath string, dryRun bool, dryRunSampleSize int, showProgress bool) error {
 	fmt.Printf("📅 Fallback Organization Mode\n")
 	fmt.Printf("🔍 Source: %s\n", sourcePath)
 	fmt.Printf("📁 Destination: %s\n", destPath)
 
 	if dryRun {
-		if dryRun1 {
-			fmt.Println("🔍 DRY RUN1 MODE - Sample only 1 file per type per subdirectory")
+		if dryRunSampleSize > 0 {
+			fmt.Printf("🔍 DRY RUN MODE - Sample only %d file(s) per type per subdirectory\n", dryRunSampleSize)
 		} else {
 			fmt.Println("🔍 DRY RUN MODE - No files will be moved")
 		}
@@ -24,11 +24,11 @@ func processFallbackOrganization(sourcePath, destPath string, dryRun bool, dryRu
 
 	// Process files in source path
 	fmt.Println("🔄 Processing files for fallback organization...")
-	return processFilesWithFallbackOrganization(sourcePath, destPath, dryRun, dryRun1, showProgress)
+	return processFilesWithFallbackOrganization(sourcePath, destPath, dryRun, dryRunSampleSize, showProgress)
 }
 
 // processFilesWithFallbackOrganization processes source files using fallback year/month organization
-func processFilesWithFallbackOrganization(sourcePath, destPath string, dryRun bool, dryRun1 bool, showProgress bool) error {
+func processFilesWithFallbackOrganization(sourcePath, destPath string, dryRun bool, dryRunSampleSize int, showProgress bool) error {
 	processedCount := 0
 	videoCount := 0
 	photoCount := 0
@@ -37,10 +37,10 @@ func processFilesWithFallbackOrganization(sourcePath, destPath string, dryRun bo
 	// Collect files to process
 	var filesToProcess []string
 
-	if dryRun1 {
-		// Sample files for dry-run1 mode
+	if dryRunSampleSize > 0 {
+		// Sample files for sampling mode
 		var err error
-		filesToProcess, err = collectSampleFilesForFallback(sourcePath)
+		filesToProcess, err = collectSampleFilesForFallback(sourcePath, dryRunSampleSize)
 		if err != nil {
 			return err
 		}
@@ -203,7 +203,7 @@ func moveFileToFallbackLocation(sourcePath, destBasePath, location, date string,
 }
 
 // collectSampleFilesForFallback collects sample files for fallback dry-run1 mode
-func collectSampleFilesForFallback(sourcePath string) ([]string, error) {
+func collectSampleFilesForFallback(sourcePath string, sampleSize int) ([]string, error) {
 	// Map to track files by subdirectory and type
 	dirFiles := make(map[string]map[string][]string) // subdirectory -> {photos: [], videos: []}
 
@@ -257,18 +257,30 @@ func collectSampleFilesForFallback(sourcePath string) ([]string, error) {
 		return nil, err
 	}
 
-	// Sample files: 1 photo and 1 video per subdirectory (if available)
+	// Sample files: N photos and N videos per subdirectory (if available)
 	var sampleFiles []string
 
 	for _, files := range dirFiles {
-		// Sample 1 photo per subdirectory
+		// Sample N photos per subdirectory
 		if len(files["photos"]) > 0 {
-			sampleFiles = append(sampleFiles, files["photos"][0])
+			count := sampleSize
+			if count > len(files["photos"]) {
+				count = len(files["photos"])
+			}
+			for i := 0; i < count; i++ {
+				sampleFiles = append(sampleFiles, files["photos"][i])
+			}
 		}
 
-		// Sample 1 video per subdirectory
+		// Sample N videos per subdirectory
 		if len(files["videos"]) > 0 {
-			sampleFiles = append(sampleFiles, files["videos"][0])
+			count := sampleSize
+			if count > len(files["videos"]) {
+				count = len(files["videos"])
+			}
+			for i := 0; i < count; i++ {
+				sampleFiles = append(sampleFiles, files["videos"][i])
+			}
 		}
 	}
 
