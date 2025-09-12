@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"log"
 	"os"
@@ -23,6 +24,46 @@ func (e *NoGPSError) Error() string {
 func isNoGPSError(err error) bool {
 	_, ok := err.(*NoGPSError)
 	return ok
+}
+
+// confirmOperation prompts the user to confirm the operation before proceeding
+func confirmOperation(command string, sourcePath, destPath string, dryRun bool, dryRunSampleSize int) bool {
+	fmt.Println()
+	fmt.Println("═══════════════════════════════════════════")
+	fmt.Printf("  📋 OPERATION CONFIRMATION\n")
+	fmt.Println("═══════════════════════════════════════════")
+	fmt.Printf("Command: %s\n", strings.ToUpper(command))
+	
+	if sourcePath != "" {
+		fmt.Printf("Source:  %s\n", sourcePath)
+	}
+	if destPath != "" {
+		fmt.Printf("Target:  %s\n", destPath)
+	}
+	
+	// Check if this is a read-only command
+	isReadOnly := command == "summary" || command == "report"
+	
+	if dryRun {
+		if dryRunSampleSize > 0 {
+			fmt.Printf("Mode:    🔍 DRY RUN (Sample: %d files per type per directory)\n", dryRunSampleSize)
+		} else {
+			fmt.Printf("Mode:    🔍 DRY RUN (Preview only - no files will be modified)\n")
+		}
+	} else if isReadOnly {
+		fmt.Printf("Mode:    📖 READ-ONLY (No files will be modified)\n")
+	} else {
+		fmt.Printf("Mode:    ⚠️  LIVE RUN (Files will be moved/modified/deleted)\n")
+	}
+	
+	fmt.Println("═══════════════════════════════════════════")
+	fmt.Print("Continue with this operation? [y/N]: ")
+	
+	reader := bufio.NewReader(os.Stdin)
+	response, _ := reader.ReadString('\n')
+	response = strings.TrimSpace(strings.ToLower(response))
+	
+	return response == "y" || response == "yes"
 }
 
 func main() {
@@ -82,6 +123,12 @@ func main() {
 			case "--no-progress":
 				showProgress = false
 			}
+		}
+		
+		// Ask for user confirmation
+		if !confirmOperation("process", sourcePath, destPath, dryRun, dryRunSampleSize) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
 		}
 		
 		// Check if source path exists
@@ -152,6 +199,12 @@ func main() {
 			}
 		}
 		
+		// Ask for user confirmation
+		if !confirmOperation("fallback", sourcePath, destPath, dryRun, dryRunSampleSize) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
+		}
+		
 		// Check if source path exists
 		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
 			log.Fatalf("Source path does not exist: %s", sourcePath)
@@ -218,6 +271,12 @@ func main() {
 			case "--no-progress":
 				showProgress = false
 			}
+		}
+		
+		// Ask for user confirmation
+		if !confirmOperation("datetime", sourcePath, destPath, dryRun, dryRunSampleSize) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
 		}
 		
 		// Check if source path exists
@@ -296,6 +355,12 @@ func main() {
 			}
 		}
 		
+		// Ask for user confirmation
+		if !confirmOperation("clean", "", targetPath, dryRun, dryRunSampleSize) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
+		}
+		
 		// Process clean (duplicate removal)
 		if err := processClean(targetPath, dryRun, dryRunSampleSize, verbose, workers, showProgress); err != nil {
 			log.Fatal(err)
@@ -354,6 +419,12 @@ func main() {
 			}
 		}
 		
+		// Ask for user confirmation
+		if !confirmOperation("merge", sourcePath, targetPath, dryRun, dryRunSampleSize) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
+		}
+		
 		// Check if source path exists
 		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
 			log.Fatalf("Source path does not exist: %s", sourcePath)
@@ -376,6 +447,12 @@ func main() {
 		}
 		
 		sourcePath := os.Args[2]
+		
+		// Ask for user confirmation
+		if !confirmOperation("summary", sourcePath, "", false, 0) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
+		}
 		
 		// Check if source path exists
 		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
@@ -436,6 +513,12 @@ func main() {
 			log.Fatalf("Source path does not exist: %s", sourcePath)
 		}
 		
+		// Ask for user confirmation
+		if !confirmOperation("report", sourcePath, "", false, 0) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
+		}
+		
 		// Configure report
 		config := ReportConfig{
 			GenerateFile:  saveFile,
@@ -479,6 +562,12 @@ func main() {
 			case "--dry-run":
 				dryRun = true
 			}
+		}
+		
+		// Ask for user confirmation
+		if !confirmOperation("cleanup", "", targetPath, dryRun, 0) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
 		}
 		
 		// Run cleanup
