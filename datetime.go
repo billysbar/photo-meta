@@ -407,6 +407,15 @@ func extractDateFromFilename(filename string) (string, error) {
 		}
 	}
 
+	// Pattern 5: IMG_YYYYMMDD_HHMMSS format (e.g., IMG_20220430_140228.jpg)
+	pattern5 := regexp.MustCompile(`^IMG_(\d{4})(\d{2})(\d{2})_\d{6}`)
+	if matches := pattern5.FindStringSubmatch(filename); len(matches) >= 4 {
+		year, month, day := matches[1], matches[2], matches[3]
+		if isValidYear(year) && isValidMonth(month) && isValidDay(day) {
+			return fmt.Sprintf("%s-%s-%s", year, month, day), nil
+		}
+	}
+
 	return "", fmt.Errorf("no date pattern found in filename")
 }
 
