@@ -1,0 +1,14 @@
+{
+  "paris": {
+    "city_name": "paris",
+    "country": "vacation",
+    "user_confirmed": false,
+    "created_at": "2025-09-12T20:25:50.996633+01:00"
+  },
+  "scarborough": {
+    "city_name": "scarborough",
+    "country": "2",
+    "user_confirmed": false,
+    "created_at": "2025-09-12T20:26:03.511398+01:00"
+  }
+}

@@ -79,83 +79,129 @@ func processDateTimeMatching(sourcePath, destPath string, dryRun bool, dryRunSam
 	return processFilesWithDateTimeMatching(sourcePath, destPath, db, dryRun, dryRunSampleSize, showProgress)
 }
 
-// checkForGPSInSource scans source path for any files with GPS data
+// checkForGPSInSource scans source path for any files with GPS data using cache
 func checkForGPSInSource(sourcePath string) (bool, string, error) {
 	var hasGPS bool
 	var gpsFile string
+	cache := GetGPSCache()
 	
-	// First pass: count total media files
+	// First pass: count total media files and categorize them
 	fmt.Print("📊 Counting files...")
 	var totalFiles int
+	var cachedFiles int
+	var needsScanning []string
+	
 	err := filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
-		if !info.IsDir() && isMediaFile(path) {
-			totalFiles++
+		if info.IsDir() || !isMediaFile(path) {
+			return nil
 		}
+		
+		totalFiles++
+		
+		// Check if file is in cache and valid
+		if cache != nil {
+			hasGPSCached, isCached, err := cache.IsFileProcessed(path)
+			if err != nil {
+				fmt.Printf("\n⚠️  Cache error for %s: %v\n", filepath.Base(path), err)
+				needsScanning = append(needsScanning, path)
+			} else if isCached {
+				cachedFiles++
+				if hasGPSCached {
+					hasGPS = true
+					gpsFile = path
+					return fmt.Errorf("found GPS in cache")
+				}
+			} else {
+				needsScanning = append(needsScanning, path)
+			}
+		} else {
+			needsScanning = append(needsScanning, path)
+		}
+		
 		return nil
 	})
+	
+	if err != nil && err.Error() == "found GPS in cache" {
+		fmt.Printf(" found %d media files (%d cached, GPS found in cache)\n", totalFiles, cachedFiles)
+		return hasGPS, gpsFile, nil
+	}
 	if err != nil {
 		return false, "", err
 	}
-	fmt.Printf(" found %d media files\n", totalFiles)
+	
+	fmt.Printf(" found %d media files (%d cached, %d need scanning)\n", totalFiles, cachedFiles, len(needsScanning))
 	
 	if totalFiles == 0 {
 		return false, "", nil
 	}
 	
-	// Second pass: check for GPS with progress bar
-	progress := NewProgressTracker(totalFiles)
+	// Early return if all files are cached and none have GPS
+	if len(needsScanning) == 0 {
+		fmt.Println("✅ All files are cached, no GPS data found")
+		return false, "", nil
+	}
+	
+	// Second pass: scan uncached files with progress bar
+	fmt.Printf("🔍 Scanning %d uncached files for GPS data...\n", len(needsScanning))
+	progress := NewProgressTracker(len(needsScanning))
 	scannedCount := 0
 	
-	err = filepath.Walk(sourcePath, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		// Skip directories
-		if info.IsDir() {
-			return nil
-		}
-
-		// Check if it's a media file (photo or video)
-		if !isMediaFile(path) {
-			return nil
-		}
-		
+	for _, path := range needsScanning {
 		scannedCount++
 		
 		// Update progress
 		progress.Update(true)
 		
-		// Show progress bar every 10 files or on last file
-		if scannedCount%10 == 0 || scannedCount == totalFiles {
+		// Show progress bar every 5 files or on last file
+		if scannedCount%5 == 0 || scannedCount == len(needsScanning) {
 			fmt.Printf("\r%s", progress.FormatProgressBar())
 		}
 
-		// Quick check for GPS data
+		// Check for GPS data
 		_, _, err = extractGPSCoordinates(path)
-		if err == nil {
+		hasGPSThisFile := (err == nil)
+		
+		if hasGPSThisFile {
 			hasGPS = true
 			gpsFile = path
-			fmt.Printf("\r%s\n", progress.FormatProgressBar()) // Final update
-			return fmt.Errorf("found GPS") // Early termination
 		}
-
-		return nil
-	})
+		
+		// Cache the result (only if not in dry run mode)
+		if cache != nil {
+			fileHash, hashErr := calculateFileHash(path)
+			if hashErr != nil {
+				fmt.Printf("\n⚠️  Warning: Could not calculate hash for %s: %v\n", filepath.Base(path), hashErr)
+				fileHash = "" // Use empty hash as fallback
+			}
+			
+			if cacheErr := cache.RecordFile(path, hasGPSThisFile, fileHash); cacheErr != nil {
+				fmt.Printf("\n⚠️  Warning: Could not cache result for %s: %v\n", filepath.Base(path), cacheErr)
+			}
+		}
+		
+		// Early termination if GPS found
+		if hasGPSThisFile {
+			fmt.Printf("\r%s\n", progress.FormatProgressBar()) // Final update
+			break
+		}
+	}
 	
 	// Ensure final progress update is shown
-	if err == nil || err.Error() != "found GPS" {
+	if !hasGPS {
 		fmt.Printf("\r%s\n", progress.FormatProgressBar())
 	}
-
-	if err != nil && err.Error() == "found GPS" {
-		return hasGPS, gpsFile, nil
+	
+	// Show cache statistics
+	if cache != nil {
+		if total, withGPS, withoutGPS, err := cache.GetCacheStats(); err == nil {
+			fmt.Printf("📊 Cache stats: %d total files (%d with GPS, %d without GPS)\n", total, withGPS, withoutGPS)
+		}
 	}
 
-	return hasGPS, gpsFile, err
+	return hasGPS, gpsFile, nil
 }
 
 // buildDateLocationDB scans destination and builds date->location mapping
