@@ -715,6 +715,71 @@ func main() {
 			log.Fatal(err)
 		}
 		
+	case "tiff":
+		if len(os.Args) < 3 {
+			fmt.Println("Usage: ./photo-metadata-editor tiff /target/path [--dry-run [N]] [--workers N] [--progress]")
+			os.Exit(1)
+		}
+
+		targetPath := os.Args[2]
+
+		// Check if target path exists
+		if _, err := os.Stat(targetPath); os.IsNotExist(err) {
+			log.Fatalf("Target path does not exist: %s", targetPath)
+		}
+
+		// Check for incorrectly formatted dry-run arguments
+		for i := 3; i < len(os.Args); i++ {
+			arg := strings.ToLower(os.Args[i])
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" {
+				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
+				fmt.Println("Use '--dry-run [N]' instead")
+				os.Exit(1)
+			}
+		}
+
+		// Parse optional flags
+		workers := 4 // Default worker count
+		dryRun := false
+		dryRunSampleSize := 0
+		showProgress := true // Default to showing progress
+		for i := 3; i < len(os.Args); i++ {
+			switch os.Args[i] {
+			case "--workers":
+				if i+1 < len(os.Args) {
+					if _, err := fmt.Sscanf(os.Args[i+1], "%d", &workers); err != nil {
+						log.Fatalf("Invalid worker count: %s", os.Args[i+1])
+					}
+					i++ // Skip the next argument since it's the worker count
+				}
+			case "--dry-run":
+				dryRun = true
+				dryRunSampleSize = 0 // Process all files for preview
+				// Check if next argument is a number
+				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
+					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
+						dryRunSampleSize = size
+						i++ // Skip the next argument since it's the sample size
+					}
+				}
+			case "--progress":
+				showProgress = true
+			case "--no-progress":
+				showProgress = false
+			}
+		}
+
+		// Ask for user confirmation
+		if !confirmOperation("tiff", "", targetPath, dryRun, dryRunSampleSize) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
+		}
+
+		// Process tiff timestamp fixes
+		if err := processTiffTimestampFix(targetPath, workers, dryRun, dryRunSampleSize, showProgress); err != nil {
+			log.Fatal(err)
+		}
+
 	case "cleanup":
 		if len(os.Args) < 3 {
 			fmt.Println("Usage: ./photo-metadata-editor cleanup /target/path [--dry-run [N]]")
@@ -1056,6 +1121,7 @@ func showUsage() {
 	fmt.Println("  ./photo-metadata-editor organize /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--reset-db]")
 	fmt.Println("  ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+	fmt.Println("  ./photo-metadata-editor tiff /target/path [--dry-run [N]] [--workers N] [--progress]")
 	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run [N]] [--verbose] [--workers N] [--progress]")
 	fmt.Println("  ./photo-metadata-editor cleanup /target/path [--dry-run [N]]")
 	fmt.Println("  ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run [N]] [--progress]")
@@ -1123,6 +1189,15 @@ func showUsage() {
 	fmt.Println("  - 🔍 --dry-run [N] mode for quick overview (N files per type per directory)")
 	fmt.Println("  - 📷 Simple YYYY-MM-DD.ext filename format")
 	fmt.Println("  - 🎥 Videos organized in VIDEO-FILES/YYYY/Month structure")
+	fmt.Println()
+	fmt.Println("TIFF Features:")
+	fmt.Println("  - 🕐 Fix midnight timestamps (00:00:00) using EXIF ModifyDate")
+	fmt.Println("  - 📸 Updates both EXIF timestamps and filename datetime")
+	fmt.Println("  - 🔍 --dry-run mode for safe preview without modifying files")
+	fmt.Println("  - 🔍 --dry-run [N] mode for quick overview (N files sampled)")
+	fmt.Println("  - 🔄 Concurrent processing with configurable worker pools")
+	fmt.Println("  - 📊 Enhanced progress bars with visual feedback")
+	fmt.Println("  - 🗂️ Preserves location data in filenames while updating date portion")
 	fmt.Println()
 	fmt.Println("Clean Features:")
 	fmt.Println("  - ⚡ High-speed duplicate detection using SHA-256")
@@ -1382,10 +1457,8 @@ func processMediaFileInternal(mediaPath, destBasePath string, dryRun bool) error
 	}
 	
 	// Generate new filename and directory structure using destination base path
-	newFilename := fmt.Sprintf("%s-%s%s", 
-		date.Format("2006-01-02"), 
-		city, 
-		filepath.Ext(mediaPath))
+	// Use helper function to preserve existing hour+minute if present
+	newFilename := generateFilenameWithTime(mediaPath, date, city)
 	
 	// Smart directory structure - check if destination already ends with the year
 	year := date.Format("2006")

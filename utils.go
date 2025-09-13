@@ -2,7 +2,10 @@ package main
 
 import (
 	"fmt"
+	"path/filepath"
+	"regexp"
 	"strings"
+	"time"
 	"unicode"
 )
 
@@ -310,4 +313,26 @@ func parseMonth(monthStr string) (int, error) {
 	}
 
 	return 0, fmt.Errorf("unknown month: %s", monthStr)
+}
+
+// generateFilenameWithTime creates a filename preserving existing hour+minute if present
+func generateFilenameWithTime(originalPath string, date time.Time, city string) string {
+	currentFilename := filepath.Base(originalPath)
+	ext := filepath.Ext(originalPath)
+
+	// Check if filename already has time component (YYYY-MM-DD-HHMM pattern)
+	timePattern := regexp.MustCompile(`^\d{4}-\d{2}-\d{2}-(\d{4})`)
+	matches := timePattern.FindStringSubmatch(currentFilename)
+
+	var dateComponent string
+	if len(matches) > 1 {
+		// Preserve existing time component
+		existingTime := matches[1]
+		dateComponent = date.Format("2006-01-02") + "-" + existingTime
+	} else {
+		// No existing time component, use date only
+		dateComponent = date.Format("2006-01-02")
+	}
+
+	return fmt.Sprintf("%s-%s%s", dateComponent, city, ext)
 }

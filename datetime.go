@@ -477,9 +477,9 @@ func moveFileToLocation(sourcePath, destBasePath, location, date string, dryRun 
 		city = "unknown"
 	}
 
-	// Generate new filename
-	ext := filepath.Ext(sourcePath)
-	newFilename := fmt.Sprintf("%s-%s%s", date, city, ext)
+	// Generate new filename preserving existing hour+minute if present
+	dateTime, _ := time.Parse("2006-01-02", date) // Convert date string back to time for helper
+	newFilename := generateFilenameWithTime(sourcePath, dateTime, city)
 
 	var destDir string
 	var fileType string

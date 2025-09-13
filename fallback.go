@@ -1,10 +1,12 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 )
 
 // processFallbackOrganization handles the fallback command workflow
@@ -89,8 +91,18 @@ func processFilesWithFallbackOrganization(sourcePath, destPath string, dryRun bo
 			
 			fmt.Printf("📅 File: %s -> Date: %s -> Location: %s\n", filepath.Base(path), date, location)
 
-			// Move file to fallback location
-			if err := moveFileToFallbackLocation(path, destPath, location, date, dryRun); err != nil {
+			// Prompt for location information
+			country, city, shouldSkip, err := promptForFallbackLocation(path)
+			if err != nil {
+				return fmt.Errorf("failed to get location for %s: %v", filepath.Base(path), err)
+			}
+			if shouldSkip {
+				fmt.Printf("⏭️  Skipping file: %s\n", filepath.Base(path))
+				continue
+			}
+
+			// Move file to fallback location with prompted location info
+			if err := moveFileToFallbackLocationWithLocation(path, destPath, location, date, country, city, dryRun); err != nil {
 				return fmt.Errorf("failed to move %s: %v", filepath.Base(path), err)
 			}
 
@@ -126,9 +138,14 @@ func processFilesWithFallbackOrganization(sourcePath, destPath string, dryRun bo
 
 // moveFileToFallbackLocation moves file to the fallback year/month location
 func moveFileToFallbackLocation(sourcePath, destBasePath, location, date string, dryRun bool) error {
-	// Generate new filename using simple date format: YYYY-MM-DD.ext
-	ext := filepath.Ext(sourcePath)
-	newFilename := fmt.Sprintf("%s%s", date, ext)
+	// Parse date string to time.Time for generateFilenameWithTime
+	parsedDate, err := time.Parse("2006-01-02", date)
+	if err != nil {
+		return fmt.Errorf("failed to parse date %s: %v", date, err)
+	}
+
+	// Generate new filename preserving existing hour+minute if present
+	newFilename := generateFilenameWithTime(sourcePath, parsedDate, "")
 
 	var destDir string
 	var fileType string
@@ -298,4 +315,131 @@ func getMonthName(monthNum string) string {
 		return name
 	}
 	return "Unknown"
+}
+
+// promptForFallbackLocation prompts user for country and city information
+func promptForFallbackLocation(filePath string) (country, city string, shouldSkip bool, err error) {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Printf("\n📸 File: %s\n", filepath.Base(filePath))
+	fmt.Print("Enter country for this location (or 'skip' to skip this file): ")
+	countryInput, err := reader.ReadString('\n')
+	if err != nil {
+		return "", "", false, err
+	}
+	country = strings.TrimSpace(countryInput)
+	if country == "" || strings.ToLower(country) == "skip" {
+		return "", "", true, nil
+	}
+
+	fmt.Print("Enter city name: ")
+	cityInput, err := reader.ReadString('\n')
+	if err != nil {
+		return "", "", false, err
+	}
+	city = strings.TrimSpace(cityInput)
+	if city == "" {
+		city = country // Default city to country if empty
+	}
+
+	// Clean up the names using existing utility functions
+	country = anglicizeName(country)
+	city = anglicizeName(city)
+
+	return country, city, false, nil
+}
+
+// moveFileToFallbackLocationWithLocation moves file to fallback location using provided country/city
+func moveFileToFallbackLocationWithLocation(sourcePath, destBasePath, location, date, country, city string, dryRun bool) error {
+	// Parse date string to time.Time for generateFilenameWithTime
+	parsedDate, err := time.Parse("2006-01-02", date)
+	if err != nil {
+		return fmt.Errorf("failed to parse date %s: %v", date, err)
+	}
+
+	// Generate new filename with location information preserving existing hour+minute if present
+	newFilename := generateFilenameWithTime(sourcePath, parsedDate, city)
+
+	var destDir string
+	var fileType string
+
+	// Check if this is a video file
+	if isVideoFile(sourcePath) {
+		// For video files, place in VIDEO-FILES/YYYY/Country/City structure
+		fileType = "video"
+		dateParts := strings.Split(date, "-")
+		if len(dateParts) >= 1 {
+			year := dateParts[0]
+			destDir = filepath.Join(destBasePath, "VIDEO-FILES", year, country, city)
+		} else {
+			destDir = filepath.Join(destBasePath, "VIDEO-FILES", location)
+		}
+		if dryRun {
+			fmt.Printf("🎥 [DRY RUN] Processing video file: %s\n", filepath.Base(sourcePath))
+		} else {
+			fmt.Printf("🎥 Processing video file: %s\n", filepath.Base(sourcePath))
+		}
+	} else {
+		// For photo files, use the YYYY/Country/City structure
+		fileType = "photo"
+		dateParts := strings.Split(date, "-")
+		if len(dateParts) >= 1 {
+			year := dateParts[0]
+			destDir = filepath.Join(destBasePath, year, country, city)
+		} else {
+			destDir = filepath.Join(destBasePath, location)
+		}
+		if dryRun {
+			fmt.Printf("📷 [DRY RUN] Processing photo file: %s\n", filepath.Base(sourcePath))
+		} else {
+			fmt.Printf("📷 Processing photo file: %s\n", filepath.Base(sourcePath))
+		}
+	}
+
+	destPath := filepath.Join(destDir, newFilename)
+
+	// Handle duplicates
+	finalPath := destPath
+	ext := filepath.Ext(sourcePath)
+	counter := 1
+	for {
+		if _, err := os.Stat(finalPath); os.IsNotExist(err) {
+			break
+		}
+
+		base := strings.TrimSuffix(newFilename, ext)
+		duplicateFilename := fmt.Sprintf("%s-%d%s", base, counter, ext)
+		finalPath = filepath.Join(destDir, duplicateFilename)
+		counter++
+
+		if counter > 1000 {
+			return fmt.Errorf("too many duplicate filenames")
+		}
+	}
+
+	if dryRun {
+		// Dry run mode - just show what would happen
+		if fileType == "video" {
+			fmt.Printf("✅ [DRY RUN] Video would be moved to: %s\n", finalPath)
+		} else {
+			fmt.Printf("✅ [DRY RUN] Photo would be moved to: %s\n", finalPath)
+		}
+		return nil
+	}
+
+	// Create directory structure if it doesn't exist
+	if err := os.MkdirAll(destDir, 0755); err != nil {
+		return fmt.Errorf("failed to create directory %s: %v", destDir, err)
+	}
+
+	// Move the file
+	if err := os.Rename(sourcePath, finalPath); err != nil {
+		return err
+	}
+
+	if fileType == "video" {
+		fmt.Printf("✅ Video moved to: %s\n", finalPath)
+	} else {
+		fmt.Printf("✅ Photo moved to: %s\n", finalPath)
+	}
+	return nil
 }

@@ -328,10 +328,35 @@ func processJob(job WorkJob, ctx context.Context) WorkResult {
 		result.Success = false
 		
 	case "clean":
-		// Implement clean logic here  
+		// Implement clean logic here
 		result.Message = "Clean operation not yet implemented"
 		result.Success = false
-		
+
+	case "tiff":
+		// For tiff jobs, we need to pass the location database
+		// This is a bit of a hack since we can't easily pass additional context through the job system
+		// TODO: Consider refactoring the job system to support additional context
+		err = processTiffFile(job.PhotoPath, job.DryRun)
+		if err != nil {
+			result.Error = err
+		} else {
+			result.Success = true
+			// Determine file type for success messages
+			if isVideoFile(job.PhotoPath) {
+				if job.DryRun {
+					result.Message = "Video timestamp would be fixed (dry run)"
+				} else {
+					result.Message = "Video timestamp fixed successfully"
+				}
+			} else {
+				if job.DryRun {
+					result.Message = "Photo timestamp would be fixed (dry run)"
+				} else {
+					result.Message = "Photo timestamp fixed successfully"
+				}
+			}
+		}
+
 	case "merge":
 		err = processMergeFile(job.PhotoPath, job.DestPath, job.DryRun)
 		if err != nil {
