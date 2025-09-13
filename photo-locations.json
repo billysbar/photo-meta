@@ -1,9 +1,21 @@
 {
+  "banteay-srei-district": {
+    "city_name": "banteay-srei-district",
+    "country": "cambodia",
+    "user_confirmed": true,
+    "created_at": "2025-09-13T15:19:17.748303+01:00"
+  },
   "bury": {
     "city_name": "bury",
-    "country": "uk",
+    "country": "united-kingdom",
     "user_confirmed": true,
     "created_at": "2025-09-13T12:05:03.611663+01:00"
+  },
+  "dubai": {
+    "city_name": "dubai",
+    "country": "uae",
+    "user_confirmed": true,
+    "created_at": "2025-09-13T15:17:32.474863+01:00"
   },
   "scarborough": {
     "city_name": "scarborough",
@@ -13,7 +25,7 @@
   },
   "york": {
     "city_name": "york",
-    "country": "uk",
+    "country": "united-kingdom",
     "user_confirmed": true,
     "created_at": "2025-09-13T12:04:53.092781+01:00"
   }

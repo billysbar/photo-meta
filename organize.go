@@ -108,12 +108,19 @@ func (ldb *LocationDB) SaveLocationMapping(city, country string, userConfirmed b
 // ListAllMappings returns all stored location mappings
 func (ldb *LocationDB) ListAllMappings() (map[string]string, error) {
 	mappings := make(map[string]string)
-	
+
 	for city, mapping := range ldb.mappings {
 		mappings[city] = mapping.Country
 	}
-	
+
 	return mappings, nil
+}
+
+// GetLocationMapping retrieves a location mapping by city name
+func (ldb *LocationDB) GetLocationMapping(cityName string) (LocationMapping, bool) {
+	cityName = strings.ToLower(strings.TrimSpace(cityName))
+	mapping, exists := ldb.mappings[cityName]
+	return mapping, exists
 }
 
 // processOrganizeByLocation handles organizing files that have location information in the filename
@@ -495,9 +502,9 @@ func promptUserForLocation(detectedCity, filename string) (country, city string,
 
 // moveFileToLocationStructure moves file to the location-based directory structure
 func moveFileToLocationStructure(sourcePath, destBasePath, location, date, city string, dryRun bool) error {
-	// Generate new filename using date-city format
-	ext := filepath.Ext(sourcePath)
-	newFilename := fmt.Sprintf("%s-%s%s", date, city, ext)
+	// Generate new filename using date-city format, preserving existing hour+minute if present
+	dateTime, _ := time.Parse("2006-01-02", date) // Convert date string back to time for helper
+	newFilename := generateFilenameWithTime(sourcePath, dateTime, city)
 
 	var destDir string
 	var fileType string
