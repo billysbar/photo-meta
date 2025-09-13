@@ -77,7 +77,7 @@ func main() {
 	switch command {
 	case "process":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--resume FILE]")
+			fmt.Println("Usage: ./photo-meta process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--resume FILE]")
 			os.Exit(1)
 		}
 		
@@ -200,7 +200,7 @@ func main() {
 		
 	case "organize":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor organize /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+			fmt.Println("Usage: ./photo-meta organize /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 			os.Exit(1)
 		}
 		
@@ -287,7 +287,7 @@ func main() {
 		
 	case "fallback":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+			fmt.Println("Usage: ./photo-meta fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 			os.Exit(1)
 		}
 		
@@ -374,7 +374,7 @@ func main() {
 		
 	case "datetime":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--reset-db]")
+			fmt.Println("Usage: ./photo-meta datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--reset-db]")
 			os.Exit(1)
 		}
 		
@@ -482,7 +482,7 @@ func main() {
 		
 	case "clean":
 		if len(os.Args) < 3 {
-			fmt.Println("Usage: ./photo-metadata-editor clean /target/path [--dry-run [N]] [--verbose] [--workers N] [--progress]")
+			fmt.Println("Usage: ./photo-meta clean /target/path [--dry-run [N]] [--verbose] [--workers N] [--progress]")
 			os.Exit(1)
 		}
 		
@@ -554,7 +554,7 @@ func main() {
 		
 	case "merge":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run [N]] [--progress]")
+			fmt.Println("Usage: ./photo-meta merge /source/path /target/path [--workers N] [--dry-run [N]] [--progress]")
 			os.Exit(1)
 		}
 		
@@ -625,7 +625,7 @@ func main() {
 		
 	case "summary":
 		if len(os.Args) < 3 {
-			fmt.Println("Usage: ./photo-metadata-editor summary /source/path")
+			fmt.Println("Usage: ./photo-meta summary /source/path")
 			os.Exit(1)
 		}
 		
@@ -649,7 +649,7 @@ func main() {
 		
 	case "report":
 		if len(os.Args) < 4 {
-			fmt.Println("Usage: ./photo-metadata-editor report <type> /source/path [--save] [--progress] [--verbose]")
+			fmt.Println("Usage: ./photo-meta report <type> /source/path [--save] [--progress] [--verbose]")
 			fmt.Println("Types: summary, duplicates, stats")
 			os.Exit(1)
 		}
@@ -717,7 +717,7 @@ func main() {
 		
 	case "tiff":
 		if len(os.Args) < 3 {
-			fmt.Println("Usage: ./photo-metadata-editor tiff /target/path [--dry-run [N]] [--workers N] [--progress]")
+			fmt.Println("Usage: ./photo-meta tiff /target/path [--dry-run [N]] [--workers N] [--progress]")
 			os.Exit(1)
 		}
 
@@ -739,10 +739,10 @@ func main() {
 		}
 
 		// Parse optional flags
-		workers := 4 // Default worker count
+		workers := 1 // Default worker count for TIFF (single worker for safety)
 		dryRun := false
 		dryRunSampleSize := 0
-		showProgress := true // Default to showing progress
+		showProgress := false // Default to no progress for TIFF
 		for i := 3; i < len(os.Args); i++ {
 			switch os.Args[i] {
 			case "--workers":
@@ -782,7 +782,7 @@ func main() {
 
 	case "cleanup":
 		if len(os.Args) < 3 {
-			fmt.Println("Usage: ./photo-metadata-editor cleanup /target/path [--dry-run [N]]")
+			fmt.Println("Usage: ./photo-meta cleanup /target/path [--dry-run [N]]")
 			os.Exit(1)
 		}
 		
@@ -1117,16 +1117,16 @@ func showUsage() {
 	fmt.Println("📸 Photo Metadata Editor - High Performance Concurrent Version")
 	fmt.Println()
 	fmt.Println("Commands:")
-	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--resume FILE]")
-	fmt.Println("  ./photo-metadata-editor organize /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
-	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--reset-db]")
-	fmt.Println("  ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
-	fmt.Println("  ./photo-metadata-editor tiff /target/path [--dry-run [N]] [--workers N] [--progress]")
-	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run [N]] [--verbose] [--workers N] [--progress]")
-	fmt.Println("  ./photo-metadata-editor cleanup /target/path [--dry-run [N]]")
-	fmt.Println("  ./photo-metadata-editor merge /source/path /target/path [--workers N] [--dry-run [N]] [--progress]")
-	fmt.Println("  ./photo-metadata-editor summary /source/path")
-	fmt.Println("  ./photo-metadata-editor report <type> /source/path [--save] [--progress] [--verbose]")
+	fmt.Println("  ./photo-meta process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--resume FILE]")
+	fmt.Println("  ./photo-meta organize /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+	fmt.Println("  ./photo-meta datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--reset-db]")
+	fmt.Println("  ./photo-meta fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+	fmt.Println("  ./photo-meta tiff /target/path [--dry-run [N]] [--workers N] [--progress]")
+	fmt.Println("  ./photo-meta clean /target/path [--dry-run [N]] [--verbose] [--workers N] [--progress]")
+	fmt.Println("  ./photo-meta cleanup /target/path [--dry-run [N]]")
+	fmt.Println("  ./photo-meta merge /source/path /target/path [--workers N] [--dry-run [N]] [--progress]")
+	fmt.Println("  ./photo-meta summary /source/path")
+	fmt.Println("  ./photo-meta report <type> /source/path [--save] [--progress] [--verbose]")
 	fmt.Println()
 	fmt.Println("Report Types:")
 	fmt.Println("  summary      Comprehensive directory analysis with processing status")

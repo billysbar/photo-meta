@@ -113,8 +113,9 @@ func processTiffTimestampFix(targetPath string, workers int, dryRun bool, dryRun
 	}
 
 	if needsUserInput {
-		fmt.Printf("🤔 Some files may require location input - processing sequentially\n")
-		return processTiffJobsSequentially(jobs, showProgress)
+		fmt.Printf("🤔 Some files may require location input - processing with single worker\n")
+		// Force single worker processing to ensure no concurrency issues during user input
+		return processJobsConcurrentlyWithProgress(jobs, 1, showProgress)
 	} else {
 		// Process jobs concurrently when no user input is needed
 		return processJobsConcurrentlyWithProgress(jobs, workers, showProgress)
@@ -202,8 +203,19 @@ func processTiffFile(filePath string, dryRun bool) error {
 	currentFilename := filepath.Base(filePath)
 	needsFilenameUpdate := newFilename != currentFilename
 
-	// Skip if no changes needed
-	if !needsExifFix && !needsFilenameUpdate {
+	// Check if we need to handle location detection even if timestamps are correct
+	needsLocationProcessing := false
+	if globalTiffLocationDB != nil {
+		// Check if this file has location information in description that could be processed
+		locationInfo, locErr := extractLocationInfo(filePath)
+		if locErr == nil && locationInfo.Description != "" && !locationInfo.HasGPS {
+			detectedLocs := detectLocationFromDescription(locationInfo.Description)
+			needsLocationProcessing = len(detectedLocs) > 0
+		}
+	}
+
+	// Skip if no changes needed at all
+	if !needsExifFix && !needsFilenameUpdate && !needsLocationProcessing {
 		fmt.Printf("✅ %s already correct\n", filepath.Base(filePath))
 		return nil
 	}
@@ -247,7 +259,7 @@ func processTiffFile(filePath string, dryRun bool) error {
 		currentFilePath = newPath // Update the path for location detection
 	}
 
-	// Handle location detection for GPS-less files
+	// Handle location detection for GPS-less files (run regardless of timestamp fixes)
 	if globalTiffLocationDB != nil {
 		if err := handleLocationDetectionAndFilenameUpdate(currentFilePath, correctTime, globalTiffLocationDB, dryRun); err != nil {
 			fmt.Printf("❌ Location detection failed for %s: %v\n", filepath.Base(currentFilePath), err)
@@ -255,7 +267,11 @@ func processTiffFile(filePath string, dryRun bool) error {
 		}
 	}
 
-	fmt.Printf("✅ %s timestamp fixed\n", filepath.Base(filePath))
+	if needsExifFix || needsFilenameUpdate {
+		fmt.Printf("✅ %s timestamp fixed\n", filepath.Base(filePath))
+	} else if needsLocationProcessing {
+		fmt.Printf("✅ %s location processing completed\n", filepath.Base(filePath))
+	}
 	return nil
 }
 
@@ -293,8 +309,34 @@ func handleLocationDetectionAndFilenameUpdate(filePath string, timestamp time.Ti
 		return nil
 	}
 
-	// Prompt user for confirmation
-	country, city, shouldSkip, err := promptUserForLocationFromDescription(filePath, locationInfo.Description, detectedLocations, locationDB)
+	var country, city string
+	var shouldSkip bool
+
+	// Check if all detected locations already have mappings
+	if globalTiffLocationDB != nil {
+		allMapped := true
+		for _, detected := range detectedLocations {
+			if _, exists := globalTiffLocationDB.GetLocationMapping(detected); !exists {
+				allMapped = false
+				break
+			}
+		}
+		if allMapped {
+			// Use the first detected location that has a mapping
+			if mapping, exists := globalTiffLocationDB.GetLocationMapping(detectedLocations[0]); exists {
+				fmt.Printf("✅ Found existing mapping: %s -> %s/%s\n", detectedLocations[0], mapping.Country, mapping.CityName)
+				country = mapping.Country
+				city = mapping.CityName
+				shouldSkip = false
+			}
+		} else {
+			// Prompt user for confirmation for unmapped locations
+			country, city, shouldSkip, err = promptUserForLocationFromDescription(filePath, locationInfo.Description, detectedLocations, globalTiffLocationDB)
+		}
+	} else {
+		// Prompt user for confirmation if no database
+		country, city, shouldSkip, err = promptUserForLocationFromDescription(filePath, locationInfo.Description, detectedLocations, globalTiffLocationDB)
+	}
 	if err != nil {
 		return fmt.Errorf("user prompt failed: %v", err)
 	}
@@ -304,11 +346,16 @@ func handleLocationDetectionAndFilenameUpdate(filePath string, timestamp time.Ti
 		return nil
 	}
 
-	// Save the mapping to database
-	if err := locationDB.SaveLocationMapping(city, country, true); err != nil {
-		fmt.Printf("⚠️ Warning: Failed to save location mapping: %v\n", err)
-	} else {
-		fmt.Printf("💾 Saved location mapping: %s -> %s\n", city, country)
+	// Save the mapping to database (only if it's a new mapping)
+	if globalTiffLocationDB != nil {
+		// Check if this is a new mapping that needs to be saved
+		if _, exists := globalTiffLocationDB.GetLocationMapping(strings.ToLower(city)); !exists {
+			if err := globalTiffLocationDB.SaveLocationMapping(city, country, true); err != nil {
+				fmt.Printf("⚠️ Warning: Failed to save location mapping: %v\n", err)
+			} else {
+				fmt.Printf("💾 Saved location mapping: %s -> %s\n", city, country)
+			}
+		}
 	}
 
 	// Generate new filename with location
@@ -545,13 +592,15 @@ func detectLocationFromDescription(description string) (detectedLocations []stri
 
 	// Convert to lowercase for matching
 	desc := strings.ToLower(description)
-	words := strings.Fields(desc)
+
+	// Use a map to avoid duplicates
+	detected := make(map[string]bool)
 
 	// Check for known countries in description
 	for _, countryName := range multiWordCountries {
 		countryLower := strings.ToLower(countryName)
 		if strings.Contains(desc, countryLower) {
-			detectedLocations = append(detectedLocations, countryName)
+			detected[countryLower] = true
 		}
 	}
 
@@ -561,26 +610,16 @@ func detectLocationFromDescription(description string) (detectedLocations []stri
 		"new york", "los angeles", "chicago", "houston", "philadelphia", "san antonio", "san diego", "dallas",
 		"bangkok", "singapore", "hong kong", "mumbai", "delhi", "bangalore", "sydney", "melbourne", "barcelona"}
 
-	for _, word := range words {
-		wordLower := strings.ToLower(word)
-		for _, location := range commonLocationWords {
-			if wordLower == location {
-				detectedLocations = append(detectedLocations, word)
-			}
+	// Check for all locations in description (both single and multi-word)
+	for _, location := range commonLocationWords {
+		if strings.Contains(desc, location) {
+			detected[location] = true
 		}
 	}
 
-	// Also check for multi-word locations in the description
-	for _, location := range commonLocationWords {
-		if strings.Contains(desc, location) {
-			// Capitalize first letter for consistency
-			parts := strings.Fields(location)
-			capitalizedParts := make([]string, len(parts))
-			for i, part := range parts {
-				capitalizedParts[i] = strings.Title(part)
-			}
-			detectedLocations = append(detectedLocations, strings.Join(capitalizedParts, " "))
-		}
+	// Convert map to slice
+	for location := range detected {
+		detectedLocations = append(detectedLocations, location)
 	}
 
 	return detectedLocations
@@ -588,9 +627,13 @@ func detectLocationFromDescription(description string) (detectedLocations []stri
 
 // promptUserForLocationFromDescription prompts user to confirm location from description
 func promptUserForLocationFromDescription(filePath, description string, detectedLocations []string, locationDB *LocationDB) (country, city string, shouldSkip bool, err error) {
+	// Pause any progress reporting during user input
+	pauseProgress()
+	defer resumeProgress()
+
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Printf("\nFile: %s\n", filepath.Base(filePath))
+	fmt.Printf("\nFile: %s\n", filePath)
 	fmt.Printf("Image Description: '%s'\n", description)
 
 	if len(detectedLocations) > 0 {
@@ -603,6 +646,8 @@ func promptUserForLocationFromDescription(filePath, description string, detected
 			fmt.Printf("Found existing mapping: %s -> %s\n", detected, mapping.Country)
 			fmt.Print("Use this mapping? (y/n/skip): ")
 
+			// Ensure output is flushed before waiting for input
+			os.Stdout.Sync()
 			response, err := reader.ReadString('\n')
 			if err != nil {
 				return "", "", false, err
@@ -610,6 +655,12 @@ func promptUserForLocationFromDescription(filePath, description string, detected
 			response = strings.TrimSpace(strings.ToLower(response))
 
 			if response == "y" || response == "yes" {
+				// Mark this mapping as user-confirmed and save it
+				if err := locationDB.SaveLocationMapping(detected, mapping.Country, true); err != nil {
+					fmt.Printf("⚠️ Warning: Failed to update location mapping: %v\n", err)
+				} else {
+					fmt.Printf("💾 Confirmed location mapping: %s -> %s\n", detected, mapping.Country)
+				}
 				return mapping.Country, detected, false, nil
 			} else if response == "skip" {
 				return "", "", true, nil

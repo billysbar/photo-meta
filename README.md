@@ -28,6 +28,7 @@ A powerful, concurrent photo organization tool that processes photos and videos 
 | **`datetime`** | Date-based filename matching | Files without GPS data (uses filename dates) |
 | **`organize`** | Location-based filename organization | Files with location names in filenames |
 | **`fallback`** | Simple filename date organization | Files with dates in filenames but no location matches |
+| **`tiff`** | Timestamp repair | Fixing midnight timestamps (00:00:00) |
 | **`merge`** | Collection combining | Merging photo libraries |
 | **`summary`** | Quick analysis | Initial directory assessment |
 | **`report`** | Detailed reporting | Comprehensive analysis & documentation |
@@ -312,7 +313,61 @@ organized/
 
 ---
 
-### 5. **CLEAN** - Intelligent Duplicate Detection & Removal
+### 5. **TIFF** - Timestamp Repair & Correction
+
+Fixes midnight timestamps (00:00:00) using EXIF ModifyDate and updates both EXIF timestamps and filename datetime.
+
+```bash
+./photo-meta tiff /target/path [OPTIONS]
+```
+
+#### **Options:**
+- `--workers N` - Number of concurrent workers (1-16, default: 4)
+- `--dry-run` - Preview timestamp fixes without modifying files
+- `--dry-run1` - Quick preview with limited file samples
+- `--progress` - Show progress bar (default: enabled)
+- `--no-progress` - Disable progress bar
+
+#### **Benefits:**
+- ✅ **Midnight Fix**: Corrects files with incorrect 00:00:00 timestamps
+- ✅ **EXIF Repair**: Uses ModifyDate field to restore correct timestamps
+- ✅ **Filename Sync**: Updates filename to match corrected timestamp
+- ✅ **Location Preservation**: Maintains existing location data in filenames
+- ✅ **Intelligent Detection**: Only processes files that actually need fixing
+- ✅ **Safe Operation**: Multiple preview modes before actual modification
+
+#### **Examples:**
+```bash
+# Quick preview of what would be fixed
+./photo-meta tiff ~/photos --dry-run1
+
+# Preview all timestamp fixes
+./photo-meta tiff ~/photos --dry-run
+
+# Fix timestamp issues with progress
+./photo-meta tiff ~/photos --progress
+
+# High-performance processing
+./photo-meta tiff ~/photos --workers 8
+```
+
+#### **Use Cases:**
+- 🕐 **Midnight Timestamps**: Photos with incorrect 00:00:00 time stamps
+- 📷 **EXIF Inconsistencies**: Files where ModifyDate differs from other date fields
+- 🔄 **Batch Correction**: Fixing timestamp issues across large collections
+- 📱 **Import Cleanup**: Correcting timestamp problems from various sources
+
+#### **How It Works:**
+1. **Scans** target directory for media files with timestamp issues
+2. **Analyzes** EXIF ModifyDate field for correct timestamp information
+3. **Compares** existing timestamps with ModifyDate to identify discrepancies
+4. **Updates** both EXIF timestamps and filename datetime portion
+5. **Preserves** existing location information in filenames
+6. **Reports** exactly which files were corrected
+
+---
+
+### 6. **CLEAN** - Intelligent Duplicate Detection & Removal
 
 Detects and removes duplicate photos using SHA-256 hashing with intelligent file prioritization.
 
@@ -359,7 +414,7 @@ Detects and removes duplicate photos using SHA-256 hashing with intelligent file
 
 ---
 
-### 6. **CLEANUP** - Standalone Empty Directory Removal
+### 7. **CLEANUP** - Standalone Empty Directory Removal
 
 Removes empty directories that contain no media files, providing a clean way to tidy up after processing operations.
 
@@ -416,7 +471,7 @@ Removes empty directories that contain no media files, providing a clean way to 
 
 ---
 
-### 7. **MERGE** - Smart Collection Combining
+### 8. **MERGE** - Smart Collection Combining
 
 Merges photos from source directory into target directory while preserving YEAR/COUNTRY/CITY structure.
 
@@ -459,7 +514,7 @@ Merges photos from source directory into target directory while preserving YEAR/
 
 ---
 
-### 8. **SUMMARY** - Quick Directory Analysis
+### 9. **SUMMARY** - Quick Directory Analysis
 
 Provides a quick overview of what's in a directory and what processing is needed.
 
@@ -485,7 +540,7 @@ Provides a quick overview of what's in a directory and what processing is needed
 
 ---
 
-### 9. **REPORT** - Comprehensive Analysis & Reporting
+### 10. **REPORT** - Comprehensive Analysis & Reporting
 
 Generates detailed reports for directory analysis, duplicate detection, and statistics with optional file export.
 
@@ -641,21 +696,25 @@ Generates detailed reports for directory analysis, duplicate detection, and stat
 ./photo-meta fallback ~/still-leftover-photos ~/organized --dry-run1
 ./photo-meta fallback ~/still-leftover-photos ~/organized --progress --info
 
-# 9. Check for duplicates before cleaning
+# 9. Fix any timestamp issues (midnight timestamps, EXIF inconsistencies)
+./photo-meta tiff ~/organized --dry-run1
+./photo-meta tiff ~/organized --progress
+
+# 10. Check for duplicates before cleaning
 ./photo-meta report duplicates ~/organized --save
 
-# 10. Clean up any duplicates
+# 11. Clean up any duplicates
 ./photo-meta clean ~/organized --dry-run1
 ./photo-meta clean ~/organized --progress
 
-# 11. Remove any empty directories left behind
+# 12. Remove any empty directories left behind
 ./photo-meta cleanup ~/organized --dry-run
 ./photo-meta cleanup ~/organized
 
-# 12. Generate final statistics report
+# 13. Generate final statistics report
 ./photo-meta report stats ~/organized --save
 
-# 13. Merge additional collections as needed
+# 14. Merge additional collections as needed
 ./photo-meta merge ~/new-photos ~/organized --dry-run1
 ./photo-meta merge ~/new-photos ~/organized --progress
 ```

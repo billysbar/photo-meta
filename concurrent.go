@@ -403,7 +403,10 @@ func progressReporter(progress *ProgressTracker, wg *sync.WaitGroup, cancelMgr *
 	for !progress.IsComplete() && cancelMgr.ShouldContinue() {
 		select {
 		case <-ticker.C:
-			fmt.Printf("\r%s", progress.FormatProgress())
+			// Only update progress if not paused for user input
+			if !isProgressPaused() {
+				fmt.Printf("\r%s", progress.FormatProgress())
+			}
 		case <-cancelMgr.Context().Done():
 			return
 		}
