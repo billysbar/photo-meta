@@ -14,7 +14,7 @@ func processMerge(sourcePath, targetPath string, workers int, dryRun bool, dryRu
 	fmt.Printf("🔀 Merge Mode - Combining Photos from Source into Target\n")
 	fmt.Printf("📂 Source: %s\n", sourcePath)
 	fmt.Printf("📁 Target: %s\n", targetPath)
-	
+
 	if dryRun {
 		if dryRunSampleSize > 0 {
 			fmt.Printf("🔍 DRY RUN MODE - Sample merge preview (%d file(s) per type per directory)\n", dryRunSampleSize)
@@ -24,9 +24,17 @@ func processMerge(sourcePath, targetPath string, workers int, dryRun bool, dryRu
 	}
 	fmt.Println()
 
+	// Initialize location database for prompting support
+	locationDB, err := NewLocationDB()
+	if err != nil {
+		fmt.Printf("⚠️ Warning: Failed to initialize location database: %v\n", err)
+		locationDB = nil
+	} else {
+		defer locationDB.Close()
+	}
+
 	// Collect files to merge
 	var jobs []WorkJob
-	var err error
 	
 	if dryRunSampleSize > 0 {
 		// For sampling mode, sample N photos and N videos per directory
@@ -81,8 +89,23 @@ func processMerge(sourcePath, targetPath string, workers int, dryRun bool, dryRu
 
 	fmt.Printf("📝 Found %d media files to merge (%d photos, %d videos)\n", len(jobs), photoCount, videoCount)
 
-	// Process jobs concurrently
-	return processJobsConcurrentlyWithProgress(jobs, workers, showProgress)
+	// Check if any files need location prompting (files without GPS that need user input)
+	needsUserInput := false
+	for _, job := range jobs {
+		if requiresLocationPromptingForMerge(job.PhotoPath) {
+			needsUserInput = true
+			break
+		}
+	}
+
+	if needsUserInput {
+		// Process with single worker to handle user prompts
+		fmt.Println("⚠️ Some files require location input - processing with single worker...")
+		return processMergeFilesSequentially(jobs, locationDB, dryRun, showProgress)
+	} else {
+		// Process jobs concurrently (no user input needed)
+		return processJobsConcurrentlyWithProgress(jobs, workers, showProgress)
+	}
 }
 
 // collectSampleFilesForMerge collects a sample of files for merge dry-run1 mode
@@ -504,4 +527,153 @@ func copyFile(src, dst string) error {
 	}
 	
 	return os.Chmod(dst, sourceInfo.Mode())
+}
+
+// requiresLocationPromptingForMerge checks if a file needs location prompting during merge
+func requiresLocationPromptingForMerge(filePath string) bool {
+	// Check if file has GPS data
+	_, _, err := extractGPSCoordinates(filePath)
+	if err == nil {
+		return false // Has GPS, no prompting needed
+	}
+
+	// If no GPS and we can't infer location from target structure,
+	// we'll need to prompt user
+	return true
+}
+
+// processMergeFilesSequentially processes merge files one by one to handle user prompts
+func processMergeFilesSequentially(jobs []WorkJob, locationDB *LocationDB, dryRun bool, showProgress bool) error {
+	successful := 0
+	failed := 0
+
+	for i, job := range jobs {
+		if showProgress {
+			fmt.Printf("[%d/%d] ", i+1, len(jobs))
+		}
+
+		err := processMergeFileWithDatabase(job.PhotoPath, job.DestPath, locationDB, dryRun)
+		if err != nil {
+			fmt.Printf("❌ Failed to merge %s: %v\n", filepath.Base(job.PhotoPath), err)
+			failed++
+		} else {
+			successful++
+		}
+	}
+
+	fmt.Printf("\n📊 Merge Summary: %d successful, %d failed\n", successful, failed)
+	return nil
+}
+
+// processMergeFileWithDatabase processes a single merge file with database support
+func processMergeFileWithDatabase(sourcePath, targetPath string, locationDB *LocationDB, dryRun bool) error {
+	// Determine file type for display
+	var fileType string
+	var fileIcon string
+	if isVideoFile(sourcePath) {
+		fileType = "video"
+		fileIcon = "🎥"
+	} else {
+		fileType = "photo"
+		fileIcon = "📷"
+	}
+
+	if dryRun {
+		fmt.Printf("%s [DRY RUN] Merging %s: %s\n", fileIcon, fileType, filepath.Base(sourcePath))
+	} else {
+		fmt.Printf("%s Merging %s: %s\n", fileIcon, fileType, filepath.Base(sourcePath))
+	}
+
+	// Check if file already exists in target directory structure
+	existingPath, exists, err := findExistingFileInTarget(sourcePath, targetPath)
+	if err != nil {
+		return fmt.Errorf("error checking for existing file: %v", err)
+	}
+
+	if exists {
+		fmt.Printf("✅ File already exists at: %s\n", existingPath)
+		return nil
+	}
+
+	// Extract GPS coordinates if available
+	lat, lon, err := extractGPSCoordinates(sourcePath)
+	if err != nil {
+		// No GPS - try to infer or prompt
+		return processMergeFileWithoutGPSWithDatabase(sourcePath, targetPath, locationDB, dryRun)
+	}
+
+	// Get location from coordinates
+	location, err := getLocationFromCoordinates(lat, lon)
+	if err != nil {
+		return fmt.Errorf("failed to get location for %s: %v", filepath.Base(sourcePath), err)
+	}
+
+	fmt.Printf("📍 Location: %s (%.6f, %.6f)\n", location, lat, lon)
+
+	// Extract date from media file
+	date, err := extractPhotoDate(sourcePath)
+	if err != nil {
+		return fmt.Errorf("failed to extract date from %s: %v", filepath.Base(sourcePath), err)
+	}
+
+	// Parse location into country and city
+	country, city, err := parseLocation(location)
+	if err != nil {
+		// Skip prompting in dry run mode
+		if dryRun {
+			country = "unknown-country"
+			city = "unknown-city"
+		} else {
+			// Prompt for missing country/city information with database support
+			country, city, shouldSkip, err := promptForLocationWithDatabase(location, sourcePath, lat, lon, locationDB)
+			if err != nil {
+				return fmt.Errorf("failed to get location information: %v", err)
+			}
+			if shouldSkip {
+				fmt.Printf("⏭️ Skipped file: %s\n", filepath.Base(sourcePath))
+				return nil
+			}
+		}
+	}
+
+	// Generate target path using YEAR/COUNTRY/CITY structure
+	return moveToTargetStructure(sourcePath, targetPath, date, country, city, dryRun)
+}
+
+// processMergeFileWithoutGPSWithDatabase handles files without GPS data with database support
+func processMergeFileWithoutGPSWithDatabase(sourcePath, targetPath string, locationDB *LocationDB, dryRun bool) error {
+	fmt.Printf("⚠️  No GPS data found, attempting to infer from target directory structure\n")
+
+	// Extract date from media file
+	date, err := extractPhotoDate(sourcePath)
+	if err != nil {
+		return fmt.Errorf("failed to extract date from %s: %v", filepath.Base(sourcePath), err)
+	}
+
+	// Try to find existing photos from the same date in target structure
+	year := date.Format("2006")
+	inferredLocation, err := inferLocationFromTarget(targetPath, year, date.Format("2006-01-02"))
+	if err != nil || inferredLocation == nil {
+		// Can't infer - prompt user
+		if dryRun {
+			fmt.Printf("📍 Using fallback location: unknown-unknown\n")
+			return moveToTargetStructure(sourcePath, targetPath, date, "unknown-country", "unknown-city", dryRun)
+		} else {
+			// Prompt for location with database support
+			country, city, shouldSkip, err := promptForLocationWithDatabase("", sourcePath, 0, 0, locationDB)
+			if err != nil {
+				return fmt.Errorf("failed to get location information: %v", err)
+			}
+			if shouldSkip {
+				fmt.Printf("⏭️ Skipped file: %s\n", filepath.Base(sourcePath))
+				return nil
+			}
+			return moveToTargetStructure(sourcePath, targetPath, date, country, city, dryRun)
+		}
+	}
+
+	fmt.Printf("📍 Inferred location: %s/%s from date %s\n", inferredLocation.Country, inferredLocation.City, inferredLocation.Date)
+
+	// Use inferred location
+	return moveToTargetStructure(sourcePath, targetPath, date, inferredLocation.Country, inferredLocation.City, dryRun)
 }

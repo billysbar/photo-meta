@@ -467,6 +467,10 @@ func validateLocationWithDB(locationDB *LocationDB, country, city, filename stri
 
 // promptUserForLocation prompts the user to confirm/provide country and city
 func promptUserForLocation(detectedCity, filename string) (country, city string, err error) {
+	// Pause any progress reporting during user input
+	pauseProgress()
+	defer resumeProgress()
+
 	reader := bufio.NewReader(os.Stdin)
 	
 	fmt.Printf("Cannot determine country for location '%s' in file: %s\n", detectedCity, filename)
@@ -493,9 +497,9 @@ func promptUserForLocation(detectedCity, filename string) (country, city string,
 		city = detectedCity
 	}
 	
-	// Convert to lowercase and replace spaces with hyphens for consistency
-	country = strings.ToLower(strings.ReplaceAll(country, " ", "-"))
-	city = strings.ToLower(strings.ReplaceAll(city, " ", "-"))
+	// Clean up the names using standardized utility functions
+	country = anglicizeName(country)
+	city = anglicizeName(city)
 	
 	return country, city, nil
 }

@@ -29,8 +29,21 @@ func processFallbackOrganization(sourcePath, destPath string, dryRun bool, dryRu
 	return processFilesWithFallbackOrganization(sourcePath, destPath, dryRun, dryRunSampleSize, showProgress)
 }
 
+// Global fallback location database
+var fallbackLocationDB *LocationDB
+
 // processFilesWithFallbackOrganization processes source files using fallback year/month organization
 func processFilesWithFallbackOrganization(sourcePath, destPath string, dryRun bool, dryRunSampleSize int, showProgress bool) error {
+	// Initialize location database for prompting support
+	var err error
+	fallbackLocationDB, err = NewLocationDB()
+	if err != nil {
+		fmt.Printf("⚠️ Warning: Failed to initialize location database: %v\n", err)
+		fallbackLocationDB = nil
+	} else {
+		defer fallbackLocationDB.Close()
+	}
+
 	processedCount := 0
 	videoCount := 0
 	photoCount := 0
@@ -91,8 +104,8 @@ func processFilesWithFallbackOrganization(sourcePath, destPath string, dryRun bo
 			
 			fmt.Printf("📅 File: %s -> Date: %s -> Location: %s\n", filepath.Base(path), date, location)
 
-			// Prompt for location information
-			country, city, shouldSkip, err := promptForFallbackLocation(path)
+			// Prompt for location information using standardized approach
+			country, city, shouldSkip, err := promptForLocationWithDatabase("", path, 0, 0, fallbackLocationDB)
 			if err != nil {
 				return fmt.Errorf("failed to get location for %s: %v", filepath.Base(path), err)
 			}
@@ -319,6 +332,10 @@ func getMonthName(monthNum string) string {
 
 // promptForFallbackLocation prompts user for country and city information
 func promptForFallbackLocation(filePath string) (country, city string, shouldSkip bool, err error) {
+	// Pause any progress reporting during user input
+	pauseProgress()
+	defer resumeProgress()
+
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Printf("\n📸 File: %s\n", filepath.Base(filePath))
 	fmt.Print("Enter country for this location (or 'skip' to skip this file): ")

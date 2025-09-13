@@ -113,8 +113,9 @@ func processTiffTimestampFix(targetPath string, workers int, dryRun bool, dryRun
 	}
 
 	if needsUserInput {
-		fmt.Printf("🤔 Some files may require location input - processing sequentially\n")
-		return processTiffJobsSequentially(jobs, showProgress)
+		fmt.Printf("🤔 Some files may require location input - processing with single worker\n")
+		// Force single worker processing to ensure no concurrency issues during user input
+		return processJobsConcurrentlyWithProgress(jobs, 1, showProgress)
 	} else {
 		// Process jobs concurrently when no user input is needed
 		return processJobsConcurrentlyWithProgress(jobs, workers, showProgress)
@@ -588,6 +589,10 @@ func detectLocationFromDescription(description string) (detectedLocations []stri
 
 // promptUserForLocationFromDescription prompts user to confirm location from description
 func promptUserForLocationFromDescription(filePath, description string, detectedLocations []string, locationDB *LocationDB) (country, city string, shouldSkip bool, err error) {
+	// Pause any progress reporting during user input
+	pauseProgress()
+	defer resumeProgress()
+
 	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Printf("\nFile: %s\n", filepath.Base(filePath))
@@ -603,6 +608,8 @@ func promptUserForLocationFromDescription(filePath, description string, detected
 			fmt.Printf("Found existing mapping: %s -> %s\n", detected, mapping.Country)
 			fmt.Print("Use this mapping? (y/n/skip): ")
 
+			// Ensure output is flushed before waiting for input
+			os.Stdout.Sync()
 			response, err := reader.ReadString('\n')
 			if err != nil {
 				return "", "", false, err
@@ -610,6 +617,12 @@ func promptUserForLocationFromDescription(filePath, description string, detected
 			response = strings.TrimSpace(strings.ToLower(response))
 
 			if response == "y" || response == "yes" {
+				// Mark this mapping as user-confirmed and save it
+				if err := locationDB.SaveLocationMapping(detected, mapping.Country, true); err != nil {
+					fmt.Printf("⚠️ Warning: Failed to update location mapping: %v\n", err)
+				} else {
+					fmt.Printf("💾 Confirmed location mapping: %s -> %s\n", detected, mapping.Country)
+				}
 				return mapping.Country, detected, false, nil
 			} else if response == "skip" {
 				return "", "", true, nil
