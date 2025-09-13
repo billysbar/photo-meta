@@ -25,8 +25,9 @@ A powerful, concurrent photo organization tool that processes photos and videos 
 |---------|---------|----------|
 | **`clean`** | Duplicate removal | Removing redundant files |
 | **`process`** | GPS-based organization | Photos/videos with location data |
-| **`datetime`** | Date-based matching | Files without GPS data |
-| **`fallback`** | Simple date organization | Files with dates but no location matches |
+| **`datetime`** | Date-based filename matching | Files without GPS data (uses filename dates) |
+| **`organize`** | Location-based filename organization | Files with location names in filenames |
+| **`fallback`** | Simple filename date organization | Files with dates in filenames but no location matches |
 | **`merge`** | Collection combining | Merging photo libraries |
 | **`summary`** | Quick analysis | Initial directory assessment |
 | **`report`** | Detailed reporting | Comprehensive analysis & documentation |
@@ -113,7 +114,7 @@ organized/
 
 ### 2. **DATETIME** - Date-Based File Matching
 
-Matches files without GPS data to existing organized structure based on date/time metadata.
+Matches files without GPS data to existing organized structure based on date/time extracted from filenames and metadata.
 
 ```bash
 ./photo-meta datetime /source/path /destination/path [OPTIONS]
@@ -129,13 +130,22 @@ Matches files without GPS data to existing organized structure based on date/tim
 - `--reset-db` - Clear the GPS cache database for fresh scanning
 
 #### **Benefits:**
-- ✅ **GPS-Free Organization**: Organizes files without GPS by matching dates
+- ✅ **GPS-Free Organization**: Organizes files without GPS by matching dates from filenames
 - ✅ **Intelligent Matching**: Uses existing location database from processed photos
-- ✅ **Date Pattern Recognition**: Supports multiple filename date formats
+- ✅ **Date Pattern Recognition**: Supports multiple filename date formats (see examples below)
 - ✅ **Location Inference**: Smart location detection from target structure
 - ✅ **Video Integration**: Properly handles video files in datetime matching
 - ✅ **GPS Cache Database**: Speeds up subsequent scans by caching GPS detection results
 - ✅ **Integrity Checking**: File hash validation ensures cache accuracy
+
+#### **Filename Pattern Examples:**
+```
+2025-09-15-palma.HEIC          → Matches to 2025/spain/palma/ (if exists)
+IMG_20250915_143022.jpg        → Matches to 2025 locations
+2025-09-15T14:30:22.jpeg       → ISO timestamp matching
+vacation_2025-09-15.png        → Date extraction from filename
+DSC_20250915.NEF               → Camera naming pattern
+```
 
 #### **Examples:**
 ```bash
@@ -164,9 +174,65 @@ Matches files without GPS data to existing organized structure based on date/tim
 
 ---
 
-### 3. **FALLBACK** - Simple Date-Based Organization
+### 3. **ORGANIZE** - Location-Based Organization
 
-Organizes files with extractable dates into a simple YYYY/Month directory structure when location-based organization isn't possible.
+Organizes files by extracting location information from filenames that contain location names or patterns.
+
+```bash
+./photo-meta organize /source/path /destination/path [OPTIONS]
+```
+
+#### **Options:**
+- `--workers N` - Number of concurrent workers (1-16, default: 4)
+- `--dry-run` - Preview organization operations
+- `--dry-run1` - Quick preview with samples
+- `--progress` - Show progress bar (default: enabled)
+- `--no-progress` - Disable progress bar
+- `--info` - Generate PhotoXX-style info_ directory summary file after processing
+
+#### **Benefits:**
+- ✅ **Location Intelligence**: Smart extraction of location information from filenames
+- ✅ **Pattern Recognition**: Recognizes common location naming patterns (see examples below)
+- ✅ **Structure Creation**: Creates organized YEAR/COUNTRY/CITY directory structure
+- ✅ **Date Integration**: Combines location data with date information for complete organization
+- ✅ **Video Support**: Properly handles video files in VIDEO-FILES structure
+- ✅ **Fallback Handling**: Gracefully handles files without clear location patterns
+
+#### **Filename Pattern Examples:**
+```
+palma-vacation-2025.HEIC       → Organizes to 2025/spain/palma/
+london_trip_sept.jpg           → Organizes to 2025/united-kingdom/london/
+paris-photos-day1.png          → Organizes to 2025/france/paris/
+barcelona_beach.MOV            → Organizes to VIDEO-FILES/2025/spain/barcelona/
+madrid-museum-visit.jpeg       → Organizes to 2025/spain/madrid/
+```
+
+#### **Examples:**
+```bash
+# Preview organize operation
+./photo-meta organize ~/photos-with-locations ~/organized --dry-run
+
+# Organize files with location intelligence
+./photo-meta organize ~/vacation-photos ~/organized --progress
+
+# Quick sample of organization
+./photo-meta organize ~/photos ~/organized --dry-run1
+
+# Process with info summary generation
+./photo-meta organize ~/photos ~/organized --info
+```
+
+#### **Use Cases:**
+- 📍 **Location-Named Files**: Files with location information in filenames
+- 🗺️ **Travel Photos**: Photos from trips with location-based naming
+- 🏗️ **Intelligent Organization**: When GPS data isn't available but location patterns exist
+- 📱 **Mixed Collections**: Photos from various sources with inconsistent location metadata
+
+---
+
+### 4. **FALLBACK** - Simple Date-Based Organization
+
+Organizes files with extractable dates from filenames into a simple YYYY/Month directory structure when location-based organization isn't possible.
 
 ```bash
 ./photo-meta fallback /source/path /destination/path [OPTIONS]
@@ -181,12 +247,21 @@ Organizes files with extractable dates into a simple YYYY/Month directory struct
 - `--info` - Generate PhotoXX-style info_ directory summary file after processing
 
 #### **Benefits:**
-- ✅ **Date-Only Organization**: Uses only extractable dates from filenames
+- ✅ **Date-Only Organization**: Uses only extractable dates from filenames (see patterns below)
 - ✅ **Simple Structure**: Clean YYYY/Month folder organization
 - ✅ **Standardized Names**: Converts all files to YYYY-MM-DD.ext format
-- ✅ **Multiple Date Formats**: Handles DD-MM-YYYY, YYYYMMDD, YYYYMMDDHHMMSS patterns
+- ✅ **Multiple Date Formats**: Handles various filename date patterns
 - ✅ **Automatic Processing**: No user prompts or intervention required
 - ✅ **Video Separation**: Places videos in VIDEO-FILES/YYYY/Month structure
+
+#### **Supported Filename Date Patterns:**
+```
+10-10-2018-DSC_0996.JPG       → 2018-10-10.JPG (2018/October/)
+20250831120839.HEIC           → 2025-08-31.HEIC (2025/August/)
+20180310-IMG.jpg              → 2018-03-10.jpg (2018/March/)
+2025-09-15-vacation.png       → 2025-09-15.png (2025/September/)
+IMG_20250915.jpeg             → 2025-09-15.jpeg (2025/September/)
+```
 
 #### **Examples:**
 ```bash
@@ -229,12 +304,6 @@ organized/
 - 📱 **Mixed Sources**: Photos from multiple devices/sources with inconsistent metadata
 - 🏃 **Quick Organization**: Fast way to get files into a basic organized structure
 
-#### **Supported Date Patterns:**
-- `DD-MM-YYYY-*` → 10-10-2018-DSC_0996.JPG → 2018-10-10.JPG
-- `YYYYMMDDHHMMSS` → 20250831120839.HEIC → 2025-08-31.HEIC
-- `YYYY-MM-DD-*` → Already standardized format
-- `YYYYMMDD-*` → 20180310-IMG.jpg → 2018-03-10.jpg
-
 #### **Date Validation:**
 - ✅ **Year Range**: Only accepts years 1900-2030 (current year + 5)
 - ✅ **Month Validation**: Validates months 01-12
@@ -243,7 +312,7 @@ organized/
 
 ---
 
-### 4. **CLEAN** - Intelligent Duplicate Detection & Removal
+### 5. **CLEAN** - Intelligent Duplicate Detection & Removal
 
 Detects and removes duplicate photos using SHA-256 hashing with intelligent file prioritization.
 
@@ -290,7 +359,7 @@ Detects and removes duplicate photos using SHA-256 hashing with intelligent file
 
 ---
 
-### 5. **CLEANUP** - Standalone Empty Directory Removal
+### 6. **CLEANUP** - Standalone Empty Directory Removal
 
 Removes empty directories that contain no media files, providing a clean way to tidy up after processing operations.
 
@@ -347,7 +416,7 @@ Removes empty directories that contain no media files, providing a clean way to 
 
 ---
 
-### 6. **MERGE** - Smart Collection Combining
+### 7. **MERGE** - Smart Collection Combining
 
 Merges photos from source directory into target directory while preserving YEAR/COUNTRY/CITY structure.
 
@@ -390,7 +459,7 @@ Merges photos from source directory into target directory while preserving YEAR/
 
 ---
 
-### 7. **SUMMARY** - Quick Directory Analysis
+### 8. **SUMMARY** - Quick Directory Analysis
 
 Provides a quick overview of what's in a directory and what processing is needed.
 
@@ -416,7 +485,7 @@ Provides a quick overview of what's in a directory and what processing is needed
 
 ---
 
-### 8. **REPORT** - Comprehensive Analysis & Reporting
+### 9. **REPORT** - Comprehensive Analysis & Reporting
 
 Generates detailed reports for directory analysis, duplicate detection, and statistics with optional file export.
 
@@ -564,25 +633,29 @@ Generates detailed reports for directory analysis, duplicate detection, and stat
 ./photo-meta datetime ~/leftover-photos ~/organized --dry-run1
 ./photo-meta datetime ~/leftover-photos ~/organized --progress --info
 
-# 7. Fallback organization for any remaining dated files
+# 7. Organize files with location intelligence
+./photo-meta organize ~/leftover-photos ~/organized --dry-run1
+./photo-meta organize ~/leftover-photos ~/organized --progress --info
+
+# 8. Fallback organization for any remaining dated files
 ./photo-meta fallback ~/still-leftover-photos ~/organized --dry-run1
 ./photo-meta fallback ~/still-leftover-photos ~/organized --progress --info
 
-# 8. Check for duplicates before cleaning
+# 9. Check for duplicates before cleaning
 ./photo-meta report duplicates ~/organized --save
 
-# 9. Clean up any duplicates
+# 10. Clean up any duplicates
 ./photo-meta clean ~/organized --dry-run1
 ./photo-meta clean ~/organized --progress
 
-# 10. Remove any empty directories left behind
+# 11. Remove any empty directories left behind
 ./photo-meta cleanup ~/organized --dry-run
 ./photo-meta cleanup ~/organized
 
-# 11. Generate final statistics report
+# 12. Generate final statistics report
 ./photo-meta report stats ~/organized --save
 
-# 12. Merge additional collections as needed
+# 13. Merge additional collections as needed
 ./photo-meta merge ~/new-photos ~/organized --dry-run1
 ./photo-meta merge ~/new-photos ~/organized --progress
 ```

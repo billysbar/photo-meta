@@ -113,7 +113,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -234,7 +234,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -321,7 +321,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -409,7 +409,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -513,7 +513,7 @@ func main() {
 			switch os.Args[i] {
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -587,7 +587,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
