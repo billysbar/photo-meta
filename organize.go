@@ -158,7 +158,6 @@ func processFilesWithLocationInFilename(sourcePath, destPath string, locationDB 
 	videoCount := 0
 	photoCount := 0
 	unmatchedFiles := []string{}
-	locationPromptFiles := []string{}
 
 	// Collect files to process
 	var filesToProcess []string
@@ -226,9 +225,40 @@ func processFilesWithLocationInFilename(sourcePath, destPath string, locationDB 
 
 		// Check if we can determine the country for this city
 		finalCountry, finalCity, needsPrompt := validateLocationWithDB(locationDB, country, city, filename)
-		
-		if needsPrompt {
-			locationPromptFiles = append(locationPromptFiles, path)
+
+		if needsPrompt && !dryRun {
+			// Prompt immediately for this file
+			fmt.Printf("\nFile: %s\n", filename)
+			fmt.Printf("Detected location: %s\n", city)
+
+			// Prompt for country and city
+			promptedCountry, promptedCity, err := promptUserForLocation(city, filename)
+			if err != nil {
+				fmt.Printf("⚠️ Skipping %s due to user input error: %v\n", filename, err)
+				unmatchedFiles = append(unmatchedFiles, path)
+				continue
+			}
+
+			if promptedCountry == "skip" {
+				fmt.Printf("⏭️ Skipping %s as requested\n", filename)
+				unmatchedFiles = append(unmatchedFiles, path)
+				continue
+			}
+
+			// Save the user-provided mapping to the database
+			if err := locationDB.SaveLocationMapping(promptedCity, promptedCountry, true); err != nil {
+				fmt.Printf("⚠️ Warning: Failed to save location mapping for %s->%s: %v\n", promptedCity, promptedCountry, err)
+			} else {
+				fmt.Printf("💾 Saved location mapping: %s -> %s\n", promptedCity, promptedCountry)
+			}
+
+			// Use the prompted values
+			finalCountry = promptedCountry
+			finalCity = promptedCity
+		} else if needsPrompt && dryRun {
+			// In dry run mode, just show what would be prompted
+			fmt.Printf("🤔 [DRY RUN] Would prompt for location: %s (detected city: %s)\n", filename, city)
+			unmatchedFiles = append(unmatchedFiles, path)
 			continue
 		}
 
@@ -249,60 +279,6 @@ func processFilesWithLocationInFilename(sourcePath, destPath string, locationDB 
 		}
 	}
 
-	// Handle files that need location prompts
-	if len(locationPromptFiles) > 0 && !dryRun {
-		fmt.Printf("\n🤔 Found %d files with ambiguous locations that need clarification:\n", len(locationPromptFiles))
-		
-		for _, path := range locationPromptFiles {
-			filename := filepath.Base(path)
-			date, _ := extractDateFromFilename(filename)
-			dateParts := strings.Split(date, "-")
-			year := dateParts[0]
-			monthNum := dateParts[1]
-			
-			_, city, _ := extractLocationFromFilename(filename, year, monthNum)
-			
-			fmt.Printf("\nFile: %s\n", filename)
-			fmt.Printf("Detected location: %s\n", city)
-			
-			// Prompt for country and city
-			finalCountry, finalCity, err := promptUserForLocation(city, filename)
-			if err != nil {
-				fmt.Printf("⚠️ Skipping %s due to user input error: %v\n", filename, err)
-				unmatchedFiles = append(unmatchedFiles, path)
-				continue
-			}
-			
-			if finalCountry == "skip" {
-				fmt.Printf("⏭️ Skipping %s as requested\n", filename)
-				unmatchedFiles = append(unmatchedFiles, path)
-				continue
-			}
-
-			// Save the user-provided mapping to the database
-			if err := locationDB.SaveLocationMapping(finalCity, finalCountry, true); err != nil {
-				fmt.Printf("⚠️ Warning: Failed to save location mapping for %s->%s: %v\n", finalCity, finalCountry, err)
-			} else {
-				fmt.Printf("💾 Saved location mapping: %s -> %s\n", finalCity, finalCountry)
-			}
-
-			// Create location path
-			location := fmt.Sprintf("%s/%s/%s", year, finalCountry, finalCity)
-			fmt.Printf("📍 File: %s -> Date: %s -> User-confirmed location: %s/%s\n", filename, date, finalCountry, finalCity)
-
-			// Move file to location-based structure
-			if err := moveFileToLocationStructure(path, destPath, location, date, finalCity, dryRun); err != nil {
-				return fmt.Errorf("failed to move %s: %v", filename, err)
-			}
-
-			processedCount++
-			if isVideoFile(path) {
-				videoCount++
-			} else {
-				photoCount++
-			}
-		}
-	}
 
 	// Summary
 	fmt.Printf("\n📊 Location-Based Organization Summary:\n")
@@ -310,9 +286,6 @@ func processFilesWithLocationInFilename(sourcePath, destPath string, locationDB 
 	fmt.Printf("📷 Photos processed: %d\n", photoCount)
 	fmt.Printf("🎥 Videos processed: %d (moved to VIDEO-FILES/)\n", videoCount)
 	fmt.Printf("⚠️  Files unmatched: %d\n", len(unmatchedFiles))
-	if len(locationPromptFiles) > 0 && dryRun {
-		fmt.Printf("🤔 Files needing location clarification: %d (would prompt in live run)\n", len(locationPromptFiles))
-	}
 
 	if len(unmatchedFiles) > 0 {
 		fmt.Println("\n📋 Unmatched Files (no location in filename):")
@@ -370,18 +343,64 @@ func parseLocationPart(locationPart string) (country, city string, found bool) {
 	if locationPart == "" {
 		return "", "", false
 	}
-	
-	// Try to parse country-city format
+
+	// Split by hyphens to analyze parts
 	parts := strings.Split(locationPart, "-")
-	if len(parts) >= 2 {
-		// Assume last part is country, everything else is city
-		city = strings.Join(parts[:len(parts)-1], "-")
-		country = parts[len(parts)-1]
+
+	// Filter out numeric parts and short parts that are likely sequence numbers
+	var locationWords []string
+	for _, part := range parts {
+		// Skip numeric parts (like "2", "3", etc. which are sequence numbers)
+		if isNumericString(part) {
+			continue
+		}
+		// Skip very short parts that are unlikely to be location names
+		if len(part) <= 2 {
+			continue
+		}
+		locationWords = append(locationWords, part)
+	}
+
+	// If we have location words, treat the first one as city
+	if len(locationWords) > 0 {
+		city = locationWords[0]
+		// If we have more than one word, the last might be country
+		if len(locationWords) >= 2 {
+			country = locationWords[len(locationWords)-1]
+			// But only if it looks like a known country pattern, otherwise assume it's part of city name
+			if !isLikelyCountryName(country) {
+				city = strings.Join(locationWords, "-")
+				country = "unknown-country"
+			}
+		} else {
+			country = "unknown-country"
+		}
 		return country, city, true
 	}
-	
-	// Single word - likely a city name
-	return "unknown-country", locationPart, true
+
+	return "", "", false
+}
+
+// isNumericString checks if a string is purely numeric
+func isNumericString(s string) bool {
+	for _, r := range s {
+		if r < '0' || r > '9' {
+			return false
+		}
+	}
+	return len(s) > 0
+}
+
+// isLikelyCountryName checks if a word looks like a country name
+func isLikelyCountryName(word string) bool {
+	// Very basic heuristics - in practice you might want a more comprehensive list
+	commonCountries := map[string]bool{
+		"usa": true, "uk": true, "france": true, "spain": true, "italy": true,
+		"germany": true, "canada": true, "australia": true, "japan": true,
+		"china": true, "india": true, "brazil": true, "mexico": true,
+		"england": true, "scotland": true, "wales": true, "ireland": true,
+	}
+	return commonCountries[strings.ToLower(word)]
 }
 
 // isLikelyLocationName checks if a word looks like a location name
