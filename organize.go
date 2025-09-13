@@ -537,6 +537,7 @@ func moveFileToLocationStructure(sourcePath, destBasePath, location, date, city 
 	destPath := filepath.Join(destDir, newFilename)
 
 	// Handle duplicates
+	ext := filepath.Ext(sourcePath)
 	finalPath := destPath
 	counter := 1
 	for {

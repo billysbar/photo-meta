@@ -508,6 +508,7 @@ func moveFileToLocation(sourcePath, destBasePath, location, date string, dryRun 
 	destPath := filepath.Join(destDir, newFilename)
 
 	// Handle duplicates simulation
+	ext := filepath.Ext(sourcePath)
 	finalPath := destPath
 	counter := 1
 	for {

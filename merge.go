@@ -625,7 +625,7 @@ func processMergeFileWithDatabase(sourcePath, targetPath string, locationDB *Loc
 			city = "unknown-city"
 		} else {
 			// Prompt for missing country/city information with database support
-			country, city, shouldSkip, err := promptForLocationWithDatabase(location, sourcePath, lat, lon, locationDB)
+			_, _, shouldSkip, err := promptForLocationWithDatabase(location, sourcePath, lat, lon, locationDB)
 			if err != nil {
 				return fmt.Errorf("failed to get location information: %v", err)
 			}
@@ -672,7 +672,7 @@ func processMergeFileWithoutGPSWithDatabase(sourcePath, targetPath string, locat
 		}
 	}
 
-	fmt.Printf("📍 Inferred location: %s/%s from date %s\n", inferredLocation.Country, inferredLocation.City, inferredLocation.Date)
+	fmt.Printf("📍 Inferred location: %s/%s from date %s\n", inferredLocation.Country, inferredLocation.City, date)
 
 	// Use inferred location
 	return moveToTargetStructure(sourcePath, targetPath, date, inferredLocation.Country, inferredLocation.City, dryRun)

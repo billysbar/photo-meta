@@ -187,6 +187,7 @@ func moveFileToFallbackLocation(sourcePath, destBasePath, location, date string,
 	destPath := filepath.Join(destDir, newFilename)
 
 	// Handle duplicates simulation
+	ext := filepath.Ext(sourcePath)
 	finalPath := destPath
 	counter := 1
 	for {

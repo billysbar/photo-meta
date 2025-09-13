@@ -7,6 +7,7 @@
 | **`datetime`** | Date-based filename matching | Files without GPS data (uses filename dates) |
 | **`organize`** | Location-based filename organization | Files with location names in filenames |
 | **`fallback`** | Simple filename date organization | Files with dates in filenames but no location matches |
+| **`tiff`** | Timestamp repair | Fixing midnight timestamps (00:00:00) |
 | **`cleanup`** | Empty directory removal | Cleaning up after processing |
 | **`merge`** | Collection combining | Merging photo libraries |
 | **`summary`** | Quick analysis | Initial directory assessment |
@@ -85,7 +86,17 @@ Organizes files with extractable dates from filenames into a simple YYYY/Month d
 IMG_20250915.jpeg             → 2025-09-15.jpeg (2025/September/)
 ```
 
-### 6. **CLEANUP** - Standalone Empty Directory Removal
+### 6. **TIFF** - Timestamp Repair & Correction
+
+Fixes midnight timestamps (00:00:00) using EXIF ModifyDate and updates both EXIF timestamps and filename datetime.
+
+```bash
+./photo-meta tiff /target/path
+# Add --dry-run for preview mode
+./photo-meta tiff /target/path --dry-run
+```
+
+### 7. **CLEANUP** - Standalone Empty Directory Removal
 
 Removes empty directories that contain no media files, providing a clean way to tidy up after processing operations.
 
@@ -93,7 +104,7 @@ Removes empty directories that contain no media files, providing a clean way to 
 ./photo-meta cleanup /path/to/directory
 ```
 
-### 7. **MERGE** - Smart Collection Combining
+### 8. **MERGE** - Smart Collection Combining
 
 Merges photos from source directory into target directory while preserving YEAR/COUNTRY/CITY structure.
 
@@ -101,7 +112,7 @@ Merges photos from source directory into target directory while preserving YEAR/
 ./photo-meta merge /path/to/source /path/to/target
 ```
 
-### 8. **SUMMARY** - Quick Directory Analysis
+### 9. **SUMMARY** - Quick Directory Analysis
 
 Provides a quick overview of what's in a directory and what processing is needed.
 
@@ -109,7 +120,7 @@ Provides a quick overview of what's in a directory and what processing is needed
 ./photo-meta summary /path/to/photos
 ```
 
-### 9. **REPORT** - Comprehensive Analysis & Reporting
+### 10. **REPORT** - Comprehensive Analysis & Reporting
 
 Generates detailed reports for directory analysis, duplicate detection, and statistics with optional file export.
 
