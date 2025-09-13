@@ -113,7 +113,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -198,6 +198,93 @@ func main() {
 			}
 		}
 		
+	case "organize":
+		if len(os.Args) < 4 {
+			fmt.Println("Usage: ./photo-metadata-editor organize /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
+			os.Exit(1)
+		}
+		
+		sourcePath := os.Args[2]
+		destPath := os.Args[3]
+		
+		// Check for incorrectly formatted dry-run arguments
+		for i := 4; i < len(os.Args); i++ {
+			arg := strings.ToLower(os.Args[i])
+			if strings.Contains(arg, "dry") && strings.Contains(arg, "run") && arg != "--dry-run" {
+				fmt.Printf("Error: Invalid argument format '%s'\n", os.Args[i])
+				fmt.Println("Use '--dry-run [N]' instead")
+				os.Exit(1)
+			}
+		}
+		
+		// Parse optional flags
+		workers := 4 // Default worker count
+		dryRun := false
+		dryRunSampleSize := 0
+		showProgress := true // Default to showing progress
+		generateInfo := false // Generate info_ directory summary file
+		for i := 4; i < len(os.Args); i++ {
+			switch os.Args[i] {
+			case "--workers":
+				if i+1 < len(os.Args) {
+					if _, err := fmt.Sscanf(os.Args[i+1], "%d", &workers); err != nil {
+						log.Fatalf("Invalid worker count: %s", os.Args[i+1])
+					}
+					i++ // Skip the next argument since it's the worker count
+				}
+			case "--dry-run":
+				dryRun = true
+				dryRunSampleSize = 0 // Process all files for preview
+				// Check if next argument is a number
+				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
+					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
+						dryRunSampleSize = size
+						i++ // Skip the next argument since it's the sample size
+					}
+				}
+			case "--progress":
+				showProgress = true
+			case "--no-progress":
+				showProgress = false
+			case "--info":
+				generateInfo = true
+			}
+		}
+		
+		// Ask for user confirmation
+		if !confirmOperation("organize", sourcePath, destPath, dryRun, dryRunSampleSize) {
+			fmt.Println("❌ Operation cancelled by user.")
+			os.Exit(0)
+		}
+		
+		// Check if source path exists
+		if _, err := os.Stat(sourcePath); os.IsNotExist(err) {
+			log.Fatalf("Source path does not exist: %s", sourcePath)
+		}
+		
+		// Create destination path if it doesn't exist
+		if err := os.MkdirAll(destPath, 0755); err != nil {
+			log.Fatalf("Failed to create destination path: %v", err)
+		}
+		
+		// Process location-based organization
+		if err := processOrganizeByLocation(sourcePath, destPath, dryRun, dryRunSampleSize, showProgress); err != nil {
+			log.Fatal(err)
+		}
+		
+		// Clean up empty directories after organize processing
+		cleanupEmptyDirectoriesIfNeeded("organize", sourcePath, dryRun, -1)
+		
+		// Generate info directory summary file if requested
+		if generateInfo && !dryRun {
+			fmt.Printf("\n📋 Generating PhotoXX-style directory summary...\n")
+			if err := generateInfoDirectorySummary(destPath, ""); err != nil {
+				fmt.Printf("⚠️  Warning: Failed to generate info directory summary: %v\n", err)
+			} else {
+				fmt.Printf("✅ Info directory summary generated successfully\n")
+			}
+		}
+		
 	case "fallback":
 		if len(os.Args) < 4 {
 			fmt.Println("Usage: ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
@@ -234,7 +321,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -322,7 +409,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -426,7 +513,7 @@ func main() {
 			switch os.Args[i] {
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -500,7 +587,7 @@ func main() {
 				}
 			case "--dry-run":
 				dryRun = true
-				dryRunSampleSize = 1 // Default sample size
+				dryRunSampleSize = 0 // Process all files for preview
 				// Check if next argument is a number
 				if i+1 < len(os.Args) && !strings.HasPrefix(os.Args[i+1], "--") {
 					if size, err := strconv.Atoi(os.Args[i+1]); err == nil && size > 0 {
@@ -966,6 +1053,7 @@ func showUsage() {
 	fmt.Println()
 	fmt.Println("Commands:")
 	fmt.Println("  ./photo-metadata-editor process /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--resume FILE]")
+	fmt.Println("  ./photo-metadata-editor organize /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 	fmt.Println("  ./photo-metadata-editor datetime /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info] [--reset-db]")
 	fmt.Println("  ./photo-metadata-editor fallback /source/path /destination/path [--workers N] [--dry-run [N]] [--progress] [--info]")
 	fmt.Println("  ./photo-metadata-editor clean /target/path [--dry-run [N]] [--verbose] [--workers N] [--progress]")
@@ -1014,6 +1102,17 @@ func showUsage() {
 	fmt.Println("  - ⏱️  Temporal proximity matching (±3 days)")
 	fmt.Println("  - 💾 GPS cache database for faster subsequent scans")
 	fmt.Println("  - 🗑️  --reset-db flag to clear the GPS cache when needed")
+	fmt.Println()
+	fmt.Println("Organize Features:")
+	fmt.Println("  - 📍 Location-based organization for files with city/country in filename")
+	fmt.Println("  - 📁 Organizes files into YYYY/COUNTRY/CITY directory structure")
+	fmt.Println("  - 🗄️  Intelligent location database for automatic mapping")
+	fmt.Println("  - 🤔 Interactive prompts for ambiguous locations (e.g., 'scarborough')")
+	fmt.Println("  - 💾 Persistent location mappings (saves user input for future files)")
+	fmt.Println("  - 🔍 --dry-run mode for safe preview without moving files")
+	fmt.Println("  - 🔍 --dry-run [N] mode for quick overview (N files per type per directory)")
+	fmt.Println("  - 📷 Example: '2008-09-28-scarborough-2.jpg' → '/tmp/photos/2008/united-kingdom/scarborough/'")
+	fmt.Println("  - 🎥 Videos organized in VIDEO-FILES/YYYY/COUNTRY/CITY structure")
 	fmt.Println()
 	fmt.Println("Fallback Features:")
 	fmt.Println("  - 📅 Date-based organization for files without location data")
